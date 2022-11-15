@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 
 def get_data(day=1):
     """
@@ -18,32 +18,29 @@ get_data()
 
 data,data1 = get_data()
 
-
-# for i in range(dataLength):
-#     print(data[i])
-
-shiftedData = np.numarray(data1.cumsum())
-shiftedData[3:] = shiftedData[3:] - shiftedData[:3]
-
-print(shiftedData)
 puzzleData = data1.copy()
 
-
-exit
 
 
 print(puzzleData)
 dataLength = len(puzzleData)
-print(dataLength)
-prev = puzzleData[0]
+# print(dataLength)
+
 ascendingCount = 0
 
-for i in range(1,dataLength):
-    if int(puzzleData[i]) > int(prev):
-        print(puzzleData[i] + " is ascending from " + prev)
+def windowCume(data,start,lag):
+    cume = 0
+    for i in range(lag):
+        cume = cume + int(data[start-i])
+    return cume
+print(windowCume(puzzleData,2,3))
+
+
+prev = windowCume(puzzleData,2,3)
+
+for i in range(3,dataLength):
+    if windowCume(puzzleData,i,3) > prev :
         ascendingCount += 1
-    else:
-        print(puzzleData[i] + " is descending from " + prev)
-    prev = puzzleData[i]
+    prev = windowCume(puzzleData,i,3)
 
 print(ascendingCount)

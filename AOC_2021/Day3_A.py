@@ -1,22 +1,23 @@
 # import numpy as np
+from get_data import get_data
 
-def get_data(day=3):
-    """
-    Returns test and real data in list format.
-    Raw data should be maintained as:
-        [test data]
-        Split From Here
-        [actual data]
-    """
-    file_name = f"data/day{day}.txt"
+# def get_data(day=3):
+#     """
+#     Returns test and real data in list format.
+#     Raw data should be maintained as:
+#         [test data]
+#         Split From Here
+#         [actual data]
+#     """
+#     file_name = f"data/day{day}.txt"
+#
+#     with open(file_name) as fp:
+#         data = fp.read().strip().split("Split From Here")
+#         data = [d.strip().split("\n") for d in data]
+#         return data
+# get_data()
 
-    with open(file_name) as fp:
-        data = fp.read().strip().split("Split From Here")
-        data = [d.strip().split("\n") for d in data]
-        return data
-get_data()
-
-data,data1 = get_data()
+data,data1 = get_data(3)
 
 puzzleData = data.copy()
 
@@ -45,6 +46,24 @@ for l in range(len(puzzleData[0])):
 print(int(''.join(str(i) for i in totalSumString),2))
 
 
+
+
+# N = len(puzzleData[0])
+#
+# gamma = 0
+# epsilon = 0
+#
+# for n in range(N):
+#     count1 = sum(1 for line in puzzleData if line[n] == '1')
+#     count0 = len(puzzleData) - count1
+#     gamma *= 2
+#     epsilon *= 2
+#     if count0 < count1:
+#         gamma += 1
+#     else:
+#         epsilon += 1
+#
+# print(gamma * epsilon)
 
 
 #

@@ -1,0 +1,3961 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="19" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>22 13 17 11  0</c>
+            </r>
+            <r>
+              <c><![CDATA[ 8  2 23  4 24]]></c>
+            </r>
+            <r>
+              <c>21  9 14 16  7</c>
+            </r>
+            <r>
+              <c><![CDATA[ 6 10  3 18  5]]></c>
+            </r>
+            <r>
+              <c><![CDATA[ 1 12 20 15 19]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 3 15  0  2 22]]></c>
+            </r>
+            <r>
+              <c><![CDATA[ 9 18 13 17  5]]></c>
+            </r>
+            <r>
+              <c>19  8  7 25 23</c>
+            </r>
+            <r>
+              <c>20 11 10 24  4</c>
+            </r>
+            <r>
+              <c>14 21 16 12  6</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>14 21 17 24  4</c>
+            </r>
+            <r>
+              <c>10 16 15  9 19</c>
+            </r>
+            <r>
+              <c>18  8 23 26 20</c>
+            </r>
+            <r>
+              <c>22 11 13  6  5</c>
+            </r>
+            <r>
+              <c><![CDATA[ 2  0 12  3  7]]></c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="522" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>data</UpdateField_Name>
+          <CreateField_Name>board</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif(isempty([Row-1:data]),[Row-1:board]+1,[Row-1:board])</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif(isempty([Row-1:data]),[Row-1:board]+1,[Row-1:board])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="342" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="342" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Skip</Mode>
+          <N>2</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Skip 1st 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1218" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_f89f1cb5f5854e33a8ccf77e6d641368_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="426" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="regex_replace(trim([data]),'\s+',' ')" field="data" size="70" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[data = regex_replace(trim([data]),'\s+',' ')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="714" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>data</UpdateField_Name>
+          <CreateField_Name>Row</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Row]+1</Expression>
+          <GroupByFields>
+            <Field field="board" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Row]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="810" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <Delimeters value="\s" />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="618" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-12-22 11:40:43</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2021-12-22 11:40:43</StartDate>
+              <EndDate>2021-12-22 11:40:43</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([data])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="906" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>data</UpdateField_Name>
+          <CreateField_Name>Column</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Column]+1</Expression>
+          <GroupByFields>
+            <Field field="board" />
+            <Field field="Row" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Column]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="750" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_055fc65b90264130937dae4ba55f10e7_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="1026" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="board" />
+            <Field field="Row" />
+          </GroupFields>
+          <HeaderField field="Column" />
+          <DataField field="data" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: iif(isempty([Row-1:data]),[Row-1:board]+1,[Row-1:board])" name="board" source="CrossTab:Group:First:" type="Int32" />
+            <Field description="Formula: [Row-1:Row]+1" name="Row" source="CrossTab:Group:First:" type="Int32" />
+            <Field description="TextToColumns: Parsed from data" name="1" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="2" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="3" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="4" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="5" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="board" order="Asc" />
+            <Field field="Row" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1122" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_4e71bf4a28ab46b4b633b7f92f6fa86c_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="426" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="522" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Order</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="858" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&lt;=</Operator>
+            <Field>Order</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-12-22 11:50:46</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2021-12-22 11:50:46</StartDate>
+              <EndDate>2021-12-22 11:50:46</EndDate>
+              <Operand>10</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Order] &lt;= 10</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="318" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="data" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="data" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="450" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="board" action="GroupBy" rename="board" />
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="data" action="Count" rename="Count" />
+            <SummarizeField field="Order" action="Max" rename="Max_Order" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="450" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="board" action="GroupBy" rename="board" />
+            <SummarizeField field="Column" action="GroupBy" rename="Column" />
+            <SummarizeField field="Column" action="Count" rename="Count" />
+            <SummarizeField field="Order" action="Max" rename="Max_Order" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="546" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="642" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Max_Order" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Max_Order - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="738" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="882" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="board" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="board" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_board" selected="False" rename="Right_board" input="Right_" />
+                <SelectField field="Right_Row" selected="False" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Count" selected="False" input="Right_" />
+                <SelectField field="Right_Max_Order" selected="False" input="Right_" />
+                <SelectField field="Right_Column" selected="False" rename="Right_Column" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="882" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_board" selected="False" input="Source_" />
+                <SelectField field="Source_Row" selected="False" input="Source_" />
+                <SelectField field="Source_Count" selected="False" input="Source_" />
+                <SelectField field="Source_Column" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="966" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Order] &lt;= [Max_Order]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Order] &lt;= [Max_Order]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1254" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="data" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="data" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_data" selected="False" rename="Right_data" input="Right_" />
+                <SelectField field="Right_board" selected="False" rename="Right_board" input="Right_" />
+                <SelectField field="Right_Row" selected="False" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Column" selected="False" rename="Right_Column" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1122" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Order] = [Max_Order]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Order] = [Max_Order]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1350" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_a3c3c1679a064f63bcb15b7a85c0b228_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1350" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_efd6a32b595a4ce4a39ef2c2e0002b55_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1746" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_d88ddf1bd39245dea20e7fc7a68e03cd_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1542" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Order" selected="False" input="Source_" />
+                <SelectField field="Source_data" selected="True" rename="Last_data" input="Source_" type="Int32" size="4" />
+                <SelectField field="Source_Max_Order" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1446" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="data" action="Sum" rename="Sum_data" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1350" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1638" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Sum_data]*[Last_data]" field="answer" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[answer = [Sum_data]*[Last_data]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="210" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="102" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="601" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>76,69,38,62,33,48,81,2,64,21,80,90,29,99,37,15,93,46,75,0,89,56,58,40,92,47,8,6,54,96,12,66,83,4,70,19,17,5,50,52,45,51,18,27,49,71,28,86,74,77,11,20,84,72,23,31,16,78,91,65,87,79,73,94,24,68,63,9,88,82,30,42,60,13,67,85,44,59,7,53,22,1,26,41,61,55,43,39,3,35,25,34,57,10,14,32,97,95,36,98</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>17 45 62 28 73</c>
+            </r>
+            <r>
+              <c>39 12  0 52  5</c>
+            </r>
+            <r>
+              <c>87 48 50 85 44</c>
+            </r>
+            <r>
+              <c>66 57 78 94  3</c>
+            </r>
+            <r>
+              <c>91 37 69 16  1</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 1 67  4 58 13]]></c>
+            </r>
+            <r>
+              <c>25 54 34 63 87</c>
+            </r>
+            <r>
+              <c>59 70 66 72 71</c>
+            </r>
+            <r>
+              <c>33 17  8 20 85</c>
+            </r>
+            <r>
+              <c>69 46 50 41 88</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>47 63 80 15 90</c>
+            </r>
+            <r>
+              <c>24  1 40 94 13</c>
+            </r>
+            <r>
+              <c>56 62 74 81 95</c>
+            </r>
+            <r>
+              <c>43 88 37 99 22</c>
+            </r>
+            <r>
+              <c>57 52 33 84 49</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>33 58 54 28 10</c>
+            </r>
+            <r>
+              <c><![CDATA[ 7 82 97 66 92]]></c>
+            </r>
+            <r>
+              <c>95 77  5 86 84</c>
+            </r>
+            <r>
+              <c>85 91 94 21 69</c>
+            </r>
+            <r>
+              <c>23 12 13 98 46</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 1 63 58 23  0]]></c>
+            </r>
+            <r>
+              <c>67 14 45 42 32</c>
+            </r>
+            <r>
+              <c>48 64 83 10 13</c>
+            </r>
+            <r>
+              <c>74 16  3 79 46</c>
+            </r>
+            <r>
+              <c>44 52 95 25  6</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>93 47  5 96 28</c>
+            </r>
+            <r>
+              <c>88 76 70  0 72</c>
+            </r>
+            <r>
+              <c>77  1 36 54  9</c>
+            </r>
+            <r>
+              <c>14 17 75 64 15</c>
+            </r>
+            <r>
+              <c>79 66 61 78 26</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>23 75 96 71 76</c>
+            </r>
+            <r>
+              <c>63 59 39 65 36</c>
+            </r>
+            <r>
+              <c>95 21 67 41 74</c>
+            </r>
+            <r>
+              <c><![CDATA[ 9 97  4  2 49]]></c>
+            </r>
+            <r>
+              <c>32 17 81  0 56</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>77 53 30 94  5</c>
+            </r>
+            <r>
+              <c><![CDATA[ 4 42 87 25 24]]></c>
+            </r>
+            <r>
+              <c>52 15 68  9 45</c>
+            </r>
+            <r>
+              <c>56 89 98 47 34</c>
+            </r>
+            <r>
+              <c>99 32 27 78 46</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>75 70 99 65 41</c>
+            </r>
+            <r>
+              <c>87  6 11 88  1</c>
+            </r>
+            <r>
+              <c><![CDATA[ 4 42 64 98 78]]></c>
+            </r>
+            <r>
+              <c>63 50 69 79 39</c>
+            </r>
+            <r>
+              <c>67 46 17 97 26</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>26 73  6 79 47</c>
+            </r>
+            <r>
+              <c>67 51 64 16 60</c>
+            </r>
+            <r>
+              <c><![CDATA[ 8  1 61 76 39]]></c>
+            </r>
+            <r>
+              <c>13 57 48 65 46</c>
+            </r>
+            <r>
+              <c>63 83  4 92 71</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>97 93 21 88 80</c>
+            </r>
+            <r>
+              <c>58 42 53 95 90</c>
+            </r>
+            <r>
+              <c>49 29 30 26 22</c>
+            </r>
+            <r>
+              <c>66 51 75  8 13</c>
+            </r>
+            <r>
+              <c><![CDATA[ 5 39 19  4 96]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>77 16 33  1  6</c>
+            </r>
+            <r>
+              <c>54 91 60 56 88</c>
+            </r>
+            <r>
+              <c><![CDATA[ 4 59 24 79 22]]></c>
+            </r>
+            <r>
+              <c>36 49 17 97 27</c>
+            </r>
+            <r>
+              <c>67 99 92 62 86</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>78 18 59 74 54</c>
+            </r>
+            <r>
+              <c>79 68 23 51 85</c>
+            </r>
+            <r>
+              <c>47 42 92 58 12</c>
+            </r>
+            <r>
+              <c>30 97 19 26 15</c>
+            </r>
+            <r>
+              <c><![CDATA[ 1 62 94 65 70]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 6 91 56 55 11]]></c>
+            </r>
+            <r>
+              <c>58 96 21 50 53</c>
+            </r>
+            <r>
+              <c>51 60 67 64 71</c>
+            </r>
+            <r>
+              <c>12 25 44 47 39</c>
+            </r>
+            <r>
+              <c>15 92 81  9 38</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>98 16 31 21 30</c>
+            </r>
+            <r>
+              <c>58 10  3 89  7</c>
+            </r>
+            <r>
+              <c>79 20 60 74 26</c>
+            </r>
+            <r>
+              <c>86  4 83 96 15</c>
+            </r>
+            <r>
+              <c>94 29 44 41 34</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>50 75 83 20 52</c>
+            </r>
+            <r>
+              <c>65 85 41 78 38</c>
+            </r>
+            <r>
+              <c>31 64 86 32 10</c>
+            </r>
+            <r>
+              <c>25 82 13 61 22</c>
+            </r>
+            <r>
+              <c>11 73  4 77 24</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>56 74 26 20 62</c>
+            </r>
+            <r>
+              <c>83 46 41 24 52</c>
+            </r>
+            <r>
+              <c>34 28 76 80 36</c>
+            </r>
+            <r>
+              <c>75 48 63 17 55</c>
+            </r>
+            <r>
+              <c>69 47 22 45 60</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>17 15 71 28 68</c>
+            </r>
+            <r>
+              <c>12 76 27 25 14</c>
+            </r>
+            <r>
+              <c>34 39 31 58 13</c>
+            </r>
+            <r>
+              <c>75 67  2 26 42</c>
+            </r>
+            <r>
+              <c>72 43  0 23 54</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>37 43 18 76 47</c>
+            </r>
+            <r>
+              <c>96  1 80 77 27</c>
+            </r>
+            <r>
+              <c>13 89 16  4  6</c>
+            </r>
+            <r>
+              <c>74 92 55 99 38</c>
+            </r>
+            <r>
+              <c>19 75 52 85 81</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>69 51 39 95 98</c>
+            </r>
+            <r>
+              <c>90 61 91  6 21</c>
+            </r>
+            <r>
+              <c>25 57 81 10 49</c>
+            </r>
+            <r>
+              <c>67 55 43 96 17</c>
+            </r>
+            <r>
+              <c>78 11  3 64 77</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>51 66  8 62 60</c>
+            </r>
+            <r>
+              <c>82 94 24 54 26</c>
+            </r>
+            <r>
+              <c>59 91 97 37 77</c>
+            </r>
+            <r>
+              <c>20 25 69 98 84</c>
+            </r>
+            <r>
+              <c>38 12 65 35 61</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 7 26 91 84 17]]></c>
+            </r>
+            <r>
+              <c>23 52 86 19 24</c>
+            </r>
+            <r>
+              <c>58 44  5 32 40</c>
+            </r>
+            <r>
+              <c><![CDATA[ 6 27 89 76 92]]></c>
+            </r>
+            <r>
+              <c>33 10 90 83 82</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>44 61 68 70 87</c>
+            </r>
+            <r>
+              <c>23 17 90 93 21</c>
+            </r>
+            <r>
+              <c>92 54 95 46 14</c>
+            </r>
+            <r>
+              <c>47 24 89 33 31</c>
+            </r>
+            <r>
+              <c>26 80 35 42 78</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>88 80 50 46 26</c>
+            </r>
+            <r>
+              <c><![CDATA[ 1 97 92 51 74]]></c>
+            </r>
+            <r>
+              <c>16 24 40 31 95</c>
+            </r>
+            <r>
+              <c>47 85 61 99 12</c>
+            </r>
+            <r>
+              <c>27  8 25 42 13</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 8 59 37 87 44]]></c>
+            </r>
+            <r>
+              <c>62  0 67 39 92</c>
+            </r>
+            <r>
+              <c>79 81 54 24 93</c>
+            </r>
+            <r>
+              <c>56 84 23 18 34</c>
+            </r>
+            <r>
+              <c>72 68 29 11 91</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>64 51 81 44 12</c>
+            </r>
+            <r>
+              <c>49 20 23 36 53</c>
+            </r>
+            <r>
+              <c>59 73 37 60 57</c>
+            </r>
+            <r>
+              <c>96 65  5 43 14</c>
+            </r>
+            <r>
+              <c>46 31 47 87  1</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>11 13 72 30  3</c>
+            </r>
+            <r>
+              <c>67 20 84 59 77</c>
+            </r>
+            <r>
+              <c>52 87 97 51 16</c>
+            </r>
+            <r>
+              <c>43 36 21 33 82</c>
+            </r>
+            <r>
+              <c>41 96 91 93 29</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 7 31 19 87 94]]></c>
+            </r>
+            <r>
+              <c>92 68 18 57 23</c>
+            </r>
+            <r>
+              <c><![CDATA[ 5 88 81 86 10]]></c>
+            </r>
+            <r>
+              <c>99 50 37 33 25</c>
+            </r>
+            <r>
+              <c>97 22  0 53 91</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>78 39 41 44 89</c>
+            </r>
+            <r>
+              <c>91 82 71 42 37</c>
+            </r>
+            <r>
+              <c>25 93 67 53  9</c>
+            </r>
+            <r>
+              <c>84 23 33 92 14</c>
+            </r>
+            <r>
+              <c>74 45 57 86 50</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>79 83 10 85 48</c>
+            </r>
+            <r>
+              <c>51 29 93 87 21</c>
+            </r>
+            <r>
+              <c>58  5 52 37 99</c>
+            </r>
+            <r>
+              <c>80  1 18 46 42</c>
+            </r>
+            <r>
+              <c>60 92  0 44 59</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>79 76 54 14 42</c>
+            </r>
+            <r>
+              <c>57 11 39 66 33</c>
+            </r>
+            <r>
+              <c>86 62 27 61 26</c>
+            </r>
+            <r>
+              <c>48 68 47 99 46</c>
+            </r>
+            <r>
+              <c>78 90  9 36 98</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>76 79 66 38 65</c>
+            </r>
+            <r>
+              <c>67 91 90 41 93</c>
+            </r>
+            <r>
+              <c><![CDATA[ 2  1 33 56 50]]></c>
+            </r>
+            <r>
+              <c>46  9  0 61 62</c>
+            </r>
+            <r>
+              <c>26 58 16 24 10</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>20 22 86 58 14</c>
+            </r>
+            <r>
+              <c>53 74 54 85  6</c>
+            </r>
+            <r>
+              <c><![CDATA[ 2 96 40 72 78]]></c>
+            </r>
+            <r>
+              <c>99 81 16 31 55</c>
+            </r>
+            <r>
+              <c>11 57 62 51 32</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 8 51 73 40 88]]></c>
+            </r>
+            <r>
+              <c>83 35 37 98 27</c>
+            </r>
+            <r>
+              <c><![CDATA[ 3 42 15 14 33]]></c>
+            </r>
+            <r>
+              <c><![CDATA[ 2 38 52 82 71]]></c>
+            </r>
+            <r>
+              <c>67 55  9 66 53</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>94 99 54 18 14</c>
+            </r>
+            <r>
+              <c>40 56 57 66 68</c>
+            </r>
+            <r>
+              <c>28 74 48 30  0</c>
+            </r>
+            <r>
+              <c>59  1 22 50 23</c>
+            </r>
+            <r>
+              <c>13 71  6 26 15</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>28 60 66 25 56</c>
+            </r>
+            <r>
+              <c>49 68 84 10 38</c>
+            </r>
+            <r>
+              <c>73 50 87 16 14</c>
+            </r>
+            <r>
+              <c>79 26 29 18  2</c>
+            </r>
+            <r>
+              <c>57 22  5 48 91</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>61 78  3 95 87</c>
+            </r>
+            <r>
+              <c><![CDATA[ 6 62 25 74 84]]></c>
+            </r>
+            <r>
+              <c>22 71 93 57 20</c>
+            </r>
+            <r>
+              <c>81 33 15 45 96</c>
+            </r>
+            <r>
+              <c>38 14 19 72 26</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>51 19 62 72 39</c>
+            </r>
+            <r>
+              <c>36 83  6 33  9</c>
+            </r>
+            <r>
+              <c>95 43 42  2 22</c>
+            </r>
+            <r>
+              <c>94 99 23 97 11</c>
+            </r>
+            <r>
+              <c>66 61 16 30 35</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>51 38  7 24 82</c>
+            </r>
+            <r>
+              <c>23 12 46 55 85</c>
+            </r>
+            <r>
+              <c>43 97 45 61 67</c>
+            </r>
+            <r>
+              <c>53  2 77 99 34</c>
+            </r>
+            <r>
+              <c>17 93 25  9 72</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>37 32 35 63 93</c>
+            </r>
+            <r>
+              <c>40 16 51 99 88</c>
+            </r>
+            <r>
+              <c>73 69 49 80 33</c>
+            </r>
+            <r>
+              <c>56 54 18 87 71</c>
+            </r>
+            <r>
+              <c>29 98 85 58 17</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>38  4 55 72 33</c>
+            </r>
+            <r>
+              <c>29 63 86 52 75</c>
+            </r>
+            <r>
+              <c><![CDATA[ 7 47 34 53 14]]></c>
+            </r>
+            <r>
+              <c>89 39 83 36 78</c>
+            </r>
+            <r>
+              <c><![CDATA[ 6 21 15 18 96]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>56 19 40  0  7</c>
+            </r>
+            <r>
+              <c>61 33 50 66 54</c>
+            </r>
+            <r>
+              <c>93 91 64  6 45</c>
+            </r>
+            <r>
+              <c>51 90 94 18 37</c>
+            </r>
+            <r>
+              <c>15 28 13  2 44</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>18 79  4 56 15</c>
+            </r>
+            <r>
+              <c>38 80  8 42  5</c>
+            </r>
+            <r>
+              <c>60 11 53 23 27</c>
+            </r>
+            <r>
+              <c><![CDATA[ 9 71 19 83 72]]></c>
+            </r>
+            <r>
+              <c>39 97 98 99  7</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>90 22 41 95 15</c>
+            </r>
+            <r>
+              <c>20 18  7 70 49</c>
+            </r>
+            <r>
+              <c>97 51 79 94 77</c>
+            </r>
+            <r>
+              <c>31 89 50 40  9</c>
+            </r>
+            <r>
+              <c>37 84  6 98 35</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>38 56 94 55  0</c>
+            </r>
+            <r>
+              <c>92 84  8 85 73</c>
+            </r>
+            <r>
+              <c>86 81 76 35  1</c>
+            </r>
+            <r>
+              <c>62  5 59 77 72</c>
+            </r>
+            <r>
+              <c>79 97 60 11 70</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>43 98 87 97 70</c>
+            </r>
+            <r>
+              <c>53 55 35  8 64</c>
+            </r>
+            <r>
+              <c>80 59 75 11  2</c>
+            </r>
+            <r>
+              <c>17 95 13 38 90</c>
+            </r>
+            <r>
+              <c>31 20 60 84  4</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>38 19 10 73 86</c>
+            </r>
+            <r>
+              <c>37 72 66 22 53</c>
+            </r>
+            <r>
+              <c><![CDATA[ 6 41 20 21 92]]></c>
+            </r>
+            <r>
+              <c><![CDATA[ 0 13  9 89 17]]></c>
+            </r>
+            <r>
+              <c>43 61 80 60 65</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>61 50 42 99 26</c>
+            </r>
+            <r>
+              <c>11 51 52 83 64</c>
+            </r>
+            <r>
+              <c>92 60  2 91 20</c>
+            </r>
+            <r>
+              <c>95 10 14 94 98</c>
+            </r>
+            <r>
+              <c><![CDATA[ 5 37 90 17 69]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>82 48 51 32 78</c>
+            </r>
+            <r>
+              <c>30 39 10 84 69</c>
+            </r>
+            <r>
+              <c>94  5 60 92 89</c>
+            </r>
+            <r>
+              <c>95 31 64 67 23</c>
+            </r>
+            <r>
+              <c>96 20 33 66 61</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>33 92 78 24 74</c>
+            </r>
+            <r>
+              <c>45 34 73  5 57</c>
+            </r>
+            <r>
+              <c>18 37 69 44 38</c>
+            </r>
+            <r>
+              <c>25 30 53 87 64</c>
+            </r>
+            <r>
+              <c>28 23 14 10 81</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>39 82 40 64 86</c>
+            </r>
+            <r>
+              <c>26 81  3 85 50</c>
+            </r>
+            <r>
+              <c>71 75 91 65 96</c>
+            </r>
+            <r>
+              <c>17 55  8 56 59</c>
+            </r>
+            <r>
+              <c>22 36 73 90  0</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>18 67 50 70 71</c>
+            </r>
+            <r>
+              <c>83  8 75 55 29</c>
+            </r>
+            <r>
+              <c>66 33 39 88 16</c>
+            </r>
+            <r>
+              <c>32 84 78 59  0</c>
+            </r>
+            <r>
+              <c>11  3 61 65 36</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 1 12 66 59  9]]></c>
+            </r>
+            <r>
+              <c>24 97 75 83 11</c>
+            </r>
+            <r>
+              <c>45 16 14 31 71</c>
+            </r>
+            <r>
+              <c>85 43 99 18 15</c>
+            </r>
+            <r>
+              <c>61 56 80 69 29</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>18 50 86 53 71</c>
+            </r>
+            <r>
+              <c>67 36 14 24 55</c>
+            </r>
+            <r>
+              <c>52 30 33 54 81</c>
+            </r>
+            <r>
+              <c>72 51 39 28 42</c>
+            </r>
+            <r>
+              <c>45 98 78 35 73</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>60 86 68 58 37</c>
+            </r>
+            <r>
+              <c>17 78 43 31 96</c>
+            </r>
+            <r>
+              <c>33 61 34 45 36</c>
+            </r>
+            <r>
+              <c>10 29 83 98  2</c>
+            </r>
+            <r>
+              <c>88 73  7 84 50</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>30 21 94 31  4</c>
+            </r>
+            <r>
+              <c>20 68 91 55 51</c>
+            </r>
+            <r>
+              <c>10 98  2 25 84</c>
+            </r>
+            <r>
+              <c>64 97 29 28 58</c>
+            </r>
+            <r>
+              <c>75 17 76 54 65</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>17 11 88  9 66</c>
+            </r>
+            <r>
+              <c><![CDATA[ 1 59 60 79 55]]></c>
+            </r>
+            <r>
+              <c>30 46 83 67 91</c>
+            </r>
+            <r>
+              <c>23 45 99 90  6</c>
+            </r>
+            <r>
+              <c>81 33  8 13 76</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>25 68 43 59 51</c>
+            </r>
+            <r>
+              <c>56 14 41 52 16</c>
+            </r>
+            <r>
+              <c>62 36 12 37 71</c>
+            </r>
+            <r>
+              <c>83 90 81 91  0</c>
+            </r>
+            <r>
+              <c>95 92 29 54 26</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>53 84 85 18 10</c>
+            </r>
+            <r>
+              <c>51 44 87 86 67</c>
+            </r>
+            <r>
+              <c><![CDATA[ 4 81 82 77 30]]></c>
+            </r>
+            <r>
+              <c>26 68 80 57 71</c>
+            </r>
+            <r>
+              <c>22 83 47 61 14</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>41 89 38 14 66</c>
+            </r>
+            <r>
+              <c>70 92 26 97 53</c>
+            </r>
+            <r>
+              <c>78 25  5  4 48</c>
+            </r>
+            <r>
+              <c>54 86 31 23  0</c>
+            </r>
+            <r>
+              <c>99 73  6 20 98</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>18 81 96 60 47</c>
+            </r>
+            <r>
+              <c>59 87 95 15 57</c>
+            </r>
+            <r>
+              <c>34 17 26  7 42</c>
+            </r>
+            <r>
+              <c>25 90 45 94  5</c>
+            </r>
+            <r>
+              <c>10 41 32 20 98</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>37  9 20 82 83</c>
+            </r>
+            <r>
+              <c>84 14 62  3 76</c>
+            </r>
+            <r>
+              <c>86 67 95 40 65</c>
+            </r>
+            <r>
+              <c>57 26  1 19 69</c>
+            </r>
+            <r>
+              <c>49 41 29 35 13</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>29 74 69 92 48</c>
+            </r>
+            <r>
+              <c>80 47 59 18 13</c>
+            </r>
+            <r>
+              <c>98  5 64 89 83</c>
+            </r>
+            <r>
+              <c>37 97 90 32 49</c>
+            </r>
+            <r>
+              <c>25 87 39 21 63</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 1 61  5 82 66]]></c>
+            </r>
+            <r>
+              <c>87 75 18 23 63</c>
+            </r>
+            <r>
+              <c>38 51 33 59  4</c>
+            </r>
+            <r>
+              <c>21 14 17 97 92</c>
+            </r>
+            <r>
+              <c>94 45 84 22 10</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>86 93  8 99 54</c>
+            </r>
+            <r>
+              <c><![CDATA[ 1  4 37 30 34]]></c>
+            </r>
+            <r>
+              <c>80 17 50 74 97</c>
+            </r>
+            <r>
+              <c>28 11  6 85 78</c>
+            </r>
+            <r>
+              <c>94 76 92 63 79</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>63 87 89 19 81</c>
+            </r>
+            <r>
+              <c>72 90 71 96 16</c>
+            </r>
+            <r>
+              <c>85 92 78 11 37</c>
+            </r>
+            <r>
+              <c>50 17 68 82 66</c>
+            </r>
+            <r>
+              <c>21  9 39 69 73</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>30 63 90  5 45</c>
+            </r>
+            <r>
+              <c>26 15 28 84 65</c>
+            </r>
+            <r>
+              <c><![CDATA[ 1 23  0 12 17]]></c>
+            </r>
+            <r>
+              <c>61 98 21 39 56</c>
+            </r>
+            <r>
+              <c>67 51  3  8 42</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>54 91  9 70 93</c>
+            </r>
+            <r>
+              <c>75 58 89 53 19</c>
+            </r>
+            <r>
+              <c>77 64 45 78 14</c>
+            </r>
+            <r>
+              <c><![CDATA[ 7 31 99 42 51]]></c>
+            </r>
+            <r>
+              <c>87 95 60 10 84</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>98 35 66 42 85</c>
+            </r>
+            <r>
+              <c>75 27 97 54  9</c>
+            </r>
+            <r>
+              <c>16 15 60 44 49</c>
+            </r>
+            <r>
+              <c>28 19 51 24 50</c>
+            </r>
+            <r>
+              <c>59 18 37 88 39</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>69 29 49  9 76</c>
+            </r>
+            <r>
+              <c><![CDATA[ 4 83 64 33  2]]></c>
+            </r>
+            <r>
+              <c>67 81 88 70 39</c>
+            </r>
+            <r>
+              <c>85 73 97 15  8</c>
+            </r>
+            <r>
+              <c><![CDATA[ 7 13 26 12  1]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>57  3 65 28 87</c>
+            </r>
+            <r>
+              <c>36 31 51 19  0</c>
+            </r>
+            <r>
+              <c>56 77 41 20 76</c>
+            </r>
+            <r>
+              <c>79 29 80 60 66</c>
+            </r>
+            <r>
+              <c>55 61  8 30 15</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 2 42  3 17 40]]></c>
+            </r>
+            <r>
+              <c>10 56 91 52 23</c>
+            </r>
+            <r>
+              <c>76 39 75 82 49</c>
+            </r>
+            <r>
+              <c>50 36 99  9 53</c>
+            </r>
+            <r>
+              <c>92 66 48 31 41</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>16 51 80 95 23</c>
+            </r>
+            <r>
+              <c>36 84 33 56 11</c>
+            </r>
+            <r>
+              <c>49 46 32 78 85</c>
+            </r>
+            <r>
+              <c>67 29 94 26 22</c>
+            </r>
+            <r>
+              <c>76  6 30 37  0</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>27 94 79 48  4</c>
+            </r>
+            <r>
+              <c>55 81 22 18 88</c>
+            </r>
+            <r>
+              <c>93 15 59 41 11</c>
+            </r>
+            <r>
+              <c>67 43 24 92 65</c>
+            </r>
+            <r>
+              <c><![CDATA[ 5  1 60 99 62]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 2 51 42 84 82]]></c>
+            </r>
+            <r>
+              <c>80 28 43 93 72</c>
+            </r>
+            <r>
+              <c>81 57 13 45 66</c>
+            </r>
+            <r>
+              <c>34 22 53 37  3</c>
+            </r>
+            <r>
+              <c>31 46 70 77 79</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>17 12 22 53 74</c>
+            </r>
+            <r>
+              <c>23 49 52 60 40</c>
+            </r>
+            <r>
+              <c>64 98 97 75 57</c>
+            </r>
+            <r>
+              <c>58 81 85 89 92</c>
+            </r>
+            <r>
+              <c>42 34 65 87 18</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>13  8 54 25 11</c>
+            </r>
+            <r>
+              <c>84 72 66 78  1</c>
+            </r>
+            <r>
+              <c>22 82 48 85 62</c>
+            </r>
+            <r>
+              <c>68 99 18  3 57</c>
+            </r>
+            <r>
+              <c>64 41 80 94 71</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>45  5 56 30 62</c>
+            </r>
+            <r>
+              <c>10 50 78 13 34</c>
+            </r>
+            <r>
+              <c>90 97 85 36  0</c>
+            </r>
+            <r>
+              <c>86 35 80 55 74</c>
+            </r>
+            <r>
+              <c>47 99 59 61 18</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>79 87 81 45 95</c>
+            </r>
+            <r>
+              <c>24 91 27 18 16</c>
+            </r>
+            <r>
+              <c>51 35 34 46 48</c>
+            </r>
+            <r>
+              <c>39 40  6 70 99</c>
+            </r>
+            <r>
+              <c><![CDATA[ 1 82 63 32 50]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>78 68 27 17 65</c>
+            </r>
+            <r>
+              <c>74 15 21 38 24</c>
+            </r>
+            <r>
+              <c>82 97 49  7 58</c>
+            </r>
+            <r>
+              <c>19 23 87 79 22</c>
+            </r>
+            <r>
+              <c>57 93 30  1 69</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>64 13 40 21 89</c>
+            </r>
+            <r>
+              <c><![CDATA[ 3 95 20 79 59]]></c>
+            </r>
+            <r>
+              <c>80 46 91 54  1</c>
+            </r>
+            <r>
+              <c>62 66 30 60 47</c>
+            </r>
+            <r>
+              <c>26 99 55 25  2</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>47 83  7 71 81</c>
+            </r>
+            <r>
+              <c><![CDATA[ 9 72 12 20 96]]></c>
+            </r>
+            <r>
+              <c>28 57 82 98 42</c>
+            </r>
+            <r>
+              <c>34 59 18 69  1</c>
+            </r>
+            <r>
+              <c>68 38 46 19 80</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>43 39 48 84 87</c>
+            </r>
+            <r>
+              <c>32 78  5 65 50</c>
+            </r>
+            <r>
+              <c>86 13 20 22 70</c>
+            </r>
+            <r>
+              <c>31  6 52 53 18</c>
+            </r>
+            <r>
+              <c>73 25  4 60 99</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>48 15 59 50 33</c>
+            </r>
+            <r>
+              <c>93 99 46 70 21</c>
+            </r>
+            <r>
+              <c>91 26 76 65 87</c>
+            </r>
+            <r>
+              <c>10 27 78  5 96</c>
+            </r>
+            <r>
+              <c><![CDATA[ 4 63 22 82 20]]></c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>88 63 66 48 37</c>
+            </r>
+            <r>
+              <c>39 47 56 52 27</c>
+            </r>
+            <r>
+              <c>81 18 33 12 59</c>
+            </r>
+            <r>
+              <c><![CDATA[ 3 96 55 26 43]]></c>
+            </r>
+            <r>
+              <c>42  4  7 28 22</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>95 12 98 84 23</c>
+            </r>
+            <r>
+              <c>37 35 78  9 61</c>
+            </r>
+            <r>
+              <c>52 47 24 90 17</c>
+            </r>
+            <r>
+              <c>55 87 18 80 41</c>
+            </r>
+            <r>
+              <c>38  0 14 36 48</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>62 72 56 78  8</c>
+            </r>
+            <r>
+              <c>75 26 11 58 91</c>
+            </r>
+            <r>
+              <c>38 74 52 65 45</c>
+            </r>
+            <r>
+              <c>43 41 15 82 35</c>
+            </r>
+            <r>
+              <c>89 27 21 54  0</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>43 36 85 68 60</c>
+            </r>
+            <r>
+              <c>26 89 84 10 80</c>
+            </r>
+            <r>
+              <c>87 50 75 81 35</c>
+            </r>
+            <r>
+              <c>12 46  6 70 59</c>
+            </r>
+            <r>
+              <c>93 51 66 33 49</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>68 32  0 63 54</c>
+            </r>
+            <r>
+              <c>20 92 39 89 17</c>
+            </r>
+            <r>
+              <c>48 60 87 36 14</c>
+            </r>
+            <r>
+              <c>93 76 83 10 55</c>
+            </r>
+            <r>
+              <c>64 74 80 11 41</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c><![CDATA[ 9 32 11 41 87]]></c>
+            </r>
+            <r>
+              <c>78 22  8 72 75</c>
+            </r>
+            <r>
+              <c><![CDATA[ 6 51 29 90 50]]></c>
+            </r>
+            <r>
+              <c>21 68 47  2  7</c>
+            </r>
+            <r>
+              <c>52 19 36 57 58</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>83 36 25 31 99</c>
+            </r>
+            <r>
+              <c>86 29 47 77 38</c>
+            </r>
+            <r>
+              <c>13 51 20 59 27</c>
+            </r>
+            <r>
+              <c>74 50  9 11 44</c>
+            </r>
+            <r>
+              <c>52 95 81  2 70</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>96 47 14 73 59</c>
+            </r>
+            <r>
+              <c>84 87  7  4 46</c>
+            </r>
+            <r>
+              <c>60 27 79 53 30</c>
+            </r>
+            <r>
+              <c>58 28 55  5 43</c>
+            </r>
+            <r>
+              <c>91 75 63 35 52</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>41 66 27 50 56</c>
+            </r>
+            <r>
+              <c>76 60 80 85 23</c>
+            </r>
+            <r>
+              <c><![CDATA[ 3 21 37 74 95]]></c>
+            </r>
+            <r>
+              <c><![CDATA[ 9 92 43  5 98]]></c>
+            </r>
+            <r>
+              <c>79 49 88 24 70</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>59 18 57 90 13</c>
+            </r>
+            <r>
+              <c>79 29 12  2  0</c>
+            </r>
+            <r>
+              <c>84 58 38 77 96</c>
+            </r>
+            <r>
+              <c>33 89 43 11 44</c>
+            </r>
+            <r>
+              <c>93 23 98 60 51</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>58 86 28 17  1</c>
+            </r>
+            <r>
+              <c><![CDATA[ 6  4 81 55 53]]></c>
+            </r>
+            <r>
+              <c>84 27 38 12 83</c>
+            </r>
+            <r>
+              <c>50 43 40 85 88</c>
+            </r>
+            <r>
+              <c>26 72 25 41 44</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>14 92  7 98 12</c>
+            </r>
+            <r>
+              <c>44 11 71 64 26</c>
+            </r>
+            <r>
+              <c>88  8  2 56  6</c>
+            </r>
+            <r>
+              <c>59  0 15 33 51</c>
+            </r>
+            <r>
+              <c>10 52 89 53 34</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>52  4  5 63 50</c>
+            </r>
+            <r>
+              <c>15  8 60 70 13</c>
+            </r>
+            <r>
+              <c>33 79 21 39 34</c>
+            </r>
+            <r>
+              <c>84 91 30 12 71</c>
+            </r>
+            <r>
+              <c>61 31 41  9 66</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>43 67 52 92 54</c>
+            </r>
+            <r>
+              <c>17 21 71 78 60</c>
+            </r>
+            <r>
+              <c>19  0 88 61  2</c>
+            </r>
+            <r>
+              <c>14 66 87 12 37</c>
+            </r>
+            <r>
+              <c>89 23 25  4 24</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>41 62  7 66 33</c>
+            </r>
+            <r>
+              <c>59 87 84 80 71</c>
+            </r>
+            <r>
+              <c>73 97 25 85 60</c>
+            </r>
+            <r>
+              <c>86 64 61 54 83</c>
+            </r>
+            <r>
+              <c>22 18 63 81 27</c>
+            </r>
+            <r>
+              <c />
+            </r>
+            <r>
+              <c>92 89 50 11 73</c>
+            </r>
+            <r>
+              <c>41 48 62 80 78</c>
+            </r>
+            <r>
+              <c>46 55 81 16 94</c>
+            </r>
+            <r>
+              <c>97 45  5 13 40</c>
+            </r>
+            <r>
+              <c>14 75 22 42  2</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="606" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>data</UpdateField_Name>
+          <CreateField_Name>board</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif(isempty([Row-1:data]),[Row-1:board]+1,[Row-1:board])</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif(isempty([Row-1:data]),[Row-1:board]+1,[Row-1:board])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="438" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="438" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Skip</Mode>
+          <N>2</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Skip 1st 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1302" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_b4d68149a08743599bce941cd12b7729_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="510" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="regex_replace(trim([data]),'\s+',' ')" field="data" size="70" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[data = regex_replace(trim([data]),'\s+',' ')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="798" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>data</UpdateField_Name>
+          <CreateField_Name>Row</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Row]+1</Expression>
+          <GroupByFields>
+            <Field field="board" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Row]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="894" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <Delimeters value="\s" />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="702" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-12-22 11:40:43</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2021-12-22 11:40:43</StartDate>
+              <EndDate>2021-12-22 11:40:43</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([data])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="990" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>data</UpdateField_Name>
+          <CreateField_Name>Column</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Column]+1</Expression>
+          <GroupByFields>
+            <Field field="board" />
+            <Field field="Row" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Column]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="1110" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="board" />
+            <Field field="Row" />
+          </GroupFields>
+          <HeaderField field="Column" />
+          <DataField field="data" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: iif(isempty([Row-1:data]),[Row-1:board]+1,[Row-1:board])" name="board" source="CrossTab:Group:First:" type="Int32" />
+            <Field description="Formula: [Row-1:Row]+1" name="Row" source="CrossTab:Group:First:" type="Int32" />
+            <Field description="TextToColumns: Parsed from data" name="1" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="2" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="3" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="4" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+            <Field description="TextToColumns: Parsed from data" name="5" size="289" source="TextToColumns: Parsed from data" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="board" order="Asc" />
+            <Field field="Row" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1206" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_64ad465aba844b79a03c12d9d88f24a8_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="510" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="606" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Order</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="942" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&lt;=</Operator>
+            <Field>Order</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-12-22 11:50:46</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2021-12-22 11:50:46</StartDate>
+              <EndDate>2021-12-22 11:50:46</EndDate>
+              <Operand>10</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Order] &lt;= 10</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="414" y="1218" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="data" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="data" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="534" y="1182" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="board" action="GroupBy" rename="board" />
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="data" action="Count" rename="Count" />
+            <SummarizeField field="Order" action="Max" rename="Max_Order" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="534" y="1242" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="board" action="GroupBy" rename="board" />
+            <SummarizeField field="Column" action="GroupBy" rename="Column" />
+            <SummarizeField field="Column" action="Count" rename="Count" />
+            <SummarizeField field="Order" action="Max" rename="Max_Order" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="630" y="1218" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="726" y="1410" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Max_Order" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Max_Order - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="822" y="1410" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="966" y="1218" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="board" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="board" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_board" selected="False" rename="Right_board" input="Right_" />
+                <SelectField field="Right_Row" selected="False" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Count" selected="False" input="Right_" />
+                <SelectField field="Right_Max_Order" selected="False" input="Right_" />
+                <SelectField field="Right_Column" selected="False" rename="Right_Column" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="966" y="1134" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_board" selected="False" input="Source_" />
+                <SelectField field="Source_Row" selected="False" input="Source_" />
+                <SelectField field="Source_Count" selected="False" input="Source_" />
+                <SelectField field="Source_Column" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1062" y="1134" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Order] &lt;= [Max_Order]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Order] &lt;= [Max_Order]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1350" y="1218" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="data" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="data" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_data" selected="False" rename="Right_data" input="Right_" />
+                <SelectField field="Right_board" selected="False" rename="Right_board" input="Right_" />
+                <SelectField field="Right_Row" selected="False" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Column" selected="False" rename="Right_Column" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1206" y="1398" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Order] = [Max_Order]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Order] = [Max_Order]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1446" y="1134" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_cd45e1157c2944ea87f9fb0759647bb3_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1446" y="1218" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_d9e44ef51005413dac52d98168f6963d_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1830" y="1290" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_28004_c03019df95ea4af4ad452ac120635e05_\Engine_28996_4126c9742434429aa8bdd6969513500e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1638" y="1290" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Order" selected="False" input="Source_" />
+                <SelectField field="Source_data" selected="True" rename="Last_data" input="Source_" type="Int32" size="4" />
+                <SelectField field="Source_Max_Order" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1542" y="1266" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="data" action="Sum" rename="Sum_data" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1446" y="1266" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1734" y="1290" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Sum_data]*[Last_data]" field="answer" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[answer = [Sum_data]*[Last_data]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="294" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="630" y="1122" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="board" action="GroupBy" rename="board" />
+            <SummarizeField field="Max_Order" action="Min" rename="EarliestWinTurn" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="702" y="1122" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="EarliestWinTurn" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>EarliestWinTurn - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="786" y="1122" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="1266" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="EarliestWinTurn" selected="True" rename="Max_Order" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="18" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="18" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="25" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="26" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="26" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Join" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Join" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Join" />
+      <Destination ToolID="28" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="True" />
+      <Destination ToolID="28" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="True" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Left" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Join" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Right" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="True" />
+      <Destination ToolID="34" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="34" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="True" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="55" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="55" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="61" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="61" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="62" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="62" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="True" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Join" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Join" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Join" />
+      <Destination ToolID="64" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="True" />
+      <Destination ToolID="64" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="True" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Left" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Join" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Right" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="True" />
+      <Destination ToolID="69" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="69" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day04</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="fc2268b5-78df-4075-957d-41b717d9e132" />
+      <Telemetry>
+        <PreviousWorkflowId value="aae122bd-c2c5-4ca8-942d-a8b2289f603b" />
+        <OriginWorkflowId value="aae122bd-c2c5-4ca8-942d-a8b2289f603b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

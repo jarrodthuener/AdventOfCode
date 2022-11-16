@@ -1,0 +1,2199 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="Field1" />
+          </Fields>
+          <Data>
+            <r>
+              <c>be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe</c>
+            </r>
+            <r>
+              <c>edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec |fcgedb cgb dgebacf gc</c>
+            </r>
+            <r>
+              <c>fgaebd cg bdaec gdafb agbcfd gdcbef bgcad gfac gcb cdgabef |cg cg fdcagb cbg</c>
+            </r>
+            <r>
+              <c>fbegcd cbd adcefb dageb afcb bc aefdc ecdab fgdeca fcdbega |efabcd cedba gadfec cb</c>
+            </r>
+            <r>
+              <c>aecbfdg fbg gf bafeg dbefa fcge gcbea fcaegb dgceab fcbdga |gecf egdcabf bgf bfgea</c>
+            </r>
+            <r>
+              <c>fgeab ca afcebg bdacfeg cfaedg gcfdb baec bfadeg bafgc acf |gebdcfa ecba ca fadegcb</c>
+            </r>
+            <r>
+              <c>dbcfg fgd bdegcaf fgec aegbdf ecdfab fbedc dacgb gdcebf gf |cefg dcbef fcge gbcadfe</c>
+            </r>
+            <r>
+              <c>bdfegc cbegaf gecbf dfcage bdacg ed bedf ced adcbefg gebcd |ed bcgafe cdgba cbgef</c>
+            </r>
+            <r>
+              <c>egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg |gbdfcae bgc cg cgb</c>
+            </r>
+            <r>
+              <c>gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc |fgae cfgab fg bagce</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="714" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Length([2])" field="Length" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Length = Length([2])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="858" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Length" action="GroupBy" rename="Length" />
+            <SummarizeField field="Length" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="954" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>tostring([Length]) in ('2','3','4','7')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>tostring([Length]) in ('2','3','4','7')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1086" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Count" action="Sum" rename="Sum_Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="102" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="200" />
+          <Fields>
+            <Field name="Field1" />
+          </Fields>
+          <Data>
+            <r>
+              <c>fdeba beagfd gbafe dagb dbf ecfad bd dgcaefb fbecgd abfecg | dgba dfb ecadf bdf</c>
+            </r>
+            <r>
+              <c>dgfc egdbaf afgcbe eafdbcg bcgad bdg fdbacg gd ecabd bafgc | gd gbd dg febgac</c>
+            </r>
+            <r>
+              <c>dfebc bceadf ebacf gdceb fd dfea cdgfba afbgec dfb fdaecbg | cgafbde efbagc faed gecdb</c>
+            </r>
+            <r>
+              <c>dbaef fabgd fcaedb cgadf aefbgd cabefg gfb bceagdf bg ebdg | gdbfae geafdbc bafgdce dbgfa</c>
+            </r>
+            <r>
+              <c>aebgd adg dg dgcabef facedg cfaebd dfbega begca bfgd dbafe | abdecf eafbd fdgb ebdfgca</c>
+            </r>
+            <r>
+              <c>bae febac abcgf eabfgd cbagfd gefcba abedfcg efcda eb becg | fcgab gafbed aedcfbg eb</c>
+            </r>
+            <r>
+              <c>edbcg ba afcdeg gbaedf gcabdf eabf bagde bga deabgcf edfga | aebf ab bdfecag abfe</c>
+            </r>
+            <r>
+              <c>dbae dgfec egfbd fbgaed feb fcabdg be bfgda facebgd baefcg | bagecf efb eb fbcgad</c>
+            </r>
+            <r>
+              <c>cdagbef cd bdgcf efcbg adbgf cdga egdabf acbdfg cdf caebfd | fbdga fcd fcd adcg</c>
+            </r>
+            <r>
+              <c>abceg dbgca acfd ebagfdc dbecfg gdfbea dc dcg abfdcg gfbad | cdg dbcagf acdf gbcdef</c>
+            </r>
+            <r>
+              <c>bcdag acdgbef ebcdag facd dfgbe cfg bfagdc fc fbcgd bgfaec | fc dafbcg fc cbdgae</c>
+            </r>
+            <r>
+              <c>ca feacgb cedfgb bgaed gbaec acefdgb bfcge eafgcd acg fbac | ca cag gac becga</c>
+            </r>
+            <r>
+              <c>gbdcfa afdcb cebd fadce cbgfdea aec cdebfa ce caegfb daegf | aedfbgc eca eca cebd</c>
+            </r>
+            <r>
+              <c>cb dcb fdbegc bgaed fcba dacgfe efcadb dceaf eacgfbd dbaec | cbd cb bagde dcb</c>
+            </r>
+            <r>
+              <c>debgf gaecdfb gcbef cbgaf fbecag bce bgfcda ce aefc ebdgca | ebcfgad ec gefcba bec</c>
+            </r>
+            <r>
+              <c>cdbfega ae cedaf bedgcf ebac efadbg afcedb afe fgadc cdfbe | fabedcg cafbed efa badgcef</c>
+            </r>
+            <r>
+              <c>aceg bcafgde deacgb fdcgab dacgb eafbcd dgcbe bdfge bce ce | dbfge bdcafg fbdcga ebdfg</c>
+            </r>
+            <r>
+              <c>efcbda fcgbe efdgc efgdcab cagbe cbf bagf ecagdb bacefg fb | fgab aecgb acfgbe agecfbd</c>
+            </r>
+            <r>
+              <c>bcgd egafb adgbcf cafged cegadfb gd dgf dbfag dfeacb dcabf | adbcf dg gd dgf</c>
+            </r>
+            <r>
+              <c>bgeca fgcbe fcgd egfbd bcgdfe fc agbdef ecf dafgecb bdafec | fc febdag cgfd dfcbgae</c>
+            </r>
+            <r>
+              <c>agb dbfa gbafcde afgcbe edfgb bagde cfdegb gbdefa ba caged | bdfa bafd cfdgeba agb</c>
+            </r>
+            <r>
+              <c>bdf baefcdg df cafbgd bdcgef bcdeag bcgad cadf gfbad fbeag | ebacfgd facd cdgfbe df</c>
+            </r>
+            <r>
+              <c>edagc egbcfad bcfdge agbdcf fbdage dcabg bga bgfdc fbca ba | cebgfda gdcfabe gfcdba bag</c>
+            </r>
+            <r>
+              <c>bgaf af bcdfge ecfagd fgcdb beacd gdecbfa bcafd fac bfdgac | bagcedf fbedgc ebfgdc gbfa</c>
+            </r>
+            <r>
+              <c>fagbdc fagdeb cebgf cbd ecagdb cade dagcebf dc becdg geabd | gfbadec cdae dbc bcefg</c>
+            </r>
+            <r>
+              <c>dgfbeac abfge dcefag cga cgbd baced gc adfebc ecbag aedgbc | bfcaged gac gebaf egdafc</c>
+            </r>
+            <r>
+              <c>cfdbe afge fa gdfbeca agfcbd abedgc fac cafbe ecfgab acgeb | adcfgeb bcadfg ebfac cfa</c>
+            </r>
+            <r>
+              <c>gebdcf cdbga eag ae dagecbf bgdfe ebgfad gabed dagfec feab | fadgecb fgbced dgcab ega</c>
+            </r>
+            <r>
+              <c>gf gcbaf gfdc agf eafcb cadebfg cgfabd dbagc agdcbe egfbda | gf beafc fga fcgd</c>
+            </r>
+            <r>
+              <c>cbed ebgad gadbfe bc bcfgea gebacd gceadfb cgfad cbg abcgd | bacdg afbegdc bgc bcagdfe</c>
+            </r>
+            <r>
+              <c>fdg dg acgfdbe gafdec cfbdg ebfgc gdeb bdcgef fbegca fbdca | fdg edbg edbg cgfbe</c>
+            </r>
+            <r>
+              <c>gfcbaed gfceda cadbg gafdb ca adc fbca dfcabg cedbg aegfdb | ca becadfg dcefga ca</c>
+            </r>
+            <r>
+              <c>agfcbd edcabg cdf cdgfabe debgcf fdgca bfac gdcab cf gedaf | fc cdf cf bcagdef</c>
+            </r>
+            <r>
+              <c>cdagb bae ea cdfebg febacd egdfb gdacfbe feag aedfbg gdabe | ea gefa agbde afge</c>
+            </r>
+            <r>
+              <c>dab cgaedb cafbg faced bdfe bd gfdeca dafgbec fcbda cadbef | db edfb bd dcafe</c>
+            </r>
+            <r>
+              <c>bde cbaed dcbf ecbag fcbdae acgfde dgafebc db fbdgea dacfe | cadbe bcdf afebdg dcgfea</c>
+            </r>
+            <r>
+              <c>ag fgaecd egcbdaf ebacd gad dagbfe cfga fcegd dcbgfe gaced | dag ag gda gacf</c>
+            </r>
+            <r>
+              <c>fdaegb dcgefa bfdec geca ge fge cdbafg decbgaf ecdfg cagdf | gdefc cgea dfacgb gedbaf</c>
+            </r>
+            <r>
+              <c>ecgfab cgbdea dgabf dcfb bd dgcabf fgdeacb dba efagd cfabg | dab adb bfdc fcdbag</c>
+            </r>
+            <r>
+              <c>dfcae cfegbd ade cdeabg egacdf gcfde da becfadg agfd efcba | ade aed dfga ade</c>
+            </r>
+            <r>
+              <c>fdgeab adcbgfe edfca cebad gdbace dgcb beafgc bac cb gdeba | bdcea bgdc dagcfeb abc</c>
+            </r>
+            <r>
+              <c>cabdge fdgae fbgc fedgcb gfebacd dfbeg bf bdf ecgbd adecfb | fb aegfbcd bdf fbacged</c>
+            </r>
+            <r>
+              <c>dfbgec feacgdb ca adgec cda ecba gdaef degbc abfdgc gdceab | ca dabfegc ca acdeg</c>
+            </r>
+            <r>
+              <c>abd fbagec gfdbea dagc ad fcdbega bafcdg facbg ecbdf fbcad | edfagb bcedf dba fbdcag</c>
+            </r>
+            <r>
+              <c>abf ebfdcg fgcdbae faegc bdgacf bfdec bade ceafdb ba eacbf | fab fbdaecg dcabfg ba</c>
+            </r>
+            <r>
+              <c>ebcgf aedcb gbaecfd gd cgdeb cadfeb edga bdfgca cbgead cdg | adge fgbec cgd dgbcfa</c>
+            </r>
+            <r>
+              <c>gdcaef dcgbe fbcdage bacge aec ea bfea bcafg aegbcf cfdgab | bfea gfecadb gbafc gedafcb</c>
+            </r>
+            <r>
+              <c>facg aebfg ecfba bfaecd fbdge badcfeg cfgeba ega cadebg ag | fgca bdgef gafc acgf</c>
+            </r>
+            <r>
+              <c>dacefg eb bdecf acbfge ecb bfcda decgf cgdebaf cbfgde gbde | bdge ecbfgd feacbgd efdabcg</c>
+            </r>
+            <r>
+              <c>bd fbd bfcgde egbaf dafgceb cefgda fcbdae dfgeb gcdb cgfde | dfbceag bd fgbdec gdbfec</c>
+            </r>
+            <r>
+              <c>gbdacf dacebf adgfbe aedfb acgbedf eacf ca dac aedcb bedgc | ca cad fcbdaeg bdagcf</c>
+            </r>
+            <r>
+              <c>cbd egdba ebfdga efadc gcdfabe bc decbga dbaec gfbecd bcag | cdb egdba acbg acgb</c>
+            </r>
+            <r>
+              <c>eacb fdeab fgcade cbdaf dea cfebgda ae bdegf cebdaf fgdcab | ae facbdg bdfecga baec</c>
+            </r>
+            <r>
+              <c>cfd adbce cf bcdafg fcedb cbedfag fdgbe faegdb fceg gdcbef | fegc cf gfdabe adbcgf</c>
+            </r>
+            <r>
+              <c>gfbdeac efdgac gcfb edbagf cebda cafeb abf cgfeab bf gacfe | abfce cadefgb abf abfce</c>
+            </r>
+            <r>
+              <c>dcfge fabgec beg abdg gbaedcf gcdbe bg ebcad cfdaeb ebagcd | bgdaec gbe gb gb</c>
+            </r>
+            <r>
+              <c>aecb daefbg ebdfc aedfcg efbad cdgabfe cfgdb fdbeca ce cfe | fce ce aceb ec</c>
+            </r>
+            <r>
+              <c>gadebf fg fga acbgfe agbcd deabf bdagf cedbfa dbafceg dfeg | fg afg gaf fg</c>
+            </r>
+            <r>
+              <c>afed cdbge dag gabfe fagbde gadbcf adebg ad agfecb gedfabc | da geabf fgcbad gad</c>
+            </r>
+            <r>
+              <c>de gcdeaf agbcedf efacg gdcea efgacb edc fegd adcgb daecbf | edc ecd de dgceaf</c>
+            </r>
+            <r>
+              <c>becadgf edagfc fcg edbagf cg adfgcb dfega acgfe gecd bfeca | cgf cg gcde cg</c>
+            </r>
+            <r>
+              <c>cfaed agcedf db dfcbe bcd dbefca dcbgfa gbecf dcaegfb bdea | dagbcef bcd fegcb eabd</c>
+            </r>
+            <r>
+              <c>fcdagb ca aedfcgb fca gafbd abegfd afbcg fbgce aefcbd acdg | acf adcg efbgc ca</c>
+            </r>
+            <r>
+              <c>da dcefgba cdgef egcabf baed fagbcd fadbge dag faebg agedf | fcegab abde gad dbgfae</c>
+            </r>
+            <r>
+              <c>fbdec cdaeb dac dbage egca ecbdgaf debcga ca abdgfe dagcbf | efbcd adgefbc gbefacd ca</c>
+            </r>
+            <r>
+              <c>bfdecg dbaecg fcd bedaf fc dcbafg cegf fcdeb cbdfage bcdeg | egcf fbade cfd dbafgec</c>
+            </r>
+            <r>
+              <c>cg cadegb badfce gfdc agfbc cadbf egafb dbecfag cbg dagcbf | bagdcf fgcbda cbg dgcf</c>
+            </r>
+            <r>
+              <c>acgbf afbged fcadgb dcefg gebcaf ad adcb acdefbg cdgfa daf | dgcefab egbfacd gabefc cdab</c>
+            </r>
+            <r>
+              <c>dgb ecfbd fbgcd aegdbcf adcfg gfba gbaced acfgde fcabgd bg | dbg gb efdcb dbgcae</c>
+            </r>
+            <r>
+              <c>febg bcfaed efagdc fba ebafgc aecbgdf fegca bcgad bf acfbg | febgacd bfeg afb fb</c>
+            </r>
+            <r>
+              <c>adc ebdfacg ad badec efbdcg fade bcgdaf faedbc baecg cbfde | da edgbcf da edfa</c>
+            </r>
+            <r>
+              <c>afbgd agdcef dc cda bedcag cgaefb fdec cgfae fgadc deabgfc | cd cfage cedf fecd</c>
+            </r>
+            <r>
+              <c>facbe edcbf ebdgac fa dfgeac gaebc acf cfaegb dcfegba bfag | ebfac gcebad fac fa</c>
+            </r>
+            <r>
+              <c>cfebdag daecfb bg gecbdf ebagc ecagd gbe abfgec gabf ebfac | gbe afcbe gecdabf gb</c>
+            </r>
+            <r>
+              <c>bgefdca fecbgd ec bce cedab ecaf bdeafg cgbda dbaef bcfdae | bfecgd cefa fdeabc ce</c>
+            </r>
+            <r>
+              <c>gedbac cbade edfgbac gabfe cfaeb caf fc dcbf cdfbea cdefga | acf dafcbe cdfb dfabceg</c>
+            </r>
+            <r>
+              <c>cfgaed cbda abgfde cea abcdfeg adcgbe ac fcbge egdab eagbc | bcda ac ac ac</c>
+            </r>
+            <r>
+              <c>cbfaged afdgec ed fdea edcfg dce fdgac bfdagc fecbg ebcdga | fcabgd bfegc fcedag gfdabc</c>
+            </r>
+            <r>
+              <c>gafec afegb bgafed bafd fb egbda edbgac cedgfb ebf bedgfca | cgefbd bef edcgfb fb</c>
+            </r>
+            <r>
+              <c>cf gfc fecgd cebf dgecbaf faedgb afbgcd dcaeg efbdg dbcefg | fecb edfgcb ebgafd bfadgc</c>
+            </r>
+            <r>
+              <c>ea gafecd fbgac fcedb defcab fbeca bfdcge baed dabfceg fae | gbefcd ebda beda fae</c>
+            </r>
+            <r>
+              <c>afdgb acg aefdgc cebgd ac begdfac dacbfg gbcad abgfde cfab | abgdc abcf bacf ca</c>
+            </r>
+            <r>
+              <c>cdbga acedbg gefcd abdf fac af bfgaec ecfagdb gfdac bcdfag | caf bfad fa caf</c>
+            </r>
+            <r>
+              <c>edcagf feadg dab adgeb gceab dgfabc fdbe befcadg fagbed bd | dab dgabef dgebcaf bd</c>
+            </r>
+            <r>
+              <c>bga baedg abdc ab gefdb gadceb gcdae aedgcbf gcebaf cfdega | gab cdab dagcfeb dafebgc</c>
+            </r>
+            <r>
+              <c>afb eabdgf eafgcb gcdabe ecfa edbgfac fbdgc fa bacfg ceagb | cefa fab baf aebcgfd</c>
+            </r>
+            <r>
+              <c>da gdbcef facdeg dafbc efdcb adc edba gbcfa acdbef deafcbg | da ad defbgc ad</c>
+            </r>
+            <r>
+              <c>acbg ecbdg ecbgfda gdabec bg daefbc cefgd dceba dgb afebdg | bg edfcg gb efcgdab</c>
+            </r>
+            <r>
+              <c>dgbeca befcd gcfaed edgac agefcbd ceadb ba abe gcba daebgf | aeb acbg efgadc becgda</c>
+            </r>
+            <r>
+              <c>cgbafde ed bdce gde bdaegc eagbfd cgbad eadgc facbgd cgfae | gfdacbe fdegacb de deg</c>
+            </r>
+            <r>
+              <c>deacfbg afc dfcea cgaed gdbcea cf dcfg fbeacg gdfcae baedf | dbcaefg fdcg acgdebf gdfc</c>
+            </r>
+            <r>
+              <c>gca fagdbe cedbgaf dgbc gdaec badeg edafc gc abedcg afbgec | gac dgbae gdcb bgdc</c>
+            </r>
+            <r>
+              <c>cdfeab dbcfa bdg bg fgbc adcgb gdfeab ecgbdfa gdeca cfadgb | bedgacf acbdfg gdb bg</c>
+            </r>
+            <r>
+              <c>gbfec bgfde gacedb fcgea cb cgeafd bcg aebgcf gdaebcf afbc | cafbge abfc adbgfec bcg</c>
+            </r>
+            <r>
+              <c>edgf bcgef edcgfb gfcabd fbdcae ef efc acebg gcbdfea fgcdb | fdge fe dabcfg aefdcb</c>
+            </r>
+            <r>
+              <c>cdbafge agdebc bcg dfbgac cged ebagd degafb bfcea gc caegb | bcg edbga fcgdab debga</c>
+            </r>
+            <r>
+              <c>ea dagfbe fae fcdgbe gfaecbd decfb dacbfe abec gdafc caedf | defcba ebgdafc ceab gbcafde</c>
+            </r>
+            <r>
+              <c>dg cefga bfaed fdecgb bdag bdaecfg fgedab edg adfecb efdag | dgab gfcae bedgfc cgfdeab</c>
+            </r>
+            <r>
+              <c>degcfb bdcfg edgb cdfab bcadgef fgcdea gdf becfg dg egfbca | gd ceabgfd efcbagd bedg</c>
+            </r>
+            <r>
+              <c>dfbg bcgeda faecdg dab bfaec dbegacf geafd eabfd agbfde db | dab adfegbc db bd</c>
+            </r>
+            <r>
+              <c>ecfagdb db gadecb dagfb caefgb gbd fbeag facgd bdfe efadgb | bfedagc db dgb cagfd</c>
+            </r>
+            <r>
+              <c>edbcga fcdgbe ebcdg bcfage fb bfcgd bgf gcdaf bgfcdea fbde | dgcbf fbg gbf fdgcb</c>
+            </r>
+            <r>
+              <c>efagd eb dafcgb ebfad eabdgcf cbed aecfbd egbcfa feb adcbf | be eb eb bfe</c>
+            </r>
+            <r>
+              <c>bdge fdabce begfcd gcbdf bd ebfgc fadcg dagecbf dfb bcafge | gfacd dbf bgcaedf dgfca</c>
+            </r>
+            <r>
+              <c>geacf cfb gbfcde dfbga bc fbadgce fgdcba cabgf fdaegb dacb | dfagcb cafdebg acfbdg fcdgeba</c>
+            </r>
+            <r>
+              <c>fecdbg gbcaf ebgacfd acgfed gbad gb fbaec afcgd bafdcg fgb | gcbefd egfdbc fgb fgb</c>
+            </r>
+            <r>
+              <c>fdce ebagf fdcegb fgacbd dcbeg geadbc cf gebcf gabefdc cbf | edfc cfdgab decbg fc</c>
+            </r>
+            <r>
+              <c>adcfeg cfgad efgcdba fecda fec gabcdf ef bacde bfdceg gefa | ef edafc ef fgcdab</c>
+            </r>
+            <r>
+              <c>afeb fbegd daefg agdbcfe agdcf ega adbegc dbgafe efcdbg ae | abedcg efbgcd fgcad cdegba</c>
+            </r>
+            <r>
+              <c>fdegbca gefbda egbf dbagc gfd bgdaf adgfec fg bfead dfceab | fdg abcdegf gadebf decfgba</c>
+            </r>
+            <r>
+              <c>dbcaef debfgc gfebdca bcaed ad baceg dca deaf edfbc dagcfb | acd dafe fbdecg adef</c>
+            </r>
+            <r>
+              <c>beadc fc faedc dbafeg gdfea gafc fegcad cgebadf dfgbec fcd | cdf deacgf gefda cf</c>
+            </r>
+            <r>
+              <c>fdaceg edgacb dbcg cda cd ebfad acbeg gdfbace dbaec bcfeag | deabf bcgd cdgb defgca</c>
+            </r>
+            <r>
+              <c>fgcebd dgbcae bfcgad ga bga bfcgd gbfda acfg dbafe fbcgead | bedcgf dbfgc gfac acfbgd</c>
+            </r>
+            <r>
+              <c>cfaebdg dcg gedbfc gefdba egafcd dc cbde bedfg bcgdf cabgf | dbacfeg feadgb dcbgf fbgdae</c>
+            </r>
+            <r>
+              <c>fagcbd fedbg fcabge ebgad cbfdg cfedgab feb fdce dfcgeb ef | cfde fgedb bdgecf ef</c>
+            </r>
+            <r>
+              <c>becgdf efcbda cgbd gdcfe gc gaedf efbcd cfg fbegcad gbfcae | fcg cdefbg gafed efadg</c>
+            </r>
+            <r>
+              <c>da adbcgef dacf eadfcb bfcage eafbc ceabd begfda bdceg bda | da da acbedf bagcfe</c>
+            </r>
+            <r>
+              <c>agebf adfb fabedg cgafde dga beadfcg cdbeg egbad cfabeg da | dfegba dafgbce egdbc fecbdga</c>
+            </r>
+            <r>
+              <c>eac fcdabeg gdabc ebadc bcge gfecad deafb bdgfac dgaecb ce | cea ec cegabdf gadcb</c>
+            </r>
+            <r>
+              <c>gfedbc gcdfb ecdfga df cfegba defb dbcga gdf cgfbead ecgbf | facbged dfg bfed cfbedag</c>
+            </r>
+            <r>
+              <c>agbde bgdfca deacgb agbef aebcgdf afg fbecg aedbfg afed af | daef fga fga gdefab</c>
+            </r>
+            <r>
+              <c>gfbac gaecdb baefc fdebgca fgbadc ec adbef efgc fabegc cea | cae eac gfdcbea fceg</c>
+            </r>
+            <r>
+              <c>ec dagbc cagfbd adbecg bfdge gebcdaf ced gdebc fagced bcea | gdbeca dec agcdb aebc</c>
+            </r>
+            <r>
+              <c>geab ebgdfa eafbd dafbc efdgb aed ae bgcaefd dcegfb aegdcf | ebga ade ebfdg dgafceb</c>
+            </r>
+            <r>
+              <c>bdaeg aebcd cgebad dbc cb fecbgd dafce bcgfdea gcab gfdbae | cbga cbag cdb bagc</c>
+            </r>
+            <r>
+              <c>dfb egfbdc ceabdfg cfbae fgbade fdbec bd gedfc deafgc cbdg | ebfgdca fdgbec caebdgf db</c>
+            </r>
+            <r>
+              <c>dfcaeg bagcefd fceab ad dae faedb fcabed ebfgd fcabeg adcb | dea ad ebgfd da</c>
+            </r>
+            <r>
+              <c>afgcd acgebf da agbdfc cad gcdfe dagb dafbec dagbefc abcgf | fgcde beagcfd cebafg da</c>
+            </r>
+            <r>
+              <c>cabd bce cb cfbdea adbef agcfbe aebcdfg fabdeg dgcfe fbdec | ebc gfcabe egcfd fedab</c>
+            </r>
+            <r>
+              <c>efcbga cgfbaed bcfga ecgbf egdbc deabfc fdgcba fage fce ef | ecgbdaf gdecabf bdceg febcga</c>
+            </r>
+            <r>
+              <c>gbcda ad gacfb dba gfacbd fbgdeca aecbfg fdac gfabde bdgce | dab bdgafce bcegd abegdfc</c>
+            </r>
+            <r>
+              <c>fcaegb baegdf gfaced gedfa dcebg dbgea agedcbf abdf bga ba | bag fabd bgfcea bga</c>
+            </r>
+            <r>
+              <c>ebafg gdebafc gedacb gcdefb agbdfc cf gebcd gcf cfde cgbfe | fdgaecb dfbcega cfg fc</c>
+            </r>
+            <r>
+              <c>fce cbaedf cgbaedf ec bfega dcea agbdfc bfdegc dacbf cefab | ce efabg faebcd gdecbaf</c>
+            </r>
+            <r>
+              <c>dcfbg fd egcdba efcgb bfad cefagd abegdfc gcafdb cabgd fdg | bafd egfbc cdgabf gfebc</c>
+            </r>
+            <r>
+              <c>abfegc gecdabf cedb bdg dgcbf gaebdf db fgacd ecfgb egcfdb | bdegaf gfaebd gcefb cdbe</c>
+            </r>
+            <r>
+              <c>bafeg febdac ged bfcedg gd cbafedg edcaf gafdce cagd fadge | fgcdae daebgcf dagc fadeg</c>
+            </r>
+            <r>
+              <c>cfdegb efdc gcadbe gdbaf ebadgfc fc gdebc dfcgb fgc egcbaf | fc cf cfed cf</c>
+            </r>
+            <r>
+              <c>aecfgd efgab bdagfc cedf cge agfce afcdg cdeabg dgbaefc ec | gce gce ec cegfadb</c>
+            </r>
+            <r>
+              <c>eagdbc ga fecbda ecdaf fdgbc abgdcef afdcg fega cag eafgdc | cga ag ag ag</c>
+            </r>
+            <r>
+              <c>fabedg cedg cbefga dga gacedf gd fdcga afecg bfdac gabfedc | fgeca gdec fdacg gda</c>
+            </r>
+            <r>
+              <c>begadc gcfeab dgcba defbac gc fbdag agdebcf degc cag abecd | gcde gca cdge cg</c>
+            </r>
+            <r>
+              <c>fd dcgba gdbfca afedcgb gbadef cagfe fad dfcb acgfd dacgeb | cbgdea fd cfdb afegbdc</c>
+            </r>
+            <r>
+              <c>fb fceab fdeb bgfaced acdfbe gbcafd cdabe abf agcef baecdg | bf fb gdebac bf</c>
+            </r>
+            <r>
+              <c>df fdb egcbd gfed bcaegd abcfg ceadbf egcdbf aegfdcb dbgfc | begdac fdb acefbd dgbec</c>
+            </r>
+            <r>
+              <c>bgedfa dg bdcgeaf cbfad decg efcdga aecgfb aegcf cgdfa gad | egfac dg gedc dga</c>
+            </r>
+            <r>
+              <c>gadfe cfgead cdgbae cfage de dbceagf ecgafb cfed dea fgbad | ade fecag aefgc fcagbed</c>
+            </r>
+            <r>
+              <c>dfab gaecbd degfc bcegfa dgebfa edb ebdfg dbceagf gafeb bd | gbaef bafd agcfbe bfcadeg</c>
+            </r>
+            <r>
+              <c>edcbg dgbfc bdfecag cfegbd eg gebfda dcaeb afcdgb cgef ebg | fceabdg gdfbec beg fdbgc</c>
+            </r>
+            <r>
+              <c>ba gfbdec gacfd bfcdae caeb egbfacd cbedf edabgf bad cadbf | becfdg aecb bad efgcdb</c>
+            </r>
+            <r>
+              <c>gba dabgfec ga fbadc dafgcb fdabg dbecaf agfceb cdag bfegd | dfeabc gab gfabd abg</c>
+            </r>
+            <r>
+              <c>abgdf gcabfd cgabde agedfcb ab cegfda dbfeg afcgd acfb gba | bcfa dgefca dfcagb ba</c>
+            </r>
+            <r>
+              <c>bdecf dgebfc bgcd fdgae gec cg gbacef bacefd cgedf afbecgd | abegfc egfcd cg gbedafc</c>
+            </r>
+            <r>
+              <c>gdecbfa cd bfcagd fagec dfcae dcf adgcfe eabfd cdge gcbeaf | cd dfc dcf gcfbae</c>
+            </r>
+            <r>
+              <c>fdecb adfce bc ecagbd bdc facgedb bfac fbged egdacf fcadbe | daefc efcgda bcd dagcfeb</c>
+            </r>
+            <r>
+              <c>fgdba fbae bcafedg dfgebc fag cbgad gedacf gdfeb fbdage fa | dbfag fdbeacg bgedaf bfae</c>
+            </r>
+            <r>
+              <c>dafbg abfed fe eaf degbca fegabc bafdec dcef aedbc afdcegb | fe fe ebfcag dacgefb</c>
+            </r>
+            <r>
+              <c>adcegb cf dceab caef ebgadfc dcabfe cbdfe fbc degbf gbdfca | cf afce aecgdb cf</c>
+            </r>
+            <r>
+              <c>cebdfag acfgbd gcbef bcf dfegc bf egacfd bfde gbfdec abceg | dbef cbf cfgde cbf</c>
+            </r>
+            <r>
+              <c>bgfaedc gcdfb cadbge fdac bgfdac cf eabfgc bfc acdbg fgbed | cafd fbdagc bdgac cf</c>
+            </r>
+            <r>
+              <c>fgdc fgceab edf feadg beadfc bdgae egdcfba efagc fd cdagef | fed gfdcaeb cgaef fedgca</c>
+            </r>
+            <r>
+              <c>bfg ecabg cabdgfe fdgc fgbac dafbge gf fcdbag fadcbe fdcab | bdagecf fgbdaec fdcgeab fg</c>
+            </r>
+            <r>
+              <c>aefdgb agcfe dfeca dgecfa feg deabgfc ge gacfb defabc dceg | efg edfca egf aefcdg</c>
+            </r>
+            <r>
+              <c>afbeg fagd adgfbe abefcdg bdefca ga gab ecdgab abefd bgfce | fgad fdag dgcbeaf ga</c>
+            </r>
+            <r>
+              <c>fbgea ebfgdca badegc bac cb gceba eadcgf daegc gcdafb bedc | cgbdefa bc bc dabecgf</c>
+            </r>
+            <r>
+              <c>cfbega dgba gb fbegd gdeabf bfcadeg egdcf fgb badef fdbaec | gadb facbdge cfgdbae eadbf</c>
+            </r>
+            <r>
+              <c>gdecaf fabed bdgcae dcgfba ce bdfegca dcaeb gbcda cae ebgc | afdgce dcbegfa egdcfba bgfcad</c>
+            </r>
+            <r>
+              <c>bcgdfa cda agecfdb cedba cafdeb caefbg abfec edcf debag cd | cda cda dc ecabd</c>
+            </r>
+            <r>
+              <c>fdbagce abfc cageb cagfe eba gadefc dgcbe adebgf geafbc ab | ab edbagf afbc facb</c>
+            </r>
+            <r>
+              <c>gcdfa cadeg dcaeb adcegf gfcdba fcabgde ge gfed gea gfeacb | cadgf gae dagfbc gfed</c>
+            </r>
+            <r>
+              <c>bfegdac gcabf fdg adgfb gefdcb gd abfed gdae dfgbae befacd | dega bfgdec dfg daefbg</c>
+            </r>
+            <r>
+              <c>acebgd ceg gcabd afcbgde ebcd afbdcg cbgea ec gbfae gdfeac | gce afbeg adcgb abedcgf</c>
+            </r>
+            <r>
+              <c>degfab fbade ac acdf feacb dgcbea cfbge abc dgfaecb bdecfa | adfc cdaebg ca acb</c>
+            </r>
+            <r>
+              <c>adegcfb gf acfdbe ecfdb dgceaf dgfbe dgbae feg fcbg dfcbge | gf fg fg gf</c>
+            </r>
+            <r>
+              <c>fbacde gfacbe eg dcge fdbga beg bedgcf dcbef fcbaedg bgfde | cged edcg bgedf ge</c>
+            </r>
+            <r>
+              <c>dgafc dfbegc fagbed cfba adfbcg cfg cf dabfg gafcdbe dgaec | dgbface fcgad cfg fadgc</c>
+            </r>
+            <r>
+              <c>defcga gdfc afc cadebf bceag degaf fc gaedfb dabcgfe eagfc | adfge dgfc edcfab fgcd</c>
+            </r>
+            <r>
+              <c>dcefb feb gcdeb efdg fcagbe becgad bfcda gabfdec fe ebfdgc | ecbagf ef dfge decbf</c>
+            </r>
+            <r>
+              <c>fgebac faegb gcebfad fb fecga bgf ecbf abged gcefad fbgacd | fb fbeag fbega bfg</c>
+            </r>
+            <r>
+              <c>cbdgfae fbe gdfbce egbda abedf cdfea badcge agfb edbafg fb | ebfad afbg edafbg efb</c>
+            </r>
+            <r>
+              <c>gbdc gb cfdegba bdgae gab gcafbe fadeb ecfgda gbdace cgaed | abg dbgc dcbg gb</c>
+            </r>
+            <r>
+              <c>db dgefb eafdbgc ecfbg bcegdf bdg fbcd gefad ecfbag adbgce | db cabedgf dbg fgead</c>
+            </r>
+            <r>
+              <c>ab bcfa bacfed dba befad fadeg bcdaeg abcgdfe bdecfg bcfde | ba debacfg fdcbe abd</c>
+            </r>
+            <r>
+              <c>baecfg edgba cdgae fced cd egfdca cgd acedfgb dbfgca feagc | adceg dcaeg efdc dc</c>
+            </r>
+            <r>
+              <c>cdb bgfeda acdeb becfda fedba dfca gbeca dbgecf dc aedcfbg | bdc egabfd cd eadbc</c>
+            </r>
+            <r>
+              <c>efgcadb dgebf baedf gcedfa bfg gb eacgbf dgefc bdcg cgbfde | dfgbe gb gbdefca dbcg</c>
+            </r>
+            <r>
+              <c>afebdgc gbfdc gbca defgb cdb bc bcfagd bcdfae edfgca fdacg | cbd cgab dfbgc cb</c>
+            </r>
+            <r>
+              <c>bgfade cdgabef cfebd ce febad dgafce dce abce cgbdf edcafb | bfeadg gdfbea cabe ce</c>
+            </r>
+            <r>
+              <c>gefbcd de dgfce gfdaecb gafec bfdcg bdge abdfgc edf dfbcea | ed fcdgab dfe edgb</c>
+            </r>
+            <r>
+              <c>cgafeb egadbc bagce gedcafb afcbd fgae bfeac fdegbc feb fe | egcba bfe bef bcdaf</c>
+            </r>
+            <r>
+              <c>bcdea dgbfc gdae dabcg ecdfab gca ag dcebgaf gadecb beafcg | eagd eadg bfgcd gac</c>
+            </r>
+            <r>
+              <c>gafcb eba acbfeg cagbfd ecaf fcbedag bdcge ea cagbe fdeabg | bea aeb ae eab</c>
+            </r>
+            <r>
+              <c>cdegfb cdagef bgf dfgcaeb eadgb fegac febga bf bfcaeg cfba | caefdgb gfb fb ebafgcd</c>
+            </r>
+            <r>
+              <c>bgedfa dfbca ebdgcf fbgcd dfcega cgf gfbcead degfb ecbg gc | gecb cfg cg aegdfb</c>
+            </r>
+            <r>
+              <c>agebd bcegda aeg fedabc bdgafce acgd fbgde ag caegbf cbdae | agcd egabfc dacg dgca</c>
+            </r>
+            <r>
+              <c>cbdfe feacd geacfd dbaefg cbgfd aedfbc ceba eb bde egacfdb | bed ceba adbefgc ebd</c>
+            </r>
+            <r>
+              <c>egd ge afcbedg bfgeda bdgefc gbce bcgdf fdacbg aecfd dcgfe | cefgbd afcbgd ge cebg</c>
+            </r>
+            <r>
+              <c>bg gacbe cefgad cbgf cbead gba fcedagb ebdafg gcfbae gacfe | gabec cedfgab acgefb dgecabf</c>
+            </r>
+            <r>
+              <c>afedg edabg fcdg bfcega ebfdca decaf gf gfa acegfbd afedcg | dgcf efacgdb dcgf ebdfcag</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="198" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Field1</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value="|" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="330" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>2</Field>
+          <Delimeters value="\s|" />
+          <NumFields value="1" />
+          <Flags value="16" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="522" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Length([Field1])" field="Length" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Length = Length([Field1])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="618" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Length" action="GroupBy" rename="Length" />
+            <SummarizeField field="Length" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="714" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>tostring([Length]) in ('2','3','4','7')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>tostring([Length]) in ('2','3','4','7')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="810" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Count" action="Sum" rename="Sum_Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="426" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field1" selected="False" />
+            <SelectField field="1" selected="False" />
+            <SelectField field="2" selected="True" rename="Field1" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="186" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Field1</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value="|" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="390" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>2</Field>
+          <Delimeters value="\s|" />
+          <NumFields value="1" />
+          <Flags value="16" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="282" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>set</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="630" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>set</UpdateField_Name>
+          <CreateField_Name>row</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:row]+1</Expression>
+          <GroupByFields>
+            <Field field="set" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:row]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="390" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>1</Field>
+          <Delimeters value="\s|" />
+          <NumFields value="1" />
+          <Flags value="16" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="486" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>set</UpdateField_Name>
+          <CreateField_Name>row</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:row]+1</Expression>
+          <GroupByFields>
+            <Field field="set" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:row]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="606" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Length([1])" field="Length" size="4" type="Int32" />
+            <FormulaField expression="iif([Length]=2,1,&#xA;iif([Length]=3,7,&#xA;iif([Length]=4,4,&#xA;iif([Length]=7,8,null()))))&#xA;" field="Digit" size="1073741823" type="V_WString" />
+            <FormulaField expression="[1]" field="segment" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Length = Length([1])
+Digit = iif([Length]=2,1,
+iif([Length]=3,7,
+iif([Length]=4,...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="714" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>segment</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>Field1_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="786" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>Digit</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-01-04 16:27:00</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2022-01-04 16:27:00</StartDate>
+              <EndDate>2022-01-04 16:27:00</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([Digit])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="882" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="set" />
+            <Field field="segment" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="set" />
+            <Field field="segment" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_set" selected="True" rename="Right_set" input="Right_" />
+                <SelectField field="Right_Field1" selected="True" rename="Right_Field1" input="Right_" />
+                <SelectField field="Right_1" selected="True" rename="Right_1" input="Right_" />
+                <SelectField field="Right_2" selected="True" rename="Right_2" input="Right_" />
+                <SelectField field="Right_row" selected="True" rename="Right_row" input="Right_" />
+                <SelectField field="Right_Length" selected="True" rename="Right_Length" input="Right_" />
+                <SelectField field="Right_Digit" selected="True" rename="Right_Digit" input="Right_" />
+                <SelectField field="Right_segment" selected="True" rename="Right_segment" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1074" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_31324_4a11833e453e4634b959c3220295badd_\Engine_27132_66bf5a2bcb334646aef52661058d6db3_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="978" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="set" action="GroupBy" rename="set" />
+            <SummarizeField field="1" action="GroupBy" rename="1" />
+            <SummarizeField field="row" action="GroupBy" rename="row" />
+            <SummarizeField field="Length" action="GroupBy" rename="Length" />
+            <SummarizeField field="Right_Digit" action="GroupBy" rename="Right_Digit" />
+            <SummarizeField field="Right_Digit" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1062" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Length] = 6
+&amp;&amp;
+[Right_Digit]=7
+&amp;&amp;
+[Count]=2</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Length] = 6
+&amp;&amp;
+[Right_Digit]=7
+&amp;&amp;
+[Count]=2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1158" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="6" field="Digit" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Digit = 6
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1062" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Length] = 6
+&amp;&amp;
+[Right_Digit]=7
+&amp;&amp;
+[Count]=2</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Length] = 6
+&amp;&amp;
+[Right_Digit]=7
+&amp;&amp;
+[Count]=2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1158" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="6" field="Digit" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Digit = 6
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="498" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="6" />
+          <Fields>
+            <Field name="Digit" />
+            <Field name="Length" />
+            <Field name="Right_Digit" />
+            <Field name="Count" />
+            <Field name="Order" />
+          </Fields>
+          <Data>
+            <r>
+              <c>6</c>
+              <c>6</c>
+              <c>7</c>
+              <c>2</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>5</c>
+              <c>4</c>
+              <c>2</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>5</c>
+              <c>7</c>
+              <c>3</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>5</c>
+              <c>4</c>
+              <c>3</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>6</c>
+              <c>4</c>
+              <c>4</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>6</c>
+              <c>7</c>
+              <c>3</c>
+              <c>6</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="606" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Length" />
+            <Field field="Right_Digit" />
+            <Field field="Count" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Length" />
+            <Field field="Right_Digit" />
+            <Field field="Count" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Length" selected="False" rename="Right_Length" input="Right_" />
+                <SelectField field="Right_Right_Digit" selected="False" rename="Right_Right_Digit" input="Right_" />
+                <SelectField field="Right_Count" selected="False" rename="Right_Count" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="690" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Order" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Order - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="534" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Right_Digit" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="882" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="set" />
+            <Field field="1" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1218" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_31324_4a11833e453e4634b959c3220295badd_\Engine_27132_360298600f6748b3b40ffeae3c89f3dd_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1026" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="930" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>Subset</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Digit2" selected="True" rename="Digit" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="810" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>Digit</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-01-04 16:45:44</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-01-04 16:45:44</StartDate>
+              <EndDate>2022-01-04 16:45:44</EndDate>
+              <Operand>
+              </Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([Digit])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1122" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="set" order="Ascending" />
+            <Field field="Digit" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>set - Ascending
+Digit - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1482" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="set" />
+            <Field field="Data" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="set" />
+            <Field field="Data" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_set" selected="False" rename="Right_set" input="Right_" />
+                <SelectField field="Right_row" selected="False" rename="Right_row" input="Right_" />
+                <SelectField field="Right_Data" selected="True" rename="Right_Data" input="Right_" />
+                <SelectField field="Right_1" selected="False" rename="Right_1" input="Right_" />
+                <SelectField field="Right_Length" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1578" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_31324_4a11833e453e4634b959c3220295badd_\Engine_27132_97050c89356045e892bdeaf1758a1bc8_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1770" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_31324_4a11833e453e4634b959c3220295badd_\Engine_27132_62ad1696c6314be9afd5a78947ea2890_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1578" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_31324_4a11833e453e4634b959c3220295badd_\Engine_27132_9531869a2428435eaaf71654f4625365_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1110" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field1" selected="False" />
+            <SelectField field="1" selected="False" />
+            <SelectField field="2" selected="True" rename="Data" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="1194" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Data</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>Data_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1290" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Data" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Data - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1386" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="set" action="GroupBy" rename="set" />
+            <SummarizeField field="row" action="GroupBy" rename="row" />
+            <SummarizeField field="Data" action="Concat" rename="Data">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1206" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="1" selected="True" rename="Data" />
+            <SelectField field="Length" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="1290" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Data</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>Data_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1386" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Data" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Data - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1482" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="set" action="GroupBy" rename="set" />
+            <SummarizeField field="row" action="GroupBy" rename="row" />
+            <SummarizeField field="Digit" action="GroupBy" rename="Digit" />
+            <SummarizeField field="Data" action="Concat" rename="Data">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1578" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="set" order="Ascending" />
+            <Field field="row" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>set - Ascending
+row - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1674" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="set" action="GroupBy" rename="set" />
+            <SummarizeField field="Digit" action="Concat" rename="Digits">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="False" />
+      <Destination ToolID="25" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="True" />
+      <Destination ToolID="25" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Join" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="True" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="False" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="True" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="34" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Join" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="37" Connection="Unique" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="42" Connection="True" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Left" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Right" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Join" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="44" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="44" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day08</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="94c0b2d4-24ae-42c3-ad9a-3b6486b82c02" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="94c0b2d4-24ae-42c3-ad9a-3b6486b82c02" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

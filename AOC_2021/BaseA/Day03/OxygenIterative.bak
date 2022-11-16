@@ -1,0 +1,1103 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="438" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="data" action="GroupBy" rename="data" />
+            <SummarizeField field="data" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" source="Summarize: GroupBy - data" type="Byte" />
+            <Field name="Count" source="Summarize: Count - data" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="data" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="798" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="data" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="data" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_data" selected="False" rename="Right_data" input="Right_" />
+                <SelectField field="Right_Count" selected="False" input="Right_" />
+                <SelectField field="Right_field" selected="False" rename="Right_field" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="data" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="data" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" source="Summarize: GroupBy - data" type="Byte" />
+            <Field name="Count" source="Summarize: Count - data" type="Int64" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="data" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="558" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Count" order="Descending" />
+            <Field field="data" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Count - Descending
+data - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" source="Summarize: GroupBy - data" type="Byte" />
+            <Field name="Count" source="Summarize: Count - data" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="522" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_RecordID" selected="False" rename="Right_RecordID" input="Right_" />
+                <SelectField field="Right_data" selected="False" rename="Right_data" input="Right_" />
+                <SelectField field="Right_field" selected="False" input="Right_" />
+                <SelectField field="Right_binary" selected="True" rename="Right_binary" input="Right_" />
+                <SelectField field="Right_Check" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RecordID" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+            <Field name="Right_binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="RecordID" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="306" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input58</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="60" />
+              <Fields>
+                <Field name="RecordID" />
+                <Field name="data" />
+                <Field name="field" />
+                <Field name="binary" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>00100</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>00100</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>00100</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>00100</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>00100</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>11110</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>11110</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>11110</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>11110</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>11110</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>10110</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>10110</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>10110</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>10110</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>10110</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>10111</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>10111</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>10111</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>10111</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>10111</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>10101</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>10101</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>10101</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>10101</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>10101</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>01111</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>01111</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>01111</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>01111</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>01111</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>00111</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>00111</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>00111</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>00111</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>00111</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>11100</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>11100</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>1</c>
+                  <c>3</c>
+                  <c>11100</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>11100</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>11100</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>10000</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>10000</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>10000</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>10000</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>10000</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>11001</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>11001</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>11001</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>11001</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>1</c>
+                  <c>5</c>
+                  <c>11001</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>00010</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>0</c>
+                  <c>2</c>
+                  <c>00010</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>00010</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>00010</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>00010</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>01010</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>1</c>
+                  <c>2</c>
+                  <c>01010</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>0</c>
+                  <c>3</c>
+                  <c>01010</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>1</c>
+                  <c>4</c>
+                  <c>01010</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>0</c>
+                  <c>5</c>
+                  <c>01010</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="186" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[field] = [Engine.IterationNumber]+1</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[field] = [Engine.IterationNumber]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="678" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" source="Summarize: GroupBy - data" type="Byte" />
+            <Field name="Count" source="Summarize: Count - data" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="618" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="RecordID" action="CountDistinct" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Count" source="Summarize: CountDistinct - RecordID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="726" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+            <Field name="Right_binary" size="5" source="TextInput:" type="String" />
+            <Field name="Count" source="Summarize: CountDistinct - RecordID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="882" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-12-22 09:55:50</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2021-12-22 09:55:50</StartDate>
+              <EndDate>2021-12-22 09:55:50</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+            <Field name="Right_binary" size="5" source="TextInput:" type="String" />
+            <Field name="Count" source="Summarize: CountDistinct - RecordID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+            <Field name="Right_binary" size="5" source="TextInput:" type="String" />
+            <Field name="Count" source="Summarize: CountDistinct - RecordID" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1086" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output40</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>O Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1074" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterative</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>I Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="978" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Right_binary" selected="False" />
+            <SelectField field="Max_Check" selected="False" />
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+        <Position x="186" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <When>First</When>
+          <Filter>1</Filter>
+          <Type>Warning</Type>
+          <Priority>High</Priority>
+          <Transient>True</Transient>
+          <MessageExpression>"Engine Iteration: "+tostring([Engine.IterationNumber])</MessageExpression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="TextInput:" type="Byte" />
+            <Field name="data" source="TextInput:" type="Byte" />
+            <Field name="field" source="TextInput:" type="Byte" />
+            <Field name="binary" size="5" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="282" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_17056_b3445d4704694846a99c009f6e8d9896_\Engine_28996_2485e1545afe4f0b993bda798f75c625_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Join" />
+      <Destination ToolID="39" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="39" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Join" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Join" />
+      <Destination ToolID="63" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="63" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="29" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="29" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="True" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="False" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="True" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (58)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (71)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>OxygenIterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="204e113f-447e-4276-bcaa-f63a8574fae3" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="204e113f-447e-4276-bcaa-f63a8574fae3" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (67)</Name>
+          <ToolId value="67" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (70)</Name>
+              <ToolId value="70" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (71)</Name>
+              <ToolId value="71" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (58)</Name>
+              <ToolId value="58" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input58</Input>
+        <Output>Iterative</Output>
+        <IterationLimit value="100" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="58" Selected="True" />
+        <Tool ToolId="74" Selected="False" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

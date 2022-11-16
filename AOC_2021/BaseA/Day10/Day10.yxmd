@@ -1,0 +1,1243 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="114" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>[({(&lt;(())[]&gt;[[{[]{&lt;()&lt;&gt;&gt;</c>
+            </r>
+            <r>
+              <c>[(()[&lt;&gt;])]({[&lt;{&lt;&lt;[]&gt;&gt;(</c>
+            </r>
+            <r>
+              <c>{([(&lt;{}[&lt;&gt;[]}&gt;{[]{[(&lt;()&gt;</c>
+            </r>
+            <r>
+              <c>(((({&lt;&gt;}&lt;{&lt;{&lt;&gt;}{[]{[]{}</c>
+            </r>
+            <r>
+              <c>[[&lt;[([]))&lt;([[{}[[()]]]</c>
+            </r>
+            <r>
+              <c>[{[{({}]{}}([{[{{{}}([]</c>
+            </r>
+            <r>
+              <c>{&lt;[[]]&gt;}&lt;{[{[{[]{()[[[]</c>
+            </r>
+            <r>
+              <c>[&lt;(&lt;(&lt;(&lt;{}))&gt;&lt;([]([]()</c>
+            </r>
+            <r>
+              <c>&lt;{([([[(&lt;&gt;()){}]&gt;(&lt;&lt;{{</c>
+            </r>
+            <r>
+              <c>&lt;{([{{}}[&lt;[[[&lt;&gt;{}]]]&gt;[]]</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data = Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;',...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="78" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29064_4e443f2fa95645e09112a22f663be52d_\Engine_27132_c58efb80770342f28e0075910311b14c_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data = Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;',...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data = Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;',...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;','')" field="data" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data = Replace(Replace(Replace(Replace(data, '()',''), '[]',''), '{}',''), '&lt;&gt;',...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([data], '.*[\[\(\&lt;\{]([\)\]\}\&gt;]).*', '$1')" field="LastOpenCharacter" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[LastOpenCharacter = REGEX_Replace([data], '.*[\[\(\<\{]([\)\]\}\>]).*', '$1')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="150" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>length([LastOpenCharacter]) = 1</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>length([LastOpenCharacter]) = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="150" y="786" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="char" />
+            <Field name="points" />
+          </Fields>
+          <Data>
+            <r>
+              <c>)</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>]</c>
+              <c>57</c>
+            </r>
+            <r>
+              <c>}</c>
+              <c>1197</c>
+            </r>
+            <r>
+              <c>&gt;</c>
+              <c>25137</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="102" y="882" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="LastOpenCharacter" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="char" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="102" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="points" action="Sum" rename="Sum_points" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="102" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29064_4e443f2fa95645e09112a22f663be52d_\Engine_27132_9cf2bfdade70496f99158708878bca13_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="294" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="102" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>[(&lt;[(({{&lt;{{[{({})}{&lt;{}{}&gt;&lt;()&lt;&gt;&gt;}]}[{[({}{})]([{}()](&lt;&gt;{}))}[&lt;&lt;[]()]&gt;[&lt;[]&lt;&gt;&gt;{[]()}]]]}{[[[{[][]}{[]()}]</c>
+            </r>
+            <r>
+              <c>(&lt;&lt;{((({&lt;(&lt;{([()[]]&lt;[]&lt;&gt;&gt;)}&gt;({[{&lt;&gt;()}]&lt;[&lt;&gt;()]({}())&gt;})){{[(&lt;&lt;&gt;&lt;&gt;&gt;{&lt;&gt;()})&lt;{[]{}}&gt;][{[[]()]&lt;[]()&gt;}</c>
+            </r>
+            <r>
+              <c>{({([({[[([&lt;{(())([][])}&lt;(&lt;&gt;())[[][]]&gt;&gt;{{{{}{}}{&lt;&gt;{}}}({{}&lt;&gt;}&lt;&lt;&gt;()&gt;)}]&lt;&lt;((&lt;&gt;&lt;&gt;))&lt;&lt;[]&gt;((){})&gt;&gt;[&lt;{{}{}}</c>
+            </r>
+            <r>
+              <c>(&lt;[{{{[[[&lt;[[[([]&lt;&gt;)]{{()()}&lt;()()&gt;}][({()&lt;&gt;}(()()))[&lt;[][]&gt;[[]&lt;&gt;]]]]([{[(){}]}(&lt;[]{}&gt;{{}()))]&lt;</c>
+            </r>
+            <r>
+              <c>{(&lt;&lt;({&lt;{&lt;&lt;[[&lt;[[]{}]&gt;]&lt;[&lt;{}{}&gt;[{}[]]]{[&lt;&gt;{})({})}&gt;]&gt;&lt;([[{(){}}{()[]}]])&gt;&gt;&lt;{({&lt;[{}()]&lt;{}[]&gt;&gt;(&lt;</c>
+            </r>
+            <r>
+              <c>&lt;&lt;[[&lt;&lt;[({[&lt;[{{[]()}[()()]}[&lt;{}{}&gt;[&lt;&gt;]]]&gt;&lt;[[(&lt;&gt;[])]]{{{{}&lt;&gt;}[{}()]}{&lt;()&gt;[{}[]]}}&gt;](({&lt;((){}</c>
+            </r>
+            <r>
+              <c>&lt;{[[((&lt;{{[[(([(){}][()&lt;&gt;]))[(&lt;()()&gt;[[]&lt;&gt;]){[(){}][()[]]}]]]&lt;([&lt;[{}{}]([]&lt;&gt;)&gt;&lt;&lt;{}&lt;&gt;&gt;{{}{}}&gt;]&lt;({[]{}}[{}{}]</c>
+            </r>
+            <r>
+              <c>&lt;&lt;&lt;{&lt;[[[[([&lt;([[]&lt;&gt;])[[&lt;&gt;{}][[]&lt;&gt;]]&gt;{{[{}{}]}[[[]()]]}][[&lt;((){})&lt;[]&lt;&gt;&gt;&gt;]&lt;{[(){}][[]&lt;&gt;]}&lt;&lt;[][]](()())&gt;&gt;]){&lt;((</c>
+            </r>
+            <r>
+              <c>[&lt;{{({&lt;&lt;[{{&lt;&lt;(()())[{}[]]&gt;{[&lt;&gt;{}]&lt;[]&lt;&gt;&gt;}&gt;{[([]&lt;&gt;)[{}&lt;&gt;]](({}&lt;&gt;)[(){}])}}}[[(&lt;{()}{&lt;&gt;()}&gt;)&lt;{&lt;{}{}&gt;([</c>
+            </r>
+            <r>
+              <c>&lt;{&lt;[{[[&lt;[({{[[{}[]][()()&gt;]((&lt;&gt;&lt;&gt;)[[]{}])}{({{}{}}[()])&lt;{&lt;&gt;{}}(&lt;&gt;[])&gt;}}&lt;&lt;(&lt;&lt;&gt;[]&gt;[()])&gt;&gt;)]({{[([&lt;&gt;])(&lt;{}[]&gt;{</c>
+            </r>
+            <r>
+              <c>(({&lt;{&lt;{[[([&lt;&lt;{{}{}}&gt;(&lt;&lt;&gt;{}&gt;&lt;()()&gt;)&gt;]{{(&lt;{}&gt;{{}[]})}(&lt;([][]][&lt;&gt;[]]&gt;{{&lt;&gt;{}}[&lt;&gt;&lt;&gt;]})})(&lt;[{{&lt;&gt;()}({}{})}{{{}[]}{&lt;</c>
+            </r>
+            <r>
+              <c>{{[&lt;&lt;{{(({{{&lt;{&lt;&gt;{}}{[]{}}&gt;[&lt;[]{}&gt;{()()})}}(&lt;({[]()}[()&lt;&gt;])[{&lt;&gt;()}&lt;[]()&gt;]&gt;[[[{}[]][&lt;&gt;{}]]&lt;{&lt;</c>
+            </r>
+            <r>
+              <c>{{{&lt;&lt;&lt;[(&lt;[({([()()]))[&lt;[()&lt;&gt;]{()()}&gt;((()[])([]()))])][([&lt;{{}()}&lt;[]&lt;&gt;&gt;&gt;](([&lt;&gt;]&lt;&lt;&gt;{}&gt;){({}&lt;&gt;){[]&lt;&gt;</c>
+            </r>
+            <r>
+              <c>&lt;&lt;({{[([{{&lt;[[&lt;()()&gt;{(){}}]{{()&lt;&gt;}[(){}]}]{[({}{})([]&lt;&gt;)]}&gt;(&lt;([{}()](()[]))({&lt;&gt;()}&lt;&lt;&gt;[]&gt;)&gt;[&lt;[()&lt;&gt;]&lt;</c>
+            </r>
+            <r>
+              <c>{(&lt;{{([{&lt;{&lt;(&lt;({}{})([]())&gt;)&gt;{[{{{}[]}(&lt;&gt;{})}{([])&lt;{}&lt;&gt;&gt;}]&lt;{&lt;{}()&gt;&lt;()[]&gt;}&lt;{[]{}}&lt;[]&gt;&gt;&gt;&gt;}&gt;}&lt;(&lt;&lt;([</c>
+            </r>
+            <r>
+              <c>([([(&lt;{&lt;[(&lt;[{&lt;&lt;&gt;&lt;&gt;&gt;(()&lt;&gt;)}(([]{}))][&lt;(&lt;&gt;{})&lt;{}&gt;&gt;{[()[]](&lt;&gt;&lt;&gt;)}]&gt;[[[{[]{}}[[]{}]]]&lt;{[()[]]}[[{}{}]&lt;&lt;&gt;&lt;&gt;&gt;]&gt;])</c>
+            </r>
+            <r>
+              <c>{&lt;&lt;({({{{[({[[&lt;&gt;[]]({}())]{[{}()]}}({[()()]{[]&lt;&gt;}}((()&lt;&gt;)&lt;[]{}&gt;))){[{{{}()}{{}()}}]}]}&lt;&lt;&lt;[[&lt;[]()&gt;][</c>
+            </r>
+            <r>
+              <c>{{[[[{&lt;&lt;[(([{[&lt;&gt;{}]&lt;&lt;&gt;&lt;&gt;&gt;}{{&lt;&gt;}{[]&lt;&gt;}}]&lt;[&lt;&lt;&gt;[]&gt;({}{})]&gt;)({&lt;{()()}&gt;{{()[]}({}())}})}]&lt;([{[&lt;[][]&gt;{()[]}]}]</c>
+            </r>
+            <r>
+              <c>(&lt;&lt;[&lt;[[[&lt;{{[{{()}[{}[]]}[&lt;{}&lt;&gt;&gt;{[]{}}]]{{[()[]]&lt;(){}&gt;}}}(((&lt;{}{}&gt;{()()}))[&lt;{&lt;&gt;()}{()&lt;&gt;}&gt;&lt;[</c>
+            </r>
+            <r>
+              <c>[[{[&lt;([([&lt;&lt;[[[()()]{()&lt;&gt;}]({&lt;&gt;{}}[&lt;&gt;[]])]&gt;(&lt;([&lt;&gt;()]&lt;()&lt;&gt;&gt;)[[{}()]]&gt;)&gt;])]){({{{[{&lt;({}[]){[]()}&gt;&lt;&lt;[</c>
+            </r>
+            <r>
+              <c>(&lt;[&lt;[(([({{[({&lt;&gt;[]}[&lt;&gt;[]])[([]{})[&lt;&gt;[]]]]([&lt;{}}[{}&lt;&gt;]][(()()){{}()}])}([&lt;({}())[[]&lt;&gt;]&gt;([[]{}]</c>
+            </r>
+            <r>
+              <c>{([[((&lt;(&lt;([{([&lt;&gt;[]]{()})[(()[])]}])(&lt;[&lt;{{}()}&gt;]&gt;)&gt;)&gt;)){{{&lt;&lt;[&lt;[&lt;(&lt;&gt;&lt;&gt;){&lt;&gt;[]}&gt;[[&lt;&gt;{}]]]({&lt;&lt;&gt;{}&gt;</c>
+            </r>
+            <r>
+              <c>&lt;&lt;(((({&lt;&lt;[{([({}{})[&lt;&gt;()]]&lt;&lt;(){}&gt;({})&gt;)}{&lt;&lt;{[]{}}{&lt;&gt;&lt;&gt;}&gt;&lt;{&lt;&gt;{}}[()[]]&gt;}&lt;(([][])(&lt;&gt;[]))&lt;[&lt;&gt;[</c>
+            </r>
+            <r>
+              <c>{{{[{[[([({{{&lt;{}{}&gt;{()}}((()[]]&lt;&lt;&gt;{}&gt;)}}&lt;[{[{}[]]&lt;&lt;&gt;[]&gt;}{[{}[]][()&lt;&gt;]}]&lt;&lt;({}[]){()()}&gt;&lt;{&lt;&gt;{}}(&lt;&gt;[]</c>
+            </r>
+            <r>
+              <c>[[([(([({&lt;[&lt;([&lt;&gt;()][[]()])&gt;{{&lt;[]{}&gt;[&lt;&gt;()]&gt;[([]{})&lt;(){}&gt;]}]({[(()&lt;&gt;){{}()}]}&lt;{(&lt;&gt;&lt;&gt;)({}{})}{[[]&lt;&gt;]{{}()}}&gt;</c>
+            </r>
+            <r>
+              <c>(&lt;{([{{([&lt;{&lt;&lt;&lt;&lt;&gt;[]&gt;&lt;[]()&gt;&gt;[(()[])[&lt;&gt;()]]&gt;{({()&lt;&gt;}{(){}})&lt;&lt;{}&lt;&gt;&gt;{&lt;&gt;{}}&gt;}}[[{&lt;{}()&gt;}&lt;(()&lt;&gt;)[()&lt;&gt;]&gt;]{[[&lt;&gt;</c>
+            </r>
+            <r>
+              <c>&lt;[[{({[&lt;&lt;&lt;{{&lt;[&lt;&gt;{}]({}&lt;&gt;)&gt;(&lt;()[]&gt;&lt;[]&gt;)}(&lt;{{}()}&lt;{}{}&gt;&gt;{{()}&lt;[][]&gt;})}[{({[]{}}(()[]))&lt;[[]{}][[]{}]&gt;}&lt;{{&lt;&gt;{</c>
+            </r>
+            <r>
+              <c>{({[[&lt;{&lt;([&lt;((({}{})[{}{}])){{[()&lt;&gt;]&lt;&lt;&gt;()&gt;}[(&lt;&gt;&lt;&gt;){[]}]}&gt;&lt;&lt;&lt;&lt;()&lt;&gt;&gt;(()&lt;&gt;)&gt;&gt;[{([]){&lt;&gt;{}}}]&gt;]){({{[{{}</c>
+            </r>
+            <r>
+              <c>(&lt;&lt;[{[&lt;&lt;({&lt;{&lt;[&lt;&gt;[]][{}&lt;&gt;]&gt;([{}&lt;&gt;]&lt;&lt;&gt;()&gt;)}{(&lt;{}{}&gt;{{}()})&lt;([])&gt;}&gt;{(({[]())(&lt;&gt;[])){[[]&lt;&gt;][&lt;&gt;&lt;&gt;]}</c>
+            </r>
+            <r>
+              <c>[({(((&lt;(&lt;&lt;{({&lt;()()&gt;({}()&gt;}((&lt;&gt;[])[[]]))}&gt;{&lt;(&lt;({}&lt;&gt;)([]())&gt;[{()&lt;&gt;}&lt;&lt;&gt;&gt;])&lt;&lt;([])&lt;[]()&gt;&gt;{(&lt;&gt;{})[&lt;&gt;{}]}&gt;&gt;[[</c>
+            </r>
+            <r>
+              <c>&lt;&lt;{[(({&lt;&lt;{[{{&lt;&lt;&gt;()&gt;{&lt;&gt;{}}}({[]}{()})}][&lt;[[[]()]]&lt;&lt;{}{}}[&lt;&gt;()]&gt;&gt;]}[&lt;(([{}{}]&lt;()&lt;&gt;&gt;){{()&lt;&gt;}[[]&lt;&gt;]})&lt;{&lt;[</c>
+            </r>
+            <r>
+              <c>(&lt;[[{{{&lt;&lt;(&lt;&lt;[&lt;()[]&gt;(()[])]&lt;[()()]([][])&gt;&gt;&lt;{({}&lt;&gt;)[&lt;&gt;&lt;&gt;]}&gt;&gt;&lt;[(({}){[][]})((()()))]&gt;){{&lt;[([]&lt;&gt;)[&lt;&gt;&lt;&gt;]</c>
+            </r>
+            <r>
+              <c>[[[[&lt;[&lt;[[[&lt;(([&lt;&gt;{}]&lt;&lt;&gt;()&gt;)(&lt;&lt;&gt;()&gt;{{}{}}))[([()()]([]&lt;&gt;))]&gt;(&lt;[([]())&lt;[]&lt;&gt;&gt;]{&lt;{}{}&gt;{{}{}}}){(&lt;()[]</c>
+            </r>
+            <r>
+              <c>{[&lt;(&lt;[[&lt;{&lt;{[{({}[])[&lt;&gt;{}]}&lt;[()&lt;&gt;]&gt;][(&lt;{}&lt;&gt;&gt;(()[])){{()()}&lt;()[]&gt;}]}[&lt;[(()[])]({{}{}}(&lt;&gt;{}))&gt;]&gt;}&lt;{{[{([]{})&lt;(){</c>
+            </r>
+            <r>
+              <c>(&lt;[{{{{{{[{[{(&lt;&gt;&lt;&gt;)({}&lt;&gt;)}[(()[]){&lt;&gt;[]}]]}[{([{}&lt;&gt;])}]]}((([{[[]][[]{}]}({&lt;&gt;()}[()[]])][({[</c>
+            </r>
+            <r>
+              <c>(&lt;&lt;&lt;&lt;[[{{&lt;&lt;((&lt;{}()&gt;[&lt;&gt;&lt;&gt;]))&lt;[&lt;&lt;&gt;&lt;&gt;&gt;([][])]&lt;{{}&lt;&gt;}([]&lt;&gt;)&gt;}&gt;{{[(&lt;&gt;&lt;&gt;){&lt;&gt;{}}]{&lt;&lt;&gt;()&gt;(()())}}[&lt;[&lt;&gt;&lt;&gt;]{{}</c>
+            </r>
+            <r>
+              <c>{({[[&lt;({&lt;{[[[[[]&lt;&gt;](&lt;&gt;{})]((&lt;&gt;{})&lt;[]()&gt;)]([&lt;()[]&gt;({}&lt;&gt;)][[[]{}&gt;[{}()]])]{({&lt;[][]&gt;&lt;[]()&gt;}&lt;(&lt;&gt;{})&gt;)((({})</c>
+            </r>
+            <r>
+              <c>{[([[{&lt;&lt;[{&lt;&lt;[&lt;()()&gt;[{}[]]]&gt;{(({}{})([]&lt;&gt;))[[{}()][()&lt;&gt;]]}&gt;[&lt;(([][])){[{}{}][{}{}]}&gt;{{&lt;(){}&gt;([]&lt;&gt;)}</c>
+            </r>
+            <r>
+              <c>([{&lt;{{{(&lt;[{[{{[]}[()&lt;&gt;]}(&lt;[]{}&gt;{()&lt;&gt;})][(&lt;[]&gt;&lt;{}&lt;&gt;&gt;)&lt;([]{})(&lt;&gt;[])&gt;]}][[{[&lt;[]{}&gt;][[&lt;&gt;[]]{&lt;&gt;[]}]}&lt;((()[])(</c>
+            </r>
+            <r>
+              <c>&lt;(({{&lt;&lt;[[&lt;&lt;[[(&lt;&gt;[]){[][]}]{({}())(()&lt;&gt;)}]{({{}&lt;&gt;})}&gt;&lt;([&lt;&lt;&gt;()&gt;&lt;{}[]&gt;][[&lt;&gt;{}]({}())])[(([][])({}&lt;</c>
+            </r>
+            <r>
+              <c>[&lt;&lt;{{{[[[((&lt;{([][])&lt;&lt;&gt;()&gt;}((&lt;&gt;&lt;&gt;)([]{}))&gt;))[&lt;(&lt;[&lt;&gt;()]&gt;&lt;([][])&lt;&lt;&gt;&lt;&gt;&gt;&gt;)&gt;[[&lt;&lt;{}{}&gt;(&lt;&gt;&lt;&gt;)&gt;&lt;{[]{}}&gt;}{({</c>
+            </r>
+            <r>
+              <c>&lt;&lt;{&lt;&lt;[[[(((({{[][]}[{}[]]}(&lt;&lt;&gt;{}&gt;&lt;{}&lt;&gt;&gt;))[(([]&lt;&gt;)&lt;()[]&gt;)&lt;[&lt;&gt;&lt;&gt;]&gt;]))&lt;&lt;(&lt;&lt;&lt;&gt;{}&gt;&gt;{(&lt;&gt;[])})&lt;[&lt;&lt;</c>
+            </r>
+            <r>
+              <c>[&lt;&lt;{({{&lt;[&lt;[&lt;&lt;({}[])(&lt;&gt;&lt;&gt;)&gt;(([]{})([]&lt;&gt;))&gt;]&gt;]{[(&lt;&lt;{(){}}[[]&lt;&gt;]&gt;&gt;){([&lt;{}()&gt;[()()]](([]())[&lt;&gt;&lt;&gt;]))</c>
+            </r>
+            <r>
+              <c>{({&lt;[&lt;[{(&lt;{[([[]&lt;&gt;]{&lt;&gt;})&lt;{&lt;&gt;[]}([])&gt;]}&lt;{((&lt;&gt;[])[{}[]}){{{}{}}&lt;[]&lt;&gt;&gt;}}&lt;{[[]{}](()[])}&lt;(()())</c>
+            </r>
+            <r>
+              <c>(({{&lt;{&lt;[[(&lt;[([&lt;&gt;()][[]()])&lt;({}&lt;&gt;)(()())&gt;]{&lt;&lt;&lt;&gt;[]&gt;{(){}}&gt;}&gt;([{({}())}{&lt;[]&gt;(())}]{&lt;&lt;[][]&gt;({}[])&gt;}))]</c>
+            </r>
+            <r>
+              <c>{{&lt;{{(&lt;[[[{&lt;&lt;&lt;[][]&gt;&lt;{}[]&gt;&gt;&lt;(())[{}[]]&gt;&gt;}][&lt;(([[][]][&lt;&gt;{}])(&lt;[][]&gt;)){{([][])&lt;{}{}&gt;}[[[]{}]{[</c>
+            </r>
+            <r>
+              <c>[([{&lt;[[&lt;[{([{&lt;[]{}&gt;(&lt;&gt;{})}]&lt;{[[]()]}[&lt;()&lt;&gt;&gt;]&gt;)}][([[[([])&lt;&lt;&gt;()&gt;]{&lt;{}&lt;&gt;&gt;[()&lt;&gt;]}}((&lt;{}{}&gt;(()&lt;&gt;))(&lt;{}</c>
+            </r>
+            <r>
+              <c>([&lt;{(&lt;({((&lt;{&lt;{()[]]{[]&lt;&gt;}&gt;(&lt;[][]&gt;(()&lt;&gt;))}{&lt;[()[]](()())&gt;{([][])&lt;&lt;&gt;&gt;}}&gt;))(&lt;[(({[]()}(()[]))([(){}]{&lt;&gt;</c>
+            </r>
+            <r>
+              <c>([{{[{(&lt;[((&lt;&lt;[[]()](()())&gt;{&lt;{}()}{[]}}&gt;{(({}&lt;&gt;))&lt;&lt;&lt;&gt;{}&gt;[{}()]&gt;})[[((&lt;&gt;)&lt;[]&lt;&gt;&gt;)([()()]{&lt;&gt;{}})]&lt;{[(){}]{[</c>
+            </r>
+            <r>
+              <c>&lt;[&lt;[&lt;[[[({{{[[()&lt;&gt;]([]())]}}{({[()()]}{{&lt;&gt;[]}&lt;&lt;&gt;{}&gt;})[[{[]()}[{}{}]][{&lt;&gt;()}&lt;{}{}&gt;])}})&lt;&lt;{([{()[]}&lt;[]</c>
+            </r>
+            <r>
+              <c>&lt;([[&lt;{&lt;&lt;{(&lt;(&lt;{[]}[{}()]&gt;({()}{&lt;&gt;()})){{[[]()](&lt;&gt;[])}(&lt;{}{}&gt;(&lt;&gt;&lt;&gt;))}&gt;&lt;{{{(){}}&lt;&lt;&gt;&lt;&gt;&gt;}}&gt;){(([[()&lt;&gt;]&lt;&lt;&gt;&lt;&gt;</c>
+            </r>
+            <r>
+              <c>{(([(&lt;[&lt;{[[&lt;{(()[])[{}&lt;&gt;]}&lt;&lt;{}()&gt;&gt;&gt;([({}&lt;&gt;){&lt;&gt;{}}]([()[]]{{}()}))]({[[[][]]]})]}&gt;][({[{&lt;&lt;([]&lt;&gt;){()&lt;&gt;}&gt;({&lt;&gt;&lt;</c>
+            </r>
+            <r>
+              <c>([&lt;(((&lt;[&lt;({&lt;[({}{})((){})]{{()&lt;&gt;}&lt;[]&lt;&gt;&gt;}&gt;{[{()[]}&lt;&lt;&gt;&lt;&gt;&gt;]({{}&lt;&gt;}[[]&lt;&gt;])}})[[{([[][]](()[]))({()[]})}((((</c>
+            </r>
+            <r>
+              <c>{&lt;[{[(([&lt;(&lt;{&lt;[&lt;&gt;{}]&gt;[((){})({}())]}{(&lt;(){}&gt;{[]&lt;&gt;})([()&lt;&gt;](()&lt;&gt;})}&gt;[(&lt;{[][]}{&lt;&gt;[]}&gt;[&lt;[]&lt;&gt;&gt;&lt;&lt;</c>
+            </r>
+            <r>
+              <c>[&lt;&lt;{((&lt;(&lt;((&lt;&lt;{[]&lt;&gt;}{[]&lt;&gt;}&gt;{[&lt;&gt;&lt;&gt;](()())}&gt;{([&lt;&gt;&lt;&gt;])[([]{})(&lt;&gt;[])]))(&lt;&lt;{[][]}{{}()}&gt;[&lt;&lt;&gt;{}&gt;{{}{}}]&gt;&lt;[({}{</c>
+            </r>
+            <r>
+              <c>(&lt;([((({{([[&lt;&lt;{}()&gt;&lt;()[]&gt;&gt;[{()&lt;&gt;}{{}{}}]]{&lt;({}{})[[]&lt;&gt;]&gt;{(()[]){&lt;&gt;}}}][{{({}{})}&lt;([]&lt;&gt;)&lt;()[]&gt;&gt;</c>
+            </r>
+            <r>
+              <c>({([[&lt;&lt;[[[[([&lt;()()&gt;{{}&lt;&gt;}]({{}[]}))]&lt;{(&lt;(){}&gt;[()()])}&gt;]{{&lt;([&lt;&gt;&lt;&gt;]{[]{}})&lt;&lt;{}&lt;&gt;&gt;[()&lt;&gt;]&gt;&gt;}{[</c>
+            </r>
+            <r>
+              <c>&lt;({{(&lt;&lt;((&lt;&lt;(&lt;({}{})&lt;{}()&gt;&gt;{{&lt;&gt;}})([[{}()]{{}()}][&lt;&lt;&gt;&lt;&gt;&gt;])&gt;&lt;{[&lt;[]()&gt;[()()]]&lt;([]())&gt;}&gt;&gt;[&lt;&lt;&lt;{()}&lt;</c>
+            </r>
+            <r>
+              <c>[[[(&lt;((({{{{&lt;{[][]}{&lt;&gt;{}}&gt;&lt;{[]{}}&lt;()[]&gt;&gt;}&lt;([{}{}]{{}&lt;&gt;})&gt;}&lt;({[[]&lt;&gt;][[]&lt;&gt;]}[[()&lt;&gt;]&lt;(){}&gt;])&gt;}{{(</c>
+            </r>
+            <r>
+              <c>(&lt;&lt;{({[{({[{(([]&lt;&gt;)({}[])}[&lt;(){}&gt;]}]})}][({(&lt;&lt;{(()())}[&lt;(){}&gt;(()[])]&gt;&lt;({&lt;&gt;{}}&lt;()()&gt;){&lt;[][]&gt;[(){}]}&gt;&gt;</c>
+            </r>
+            <r>
+              <c>([({{{{{([{[{([][])&lt;[][]&gt;}&lt;{()&lt;&gt;}&lt;{}&lt;&gt;&gt;&gt;]}{[{([][])}&lt;&lt;()()&gt;[{}[]]&gt;]{&lt;[[][]]{[]&lt;&gt;}&gt;}}]&lt;[(&lt;&lt;[]&lt;</c>
+            </r>
+            <r>
+              <c>[([&lt;({(&lt;({[&lt;{[{}&lt;&gt;]}&gt;{[(()&lt;&gt;){&lt;&gt;()}]}](([([])[&lt;&gt;{}]])&lt;[[()()]{[]}](((){}]{[]{}})&gt;)}[&lt;[&lt;{&lt;&gt;[]</c>
+            </r>
+            <r>
+              <c>[({&lt;[(&lt;&lt;{&lt;[{[[(){}]&lt;&lt;&gt;&lt;&gt;&gt;][&lt;(){}&gt;[{}[]]]}(({{}()}&lt;[]&lt;&gt;&gt;){([]()){{}()}})]&gt;&lt;&lt;(&lt;&lt;&lt;&gt;[]&gt;{&lt;&gt;}&gt;(({}()){&lt;&gt;()}))[[(&lt;</c>
+            </r>
+            <r>
+              <c>{{{{&lt;{{&lt;&lt;{[&lt;([()[]][{}[]])[{&lt;&gt;{}}[(){}])&gt;&lt;((()[]){()[]})[[{}[]](()&lt;&gt;)]&gt;]}&gt;&gt;}}&gt;{{[[{&lt;(&lt;(({}&lt;&gt;)[&lt;&gt;()]){[</c>
+            </r>
+            <r>
+              <c>([&lt;{[&lt;&lt;[{({([&lt;(){}&gt;([])][(()&lt;&gt;)&lt;&lt;&gt;()&gt;])}{[([[][]]{{}()})&lt;[{}]({}&lt;&gt;]&gt;](([[]()]&lt;{}&lt;&gt;&gt;){&lt;{}()&gt;[[]()]})})[&lt;</c>
+            </r>
+            <r>
+              <c>&lt;((&lt;{({[&lt;(&lt;(&lt;&lt;{}&lt;&gt;&gt;{[]()}&gt;&lt;&lt;()&lt;&gt;&gt;([][])&gt;){&lt;&lt;[]{}&gt;{&lt;&gt;[]}&gt;{[&lt;&gt;[]][()()]}}&gt;(({{()}{()&lt;&gt;}}({[]&lt;&gt;}(&lt;&gt;{})))</c>
+            </r>
+            <r>
+              <c>&lt;[(&lt;{{{&lt;[(([{{[]&lt;&gt;}{{}()}}&lt;[&lt;&gt;&lt;&gt;]&lt;&lt;&gt;[]&gt;&gt;]({((){})}))&lt;(([&lt;&gt;()]&lt;[][]&gt;)(&lt;()&lt;&gt;&gt;([]&lt;&gt;)))&gt;)]&gt;[[[[[{[</c>
+            </r>
+            <r>
+              <c>(({{(([{{((&lt;{&lt;&lt;&gt;&lt;&gt;&gt;&lt;{}&lt;&gt;}}{{{}{}}{[]()}}&gt;[[(&lt;&gt;[])[{}{}]]{&lt;()[]&gt;[[]{}]}])){{{{{()&lt;&gt;}&lt;&lt;&gt;&lt;&gt;&gt;}{&lt;[]&lt;&gt;&gt;[[]&lt;&gt;]</c>
+            </r>
+            <r>
+              <c>(&lt;{(((&lt;&lt;(({{{{[]()}}&lt;&lt;()()&gt;{[]&gt;&gt;}[&lt;{&lt;&gt;{}}{&lt;&gt;&lt;&gt;}&gt;&lt;{{}()}({}&lt;&gt;)&gt;]}))(([((&lt;(){}&gt;({}()))&lt;{&lt;&gt;&lt;&gt;}&lt;[]()&gt;&gt;)&lt;(</c>
+            </r>
+            <r>
+              <c>&lt;[[&lt;[(&lt;&lt;{((&lt;[&lt;[]()&gt;([]&lt;&gt;)]{(&lt;&gt;[])[&lt;&gt;()]}&gt;[&lt;(()&lt;&gt;){[]()}&gt;{{[]&lt;&gt;}([][])}])[&lt;(([]&lt;&gt;){&lt;&gt;()})([{}()]&lt;[]{}&gt;)&gt;({</c>
+            </r>
+            <r>
+              <c>&lt;&lt;[[({&lt;&lt;({&lt;{[({}[])&lt;()&lt;&gt;&gt;][[(){}]{[]()}]}[{&lt;(){}&gt;[&lt;&gt;[]]}{(&lt;&gt;[]&gt;({}&lt;&gt;)}]&gt;&lt;&lt;([[]&lt;&gt;]({}))&lt;{[]{}}(&lt;&gt;&lt;&gt;</c>
+            </r>
+            <r>
+              <c>&lt;(({([&lt;&lt;(({[{[[]&lt;&gt;]({}())}[{&lt;&gt;&lt;&gt;}[[]()]]][(&lt;{}()&gt;)[{{}{}}[{}{}]]]}&lt;{(&lt;()&lt;&gt;&gt;{()&lt;&gt;})&lt;[()[]][{}{}]&gt;}[[(&lt;&gt;[])</c>
+            </r>
+            <r>
+              <c>[&lt;{&lt;({{(({(&lt;[{(){}})(&lt;&lt;&gt;()&gt;&lt;&lt;&gt;()&gt;)&gt;)&lt;{&lt;({}&lt;&gt;)[{}[]]&gt;(&lt;()()&gt;(&lt;&gt;&lt;&gt;))}{([&lt;&gt;[]][()&lt;&gt;])[{[]()}{[]}]}&gt;}))&lt;(</c>
+            </r>
+            <r>
+              <c>[&lt;{&lt;[[(&lt;([&lt;[&lt;&lt;{}&lt;&gt;&gt;&gt;{[&lt;&gt;[]]({}())}&gt;{[(&lt;&gt;{})[(){}]]{[&lt;&gt;[]]}}&gt;][{&lt;{&lt;[]()&gt;{{}{}}}[[[]&lt;&gt;]&lt;(){}&gt;]&gt;([&lt;&lt;&gt;&lt;&gt;&gt;[{}{}</c>
+            </r>
+            <r>
+              <c>&lt;&lt;(({[&lt;&lt;{&lt;([[{[]()}{&lt;&gt;()}]&lt;[[][]]&gt;][(((){}){&lt;&gt;{}})([{}()]&lt;[]&lt;&gt;&gt;)])&gt;}&gt;([[&lt;&lt;(&lt;[]&lt;&gt;&gt;&lt;()()&gt;)&lt;[()(</c>
+            </r>
+            <r>
+              <c>{&lt;({[{&lt;&lt;&lt;{[({&lt;()[]&gt;}[&lt;&lt;&gt;()&gt;[(){}]])&lt;[(&lt;&gt;())&lt;[][]&gt;](&lt;[]()&gt;[{}&lt;&gt;])&gt;]((&lt;(&lt;&gt;{}){&lt;&gt;{}}&gt;{{[]()}([])})[&lt;{{}</c>
+            </r>
+            <r>
+              <c>[&lt;([(&lt;[{(&lt;([&lt;(&lt;&gt;[])[()()]&gt;{[()&lt;&gt;][&lt;&gt;&lt;&gt;]}]&lt;[{{}[])]((&lt;&gt;())[[][]])&gt;)&gt;({(({&lt;&gt;&lt;&gt;}({}[]))&lt;{{}&lt;&gt;}([]&lt;&gt;)&gt;)</c>
+            </r>
+            <r>
+              <c>{&lt;[[({&lt;[([{&lt;{({}()){{}{}&gt;}&gt;{{[()[]]}[(&lt;&gt;[])&lt;{}()&gt;]}}])[[&lt;(([&lt;&gt;]&lt;{}&lt;&gt;&gt;)([{}]{&lt;&gt;}))&lt;({&lt;&gt;&lt;&gt;}([]&lt;&gt;))&lt;[&lt;&gt;[]][</c>
+            </r>
+            <r>
+              <c>{(&lt;[[([[([{{[((){})(()&lt;&gt;)]}}[&lt;(([]&lt;&gt;){{}{}})&gt;{&lt;[[]{}]{()()}&gt;({{}()}[&lt;&gt;])}]][[(&lt;[[]&lt;&gt;]&lt;&lt;&gt;&lt;&gt;&gt;&gt;</c>
+            </r>
+            <r>
+              <c>&lt;{[&lt;{{((&lt;({{{[()[]]([]&lt;&gt;)}({{}&lt;&gt;}&lt;{}()&gt;)}(((()&lt;&gt;)[[]{}])[([]&lt;&gt;)&lt;{}()&gt;])]([[&lt;()[]&gt;&lt;&lt;&gt;()&gt;]]&lt;{{[][]}[[]]}&gt;))&gt;)&lt;&lt;</c>
+            </r>
+            <r>
+              <c>{([([&lt;&lt;((([(&lt;([]&lt;&gt;){[][]}&gt;&lt;{[]()}&lt;&lt;&gt;{}&gt;&gt;)(&lt;[&lt;&gt;()]([]&lt;&gt;)&gt;[[[][]]&lt;&lt;&gt;()&gt;])]))(((&lt;{&lt;[]()&gt;&lt;()&lt;&gt;&gt;}([[]][()[]])&gt;)&lt;(</c>
+            </r>
+            <r>
+              <c>{&lt;[(&lt;&lt;((&lt;&lt;({{[{}[]][&lt;&gt;[]]}[{{}&lt;&gt;}((){})]}&lt;([()&lt;&gt;][{}[]])&lt;{&lt;&gt;[]}({}())&gt;&gt;)(&lt;[&lt;(){}&gt;]{{()[]}&lt;()()&gt;}&gt;(&lt;&lt;()[]&gt;</c>
+            </r>
+            <r>
+              <c>&lt;(&lt;{[({{&lt;&lt;{[({&lt;&gt;()}{&lt;&gt;&lt;&gt;})(&lt;{}{}&gt;(&lt;&gt;&lt;&gt;))]{&lt;&lt;{}&lt;&gt;&gt;({}{})&gt;}}[({(&lt;&gt;{})({}{})}{&lt;{}{}&gt;&lt;{}{}&gt;})]}[&lt;(</c>
+            </r>
+            <r>
+              <c>{&lt;[([&lt;(([([&lt;(&lt;()[]&gt;(&lt;&gt;[]))[[()][&lt;&gt;()]]&gt;[[{{}{}}(()())][&lt;(){}&gt;&lt;{}&lt;&gt;&gt;]]]&lt;((&lt;()&gt;((){}))&lt;{{}{}}</c>
+            </r>
+            <r>
+              <c>((({{(({{[&lt;[&lt;{&lt;&gt;}&lt;[]{}&gt;&gt;{([]{})&lt;{}&lt;&gt;&gt;}](&lt;{&lt;&gt;{}}&lt;&lt;&gt;()&gt;&gt;&lt;{(){}}[[]()]&gt;)&gt;({&lt;([][]}&lt;&lt;&gt;{}&gt;&gt;&lt;&lt;{}()&gt;&lt;{}{}&gt;&gt;}</c>
+            </r>
+            <r>
+              <c>[([{[&lt;[[({[(&lt;{&lt;&gt;[]}[{}[]]&gt;(({}[]}{[]&lt;&gt;}))[&lt;{&lt;&gt;{}}{&lt;&gt;()}&gt;(([]&lt;&gt;))]][&lt;(([])&lt;{}()&gt;)[&lt;{}&lt;&gt;&gt;{[]&lt;</c>
+            </r>
+            <r>
+              <c>([&lt;{(&lt;[&lt;[{([&lt;[()[]]&lt;()&lt;&gt;&gt;&gt;]{[{[]{}}&lt;&lt;&gt;()&gt;]}){[[[&lt;&gt;&lt;&gt;][&lt;&gt;[]]]&lt;({}[])&lt;[]()&gt;&gt;](([[][]]&lt;{}()&gt;)[[&lt;&gt;{}]{()[]}])}}{</c>
+            </r>
+            <r>
+              <c>[[[([{{(({&lt;[[&lt;&lt;&gt;{}&gt;(&lt;&gt;())][((){})]]]{((&lt;()&lt;&gt;&gt;{[][]})((&lt;&gt;())(()&lt;&gt;))){&lt;&lt;&lt;&gt;&lt;&gt;&gt;(&lt;&gt;[])&gt;}}}(({&lt;([]</c>
+            </r>
+            <r>
+              <c>({{[(([&lt;(&lt;([&lt;{(){}}({}())&gt;&lt;[{}&lt;&gt;]&gt;]{(&lt;&lt;&gt;{}&gt;&lt;(){}&gt;)})&gt;){[&lt;[&lt;(()()}[&lt;&gt;{}]&gt;((&lt;&gt;&lt;&gt;)&lt;&lt;&gt;()&gt;)][([{}{}]){(&lt;&gt;[])[[</c>
+            </r>
+            <r>
+              <c>{([{((({(((([(()&lt;&gt;){[]()}](&lt;{}[]&gt;[{}{}]))&lt;((()()){{}{}})[&lt;[]()&gt;]&gt;)[((&lt;&lt;&gt;[]&gt;[()[]])(&lt;{}&lt;&gt;&gt;&lt;&lt;</c>
+            </r>
+            <r>
+              <c>([[{[[[{&lt;{[{{([]&lt;&gt;){()[]}}}]{({(()&lt;&gt;)({}{})}[&lt;{}()&gt;{[]{}}])&lt;{[&lt;&gt;{}]}&gt;}}&gt;}]]]{&lt;[({(&lt;[&lt;([]()){</c>
+            </r>
+            <r>
+              <c>((({[&lt;&lt;&lt;{{(([({}&lt;&gt;)&lt;[]&lt;&gt;&gt;][{{}{}}])){([[()&lt;&gt;]]({(){}}[&lt;&gt;&lt;&gt;]))((&lt;()()&gt;[{}&lt;&gt;]){{()&lt;&gt;}(()[])})}}&lt;({((</c>
+            </r>
+            <r>
+              <c>&lt;&lt;&lt;(&lt;{(&lt;([&lt;{[[{}{}]]&lt;{(){}}({}())&gt;}[&lt;&lt;{}()&gt;&lt;{}{}&gt;&gt;&lt;(()()){()&lt;&gt;}&gt;]&gt;]]&gt;{&lt;[([&lt;&lt;()&lt;&gt;&gt;((){})&gt;][[[()[]]&lt;{}[]&gt;]&lt;(&lt;&gt;{</c>
+            </r>
+            <r>
+              <c>([{&lt;[[[[[[{(&lt;&lt;()&lt;&gt;&gt;([][]&gt;&gt;)({{()[]}&lt;[][]&gt;}((()()){()[]}))}((([{}&lt;&gt;]([]&lt;&gt;)){&lt;&lt;&gt;()&gt;{[][]}}))]&lt;&lt;[[[[]()][[][]]</c>
+            </r>
+            <r>
+              <c>{&lt;&lt;[[{{[([&lt;&lt;&lt;{()&lt;&gt;}&gt;[((){}){[]{}}]&gt;&lt;({&lt;&gt;[]}[{}])([[][]]({}{}))&gt;&gt;[(([[]&lt;&gt;]){&lt;()&lt;&gt;&gt;[&lt;&gt;{}]}){&lt;&lt;(){}&gt;({}{})&gt;[{</c>
+            </r>
+            <r>
+              <c>&lt;{(&lt;(&lt;([(&lt;&lt;([&lt;[]&lt;&gt;&gt;(&lt;&gt;{})][([]())&lt;[][]&gt;])([[&lt;&gt;()](()[])])&gt;({(&lt;{}&lt;&gt;&gt;([][]))}[{[[][]]{(){}]}]</c>
+            </r>
+            <r>
+              <c>{[({{{[([{&lt;((({}()){(){}})((&lt;&gt;[]){&lt;&gt;{}}))&lt;&lt;([][]){{}[]})[{{}{}}{{}[]}]&gt;&gt;}[{[[[&lt;&gt;[]]([]{})]&lt;[{}()]&lt;&lt;&gt;&lt;&gt;&gt;&gt;](&lt;((</c>
+            </r>
+            <r>
+              <c>[[{[(({&lt;[[[({((){})&lt;()&lt;&gt;&gt;}{{&lt;&gt;{}}[()()]}){[([]{})([]&lt;&gt;)][{{}}&lt;&lt;&gt;()&gt;])][{([{}&lt;&gt;]({}())){([]{}){</c>
+            </r>
+            <r>
+              <c>((&lt;[{(({&lt;{&lt;(((&lt;&gt;)&lt;{}[]&gt;)([&lt;&gt;[]]{()()}))&gt;}&gt;}[[&lt;[{({[]{}}{[][]})}(&lt;{{}[]}(()[])&gt;(({}()){&lt;&gt;[]}))]&lt;&lt;([{}][()[]])&gt;</c>
+            </r>
+            <r>
+              <c>&lt;(({&lt;[[&lt;{{&lt;&lt;&lt;[{}{}]{(){}}&gt;{&lt;()&lt;&gt;&gt;[&lt;&gt;{}]}&gt;&gt;}[[{[([][])(()())]&lt;[()&lt;&gt;]&gt;}{&lt;&lt;(){}&gt;[()[]]&gt;([[]&lt;&gt;]&lt;[][]&gt;)}][{</c>
+            </r>
+            <r>
+              <c>&lt;{((&lt;({{({&lt;&lt;{([]&lt;&gt;]{&lt;&gt;&lt;&gt;}}((&lt;&gt;[]){&lt;&gt;&lt;&gt;})&gt;&gt;{&lt;{[{}{}][&lt;&gt;[]]}&gt;({{&lt;&gt;&lt;&gt;}[[]]}&lt;{(){}}[&lt;&gt;{}]&gt;)}})}})&lt;((&lt;{[(&lt;&lt;()(</c>
+            </r>
+            <r>
+              <c>[(({({{([([{{&lt;[]&lt;&gt;&gt;([][])}&lt;[()&lt;&gt;]&gt;}{(({}())[&lt;&gt;()])}]&lt;({{{}{}}}({{}&lt;&gt;}&lt;[]{}&gt;))&gt;)(&lt;[[&lt;()&gt;((){})]</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="246" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>LastOpenCharacter</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>data_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="246" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="246" y="918" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>RecordID</UpdateField_Name>
+          <CreateField_Name>CharPos</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:CharPos]+1</Expression>
+          <GroupByFields>
+            <Field field="RecordID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:CharPos]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="354" y="918" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="Char" />
+            <Field name="Points" />
+          </Fields>
+          <Data>
+            <r>
+              <c>(</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>[</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>{</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>&lt;</c>
+              <c>4</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="294" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="LastOpenCharacter" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Char" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29064_4e443f2fa95645e09112a22f663be52d_\Engine_27132_00f1e5f4b3ff49f6b1a64716769d517e_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="294" y="1398" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29064_4e443f2fa95645e09112a22f663be52d_\Engine_27132_e49850e0fa3949b39a001c2595e8de50_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="378" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29064_4e443f2fa95645e09112a22f663be52d_\Engine_27132_0ce9e918c1564fe08095fc1fb8c43f8d_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="294" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="RecordID" order="Ascending" />
+            <Field field="CharPos" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>RecordID - Ascending
+CharPos - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="294" y="1206" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>RecordID</UpdateField_Name>
+          <CreateField_Name>TotalPoints</CreateField_Name>
+          <CreateField_Type>Int64</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>([Row-1:TotalPoints]*5)+[Points]</Expression>
+          <GroupByFields>
+            <Field field="RecordID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>([Row-1:TotalPoints]*5)+[Points]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="294" y="1302" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Last</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False">
+            <Field name="RecordID" />
+          </GroupFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="354" y="1398" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="TotalPoints" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TotalPoints - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="354" y="1482" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>AscOrder</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="462" y="1506" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="TotalPoints" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TotalPoints - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="462" y="1590" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>DescOrder</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="462" y="1662" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[DescOrder] = [AscOrder]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[DescOrder] = [AscOrder]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="426" y="1758" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29064_4e443f2fa95645e09112a22f663be52d_\Engine_27132_b4b408b348c54f988705677475e4f7b2_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="498" y="1758" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29064_4e443f2fa95645e09112a22f663be52d_\Engine_27132_d84687023299444b97bb723c6eb8421e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="False" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Left" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Right" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Join" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="True" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="False" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day10</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="22dd15f0-4d97-465e-a774-23a450e051b4" />
+      <Telemetry>
+        <PreviousWorkflowId value="82f59253-8dc4-43b1-a3e1-9d9158e473b2" />
+        <OriginWorkflowId value="82f59253-8dc4-43b1-a3e1-9d9158e473b2" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

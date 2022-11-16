@@ -1,0 +1,1679 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="295">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="174" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-12-11 20:42:00</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>.</Operand>
+              <StartDate>2020-12-11 20:42:00</StartDate>
+              <EndDate>2020-12-11 20:42:00</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[data] != "."</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="296">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>L.LL.LL.LL</c>
+            </r>
+            <r>
+              <c>LLLLLLL.LL</c>
+            </r>
+            <r>
+              <c>L.L.L..L..</c>
+            </r>
+            <r>
+              <c>LLLL.LL.LL</c>
+            </r>
+            <r>
+              <c>L.LL.LL.LL</c>
+            </r>
+            <r>
+              <c>L.LLLLL.LL</c>
+            </r>
+            <r>
+              <c>..L.L.....</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>L.LLLLLL.L</c>
+            </r>
+            <r>
+              <c>L.LLLLL.LL</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="297">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="54" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>row</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="298">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="174" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>data_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="299">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="174" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>row</UpdateField_Name>
+          <CreateField_Name>column</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:column]+1</Expression>
+          <GroupByFields>
+            <Field field="row" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:column]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="300">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="174" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="tostring([row])+','+tostring([column])" field="coordinates" size="64" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[coordinates = tostring([row])+','+tostring([column])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="301">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="98" />
+          <Fields>
+            <Field name="data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLL.LL.L.LLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLL.L.LLLLLLL.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLL..LLLLLLLLLLLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLLLL..L.LLLLLLLLLLLLLLL.LL.LLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLLLLL.LLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LL..LLLL.LLLLLLL.LLLLLLLLLLL.LLLLLLLLLLL.LLLLLLLLLLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLL.LLLLLL.LLLL..LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LL.L..L.L..L.LL..L.....LLLL..L.L.LL..L...LLLLLL...L.....L.....LL.L...LLLLL..L.LL..L..L.LL..</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLLL.LLLL.LLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL..LLLLLLL.LLLLLLL.LLLLL.L.LLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>L.LLLLLLLLLL.LLL..LLLLLLLLL.LLLLL.LLLLL..LLLLLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLL.LLLL..LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLL..LLLLLLLLLLL.L.LL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLL.L.LLLLLLLLLLLLLLLL.LLLLLLLLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLL.LLLLL</c>
+            </r>
+            <r>
+              <c>.......LL.L....L......L....L...L.LL..L..L...L.LL.L.LL..L..L.L.LLL.....L...LL..L..L..L.LL..L</c>
+            </r>
+            <r>
+              <c>LLL.LLLLLLLLLLLLLLL.LLLLLLL.LLLLL.LLLLL.L.LL.LLLLLLLLLL.LLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLL.LLL.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLL..LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLL.LL.LLLL.LLL..LLLLLL.LLLLL.LLLLLLLLLL.LLLL.LLLLLLLLL.LLLL.LLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LL.LLLLL.LLLLLLLLLLLLL.LLLLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLL.LLLL.LLLL.LLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>.LL..LL.L.L....L...L.........L......LL.L..........L....L...L.L..L.L.L.LLL...LLL.L.....L.L..</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLL.L.LLL.LLL.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLLL..LLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LL.LLLLLLL.LL.LLLLL.LLLLLLL.LLLLLLLLLLLLLLLL..LLL.LLL.LLLLL.LLLLLLLL..LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLL.LL..LL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLL.L.LLLLLLLL.LL.LLLL.LLLL.LLLLLLLLL.LLL.LLLLL.L.LLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LL.LLLLLLL.LLLLLLLL.LLLLLLLLLLLLL.LL.LLLLLLL.LLLL..LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>......L.L......L.L.LLL.L.......L.LL..L..........LLL.LL..L.L............LL.LL.L.LL.......L..</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLLL.LLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLL.LLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLL.LLLLLL.LLLLLLLLLLLLL.L.LLL.LLLLL.LLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLL..LLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLL.L.LLL.LLLLLLLLLL.LLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLL.LLLL.LLLL.LLLLLLLLLLL.LLLLL.LLLLL.LLLL..LL..LLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLLL.LL</c>
+            </r>
+            <r>
+              <c>LL.LLLLLLLLLLLLLLLL.LLL.LLL.LLLLL.L.LLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL.L.LLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLL.LLLL.LLLLLLLLLLLLLLLLLL..LLLLLLLLL..L.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>........LL.........L........L.L.LL..L.......L....L.....L.......L...L.L..L..........L......L</c>
+            </r>
+            <r>
+              <c>LL.LLLLLLL.LLLLLLLL.LLLLLL.LLL.LLLLLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLL.LLLLLLLLLLL.LLLLL.LLLL.LLLL.LLLLLLLLLLLLLLL.LLL.LLLLLL.LLLLL.LLLLLL.L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL..LLLLLLLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLL.LLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLLL.LLLL.LL.L.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLL.LLL.L.LLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>...L....L.LL..L.......L..L...L.LL..LL.L....LL......L...L..L.....LL.LL....L.L..L.....L..L.L.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLL.LL.LLLLL.LLLLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLLLL..LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLL.LLLLL.LLL.LLLLLLLLL.LLL.LL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLL.LLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLL.LLL.LLLL</c>
+            </r>
+            <r>
+              <c>L.L..LL..L..LL....L...LL...L.LL...L.L.......LL.......L.LLL....L.....L..L.L..L...L.L.L.L....</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LL.LLLLLLLLL.LLLLLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLL.LLLL.LLLLLLLLLLLLLLLLLLL.LLLLLL.LLLLLLLLL.LLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLL.L.LLLLL.LL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLL.LLLL..LLLLLL.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLLL..LLLLLLLL.LLLLLL.LLL.L.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLL.LL.L.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLL.LL.LLLLLLLLLLLLL.LLLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>...LLL.LL.LL.LLL......L.L.L..L..L....L........L........L...LL....L.LLL....LLL..L.......LLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLL.LL.LLLLLLLLL.L.LLL.LLL.LLL.LLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLL.LLLLL.LLLL.LLLL.LLL.LLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLL.L.LLLLLLLL..LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLL.L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLLLLLLL.LLLL.LLLLLLLLL..LLLLLLL..LLLLLL.LLLLL.LLLLLL.L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLL.LLLLL.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLL.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LL.LLLLL.LLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLL.LLLLLL.LLL.LLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LL.LL.LLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLL.LLLL.LLLLLLLLLLLLLLLL.L..LL.LLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>L.L........L...LL.L..L....LLLL...LL.L......L.L....L...L.L..LL......LL......L....L..L.LL..L.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL..L.LLLL.L.LLLLLLLLL.LLLLLLLLL.LLLLLLLLL..LLLLLL.L.L..LLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLL.L.LLLL.LLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLL.LL.L.LLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLL.L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL..LLLLLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLL.L.LLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLLLLLLLLLLLL.LLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLL.LL.LLLLL.LLLLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLL..L.LLLLLLL.LLLLL.LLL.L.LLLL..LLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLLLLLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>...LL......L..LL.....L.LLLLLL..LL.LLL...L.L...LLL.LL........L......LLL..L.L.L.L..L..LLL.L..</c>
+            </r>
+            <r>
+              <c>LL.LLL.LLL.LLLLLLLL.L.LLLLL.LLLLL.L.LLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLLLLLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLL.L.LL.LLLL..LLLLL.LL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLL.LLLLL..LLLLLLLL.LLLLL.L.LLLLL.LLLLL.LLL.LLLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLL.LL.LLLL.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLL.LLL.LLLL.LLLLLL.LL.L.LLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>.......LLL....LLL.LL.L.L.L....LLL..L..L...L.LL.LLLL...LL............LL..LL....L..L...L.LLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLL.LLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLLL.LLLLLL..L.LLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLL.LLLLL.LLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLL.LLLL.LLLLLLLL.LLLLLLL..LLLL.LLLLLLLLLL.LLLL.LLLLLLLLL.LLL.LLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLLLLLLLL.LLLLLLLLLLLLLLLLLLLL.LLLL.LLLLLLLLL.LLLLLLLLLLL..LLLL.LLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLL..LLLLLLL.LLLLL..LLLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLL.LLLLLLLLL.LLLLLLL.LLLL..LLLLL.LLLL.LLLL.LLLLLLLLL.L.LLLLLLL.LLLLLLLLLLLL.L.LLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLL.L..LLLLLLL.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>.....L...L..L.L..L.LLLLLLLLL....L.LL...LL...L.LL..L..L.L..L.L.....L...L.LL...L.L.......L..L</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLL.L.LLLLL.LLLLL.LLLL.LLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLL.LLLLLLL.LLLLL.LLLLL.LLLL.LL.LLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLLLLLL.LLL.LLLLL.LLL.L.LLLL.LLLLLLLLLLLLLL.LLLLLLLLLLLLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.LLLLL.LLLL.LLLL.LLLLLLLLL.LLLLLLLLL.LLLLLLLLLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLL.L.LLLLLLLL.LLLLLLL.L.LLL.LLLLL.LLLLLLLLLLLLLLLLLLL.LLLLLLLLL.LLLLLL.LLLLL.LLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLL.LLLL.LLLLLLL.LL.LL.LLLLL.LLLL.LLLL.LLLLLLLLLLLLLLLLLLL.LLLLLL.LLLLLLLLLLLLL.</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLL..LLLLLLL.LLLLL.LLLLL.LLLLLLLLL.LLL.LLLLL.LLLLLLLLL.LLLLLLLLLLLLLLLLLLLLL</c>
+            </r>
+            <r>
+              <c>LLLLLLLLLL.LLLLLLLL.LLLLLLLLLLLLL.LLLLL.LLL..LLLL.LLLLLLL.L.LLLLLLLLL..LLLLLLLLLLLLLLLLLLL.</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="309">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="270" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="312">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="126" y="942" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="row" />
+          </GroupFields>
+          <HeaderField field="column" />
+          <DataField field="rminuscdiff" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="row" source="CrossTab:Group:Sum:" type="Int32" />
+            <Field name="1" source="CrossTab:Header:column:1:Sum:" type="Int64" />
+            <Field name="2" source="CrossTab:Header:column:2:Sum:" type="Int64" />
+            <Field name="3" source="CrossTab:Header:column:3:Sum:" type="Int64" />
+            <Field name="4" source="CrossTab:Header:column:4:Sum:" type="Int64" />
+            <Field name="5" source="CrossTab:Header:column:5:Sum:" type="Int64" />
+            <Field name="6" source="CrossTab:Header:column:6:Sum:" type="Int64" />
+            <Field name="7" source="CrossTab:Header:column:7:Sum:" type="Int64" />
+            <Field name="8" source="CrossTab:Header:column:8:Sum:" type="Int64" />
+            <Field name="9" source="CrossTab:Header:column:9:Sum:" type="Int64" />
+            <Field name="10" source="CrossTab:Header:column:10:Sum:" type="Int64" />
+            <Field name="11" source="CrossTab:Header:column:11:Sum:" type="Int64" />
+            <Field name="12" source="CrossTab:Header:column:12:Sum:" type="Int64" />
+            <Field name="13" source="CrossTab:Header:column:13:Sum:" type="Int64" />
+            <Field name="14" source="CrossTab:Header:column:14:Sum:" type="Int64" />
+            <Field name="15" source="CrossTab:Header:column:15:Sum:" type="Int64" />
+            <Field name="16" source="CrossTab:Header:column:16:Sum:" type="Int64" />
+            <Field name="17" source="CrossTab:Header:column:17:Sum:" type="Int64" />
+            <Field name="18" source="CrossTab:Header:column:18:Sum:" type="Int64" />
+            <Field name="19" source="CrossTab:Header:column:19:Sum:" type="Int64" />
+            <Field name="20" source="CrossTab:Header:column:20:Sum:" type="Int64" />
+            <Field name="21" source="CrossTab:Header:column:21:Sum:" type="Int64" />
+            <Field name="22" source="CrossTab:Header:column:22:Sum:" type="Int64" />
+            <Field name="23" source="CrossTab:Header:column:23:Sum:" type="Int64" />
+            <Field name="24" source="CrossTab:Header:column:24:Sum:" type="Int64" />
+            <Field name="25" source="CrossTab:Header:column:25:Sum:" type="Int64" />
+            <Field name="26" source="CrossTab:Header:column:26:Sum:" type="Int64" />
+            <Field name="27" source="CrossTab:Header:column:27:Sum:" type="Int64" />
+            <Field name="28" source="CrossTab:Header:column:28:Sum:" type="Int64" />
+            <Field name="29" source="CrossTab:Header:column:29:Sum:" type="Int64" />
+            <Field name="30" source="CrossTab:Header:column:30:Sum:" type="Int64" />
+            <Field name="31" source="CrossTab:Header:column:31:Sum:" type="Int64" />
+            <Field name="32" source="CrossTab:Header:column:32:Sum:" type="Int64" />
+            <Field name="33" source="CrossTab:Header:column:33:Sum:" type="Int64" />
+            <Field name="34" source="CrossTab:Header:column:34:Sum:" type="Int64" />
+            <Field name="35" source="CrossTab:Header:column:35:Sum:" type="Int64" />
+            <Field name="36" source="CrossTab:Header:column:36:Sum:" type="Int64" />
+            <Field name="37" source="CrossTab:Header:column:37:Sum:" type="Int64" />
+            <Field name="38" source="CrossTab:Header:column:38:Sum:" type="Int64" />
+            <Field name="39" source="CrossTab:Header:column:39:Sum:" type="Int64" />
+            <Field name="40" source="CrossTab:Header:column:40:Sum:" type="Int64" />
+            <Field name="41" source="CrossTab:Header:column:41:Sum:" type="Int64" />
+            <Field name="42" source="CrossTab:Header:column:42:Sum:" type="Int64" />
+            <Field name="43" source="CrossTab:Header:column:43:Sum:" type="Int64" />
+            <Field name="44" source="CrossTab:Header:column:44:Sum:" type="Int64" />
+            <Field name="45" source="CrossTab:Header:column:45:Sum:" type="Int64" />
+            <Field name="46" source="CrossTab:Header:column:46:Sum:" type="Int64" />
+            <Field name="47" source="CrossTab:Header:column:47:Sum:" type="Int64" />
+            <Field name="48" source="CrossTab:Header:column:48:Sum:" type="Int64" />
+            <Field name="49" source="CrossTab:Header:column:49:Sum:" type="Int64" />
+            <Field name="50" source="CrossTab:Header:column:50:Sum:" type="Int64" />
+            <Field name="51" source="CrossTab:Header:column:51:Sum:" type="Int64" />
+            <Field name="52" source="CrossTab:Header:column:52:Sum:" type="Int64" />
+            <Field name="53" source="CrossTab:Header:column:53:Sum:" type="Int64" />
+            <Field name="54" source="CrossTab:Header:column:54:Sum:" type="Int64" />
+            <Field name="55" source="CrossTab:Header:column:55:Sum:" type="Int64" />
+            <Field name="56" source="CrossTab:Header:column:56:Sum:" type="Int64" />
+            <Field name="57" source="CrossTab:Header:column:57:Sum:" type="Int64" />
+            <Field name="58" source="CrossTab:Header:column:58:Sum:" type="Int64" />
+            <Field name="59" source="CrossTab:Header:column:59:Sum:" type="Int64" />
+            <Field name="60" source="CrossTab:Header:column:60:Sum:" type="Int64" />
+            <Field name="61" source="CrossTab:Header:column:61:Sum:" type="Int64" />
+            <Field name="62" source="CrossTab:Header:column:62:Sum:" type="Int64" />
+            <Field name="63" source="CrossTab:Header:column:63:Sum:" type="Int64" />
+            <Field name="64" source="CrossTab:Header:column:64:Sum:" type="Int64" />
+            <Field name="65" source="CrossTab:Header:column:65:Sum:" type="Int64" />
+            <Field name="66" source="CrossTab:Header:column:66:Sum:" type="Int64" />
+            <Field name="67" source="CrossTab:Header:column:67:Sum:" type="Int64" />
+            <Field name="68" source="CrossTab:Header:column:68:Sum:" type="Int64" />
+            <Field name="69" source="CrossTab:Header:column:69:Sum:" type="Int64" />
+            <Field name="70" source="CrossTab:Header:column:70:Sum:" type="Int64" />
+            <Field name="71" source="CrossTab:Header:column:71:Sum:" type="Int64" />
+            <Field name="72" source="CrossTab:Header:column:72:Sum:" type="Int64" />
+            <Field name="73" source="CrossTab:Header:column:73:Sum:" type="Int64" />
+            <Field name="74" source="CrossTab:Header:column:74:Sum:" type="Int64" />
+            <Field name="75" source="CrossTab:Header:column:75:Sum:" type="Int64" />
+            <Field name="76" source="CrossTab:Header:column:76:Sum:" type="Int64" />
+            <Field name="77" source="CrossTab:Header:column:77:Sum:" type="Int64" />
+            <Field name="78" source="CrossTab:Header:column:78:Sum:" type="Int64" />
+            <Field name="79" source="CrossTab:Header:column:79:Sum:" type="Int64" />
+            <Field name="80" source="CrossTab:Header:column:80:Sum:" type="Int64" />
+            <Field name="81" source="CrossTab:Header:column:81:Sum:" type="Int64" />
+            <Field name="82" source="CrossTab:Header:column:82:Sum:" type="Int64" />
+            <Field name="83" source="CrossTab:Header:column:83:Sum:" type="Int64" />
+            <Field name="84" source="CrossTab:Header:column:84:Sum:" type="Int64" />
+            <Field name="85" source="CrossTab:Header:column:85:Sum:" type="Int64" />
+            <Field name="86" source="CrossTab:Header:column:86:Sum:" type="Int64" />
+            <Field name="87" source="CrossTab:Header:column:87:Sum:" type="Int64" />
+            <Field name="88" source="CrossTab:Header:column:88:Sum:" type="Int64" />
+            <Field name="89" source="CrossTab:Header:column:89:Sum:" type="Int64" />
+            <Field name="90" source="CrossTab:Header:column:90:Sum:" type="Int64" />
+            <Field name="91" source="CrossTab:Header:column:91:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="313">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="126" y="1230" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_22856_e6b2ae37ea0c4653a549e67f05d73550_\Engine_20256_73dc11f94ad34a13b993fc36feb0bbae_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="314">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="126" y="1134" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="315">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="126" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="row" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>row - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="334">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="258" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_4060_c237e4e20aa8e04bad78ee75df4a478c_\Engine_4060_dce074d129129244bdb288ea5868117e~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="335">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="413" y="329" width="158" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 335</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="311">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="533" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[row]-[column]" field="rminuscdiff" size="4" type="Int32" />
+                <FormulaField expression="[column]-[row]" field="cminusrdiff" size="4" type="Int32" />
+                <FormulaField expression="[row]" field="rowjoin" size="4" type="Int32" />
+                <FormulaField expression="[column]" field="columnjoin" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>rminuscdiff = [row]-[column]
+cminusrdiff = [column]-[row]
+rowjoin = [row]
+column...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="316">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+            <Position x="522" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ErrorWarn>Warn</ErrorWarn>
+              <KeyFields>
+                <Field field="row" />
+                <Field field="data" />
+                <Field field="column" />
+                <Field field="coordinates" />
+              </KeyFields>
+              <DataFields>
+                <Field field="row" selected="False" />
+                <Field field="data" selected="False" />
+                <Field field="column" selected="False" />
+                <Field field="coordinates" selected="False" />
+                <Field field="rminuscdiff" selected="True" />
+                <Field field="cminusrdiff" selected="True" />
+                <Field field="rowjoin" selected="True" />
+                <Field field="columnjoin" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </DataFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+        </Node>
+        <Node ToolID="317">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="534" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Name" />
+                <Field field="Value" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Name" />
+                <Field field="Value" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_row" selected="True" rename="Right_row" input="Right_" />
+                    <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                    <SelectField field="Right_column" selected="True" rename="Right_column" input="Right_" />
+                    <SelectField field="Right_coordinates" selected="True" rename="Right_coordinates" input="Right_" />
+                    <SelectField field="Right_Name" selected="False" rename="Right_Name" input="Right_" />
+                    <SelectField field="Right_Value" selected="False" rename="Right_Value" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="318">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="450" y="666" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_2792_b278ab0098cad04e88b1c501d794ea09_\Engine_2792_bcc21dec5e57bd4e81f41e4a60febc70~.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="319">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="534" y="666" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_2792_b278ab0098cad04e88b1c501d794ea09_\Engine_2792_22de88edbe95d242a429911f952c48b9~.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="320">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="618" y="666" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_2792_b278ab0098cad04e88b1c501d794ea09_\Engine_2792_dbd0491c38ff0d44ab5b965852546f4e~.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="321">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="558" y="846" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ATAN2(([Row]-[right_Row]),([Column]-[right_Column]))*180/pi()" field="Degrees" size="19.6" type="FixedDecimal" />
+                <FormulaField expression="ABS([row]-[Right_row])+ABS([column]-[Right_column])" field="distance" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Degrees = ATAN2(([Row]-[right_Row]),([Column]-[right_Column]))*180/pi()
+distance...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="322">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="534" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[coordinates] != [right_coordinates]</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[coordinates] != [right_coordinates]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="323">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="546" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="0">
+                <Field field="coordinates" order="Ascending" />
+                <Field field="Degrees" order="Ascending" />
+                <Field field="distance" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>coordinates - Ascending
+Degrees - Ascending
+distance - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="324">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="534" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="coordinates" />
+                <Field field="Degrees" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="325">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="498" y="1146" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_2792_b278ab0098cad04e88b1c501d794ea09_\Engine_2792_66159ad3d1cbb64a9101c98b95d96262~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints />
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="326">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="570" y="1146" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_2792_b278ab0098cad04e88b1c501d794ea09_\Engine_2792_7d910378ef60754985c370ef5c1866c2~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="327">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="438" y="1134" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="row" action="GroupBy" rename="row" />
+                <SummarizeField field="data" action="GroupBy" rename="data" />
+                <SummarizeField field="column" action="GroupBy" rename="column" />
+                <SummarizeField field="coordinates" action="GroupBy" rename="coordinates" />
+                <SummarizeField field="Right_data" action="GroupBy" rename="Right_data" />
+                <SummarizeField field="Right_column" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="328">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="509" y="1590" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields>
+                <Field field="row" />
+                <Field field="data" />
+                <Field field="column" />
+                <Field field="coordinates" />
+              </GroupFields>
+              <HeaderField field="Right_data" />
+              <DataField field="Count" />
+              <Methods>
+                <Method method="Sum" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="row" source="CrossTab:Group:Sum:" type="Int32" />
+                <Field name="data" size="2147483647" source="CrossTab:Group:Sum:" type="V_String" />
+                <Field name="column" source="CrossTab:Group:Sum:" type="Int32" />
+                <Field name="coordinates" size="64" source="CrossTab:Group:Sum:" type="String" />
+                <Field name="empty" source="CrossTab:Header:Right_data:empty:Sum:" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="329">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="606" y="1278" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IIF([Right_data]='#', 'occupied', 'empty')" field="Right_data" size="2147483647" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Right_data = IIF([Right_data]='#', 'occupied', 'empty')
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="330">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="545" y="1746" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_2792_b278ab0098cad04e88b1c501d794ea09_\Engine_2792_f9b4a01802dfcd43b37d2511ed99e7f7~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="331">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="497" y="1506" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="332">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="462" y="1230" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="0" />
+              <Fields>
+                <Field name="occupied" />
+                <Field name="empty" />
+              </Fields>
+              <Data />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="333">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="486" y="1326" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="occupied" selected="True" type="Int32" size="4" />
+                <SelectField field="empty" selected="True" type="Int32" size="4" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="340">
+      <GuiSettings>
+        <Position x="342" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>AOC_BaseA_11_Part2_Iterative (336)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="AOC_BaseA_11_Part2_Iterative.yxmc" />
+    </Node>
+    <Node ToolID="337">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="306" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_1256_27f33e50323b4742b97ce82e0fe9f9b9_\Engine_1256_c02f02e385f5364cbf4442f9d865d55b~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="338">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="366" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_1256_27f33e50323b4742b97ce82e0fe9f9b9_\Engine_1256_138577f5149bf744b56630c36bf8b08e~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="341">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="366" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="CurrentStatus" action="GroupBy" rename="CurrentStatus" />
+            <SummarizeField field="CurrentStatus" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="310">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="748" y="197" width="158" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 310</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="302">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="774" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="ATAN2(([Row]-[Source_Row]),([Column]-[Source_Column]))*180/pi()" field="Degrees" size="19.6" type="FixedDecimal" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Degrees = ATAN2(([Row]-[Source_Row]),([Column]-[Source_Column]))*180/pi()
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="303">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="786" y="246" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Allow</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_row" selected="True" rename="Source_row" input="Source_" />
+                    <SelectField field="Source_data" selected="True" rename="Source_data" input="Source_" />
+                    <SelectField field="Source_column" selected="True" rename="Source_column" input="Source_" />
+                    <SelectField field="Source_coordinates" selected="True" rename="Source_coordinates" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="304">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="773" y="822" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_1308_a794569d1dc3124c9fbf5c16fd86c490_\Engine_1308_6664d8a31d304e4c8a5ddca3a793fb04~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="305">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="773" y="522" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Degrees] = 90
+|| [Degrees] =270
+|| [Degrees] =0
+|| [Degrees] =180
+|| [Degrees] =135
+|| [Degrees] =315
+|| [Degrees] =45
+|| [Degrees] =225</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Degrees] = 90
+|| [Degrees] =270
+|| [Degrees] =0
+|| [Degrees] =180
+|| [Degrees] ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="306">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="774" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="row" action="GroupBy" rename="row" />
+                <SummarizeField field="data" action="GroupBy" rename="data" />
+                <SummarizeField field="column" action="GroupBy" rename="column" />
+                <SummarizeField field="coordinates" action="GroupBy" rename="coordinates" />
+                <SummarizeField field="Degrees" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="307">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="773" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="row" action="GroupBy" rename="row" />
+                <SummarizeField field="data" action="GroupBy" rename="data" />
+                <SummarizeField field="column" action="GroupBy" rename="column" />
+                <SummarizeField field="coordinates" action="GroupBy" rename="coordinates" />
+                <SummarizeField field="Degrees" action="GroupBy" rename="Degrees" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="308">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="786" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[coordinates] != [Source_coordinates]</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[coordinates] != [Source_coordinates]</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="295" Connection="True" />
+      <Destination ToolID="309" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="297" Connection="Output" />
+      <Destination ToolID="298" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="298" Connection="Output" />
+      <Destination ToolID="299" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="299" Connection="Output" />
+      <Destination ToolID="300" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="300" Connection="Output" />
+      <Destination ToolID="295" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="301" Connection="Output" />
+      <Destination ToolID="297" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="Output" />
+      <Destination ToolID="303" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="Output" />
+      <Destination ToolID="303" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="Output" />
+      <Destination ToolID="311" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="Output" />
+      <Destination ToolID="334" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="Output" />
+      <Destination ToolID="340" Connection="Input21" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="312" Connection="Output" />
+      <Destination ToolID="315" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="314" Connection="Output" />
+      <Destination ToolID="313" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="315" Connection="Output" />
+      <Destination ToolID="314" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="311" Connection="Output" />
+      <Destination ToolID="312" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="311" Connection="Output" />
+      <Destination ToolID="316" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="316" Connection="Output" />
+      <Destination ToolID="317" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="316" Connection="Output" />
+      <Destination ToolID="317" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="317" Connection="Left" />
+      <Destination ToolID="318" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="317" Connection="Join" />
+      <Destination ToolID="319" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="317" Connection="Right" />
+      <Destination ToolID="320" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="317" Connection="Join" />
+      <Destination ToolID="322" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="321" Connection="Output" />
+      <Destination ToolID="323" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="322" Connection="True" />
+      <Destination ToolID="321" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="323" Connection="Output" />
+      <Destination ToolID="324" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="324" Connection="Unique" />
+      <Destination ToolID="325" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="324" Connection="Duplicates" />
+      <Destination ToolID="326" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="324" Connection="Unique" />
+      <Destination ToolID="327" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="327" Connection="Output" />
+      <Destination ToolID="329" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="328" Connection="Output" />
+      <Destination ToolID="330" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="329" Connection="Output" />
+      <Destination ToolID="331" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="333" Connection="Output" />
+      <Destination ToolID="331" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="331" Connection="Output" />
+      <Destination ToolID="328" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="332" Connection="Output" />
+      <Destination ToolID="333" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="340" Connection="Iterate" />
+      <Destination ToolID="337" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="340" Connection="Output" />
+      <Destination ToolID="341" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="341" Connection="Output" />
+      <Destination ToolID="338" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="302" Connection="Output" />
+      <Destination ToolID="305" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="303" Connection="Output" />
+      <Destination ToolID="308" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="305" Connection="True" />
+      <Destination ToolID="307" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="306" Connection="Output" />
+      <Destination ToolID="304" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="307" Connection="Output" />
+      <Destination ToolID="306" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="308" Connection="True" />
+      <Destination ToolID="302" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AOC_BaseA_11_Part2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="186" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>I Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="186" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Concat_RuleName</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="16" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field" size="9" source="TextInput:" type="String" />
+            <Field description="TextToColumns: Parsed from Concat_RuleName" name="Concat_RuleName" size="223" source="TextToColumns: Parsed from Concat_RuleName" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="114" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-12-16 09:55:23</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2020-12-16 09:55:23</StartDate>
+              <EndDate>2020-12-16 09:55:23</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Field" size="9" source="TextInput:" type="String" />
+            <Field name="Concat_RuleName" size="223" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Field" size="9" source="TextInput:" type="String" />
+            <Field name="Concat_RuleName" size="223" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="162" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>Concat_RuleName</FieldFind>
+          <FieldSearch>Concat_RuleName</FieldSearch>
+          <ReplaceFoundField>replace</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="True" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Replace</ReplaceMode>
+          <ReplaceMultipleFound value="False" />
+          <ReplaceAppendFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field" size="9" source="TextInput:" type="String" />
+            <Field name="Concat_RuleName" size="223" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="54" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>O Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="114" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="''" field="replace" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[replace = ''
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field" size="9" source="TextInput:" type="String" />
+            <Field name="Concat_RuleName" size="223" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Byte" />
+            <Field name="replace" size="1073741823" source="Formula: ''" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="186" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Field" action="GroupBy" rename="Field" />
+            <SummarizeField field="RuleName" action="Concat" rename="Concat_RuleName">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End />
+            </SummarizeField>
+            <SummarizeField field="Count" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field" size="9" source="Summarize: GroupBy - Field" type="String" />
+            <Field name="Concat_RuleName" size="2147483647" source="Summarize: Concat - RuleName" type="V_String" />
+            <Field name="Count" source="Summarize: Count" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Field" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Concat_RuleName" selected="True" rename="RuleName" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field" size="9" source="TextInput:" type="String" />
+            <Field description="TextToColumns: Parsed from Concat_RuleName" name="RuleName" size="223" source="TextToColumns: Parsed from Concat_RuleName" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="126" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input9</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="20" />
+              <Fields>
+                <Field name="Field" />
+                <Field name="Concat_RuleName" />
+                <Field name="Count" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Field_013</c>
+                  <c>row</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>Field_012</c>
+                  <c>arrival station,row</c>
+                  <c>2</c>
+                </r>
+                <r>
+                  <c>Field_007</c>
+                  <c>arrival station,price,row</c>
+                  <c>3</c>
+                </r>
+                <r>
+                  <c>Field_009</c>
+                  <c>arrival station,price,row,seat</c>
+                  <c>4</c>
+                </r>
+                <r>
+                  <c>Field_003</c>
+                  <c>arrival station,price,route,row,seat</c>
+                  <c>5</c>
+                </r>
+                <r>
+                  <c>Field_019</c>
+                  <c>arrival station,price,route,row,seat,type</c>
+                  <c>6</c>
+                </r>
+                <r>
+                  <c>Field_014</c>
+                  <c>arrival station,arrival track,price,route,row,seat,type</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>Field_001</c>
+                  <c>arrival station,arrival track,departure station,price,route,row,seat,type</c>
+                  <c>8</c>
+                </r>
+                <r>
+                  <c>Field_008</c>
+                  <c>arrival station,arrival track,departure date,departure station,price,route,row,seat,type</c>
+                  <c>9</c>
+                </r>
+                <r>
+                  <c>Field_005</c>
+                  <c>arrival station,arrival track,departure date,departure location,departure station,price,route,row,seat,type</c>
+                  <c>10</c>
+                </r>
+                <r>
+                  <c>Field_018</c>
+                  <c>arrival station,arrival track,departure date,departure location,departure station,departure track,price,route,row,seat,type</c>
+                  <c>11</c>
+                </r>
+                <r>
+                  <c>Field_011</c>
+                  <c>arrival station,arrival track,departure date,departure location,departure station,departure time,departure track,price,route,row,seat,type</c>
+                  <c>12</c>
+                </r>
+                <r>
+                  <c>Field_017</c>
+                  <c>arrival station,arrival track,departure date,departure location,departure platform,departure station,departure time,departure track,price,route,row,seat,type</c>
+                  <c>13</c>
+                </r>
+                <r>
+                  <c>Field_002</c>
+                  <c>arrival station,arrival track,class,departure date,departure location,departure platform,departure station,departure time,departure track,price,route,row,seat,type</c>
+                  <c>14</c>
+                </r>
+                <r>
+                  <c>Field_016</c>
+                  <c>arrival station,arrival track,class,departure date,departure location,departure platform,departure station,departure time,departure track,price,route,row,seat,type,zone</c>
+                  <c>15</c>
+                </r>
+                <r>
+                  <c>Field_006</c>
+                  <c>arrival platform,arrival station,arrival track,class,departure date,departure location,departure platform,departure station,departure time,departure track,price,route,row,seat,type,zone</c>
+                  <c>16</c>
+                </r>
+                <r>
+                  <c>Field_015</c>
+                  <c>arrival platform,arrival station,arrival track,class,departure date,departure location,departure platform,departure station,departure time,departure track,duration,price,route,row,seat,type,zone</c>
+                  <c>17</c>
+                </r>
+                <r>
+                  <c>Field_010</c>
+                  <c>arrival platform,arrival station,arrival track,class,departure date,departure location,departure platform,departure station,departure time,departure track,duration,price,route,row,seat,type,wagon,zone</c>
+                  <c>18</c>
+                </r>
+                <r>
+                  <c>Field_004</c>
+                  <c>arrival location,arrival platform,arrival station,arrival track,class,departure date,departure location,departure platform,departure station,departure time,departure track,duration,price,route,row,seat,type,wagon,zone</c>
+                  <c>19</c>
+                </r>
+                <r>
+                  <c>Field_020</c>
+                  <c>arrival location,arrival platform,arrival station,arrival track,class,departure date,departure location,departure platform,departure station,departure time,departure track,duration,price,route,row,seat,train,type,wagon,zone</c>
+                  <c>20</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field" size="9" source="TextInput:" type="String" />
+            <Field name="Concat_RuleName" size="223" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="False" />
+      <Destination ToolID="4" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="4" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day16Part2_Iterate</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (10)</Name>
+          <ToolId value="10" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (9)</Name>
+              <ToolId value="9" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (5)</Name>
+              <ToolId value="5" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (1)</Name>
+              <ToolId value="1" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input9</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="100" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="5" Selected="True" />
+        <Tool ToolId="9" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

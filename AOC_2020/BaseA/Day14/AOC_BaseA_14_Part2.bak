@@ -1,0 +1,2938 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="210" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IntToBin(int)" field="fdsafds" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[fdsafds = IntToBin(int)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35600_5f522b85e8854487a7601745dc875c74_\Engine_40608_5859aa4c5c394cf086b0102217668621_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="210" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="Field1" />
+            <Field name="int" />
+            <Field name="Field3" />
+          </Fields>
+          <Data>
+            <r>
+              <c>tes</c>
+              <c>11</c>
+              <c>XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X</c>
+            </r>
+            <r>
+              <c />
+              <c>101</c>
+              <c />
+            </r>
+            <r>
+              <c />
+              <c>0</c>
+              <c />
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="378" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="Field1" />
+          </Fields>
+          <Data>
+            <r>
+              <c>mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X</c>
+            </r>
+            <r>
+              <c>mem[8] = 11</c>
+            </r>
+            <r>
+              <c>mem[7] = 101</c>
+            </r>
+            <r>
+              <c>mem[8] = 0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="378" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Field1</Field>
+          <RegExExpression value="(.*)\s=\s(.*)" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>Field1</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="MemSpace" type="V_String" size="43" />
+            <Field field="Int" type="V_WString" size="36" />
+          </ParseComplex>
+          <Match>
+            <Field>Field1_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="378" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Order</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="378" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Order</UpdateField_Name>
+          <CreateField_Name>Mask</CreateField_Name>
+          <CreateField_Type>V_WString</CreateField_Type>
+          <CreateField_Size>36</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif([MemSpace]=='Mask',[Int],[Row-1:Mask])</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif([MemSpace]=='Mask',[Int],[Row-1:Mask])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="582" y="1158" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35600_5f522b85e8854487a7601745dc875c74_\Engine_40608_432f89ca6ef744c88afaf02bb10e25c9_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="378" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>MemSpace</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-12-21 17:18:36</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>mask</Operand>
+              <StartDate>2020-12-21 17:18:36</StartDate>
+              <EndDate>2020-12-21 17:18:36</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[MemSpace] != "mask"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="366" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Order" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Order - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="378" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="MemSpace" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="378" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="padleft(IntToBin([Int]),36,'0')" field="Binary" size="36" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Binary = padleft(IntToBin([Int]),36,'0')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="378" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Int" selected="True" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="390" y="942" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Mask</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>Field1_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="378" y="1098" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Mask] IN ("0",'1')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Mask] IN ("0",'1')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="486" y="1086" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Binary</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>Field1_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="486" y="894" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="426" y="1278" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="MemSpace" />
+            <Field field="Space" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="MemSpace" />
+            <Field field="Space" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Mask" selected="True" rename="Binary" input="Left_" />
+                <SelectField field="Right_MemSpace" selected="False" input="Right_" />
+                <SelectField field="Right_Binary" selected="False" rename="Right_Binary" input="Right_" />
+                <SelectField field="Right_Space" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="378" y="1026" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Order</UpdateField_Name>
+          <CreateField_Name>Space</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Space]+1</Expression>
+          <GroupByFields>
+            <Field field="MemSpace" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Space]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="486" y="1182" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Order</UpdateField_Name>
+          <CreateField_Name>Space</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Space]+1</Expression>
+          <GroupByFields>
+            <Field field="Order" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Space]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="426" y="1854" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35600_5f522b85e8854487a7601745dc875c74_\Engine_40608_66a3d53aa536445c9866b08823f3a6b9_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="510" y="1374" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35600_5f522b85e8854487a7601745dc875c74_\Engine_40608_6bb2529ab55c4d0bb6ee44f90a32b617_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="486" y="990" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field1" selected="False" />
+            <SelectField field="Int" selected="False" />
+            <SelectField field="Mask" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="366" y="1194" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Order" selected="False" />
+            <SelectField field="Field1" selected="False" />
+            <SelectField field="Int" selected="False" />
+            <SelectField field="Binary" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="426" y="1374" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="426" y="1470" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="MemSpace" order="Ascending" />
+            <Field field="Order" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>MemSpace - Ascending
+Order - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="426" y="1566" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="MemSpace" action="GroupBy" rename="MemSpace" />
+            <SummarizeField field="Binary" action="Concat" rename="Concat_Binary">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="426" y="1662" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="BinToInt([Concat_Binary])" field="INT" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[INT = BinToInt([Concat_Binary])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="426" y="1758" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="INT" action="Sum" rename="Sum_INT" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="52" y="797" width="152" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 42</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="89" y="846" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="MemSpace" action="GroupBy" rename="MemSpace" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="126" y="1146" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Allow</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="174" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Space</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>1</Expression_Init>
+              <Expression_Cond>RowCount &lt;= 36</Expression_Cond>
+              <Expression_Loop>RowCount + 1</Expression_Loop>
+              <RecordCount value="36" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+              <RecordCount value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="162" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="RowCount" selected="True" rename="Space" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="162" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="0" field="Value" size="1" type="Byte" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Value = 0
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="162" y="1374" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="MemSpace" />
+                <Field field="Space" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="MemSpace" />
+                <Field field="Space" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Value" selected="False" rename="Left_Value" input="Left_" />
+                    <SelectField field="Right_MemSpace" selected="False" rename="Right_MemSpace" input="Right_" />
+                    <SelectField field="Right_Mask" selected="False" input="Right_" />
+                    <SelectField field="Right_Space" selected="False" rename="Right_Space" input="Right_" />
+                    <SelectField field="Right_Order" selected="False" input="Right_" />
+                    <SelectField field="Right_Binary" selected="True" rename="Value" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="198" y="1302" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35204_6556ca7b7d3645f4895d58c717394add_\Engine_40608_f86e09211fee4933b673966905f70cc4_.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="77" y="1470" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35204_6556ca7b7d3645f4895d58c717394add_\Engine_40608_9b6825df5fca4d23b551e4b8298f2b98_.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="162" y="1554" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35204_6556ca7b7d3645f4895d58c717394add_\Engine_40608_44eaca61fcc448c28d85f292e911e8a9_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="246" y="1470" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_35204_6556ca7b7d3645f4895d58c717394add_\Engine_40608_cf948c849404476fa9b44ff65d6464d6_.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="162" y="1470" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="474" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="561" />
+          <Fields>
+            <Field name="Field1" />
+          </Fields>
+          <Data>
+            <r>
+              <c>mask = X011X00011011110001X01010011X0X0X010</c>
+            </r>
+            <r>
+              <c>mem[35176] = 9976167</c>
+            </r>
+            <r>
+              <c>mem[39031] = 108553</c>
+            </r>
+            <r>
+              <c>mem[59131] = 6439623</c>
+            </r>
+            <r>
+              <c>mem[63499] = 293387351</c>
+            </r>
+            <r>
+              <c>mem[53936] = 331755</c>
+            </r>
+            <r>
+              <c>mem[56389] = 2017477</c>
+            </r>
+            <r>
+              <c>mask = 101110001111X1X0000011X11X1X01X00001</c>
+            </r>
+            <r>
+              <c>mem[115] = 642</c>
+            </r>
+            <r>
+              <c>mem[35236] = 21608171</c>
+            </r>
+            <r>
+              <c>mem[40102] = 7571</c>
+            </r>
+            <r>
+              <c>mask = 0010100X10X01X00010XX0001X1X0X011001</c>
+            </r>
+            <r>
+              <c>mem[45336] = 5952410</c>
+            </r>
+            <r>
+              <c>mem[22732] = 97085</c>
+            </r>
+            <r>
+              <c>mem[13568] = 32642580</c>
+            </r>
+            <r>
+              <c>mem[11278] = 991213086</c>
+            </r>
+            <r>
+              <c>mem[13552] = 1655255</c>
+            </r>
+            <r>
+              <c>mask = 01X0101XX110110101010X1001X0010110X1</c>
+            </r>
+            <r>
+              <c>mem[42192] = 4234239</c>
+            </r>
+            <r>
+              <c>mem[31473] = 17136584</c>
+            </r>
+            <r>
+              <c>mem[29723] = 93520</c>
+            </r>
+            <r>
+              <c>mem[29158] = 116136736</c>
+            </r>
+            <r>
+              <c>mask = 0001100X0X1X110X1X00010X0100010X0100</c>
+            </r>
+            <r>
+              <c>mem[39435] = 357608510</c>
+            </r>
+            <r>
+              <c>mem[14973] = 532464795</c>
+            </r>
+            <r>
+              <c>mem[2752] = 64188</c>
+            </r>
+            <r>
+              <c>mem[61697] = 11187418</c>
+            </r>
+            <r>
+              <c>mem[18575] = 199186</c>
+            </r>
+            <r>
+              <c>mem[47723] = 426934</c>
+            </r>
+            <r>
+              <c>mem[27423] = 1974772</c>
+            </r>
+            <r>
+              <c>mask = 000110000010X10X0X001100X01001X0X1X0</c>
+            </r>
+            <r>
+              <c>mem[44107] = 25101</c>
+            </r>
+            <r>
+              <c>mem[44194] = 21551</c>
+            </r>
+            <r>
+              <c>mem[12030] = 169</c>
+            </r>
+            <r>
+              <c>mem[6630] = 12436270</c>
+            </r>
+            <r>
+              <c>mask = 0X11XX0111111111110010101110100XX000</c>
+            </r>
+            <r>
+              <c>mem[449] = 7072331</c>
+            </r>
+            <r>
+              <c>mem[42523] = 267359150</c>
+            </r>
+            <r>
+              <c>mem[19455] = 24135</c>
+            </r>
+            <r>
+              <c>mem[39633] = 268298</c>
+            </r>
+            <r>
+              <c>mask = 0001100101111X01X0X01101X1001001X000</c>
+            </r>
+            <r>
+              <c>mem[4608] = 14005</c>
+            </r>
+            <r>
+              <c>mem[10241] = 782600</c>
+            </r>
+            <r>
+              <c>mem[54738] = 209648820</c>
+            </r>
+            <r>
+              <c>mask = 101X100011100X00X10111010X00010X01X0</c>
+            </r>
+            <r>
+              <c>mem[42500] = 58188815</c>
+            </r>
+            <r>
+              <c>mem[11694] = 11887</c>
+            </r>
+            <r>
+              <c>mem[39816] = 128889468</c>
+            </r>
+            <r>
+              <c>mem[37274] = 5127</c>
+            </r>
+            <r>
+              <c>mem[17385] = 17378063</c>
+            </r>
+            <r>
+              <c>mask = 0111110X0X0011X1010X1X110101X1XX0001</c>
+            </r>
+            <r>
+              <c>mem[6801] = 243108</c>
+            </r>
+            <r>
+              <c>mem[48960] = 4760103</c>
+            </r>
+            <r>
+              <c>mem[22732] = 523377</c>
+            </r>
+            <r>
+              <c>mask = 00011000001X1X1010000X01110X00X0X001</c>
+            </r>
+            <r>
+              <c>mem[4608] = 1170</c>
+            </r>
+            <r>
+              <c>mem[30523] = 52724553</c>
+            </r>
+            <r>
+              <c>mem[64163] = 19673</c>
+            </r>
+            <r>
+              <c>mem[11679] = 12049</c>
+            </r>
+            <r>
+              <c>mem[338] = 18404</c>
+            </r>
+            <r>
+              <c>mem[36800] = 1073142</c>
+            </r>
+            <r>
+              <c>mask = XX101000101010000101001000100X1100X0</c>
+            </r>
+            <r>
+              <c>mem[25041] = 33614936</c>
+            </r>
+            <r>
+              <c>mem[19637] = 12910</c>
+            </r>
+            <r>
+              <c>mem[48777] = 312026612</c>
+            </r>
+            <r>
+              <c>mem[3614] = 42590</c>
+            </r>
+            <r>
+              <c>mask = 00X0000000X0110001001X11X10001000001</c>
+            </r>
+            <r>
+              <c>mem[13162] = 62756298</c>
+            </r>
+            <r>
+              <c>mem[14130] = 79824</c>
+            </r>
+            <r>
+              <c>mask = 10X100X01X1X1X10000X0X000111X10X0101</c>
+            </r>
+            <r>
+              <c>mem[54039] = 155170303</c>
+            </r>
+            <r>
+              <c>mem[47391] = 11186</c>
+            </r>
+            <r>
+              <c>mem[16757] = 64889909</c>
+            </r>
+            <r>
+              <c>mem[19198] = 34026906</c>
+            </r>
+            <r>
+              <c>mask = 00011X0X01XX1101X000X10110XX0000000X</c>
+            </r>
+            <r>
+              <c>mem[14232] = 18518</c>
+            </r>
+            <r>
+              <c>mem[4532] = 1320230</c>
+            </r>
+            <r>
+              <c>mem[40264] = 68063</c>
+            </r>
+            <r>
+              <c>mem[29145] = 147910</c>
+            </r>
+            <r>
+              <c>mask = 011X1X0X011011000000110X0110101X0X00</c>
+            </r>
+            <r>
+              <c>mem[13568] = 975118</c>
+            </r>
+            <r>
+              <c>mem[2216] = 425464</c>
+            </r>
+            <r>
+              <c>mem[59072] = 777680332</c>
+            </r>
+            <r>
+              <c>mask = 0X0010X0X110110X010X111XX100X0001000</c>
+            </r>
+            <r>
+              <c>mem[8637] = 3036011</c>
+            </r>
+            <r>
+              <c>mem[11345] = 28691019</c>
+            </r>
+            <r>
+              <c>mem[28520] = 801207</c>
+            </r>
+            <r>
+              <c>mem[63730] = 666</c>
+            </r>
+            <r>
+              <c>mask = 0001110010XX11X1000000010110X0100001</c>
+            </r>
+            <r>
+              <c>mem[4651] = 9924</c>
+            </r>
+            <r>
+              <c>mem[61289] = 2749110</c>
+            </r>
+            <r>
+              <c>mem[57251] = 19712904</c>
+            </r>
+            <r>
+              <c>mask = X0X1101001100X10X10X11001X0101011010</c>
+            </r>
+            <r>
+              <c>mem[24158] = 8884236</c>
+            </r>
+            <r>
+              <c>mem[22515] = 1409</c>
+            </r>
+            <r>
+              <c>mem[22964] = 183923110</c>
+            </r>
+            <r>
+              <c>mem[33878] = 885936</c>
+            </r>
+            <r>
+              <c>mem[44538] = 874947</c>
+            </r>
+            <r>
+              <c>mem[5990] = 363</c>
+            </r>
+            <r>
+              <c>mask = 0X11X101011XX111011010X1X0X01101X001</c>
+            </r>
+            <r>
+              <c>mem[27091] = 1044</c>
+            </r>
+            <r>
+              <c>mem[57617] = 3722045</c>
+            </r>
+            <r>
+              <c>mask = 0XX11X101110010X010X101XX0X111010X11</c>
+            </r>
+            <r>
+              <c>mem[26059] = 13841479</c>
+            </r>
+            <r>
+              <c>mem[55461] = 4252699</c>
+            </r>
+            <r>
+              <c>mem[56882] = 25286</c>
+            </r>
+            <r>
+              <c>mem[55972] = 1008168</c>
+            </r>
+            <r>
+              <c>mem[60550] = 1965604</c>
+            </r>
+            <r>
+              <c>mem[43412] = 861720</c>
+            </r>
+            <r>
+              <c>mask = 1X11000XX1011X100010101X0XX10X1011X0</c>
+            </r>
+            <r>
+              <c>mem[54042] = 883549632</c>
+            </r>
+            <r>
+              <c>mem[65377] = 94416</c>
+            </r>
+            <r>
+              <c>mem[33534] = 13467</c>
+            </r>
+            <r>
+              <c>mask = 00111000011111110X01X1XX100101011X11</c>
+            </r>
+            <r>
+              <c>mem[21993] = 74</c>
+            </r>
+            <r>
+              <c>mem[49628] = 5558</c>
+            </r>
+            <r>
+              <c>mem[61750] = 475383817</c>
+            </r>
+            <r>
+              <c>mem[36392] = 32630</c>
+            </r>
+            <r>
+              <c>mask = 111X10001X1X01001X0110X0001010010100</c>
+            </r>
+            <r>
+              <c>mem[52078] = 214690759</c>
+            </r>
+            <r>
+              <c>mem[62049] = 235777</c>
+            </r>
+            <r>
+              <c>mem[55972] = 162504</c>
+            </r>
+            <r>
+              <c>mem[28257] = 1771</c>
+            </r>
+            <r>
+              <c>mem[49729] = 23532</c>
+            </r>
+            <r>
+              <c>mem[3769] = 475930259</c>
+            </r>
+            <r>
+              <c>mem[50832] = 7539691</c>
+            </r>
+            <r>
+              <c>mask = 01011X01010011111X00111111X111000X01</c>
+            </r>
+            <r>
+              <c>mem[47391] = 294107389</c>
+            </r>
+            <r>
+              <c>mem[41571] = 33636200</c>
+            </r>
+            <r>
+              <c>mem[34344] = 4779864</c>
+            </r>
+            <r>
+              <c>mem[5210] = 14455055</c>
+            </r>
+            <r>
+              <c>mem[55569] = 294086</c>
+            </r>
+            <r>
+              <c>mem[14810] = 19093</c>
+            </r>
+            <r>
+              <c>mask = 011110101110X10X01XX11110X1100110010</c>
+            </r>
+            <r>
+              <c>mem[43678] = 103962743</c>
+            </r>
+            <r>
+              <c>mem[46649] = 174</c>
+            </r>
+            <r>
+              <c>mem[17417] = 51516531</c>
+            </r>
+            <r>
+              <c>mem[44279] = 13699</c>
+            </r>
+            <r>
+              <c>mem[29723] = 382196268</c>
+            </r>
+            <r>
+              <c>mask = 0X1X10X0X11011000X00111100X1001X0X00</c>
+            </r>
+            <r>
+              <c>mem[58181] = 7631</c>
+            </r>
+            <r>
+              <c>mem[54660] = 18</c>
+            </r>
+            <r>
+              <c>mem[62624] = 65676864</c>
+            </r>
+            <r>
+              <c>mem[7637] = 682188755</c>
+            </r>
+            <r>
+              <c>mem[30523] = 54181</c>
+            </r>
+            <r>
+              <c>mask = X001100001X00101X000010101011010100X</c>
+            </r>
+            <r>
+              <c>mem[62308] = 3258008</c>
+            </r>
+            <r>
+              <c>mem[54316] = 546</c>
+            </r>
+            <r>
+              <c>mem[35020] = 84582</c>
+            </r>
+            <r>
+              <c>mem[63858] = 243188165</c>
+            </r>
+            <r>
+              <c>mem[20003] = 1739942</c>
+            </r>
+            <r>
+              <c>mask = 0XX01X10X1101100X1X010111X0110XX0001</c>
+            </r>
+            <r>
+              <c>mem[62495] = 31369385</c>
+            </r>
+            <r>
+              <c>mem[30172] = 50943552</c>
+            </r>
+            <r>
+              <c>mem[43610] = 56640</c>
+            </r>
+            <r>
+              <c>mem[25863] = 5589</c>
+            </r>
+            <r>
+              <c>mask = XX1X100001100100000100X1110010111000</c>
+            </r>
+            <r>
+              <c>mem[15271] = 1383</c>
+            </r>
+            <r>
+              <c>mem[30514] = 517505</c>
+            </r>
+            <r>
+              <c>mem[53271] = 1003887</c>
+            </r>
+            <r>
+              <c>mem[30597] = 198292</c>
+            </r>
+            <r>
+              <c>mem[60624] = 498352568</c>
+            </r>
+            <r>
+              <c>mem[41024] = 5218437</c>
+            </r>
+            <r>
+              <c>mask = 001XX00001110100X0011100X0000000011X</c>
+            </r>
+            <r>
+              <c>mem[21892] = 29032569</c>
+            </r>
+            <r>
+              <c>mem[48960] = 7348953</c>
+            </r>
+            <r>
+              <c>mem[34838] = 5416170</c>
+            </r>
+            <r>
+              <c>mem[54039] = 3631</c>
+            </r>
+            <r>
+              <c>mem[3062] = 651155</c>
+            </r>
+            <r>
+              <c>mask = 101100001X11X11X000X010X11010X000110</c>
+            </r>
+            <r>
+              <c>mem[45244] = 490449</c>
+            </r>
+            <r>
+              <c>mem[2123] = 368294</c>
+            </r>
+            <r>
+              <c>mem[45758] = 1822</c>
+            </r>
+            <r>
+              <c>mem[40631] = 245598209</c>
+            </r>
+            <r>
+              <c>mem[36989] = 3830384</c>
+            </r>
+            <r>
+              <c>mem[6227] = 5405426</c>
+            </r>
+            <r>
+              <c>mem[6315] = 11116</c>
+            </r>
+            <r>
+              <c>mask = X0011000X0X01101100XXX11111001100001</c>
+            </r>
+            <r>
+              <c>mem[51307] = 11819100</c>
+            </r>
+            <r>
+              <c>mem[10561] = 605909523</c>
+            </r>
+            <r>
+              <c>mem[27387] = 31698</c>
+            </r>
+            <r>
+              <c>mem[25513] = 458925821</c>
+            </r>
+            <r>
+              <c>mem[37018] = 522164</c>
+            </r>
+            <r>
+              <c>mem[18187] = 13328</c>
+            </r>
+            <r>
+              <c>mask = 0X0X10X00110X1000X000X1X1100000100X0</c>
+            </r>
+            <r>
+              <c>mem[64601] = 63</c>
+            </r>
+            <r>
+              <c>mem[1569] = 42324</c>
+            </r>
+            <r>
+              <c>mem[11413] = 640</c>
+            </r>
+            <r>
+              <c>mask = 00X110000X1011XXX000000X11000000XX01</c>
+            </r>
+            <r>
+              <c>mem[7713] = 14341</c>
+            </r>
+            <r>
+              <c>mem[11413] = 4062857</c>
+            </r>
+            <r>
+              <c>mem[60014] = 2945180</c>
+            </r>
+            <r>
+              <c>mask = 011X1010111011000X00X111X0110110000X</c>
+            </r>
+            <r>
+              <c>mem[7637] = 7272948</c>
+            </r>
+            <r>
+              <c>mem[53569] = 499905</c>
+            </r>
+            <r>
+              <c>mem[16193] = 26937</c>
+            </r>
+            <r>
+              <c>mem[26059] = 54033</c>
+            </r>
+            <r>
+              <c>mask = 0XXX1100X01XX101010001001010XX001111</c>
+            </r>
+            <r>
+              <c>mem[45815] = 2006054</c>
+            </r>
+            <r>
+              <c>mem[39698] = 7265</c>
+            </r>
+            <r>
+              <c>mem[45186] = 596544</c>
+            </r>
+            <r>
+              <c>mem[32965] = 2713</c>
+            </r>
+            <r>
+              <c>mem[28434] = 980517</c>
+            </r>
+            <r>
+              <c>mem[45787] = 558823</c>
+            </r>
+            <r>
+              <c>mem[61407] = 448340333</c>
+            </r>
+            <r>
+              <c>mask = X0101000011011000X0X001111011X100101</c>
+            </r>
+            <r>
+              <c>mem[65392] = 7496387</c>
+            </r>
+            <r>
+              <c>mem[3310] = 10949</c>
+            </r>
+            <r>
+              <c>mem[54021] = 1018</c>
+            </r>
+            <r>
+              <c>mem[39182] = 1015</c>
+            </r>
+            <r>
+              <c>mask = 00011X00XX10110X0X00000XX000000010XX</c>
+            </r>
+            <r>
+              <c>mem[29258] = 32355</c>
+            </r>
+            <r>
+              <c>mem[21927] = 415005978</c>
+            </r>
+            <r>
+              <c>mem[7720] = 400318</c>
+            </r>
+            <r>
+              <c>mask = XX101X00001011X010011110100001X10011</c>
+            </r>
+            <r>
+              <c>mem[19357] = 698</c>
+            </r>
+            <r>
+              <c>mem[39816] = 38859710</c>
+            </r>
+            <r>
+              <c>mem[33161] = 721879</c>
+            </r>
+            <r>
+              <c>mem[51029] = 1020</c>
+            </r>
+            <r>
+              <c>mem[63289] = 63403541</c>
+            </r>
+            <r>
+              <c>mem[44874] = 130864184</c>
+            </r>
+            <r>
+              <c>mem[22915] = 165664389</c>
+            </r>
+            <r>
+              <c>mask = 001110000111X1XX0X0X1XX1100X010X1110</c>
+            </r>
+            <r>
+              <c>mem[42040] = 243356019</c>
+            </r>
+            <r>
+              <c>mem[37748] = 7353</c>
+            </r>
+            <r>
+              <c>mem[62516] = 326</c>
+            </r>
+            <r>
+              <c>mem[16620] = 361</c>
+            </r>
+            <r>
+              <c>mem[64585] = 46439</c>
+            </r>
+            <r>
+              <c>mem[28563] = 1986</c>
+            </r>
+            <r>
+              <c>mem[39009] = 628217</c>
+            </r>
+            <r>
+              <c>mask = 01X11X01010011X100101X010000101101X1</c>
+            </r>
+            <r>
+              <c>mem[24198] = 1466</c>
+            </r>
+            <r>
+              <c>mem[15002] = 634696</c>
+            </r>
+            <r>
+              <c>mem[26199] = 119807597</c>
+            </r>
+            <r>
+              <c>mem[23206] = 655878</c>
+            </r>
+            <r>
+              <c>mem[8193] = 4004526</c>
+            </r>
+            <r>
+              <c>mem[41317] = 2850662</c>
+            </r>
+            <r>
+              <c>mask = 1110X0001110X10001101000X100000000X0</c>
+            </r>
+            <r>
+              <c>mem[44279] = 36824</c>
+            </r>
+            <r>
+              <c>mem[26815] = 6522802</c>
+            </r>
+            <r>
+              <c>mem[14909] = 17326</c>
+            </r>
+            <r>
+              <c>mask = 0001110001X0110110XX00011X10X1001000</c>
+            </r>
+            <r>
+              <c>mem[1962] = 1442842</c>
+            </r>
+            <r>
+              <c>mem[57522] = 3608</c>
+            </r>
+            <r>
+              <c>mem[63355] = 1650944</c>
+            </r>
+            <r>
+              <c>mem[56904] = 2521022</c>
+            </r>
+            <r>
+              <c>mask = XXX111XX1110X10101001X01001111000XX1</c>
+            </r>
+            <r>
+              <c>mem[56039] = 13855</c>
+            </r>
+            <r>
+              <c>mem[48222] = 13842</c>
+            </r>
+            <r>
+              <c>mem[57251] = 110043295</c>
+            </r>
+            <r>
+              <c>mem[896] = 7181</c>
+            </r>
+            <r>
+              <c>mem[64594] = 3483</c>
+            </r>
+            <r>
+              <c>mask = 00011X000X1011001000011111XX00100010</c>
+            </r>
+            <r>
+              <c>mem[41571] = 63539</c>
+            </r>
+            <r>
+              <c>mem[39714] = 1004729334</c>
+            </r>
+            <r>
+              <c>mem[33630] = 31829390</c>
+            </r>
+            <r>
+              <c>mask = 001010011010X1001XX00000X1000110011X</c>
+            </r>
+            <r>
+              <c>mem[12774] = 219393591</c>
+            </r>
+            <r>
+              <c>mem[39801] = 6063</c>
+            </r>
+            <r>
+              <c>mem[17417] = 188732</c>
+            </r>
+            <r>
+              <c>mem[33878] = 117640</c>
+            </r>
+            <r>
+              <c>mem[9589] = 349</c>
+            </r>
+            <r>
+              <c>mask = 1011X00011X11X1000X011100X0111000X01</c>
+            </r>
+            <r>
+              <c>mem[50450] = 627875</c>
+            </r>
+            <r>
+              <c>mem[64553] = 99</c>
+            </r>
+            <r>
+              <c>mem[64585] = 1273168</c>
+            </r>
+            <r>
+              <c>mem[6757] = 3017</c>
+            </r>
+            <r>
+              <c>mem[14356] = 5008</c>
+            </r>
+            <r>
+              <c>mem[29258] = 1655</c>
+            </r>
+            <r>
+              <c>mem[11413] = 60359360</c>
+            </r>
+            <r>
+              <c>mask = 0010X0X0XX101100010X001111X1X1110001</c>
+            </r>
+            <r>
+              <c>mem[37311] = 436389854</c>
+            </r>
+            <r>
+              <c>mem[62848] = 350102481</c>
+            </r>
+            <r>
+              <c>mem[54021] = 3272</c>
+            </r>
+            <r>
+              <c>mem[13433] = 2181</c>
+            </r>
+            <r>
+              <c>mem[32818] = 1561170</c>
+            </r>
+            <r>
+              <c>mem[61100] = 144227</c>
+            </r>
+            <r>
+              <c>mask = 0111110X011X11X10100111XX00XX101XX01</c>
+            </r>
+            <r>
+              <c>mem[51399] = 1972</c>
+            </r>
+            <r>
+              <c>mem[5042] = 926644</c>
+            </r>
+            <r>
+              <c>mem[11375] = 259250573</c>
+            </r>
+            <r>
+              <c>mem[41416] = 936</c>
+            </r>
+            <r>
+              <c>mem[12700] = 246505</c>
+            </r>
+            <r>
+              <c>mem[57540] = 2923524</c>
+            </r>
+            <r>
+              <c>mem[8321] = 70934934</c>
+            </r>
+            <r>
+              <c>mask = 0X11X0000110010000001001XX0000110X10</c>
+            </r>
+            <r>
+              <c>mem[21546] = 912416315</c>
+            </r>
+            <r>
+              <c>mem[29145] = 99559</c>
+            </r>
+            <r>
+              <c>mem[16528] = 29459665</c>
+            </r>
+            <r>
+              <c>mem[13846] = 6110601</c>
+            </r>
+            <r>
+              <c>mem[6104] = 13330</c>
+            </r>
+            <r>
+              <c>mem[62308] = 31534</c>
+            </r>
+            <r>
+              <c>mem[64601] = 494</c>
+            </r>
+            <r>
+              <c>mask = 0001X1X101101X0X1X00X101101X1011010X</c>
+            </r>
+            <r>
+              <c>mem[35524] = 261536</c>
+            </r>
+            <r>
+              <c>mem[39801] = 310749971</c>
+            </r>
+            <r>
+              <c>mem[46522] = 1236</c>
+            </r>
+            <r>
+              <c>mem[4129] = 1844</c>
+            </r>
+            <r>
+              <c>mem[6315] = 6569</c>
+            </r>
+            <r>
+              <c>mem[32886] = 168</c>
+            </r>
+            <r>
+              <c>mem[42248] = 11892434</c>
+            </r>
+            <r>
+              <c>mask = 1XX11001110X000010000X00000X00100001</c>
+            </r>
+            <r>
+              <c>mem[34337] = 3847</c>
+            </r>
+            <r>
+              <c>mem[8390] = 8155520</c>
+            </r>
+            <r>
+              <c>mem[62768] = 5218234</c>
+            </r>
+            <r>
+              <c>mem[29841] = 249705</c>
+            </r>
+            <r>
+              <c>mask = 01011101X10X1111000011X1101XX1110101</c>
+            </r>
+            <r>
+              <c>mem[40491] = 11567</c>
+            </r>
+            <r>
+              <c>mem[29057] = 5710533</c>
+            </r>
+            <r>
+              <c>mem[7221] = 1098</c>
+            </r>
+            <r>
+              <c>mem[57270] = 997670442</c>
+            </r>
+            <r>
+              <c>mask = 001010X100101X00X00001XX01X000011010</c>
+            </r>
+            <r>
+              <c>mem[54373] = 3875</c>
+            </r>
+            <r>
+              <c>mem[41275] = 111847</c>
+            </r>
+            <r>
+              <c>mem[15151] = 45571</c>
+            </r>
+            <r>
+              <c>mem[22776] = 8162199</c>
+            </r>
+            <r>
+              <c>mask = X01110X0111XXX0000001X11111110000X01</c>
+            </r>
+            <r>
+              <c>mem[106] = 5774051</c>
+            </r>
+            <r>
+              <c>mem[41573] = 7822355</c>
+            </r>
+            <r>
+              <c>mask = 001110X0011X01X00X0X110X0X0000010X1X</c>
+            </r>
+            <r>
+              <c>mem[39101] = 17209596</c>
+            </r>
+            <r>
+              <c>mem[57877] = 216131041</c>
+            </r>
+            <r>
+              <c>mem[63978] = 643398</c>
+            </r>
+            <r>
+              <c>mem[10351] = 15285</c>
+            </r>
+            <r>
+              <c>mem[35863] = 23302872</c>
+            </r>
+            <r>
+              <c>mask = 001010X011101100010001X0100101X0000X</c>
+            </r>
+            <r>
+              <c>mem[20499] = 211562966</c>
+            </r>
+            <r>
+              <c>mem[46546] = 1635565</c>
+            </r>
+            <r>
+              <c>mem[45815] = 18600505</c>
+            </r>
+            <r>
+              <c>mem[65441] = 25793</c>
+            </r>
+            <r>
+              <c>mem[48867] = 4021120</c>
+            </r>
+            <r>
+              <c>mask = X11010001110X10001X011X001001X1100XX</c>
+            </r>
+            <r>
+              <c>mem[49457] = 476570</c>
+            </r>
+            <r>
+              <c>mem[26669] = 4266538</c>
+            </r>
+            <r>
+              <c>mem[50839] = 9507231</c>
+            </r>
+            <r>
+              <c>mem[54766] = 1208643</c>
+            </r>
+            <r>
+              <c>mem[49279] = 2607329</c>
+            </r>
+            <r>
+              <c>mem[20912] = 1119428</c>
+            </r>
+            <r>
+              <c>mask = 00X111X011X0110100000001001001001X10</c>
+            </r>
+            <r>
+              <c>mem[3981] = 28411</c>
+            </r>
+            <r>
+              <c>mem[1880] = 357278</c>
+            </r>
+            <r>
+              <c>mem[31243] = 162</c>
+            </r>
+            <r>
+              <c>mask = 00011100X1X0X101000X000110XXX1011000</c>
+            </r>
+            <r>
+              <c>mem[26881] = 21252</c>
+            </r>
+            <r>
+              <c>mem[10018] = 6965635</c>
+            </r>
+            <r>
+              <c>mem[47777] = 33385526</c>
+            </r>
+            <r>
+              <c>mem[46651] = 214034</c>
+            </r>
+            <r>
+              <c>mem[42585] = 40702649</c>
+            </r>
+            <r>
+              <c>mem[55569] = 20351</c>
+            </r>
+            <r>
+              <c>mem[23923] = 253114336</c>
+            </r>
+            <r>
+              <c>mask = 00XX100000101100X00X1110111XX00101X0</c>
+            </r>
+            <r>
+              <c>mem[29597] = 1149</c>
+            </r>
+            <r>
+              <c>mem[21886] = 38689097</c>
+            </r>
+            <r>
+              <c>mem[37141] = 700</c>
+            </r>
+            <r>
+              <c>mem[19653] = 273424</c>
+            </r>
+            <r>
+              <c>mem[50472] = 7691440</c>
+            </r>
+            <r>
+              <c>mask = XX111X10X111X10001X001X1X1011011X011</c>
+            </r>
+            <r>
+              <c>mem[8566] = 25451836</c>
+            </r>
+            <r>
+              <c>mem[39771] = 4721485</c>
+            </r>
+            <r>
+              <c>mem[44687] = 6594426</c>
+            </r>
+            <r>
+              <c>mem[42570] = 361</c>
+            </r>
+            <r>
+              <c>mem[14627] = 64772285</c>
+            </r>
+            <r>
+              <c>mem[48337] = 1264</c>
+            </r>
+            <r>
+              <c>mask = X010X0011101001010X0111X000111X000XX</c>
+            </r>
+            <r>
+              <c>mem[54859] = 36075224</c>
+            </r>
+            <r>
+              <c>mem[61289] = 1247</c>
+            </r>
+            <r>
+              <c>mem[31793] = 19842184</c>
+            </r>
+            <r>
+              <c>mem[15612] = 404768</c>
+            </r>
+            <r>
+              <c>mask = 10110X01110X1X1000100X1X00100011110X</c>
+            </r>
+            <r>
+              <c>mem[41092] = 29758</c>
+            </r>
+            <r>
+              <c>mem[58134] = 1780</c>
+            </r>
+            <r>
+              <c>mem[30647] = 865419</c>
+            </r>
+            <r>
+              <c>mem[46184] = 133</c>
+            </r>
+            <r>
+              <c>mask = 0XX1110101X011X1XXX00011X0X011010001</c>
+            </r>
+            <r>
+              <c>mem[52020] = 14383756</c>
+            </r>
+            <r>
+              <c>mem[64473] = 2371708</c>
+            </r>
+            <r>
+              <c>mem[53688] = 3645018</c>
+            </r>
+            <r>
+              <c>mem[62848] = 112067628</c>
+            </r>
+            <r>
+              <c>mem[25377] = 5361</c>
+            </r>
+            <r>
+              <c>mem[40061] = 584</c>
+            </r>
+            <r>
+              <c>mem[57896] = 4809281</c>
+            </r>
+            <r>
+              <c>mask = 0001X1X10X1X1X001X00001X1X0000100100</c>
+            </r>
+            <r>
+              <c>mem[50150] = 1695</c>
+            </r>
+            <r>
+              <c>mem[58420] = 95104341</c>
+            </r>
+            <r>
+              <c>mem[60817] = 4009428</c>
+            </r>
+            <r>
+              <c>mem[29926] = 1556</c>
+            </r>
+            <r>
+              <c>mem[28188] = 165994572</c>
+            </r>
+            <r>
+              <c>mem[44315] = 2054</c>
+            </r>
+            <r>
+              <c>mask = 0111X0001110X100X000X11111011110000X</c>
+            </r>
+            <r>
+              <c>mem[40090] = 53578</c>
+            </r>
+            <r>
+              <c>mem[61376] = 125798</c>
+            </r>
+            <r>
+              <c>mem[59920] = 2637064</c>
+            </r>
+            <r>
+              <c>mem[31522] = 223908</c>
+            </r>
+            <r>
+              <c>mem[41317] = 11020</c>
+            </r>
+            <r>
+              <c>mem[64504] = 60087919</c>
+            </r>
+            <r>
+              <c>mem[29083] = 165056</c>
+            </r>
+            <r>
+              <c>mask = 00X110000110X10X000000X1X0000010X00X</c>
+            </r>
+            <r>
+              <c>mem[63634] = 156131519</c>
+            </r>
+            <r>
+              <c>mem[63499] = 37794</c>
+            </r>
+            <r>
+              <c>mem[54660] = 213384</c>
+            </r>
+            <r>
+              <c>mem[19357] = 291569507</c>
+            </r>
+            <r>
+              <c>mem[11793] = 44425775</c>
+            </r>
+            <r>
+              <c>mem[1569] = 1499</c>
+            </r>
+            <r>
+              <c>mask = 0111X1XX1110XX0100001011X010X0111010</c>
+            </r>
+            <r>
+              <c>mem[17747] = 687783</c>
+            </r>
+            <r>
+              <c>mem[47527] = 43313</c>
+            </r>
+            <r>
+              <c>mem[46385] = 30062259</c>
+            </r>
+            <r>
+              <c>mem[39435] = 6225</c>
+            </r>
+            <r>
+              <c>mask = 00111110111001X0X1XX1X0X10X11X010011</c>
+            </r>
+            <r>
+              <c>mem[60773] = 4068534</c>
+            </r>
+            <r>
+              <c>mem[46727] = 88487</c>
+            </r>
+            <r>
+              <c>mem[45335] = 2899</c>
+            </r>
+            <r>
+              <c>mem[55714] = 3991</c>
+            </r>
+            <r>
+              <c>mask = 01X11X0010111111X11X11X0100001010001</c>
+            </r>
+            <r>
+              <c>mem[50543] = 70</c>
+            </r>
+            <r>
+              <c>mem[28563] = 17930</c>
+            </r>
+            <r>
+              <c>mem[14417] = 107070185</c>
+            </r>
+            <r>
+              <c>mem[19810] = 530758</c>
+            </r>
+            <r>
+              <c>mem[26195] = 352915721</c>
+            </r>
+            <r>
+              <c>mem[23620] = 541394</c>
+            </r>
+            <r>
+              <c>mem[51609] = 68738</c>
+            </r>
+            <r>
+              <c>mask = 1010100X01X01X0000X01X1X11001XX01101</c>
+            </r>
+            <r>
+              <c>mem[30706] = 33489</c>
+            </r>
+            <r>
+              <c>mem[3614] = 97141</c>
+            </r>
+            <r>
+              <c>mem[47530] = 61588428</c>
+            </r>
+            <r>
+              <c>mem[54451] = 37</c>
+            </r>
+            <r>
+              <c>mem[17417] = 3467253</c>
+            </r>
+            <r>
+              <c>mask = 0XX0X10X00X0XX001X0010100X1000100101</c>
+            </r>
+            <r>
+              <c>mem[61965] = 25976999</c>
+            </r>
+            <r>
+              <c>mem[52290] = 83693474</c>
+            </r>
+            <r>
+              <c>mem[10104] = 172902064</c>
+            </r>
+            <r>
+              <c>mask = 10101001X100110000X0X111110X11111X10</c>
+            </r>
+            <r>
+              <c>mem[51399] = 42079173</c>
+            </r>
+            <r>
+              <c>mem[10104] = 60</c>
+            </r>
+            <r>
+              <c>mem[42192] = 761948</c>
+            </r>
+            <r>
+              <c>mask = 01111X1X111001010XX01111X1111101X011</c>
+            </r>
+            <r>
+              <c>mem[15002] = 5761</c>
+            </r>
+            <r>
+              <c>mem[57522] = 781049282</c>
+            </r>
+            <r>
+              <c>mem[58771] = 36590</c>
+            </r>
+            <r>
+              <c>mem[50845] = 895780041</c>
+            </r>
+            <r>
+              <c>mask = 1110100X1110X10001X011X0100X1X11XX0X</c>
+            </r>
+            <r>
+              <c>mem[28451] = 29180808</c>
+            </r>
+            <r>
+              <c>mem[49154] = 106361</c>
+            </r>
+            <r>
+              <c>mem[19472] = 962416</c>
+            </r>
+            <r>
+              <c>mask = X001X1XX011010001X00X1111010X011100X</c>
+            </r>
+            <r>
+              <c>mem[472] = 20077</c>
+            </r>
+            <r>
+              <c>mem[44685] = 88446</c>
+            </r>
+            <r>
+              <c>mem[46048] = 3015039</c>
+            </r>
+            <r>
+              <c>mem[61697] = 1680</c>
+            </r>
+            <r>
+              <c>mem[65441] = 420953</c>
+            </r>
+            <r>
+              <c>mask = 010111X0001XX100010001101X0000001011</c>
+            </r>
+            <r>
+              <c>mem[7230] = 105401132</c>
+            </r>
+            <r>
+              <c>mem[37903] = 49164</c>
+            </r>
+            <r>
+              <c>mem[2407] = 15927</c>
+            </r>
+            <r>
+              <c>mem[62905] = 2466</c>
+            </r>
+            <r>
+              <c>mem[6996] = 275026478</c>
+            </r>
+            <r>
+              <c>mask = 0010X0X0111011000X00101X010000101100</c>
+            </r>
+            <r>
+              <c>mem[20747] = 130064892</c>
+            </r>
+            <r>
+              <c>mem[227] = 14848571</c>
+            </r>
+            <r>
+              <c>mask = 1X101X0011100100X10X11000XX00XX0010X</c>
+            </r>
+            <r>
+              <c>mem[18075] = 4105</c>
+            </r>
+            <r>
+              <c>mem[7692] = 10369</c>
+            </r>
+            <r>
+              <c>mem[34480] = 70016</c>
+            </r>
+            <r>
+              <c>mem[54747] = 178664159</c>
+            </r>
+            <r>
+              <c>mem[31770] = 4308718</c>
+            </r>
+            <r>
+              <c>mem[25940] = 286972</c>
+            </r>
+            <r>
+              <c>mask = 1X1X100011110X10X000X00XX01001000001</c>
+            </r>
+            <r>
+              <c>mem[18927] = 433001153</c>
+            </r>
+            <r>
+              <c>mem[56004] = 381</c>
+            </r>
+            <r>
+              <c>mem[7713] = 560209289</c>
+            </r>
+            <r>
+              <c>mem[55758] = 1791814</c>
+            </r>
+            <r>
+              <c>mem[12953] = 174435</c>
+            </r>
+            <r>
+              <c>mem[40556] = 1415</c>
+            </r>
+            <r>
+              <c>mask = X01X101001110XX00001000X10000X010000</c>
+            </r>
+            <r>
+              <c>mem[62126] = 15628</c>
+            </r>
+            <r>
+              <c>mem[53714] = 392410</c>
+            </r>
+            <r>
+              <c>mem[49154] = 13065</c>
+            </r>
+            <r>
+              <c>mask = 001X1000X0X010XX01X0X000X1000000X100</c>
+            </r>
+            <r>
+              <c>mem[8723] = 64433454</c>
+            </r>
+            <r>
+              <c>mem[6757] = 1682978</c>
+            </r>
+            <r>
+              <c>mem[60483] = 13735</c>
+            </r>
+            <r>
+              <c>mask = 01011X01011XX1111X001X110000X01100XX</c>
+            </r>
+            <r>
+              <c>mem[64013] = 806538</c>
+            </r>
+            <r>
+              <c>mem[51273] = 32346</c>
+            </r>
+            <r>
+              <c>mask = 00X11101011011010110101X0011110XX001</c>
+            </r>
+            <r>
+              <c>mem[55121] = 416007913</c>
+            </r>
+            <r>
+              <c>mem[44077] = 5865583</c>
+            </r>
+            <r>
+              <c>mem[64585] = 323728</c>
+            </r>
+            <r>
+              <c>mask = 101X100X11X100X01000100X01000X100001</c>
+            </r>
+            <r>
+              <c>mem[60817] = 42192</c>
+            </r>
+            <r>
+              <c>mem[6757] = 4925545</c>
+            </r>
+            <r>
+              <c>mem[33281] = 6862960</c>
+            </r>
+            <r>
+              <c>mem[21115] = 11608810</c>
+            </r>
+            <r>
+              <c>mask = XXX0X11000101X010100X010101X10001000</c>
+            </r>
+            <r>
+              <c>mem[42505] = 6795</c>
+            </r>
+            <r>
+              <c>mem[27245] = 671587340</c>
+            </r>
+            <r>
+              <c>mem[43412] = 8741321</c>
+            </r>
+            <r>
+              <c>mem[2793] = 1114109</c>
+            </r>
+            <r>
+              <c>mem[34194] = 2767551</c>
+            </r>
+            <r>
+              <c>mask = 0X111X0001111101010010001001XX1X1110</c>
+            </r>
+            <r>
+              <c>mem[21794] = 1041902</c>
+            </r>
+            <r>
+              <c>mem[22992] = 3666</c>
+            </r>
+            <r>
+              <c>mem[63730] = 46469539</c>
+            </r>
+            <r>
+              <c>mask = 000110X10X001101X00X011110X011010001</c>
+            </r>
+            <r>
+              <c>mem[6617] = 22675825</c>
+            </r>
+            <r>
+              <c>mem[9131] = 24859225</c>
+            </r>
+            <r>
+              <c>mask = 001X1X0XX010X10010001X0001000010XX10</c>
+            </r>
+            <r>
+              <c>mem[28267] = 491581202</c>
+            </r>
+            <r>
+              <c>mem[7622] = 154622</c>
+            </r>
+            <r>
+              <c>mem[49279] = 1164052</c>
+            </r>
+            <r>
+              <c>mem[6361] = 62173</c>
+            </r>
+            <r>
+              <c>mem[29823] = 6599915</c>
+            </r>
+            <r>
+              <c>mask = 01X0XX1X0X10110101001010101XX11X1000</c>
+            </r>
+            <r>
+              <c>mem[50472] = 5878</c>
+            </r>
+            <r>
+              <c>mem[3981] = 896</c>
+            </r>
+            <r>
+              <c>mem[39714] = 74</c>
+            </r>
+            <r>
+              <c>mem[6898] = 1993</c>
+            </r>
+            <r>
+              <c>mem[8193] = 487</c>
+            </r>
+            <r>
+              <c>mask = 0001X100111011X000000110X00X01000000</c>
+            </r>
+            <r>
+              <c>mem[25162] = 323406673</c>
+            </r>
+            <r>
+              <c>mem[43610] = 647412</c>
+            </r>
+            <r>
+              <c>mem[54042] = 811029198</c>
+            </r>
+            <r>
+              <c>mem[13461] = 33008731</c>
+            </r>
+            <r>
+              <c>mem[17432] = 766541</c>
+            </r>
+            <r>
+              <c>mem[45290] = 167819285</c>
+            </r>
+            <r>
+              <c>mask = 00110X000110010000XXX111011101010010</c>
+            </r>
+            <r>
+              <c>mem[10481] = 1969</c>
+            </r>
+            <r>
+              <c>mem[61056] = 100302708</c>
+            </r>
+            <r>
+              <c>mem[62768] = 97484359</c>
+            </r>
+            <r>
+              <c>mask = 0X0XX100001X11XX0100010010X001001X10</c>
+            </r>
+            <r>
+              <c>mem[11117] = 90479</c>
+            </r>
+            <r>
+              <c>mem[51399] = 5088</c>
+            </r>
+            <r>
+              <c>mem[65489] = 273</c>
+            </r>
+            <r>
+              <c>mem[29185] = 9519</c>
+            </r>
+            <r>
+              <c>mem[46096] = 669</c>
+            </r>
+            <r>
+              <c>mask = 01111X0XXX111X11X1X01010100X01X00001</c>
+            </r>
+            <r>
+              <c>mem[6256] = 8901226</c>
+            </r>
+            <r>
+              <c>mem[38934] = 11506</c>
+            </r>
+            <r>
+              <c>mem[4000] = 49916408</c>
+            </r>
+            <r>
+              <c>mem[31753] = 7960142</c>
+            </r>
+            <r>
+              <c>mem[61777] = 22041</c>
+            </r>
+            <r>
+              <c>mask = X11110001110110X000X011100X00XX00001</c>
+            </r>
+            <r>
+              <c>mem[37652] = 309890</c>
+            </r>
+            <r>
+              <c>mem[4955] = 6491368</c>
+            </r>
+            <r>
+              <c>mask = 0X1X110000X00X001000011000100110X011</c>
+            </r>
+            <r>
+              <c>mem[35882] = 20171</c>
+            </r>
+            <r>
+              <c>mem[14041] = 542</c>
+            </r>
+            <r>
+              <c>mem[973] = 33148060</c>
+            </r>
+            <r>
+              <c>mem[61056] = 2230</c>
+            </r>
+            <r>
+              <c>mem[30545] = 2890</c>
+            </r>
+            <r>
+              <c>mem[48094] = 745799437</c>
+            </r>
+            <r>
+              <c>mask = 1011000011X1111000X0X1XX11X1X10X0101</c>
+            </r>
+            <r>
+              <c>mem[61322] = 765242</c>
+            </r>
+            <r>
+              <c>mem[6315] = 7001612</c>
+            </r>
+            <r>
+              <c>mem[11278] = 12973</c>
+            </r>
+            <r>
+              <c>mem[59259] = 2040</c>
+            </r>
+            <r>
+              <c>mem[46184] = 498</c>
+            </r>
+            <r>
+              <c>mask = X01X10101X1X0100000X10101011X110X011</c>
+            </r>
+            <r>
+              <c>mem[1103] = 6682</c>
+            </r>
+            <r>
+              <c>mem[49066] = 528792283</c>
+            </r>
+            <r>
+              <c>mem[42040] = 222766</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Unique" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="True" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Left" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Right" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Join" />
+      <Destination ToolID="21" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="21" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="25" Connection="Join" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="25" Connection="Right" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="25" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="25" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="16" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Left" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Right" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="21" Connection="Join" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="21" Connection="Left" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AOC_BaseA_14_Part2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

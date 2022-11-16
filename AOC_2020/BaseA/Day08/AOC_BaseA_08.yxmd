@@ -1,0 +1,2857 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.3">
+  <Nodes>
+    <Node ToolID="171">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="342" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>instruction</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value="\s" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="172">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="342" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="instruction" selected="False" />
+            <SelectField field="1" selected="True" rename="operation" />
+            <SelectField field="2" selected="True" rename="change" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="173">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="342" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Order</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="174">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="342" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="0" field="Accumulator" size="4" type="Int32" />
+            <FormulaField expression="1" field="Step" size="4" type="Int32" />
+            <FormulaField expression="0" field="Times" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Accumulator = 0
+Step = 1
+Times = 0
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="675">
+      <GuiSettings>
+        <Position x="342" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>AOC_BaseA_08_Part1_Iterative (375)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="AOC_BaseA_08_Part1_Iterative.yxmc" />
+    </Node>
+    <Node ToolID="376">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="306" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_43768_f244af74de2828459069d7d03fff557c_\Engine_43768_b574df6a5ff51546ba05f715ecc9fcee~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="377">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="378" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_43768_f244af74de2828459069d7d03fff557c_\Engine_43768_55720e611135a640821d08f53e95de0e~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="379">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="282" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="633" />
+          <Fields>
+            <Field name="instruction" />
+          </Fields>
+          <Data>
+            <r>
+              <c>acc +37</c>
+            </r>
+            <r>
+              <c>acc -1</c>
+            </r>
+            <r>
+              <c>nop +512</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>jmp +60</c>
+            </r>
+            <r>
+              <c>acc -3</c>
+            </r>
+            <r>
+              <c>nop +317</c>
+            </r>
+            <r>
+              <c>jmp +130</c>
+            </r>
+            <r>
+              <c>acc +22</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>jmp +486</c>
+            </r>
+            <r>
+              <c>acc -18</c>
+            </r>
+            <r>
+              <c>nop +610</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>nop +274</c>
+            </r>
+            <r>
+              <c>jmp +439</c>
+            </r>
+            <r>
+              <c>acc -6</c>
+            </r>
+            <r>
+              <c>acc -1</c>
+            </r>
+            <r>
+              <c>acc -4</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>jmp +175</c>
+            </r>
+            <r>
+              <c>nop +179</c>
+            </r>
+            <r>
+              <c>jmp +197</c>
+            </r>
+            <r>
+              <c>jmp +76</c>
+            </r>
+            <r>
+              <c>acc -1</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>jmp +472</c>
+            </r>
+            <r>
+              <c>acc +8</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>jmp +551</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>acc +27</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>jmp +153</c>
+            </r>
+            <r>
+              <c>acc +14</c>
+            </r>
+            <r>
+              <c>jmp +207</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>jmp +557</c>
+            </r>
+            <r>
+              <c>nop +424</c>
+            </r>
+            <r>
+              <c>jmp +571</c>
+            </r>
+            <r>
+              <c>nop -19</c>
+            </r>
+            <r>
+              <c>nop +9</c>
+            </r>
+            <r>
+              <c>acc +2</c>
+            </r>
+            <r>
+              <c>acc +29</c>
+            </r>
+            <r>
+              <c>jmp +14</c>
+            </r>
+            <r>
+              <c>acc -10</c>
+            </r>
+            <r>
+              <c>acc +43</c>
+            </r>
+            <r>
+              <c>acc +43</c>
+            </r>
+            <r>
+              <c>jmp +75</c>
+            </r>
+            <r>
+              <c>jmp +311</c>
+            </r>
+            <r>
+              <c>jmp +517</c>
+            </r>
+            <r>
+              <c>acc -6</c>
+            </r>
+            <r>
+              <c>acc +13</c>
+            </r>
+            <r>
+              <c>jmp +140</c>
+            </r>
+            <r>
+              <c>nop +348</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>jmp +275</c>
+            </r>
+            <r>
+              <c>jmp +52</c>
+            </r>
+            <r>
+              <c>jmp +110</c>
+            </r>
+            <r>
+              <c>acc +11</c>
+            </r>
+            <r>
+              <c>acc +15</c>
+            </r>
+            <r>
+              <c>jmp +13</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>jmp +216</c>
+            </r>
+            <r>
+              <c>jmp +174</c>
+            </r>
+            <r>
+              <c>nop +24</c>
+            </r>
+            <r>
+              <c>acc -16</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>acc -17</c>
+            </r>
+            <r>
+              <c>jmp +519</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>acc -4</c>
+            </r>
+            <r>
+              <c>jmp +309</c>
+            </r>
+            <r>
+              <c>acc +14</c>
+            </r>
+            <r>
+              <c>acc +36</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>jmp +244</c>
+            </r>
+            <r>
+              <c>acc +37</c>
+            </r>
+            <r>
+              <c>acc +43</c>
+            </r>
+            <r>
+              <c>jmp +146</c>
+            </r>
+            <r>
+              <c>jmp +260</c>
+            </r>
+            <r>
+              <c>jmp +217</c>
+            </r>
+            <r>
+              <c>acc +39</c>
+            </r>
+            <r>
+              <c>jmp +454</c>
+            </r>
+            <r>
+              <c>nop +16</c>
+            </r>
+            <r>
+              <c>nop +255</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>jmp +13</c>
+            </r>
+            <r>
+              <c>acc +38</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>jmp +534</c>
+            </r>
+            <r>
+              <c>acc +13</c>
+            </r>
+            <r>
+              <c>acc +44</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>jmp +286</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>acc -12</c>
+            </r>
+            <r>
+              <c>jmp -45</c>
+            </r>
+            <r>
+              <c>jmp +147</c>
+            </r>
+            <r>
+              <c>acc -2</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>nop +391</c>
+            </r>
+            <r>
+              <c>acc +11</c>
+            </r>
+            <r>
+              <c>jmp +242</c>
+            </r>
+            <r>
+              <c>acc +1</c>
+            </r>
+            <r>
+              <c>acc +28</c>
+            </r>
+            <r>
+              <c>jmp +423</c>
+            </r>
+            <r>
+              <c>acc +5</c>
+            </r>
+            <r>
+              <c>jmp +319</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>nop +350</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>jmp +47</c>
+            </r>
+            <r>
+              <c>nop +32</c>
+            </r>
+            <r>
+              <c>acc +2</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>jmp +252</c>
+            </r>
+            <r>
+              <c>acc -4</c>
+            </r>
+            <r>
+              <c>acc +23</c>
+            </r>
+            <r>
+              <c>jmp +452</c>
+            </r>
+            <r>
+              <c>acc -5</c>
+            </r>
+            <r>
+              <c>acc +48</c>
+            </r>
+            <r>
+              <c>jmp -104</c>
+            </r>
+            <r>
+              <c>acc +38</c>
+            </r>
+            <r>
+              <c>jmp +172</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>jmp +5</c>
+            </r>
+            <r>
+              <c>acc +19</c>
+            </r>
+            <r>
+              <c>acc +12</c>
+            </r>
+            <r>
+              <c>acc +26</c>
+            </r>
+            <r>
+              <c>jmp +232</c>
+            </r>
+            <r>
+              <c>acc -12</c>
+            </r>
+            <r>
+              <c>nop +121</c>
+            </r>
+            <r>
+              <c>nop +80</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>jmp +126</c>
+            </r>
+            <r>
+              <c>jmp +82</c>
+            </r>
+            <r>
+              <c>nop +69</c>
+            </r>
+            <r>
+              <c>jmp -128</c>
+            </r>
+            <r>
+              <c>acc +18</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>acc +14</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>jmp +219</c>
+            </r>
+            <r>
+              <c>jmp +422</c>
+            </r>
+            <r>
+              <c>acc +2</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>acc +13</c>
+            </r>
+            <r>
+              <c>jmp +450</c>
+            </r>
+            <r>
+              <c>acc +48</c>
+            </r>
+            <r>
+              <c>jmp +172</c>
+            </r>
+            <r>
+              <c>acc +19</c>
+            </r>
+            <r>
+              <c>acc -10</c>
+            </r>
+            <r>
+              <c>jmp +69</c>
+            </r>
+            <r>
+              <c>nop +336</c>
+            </r>
+            <r>
+              <c>nop -6</c>
+            </r>
+            <r>
+              <c>jmp +265</c>
+            </r>
+            <r>
+              <c>jmp -136</c>
+            </r>
+            <r>
+              <c>jmp +350</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>acc +39</c>
+            </r>
+            <r>
+              <c>nop +389</c>
+            </r>
+            <r>
+              <c>nop +404</c>
+            </r>
+            <r>
+              <c>jmp +16</c>
+            </r>
+            <r>
+              <c>acc +13</c>
+            </r>
+            <r>
+              <c>nop -41</c>
+            </r>
+            <r>
+              <c>acc -2</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>jmp +159</c>
+            </r>
+            <r>
+              <c>jmp -111</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>acc +36</c>
+            </r>
+            <r>
+              <c>acc -17</c>
+            </r>
+            <r>
+              <c>jmp -143</c>
+            </r>
+            <r>
+              <c>acc +36</c>
+            </r>
+            <r>
+              <c>acc +29</c>
+            </r>
+            <r>
+              <c>acc +19</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>jmp +159</c>
+            </r>
+            <r>
+              <c>jmp +279</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>jmp +346</c>
+            </r>
+            <r>
+              <c>acc +15</c>
+            </r>
+            <r>
+              <c>nop +173</c>
+            </r>
+            <r>
+              <c>acc +48</c>
+            </r>
+            <r>
+              <c>jmp -183</c>
+            </r>
+            <r>
+              <c>acc +16</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>jmp +418</c>
+            </r>
+            <r>
+              <c>acc -13</c>
+            </r>
+            <r>
+              <c>jmp +280</c>
+            </r>
+            <r>
+              <c>acc +30</c>
+            </r>
+            <r>
+              <c>nop +229</c>
+            </r>
+            <r>
+              <c>jmp -139</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>acc +9</c>
+            </r>
+            <r>
+              <c>jmp +354</c>
+            </r>
+            <r>
+              <c>acc +12</c>
+            </r>
+            <r>
+              <c>jmp +310</c>
+            </r>
+            <r>
+              <c>jmp -129</c>
+            </r>
+            <r>
+              <c>acc -8</c>
+            </r>
+            <r>
+              <c>jmp -96</c>
+            </r>
+            <r>
+              <c>acc -3</c>
+            </r>
+            <r>
+              <c>acc +1</c>
+            </r>
+            <r>
+              <c>jmp +51</c>
+            </r>
+            <r>
+              <c>jmp +303</c>
+            </r>
+            <r>
+              <c>acc +28</c>
+            </r>
+            <r>
+              <c>jmp -186</c>
+            </r>
+            <r>
+              <c>acc +36</c>
+            </r>
+            <r>
+              <c>acc -10</c>
+            </r>
+            <r>
+              <c>nop +72</c>
+            </r>
+            <r>
+              <c>nop +345</c>
+            </r>
+            <r>
+              <c>jmp +200</c>
+            </r>
+            <r>
+              <c>acc +6</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>jmp +87</c>
+            </r>
+            <r>
+              <c>nop +318</c>
+            </r>
+            <r>
+              <c>jmp +273</c>
+            </r>
+            <r>
+              <c>nop +309</c>
+            </r>
+            <r>
+              <c>acc +50</c>
+            </r>
+            <r>
+              <c>jmp +147</c>
+            </r>
+            <r>
+              <c>jmp +387</c>
+            </r>
+            <r>
+              <c>acc +38</c>
+            </r>
+            <r>
+              <c>nop -169</c>
+            </r>
+            <r>
+              <c>acc +44</c>
+            </r>
+            <r>
+              <c>jmp +28</c>
+            </r>
+            <r>
+              <c>nop +208</c>
+            </r>
+            <r>
+              <c>nop +43</c>
+            </r>
+            <r>
+              <c>acc +26</c>
+            </r>
+            <r>
+              <c>acc -13</c>
+            </r>
+            <r>
+              <c>jmp -160</c>
+            </r>
+            <r>
+              <c>jmp +233</c>
+            </r>
+            <r>
+              <c>acc +22</c>
+            </r>
+            <r>
+              <c>jmp +357</c>
+            </r>
+            <r>
+              <c>jmp +374</c>
+            </r>
+            <r>
+              <c>acc -6</c>
+            </r>
+            <r>
+              <c>acc +38</c>
+            </r>
+            <r>
+              <c>jmp +100</c>
+            </r>
+            <r>
+              <c>jmp -36</c>
+            </r>
+            <r>
+              <c>acc +38</c>
+            </r>
+            <r>
+              <c>nop +330</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>jmp -43</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>nop +239</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>acc +15</c>
+            </r>
+            <r>
+              <c>jmp +48</c>
+            </r>
+            <r>
+              <c>acc +49</c>
+            </r>
+            <r>
+              <c>acc +20</c>
+            </r>
+            <r>
+              <c>acc -5</c>
+            </r>
+            <r>
+              <c>acc +41</c>
+            </r>
+            <r>
+              <c>jmp +70</c>
+            </r>
+            <r>
+              <c>jmp +211</c>
+            </r>
+            <r>
+              <c>jmp +144</c>
+            </r>
+            <r>
+              <c>acc +29</c>
+            </r>
+            <r>
+              <c>acc +36</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>jmp -24</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>jmp -17</c>
+            </r>
+            <r>
+              <c>acc -18</c>
+            </r>
+            <r>
+              <c>acc +27</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>jmp -21</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>acc +35</c>
+            </r>
+            <r>
+              <c>acc -5</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>jmp +337</c>
+            </r>
+            <r>
+              <c>nop -240</c>
+            </r>
+            <r>
+              <c>jmp +180</c>
+            </r>
+            <r>
+              <c>acc -1</c>
+            </r>
+            <r>
+              <c>nop +49</c>
+            </r>
+            <r>
+              <c>jmp +260</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>jmp -165</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>acc +30</c>
+            </r>
+            <r>
+              <c>nop -234</c>
+            </r>
+            <r>
+              <c>jmp +27</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>acc +48</c>
+            </r>
+            <r>
+              <c>acc +44</c>
+            </r>
+            <r>
+              <c>acc -19</c>
+            </r>
+            <r>
+              <c>jmp +70</c>
+            </r>
+            <r>
+              <c>acc +20</c>
+            </r>
+            <r>
+              <c>acc +18</c>
+            </r>
+            <r>
+              <c>jmp +219</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>jmp -85</c>
+            </r>
+            <r>
+              <c>acc +43</c>
+            </r>
+            <r>
+              <c>acc +21</c>
+            </r>
+            <r>
+              <c>jmp -4</c>
+            </r>
+            <r>
+              <c>acc +37</c>
+            </r>
+            <r>
+              <c>acc +26</c>
+            </r>
+            <r>
+              <c>acc +16</c>
+            </r>
+            <r>
+              <c>jmp -257</c>
+            </r>
+            <r>
+              <c>acc +39</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>jmp -260</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>acc +10</c>
+            </r>
+            <r>
+              <c>acc +36</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>jmp +2</c>
+            </r>
+            <r>
+              <c>jmp -249</c>
+            </r>
+            <r>
+              <c>acc +20</c>
+            </r>
+            <r>
+              <c>acc -1</c>
+            </r>
+            <r>
+              <c>acc +21</c>
+            </r>
+            <r>
+              <c>jmp +74</c>
+            </r>
+            <r>
+              <c>jmp +31</c>
+            </r>
+            <r>
+              <c>acc +32</c>
+            </r>
+            <r>
+              <c>jmp +64</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>jmp -255</c>
+            </r>
+            <r>
+              <c>acc -8</c>
+            </r>
+            <r>
+              <c>acc -2</c>
+            </r>
+            <r>
+              <c>acc +26</c>
+            </r>
+            <r>
+              <c>jmp -102</c>
+            </r>
+            <r>
+              <c>jmp +229</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>acc +25</c>
+            </r>
+            <r>
+              <c>jmp -154</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>jmp -92</c>
+            </r>
+            <r>
+              <c>nop -37</c>
+            </r>
+            <r>
+              <c>acc -5</c>
+            </r>
+            <r>
+              <c>acc +50</c>
+            </r>
+            <r>
+              <c>acc +43</c>
+            </r>
+            <r>
+              <c>jmp +73</c>
+            </r>
+            <r>
+              <c>acc +1</c>
+            </r>
+            <r>
+              <c>acc -17</c>
+            </r>
+            <r>
+              <c>acc +19</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>jmp -319</c>
+            </r>
+            <r>
+              <c>nop -225</c>
+            </r>
+            <r>
+              <c>jmp -304</c>
+            </r>
+            <r>
+              <c>acc +49</c>
+            </r>
+            <r>
+              <c>acc +5</c>
+            </r>
+            <r>
+              <c>acc -17</c>
+            </r>
+            <r>
+              <c>jmp +14</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>acc -9</c>
+            </r>
+            <r>
+              <c>acc -10</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>jmp -125</c>
+            </r>
+            <r>
+              <c>jmp -46</c>
+            </r>
+            <r>
+              <c>acc +13</c>
+            </r>
+            <r>
+              <c>acc +11</c>
+            </r>
+            <r>
+              <c>nop +199</c>
+            </r>
+            <r>
+              <c>acc -19</c>
+            </r>
+            <r>
+              <c>jmp -159</c>
+            </r>
+            <r>
+              <c>acc +1</c>
+            </r>
+            <r>
+              <c>jmp +253</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>jmp +233</c>
+            </r>
+            <r>
+              <c>nop -76</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>acc +44</c>
+            </r>
+            <r>
+              <c>jmp -18</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>nop +227</c>
+            </r>
+            <r>
+              <c>jmp +178</c>
+            </r>
+            <r>
+              <c>nop -22</c>
+            </r>
+            <r>
+              <c>jmp -44</c>
+            </r>
+            <r>
+              <c>jmp +24</c>
+            </r>
+            <r>
+              <c>nop +122</c>
+            </r>
+            <r>
+              <c>acc +20</c>
+            </r>
+            <r>
+              <c>acc +43</c>
+            </r>
+            <r>
+              <c>jmp -81</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>acc +10</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>jmp +108</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>jmp +35</c>
+            </r>
+            <r>
+              <c>acc +44</c>
+            </r>
+            <r>
+              <c>jmp +36</c>
+            </r>
+            <r>
+              <c>nop -2</c>
+            </r>
+            <r>
+              <c>nop -320</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>jmp -6</c>
+            </r>
+            <r>
+              <c>acc -16</c>
+            </r>
+            <r>
+              <c>acc +49</c>
+            </r>
+            <r>
+              <c>nop +56</c>
+            </r>
+            <r>
+              <c>jmp +104</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>jmp -159</c>
+            </r>
+            <r>
+              <c>acc +30</c>
+            </r>
+            <r>
+              <c>jmp +56</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>acc -6</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>acc +2</c>
+            </r>
+            <r>
+              <c>jmp -102</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>jmp -262</c>
+            </r>
+            <r>
+              <c>acc +36</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>acc -17</c>
+            </r>
+            <r>
+              <c>jmp -90</c>
+            </r>
+            <r>
+              <c>acc +18</c>
+            </r>
+            <r>
+              <c>nop +7</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>jmp -194</c>
+            </r>
+            <r>
+              <c>acc +16</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>acc +26</c>
+            </r>
+            <r>
+              <c>jmp -257</c>
+            </r>
+            <r>
+              <c>acc +25</c>
+            </r>
+            <r>
+              <c>jmp -367</c>
+            </r>
+            <r>
+              <c>jmp +69</c>
+            </r>
+            <r>
+              <c>nop -102</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>jmp -356</c>
+            </r>
+            <r>
+              <c>nop -105</c>
+            </r>
+            <r>
+              <c>acc +6</c>
+            </r>
+            <r>
+              <c>jmp -42</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>jmp -368</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>jmp +84</c>
+            </r>
+            <r>
+              <c>acc +17</c>
+            </r>
+            <r>
+              <c>acc +14</c>
+            </r>
+            <r>
+              <c>acc -17</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>jmp -80</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>acc +11</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>jmp -77</c>
+            </r>
+            <r>
+              <c>acc -12</c>
+            </r>
+            <r>
+              <c>acc +8</c>
+            </r>
+            <r>
+              <c>acc -19</c>
+            </r>
+            <r>
+              <c>jmp -206</c>
+            </r>
+            <r>
+              <c>acc +6</c>
+            </r>
+            <r>
+              <c>acc +18</c>
+            </r>
+            <r>
+              <c>nop +94</c>
+            </r>
+            <r>
+              <c>acc -2</c>
+            </r>
+            <r>
+              <c>jmp -330</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>jmp -367</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>jmp +143</c>
+            </r>
+            <r>
+              <c>jmp -178</c>
+            </r>
+            <r>
+              <c>acc -1</c>
+            </r>
+            <r>
+              <c>jmp +140</c>
+            </r>
+            <r>
+              <c>acc +13</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>jmp -271</c>
+            </r>
+            <r>
+              <c>acc +29</c>
+            </r>
+            <r>
+              <c>nop -30</c>
+            </r>
+            <r>
+              <c>nop -344</c>
+            </r>
+            <r>
+              <c>jmp -251</c>
+            </r>
+            <r>
+              <c>jmp +98</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>acc -17</c>
+            </r>
+            <r>
+              <c>acc +5</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>jmp -299</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>nop +16</c>
+            </r>
+            <r>
+              <c>jmp -106</c>
+            </r>
+            <r>
+              <c>jmp -399</c>
+            </r>
+            <r>
+              <c>jmp -291</c>
+            </r>
+            <r>
+              <c>acc -4</c>
+            </r>
+            <r>
+              <c>acc +26</c>
+            </r>
+            <r>
+              <c>jmp -376</c>
+            </r>
+            <r>
+              <c>nop -444</c>
+            </r>
+            <r>
+              <c>nop +59</c>
+            </r>
+            <r>
+              <c>acc +27</c>
+            </r>
+            <r>
+              <c>nop +89</c>
+            </r>
+            <r>
+              <c>jmp -188</c>
+            </r>
+            <r>
+              <c>acc +21</c>
+            </r>
+            <r>
+              <c>nop -246</c>
+            </r>
+            <r>
+              <c>acc +6</c>
+            </r>
+            <r>
+              <c>jmp -24</c>
+            </r>
+            <r>
+              <c>acc +35</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>jmp -361</c>
+            </r>
+            <r>
+              <c>acc +48</c>
+            </r>
+            <r>
+              <c>acc -5</c>
+            </r>
+            <r>
+              <c>acc +19</c>
+            </r>
+            <r>
+              <c>jmp +74</c>
+            </r>
+            <r>
+              <c>jmp -56</c>
+            </r>
+            <r>
+              <c>jmp +43</c>
+            </r>
+            <r>
+              <c>acc +50</c>
+            </r>
+            <r>
+              <c>nop -275</c>
+            </r>
+            <r>
+              <c>acc +39</c>
+            </r>
+            <r>
+              <c>acc -11</c>
+            </r>
+            <r>
+              <c>jmp -258</c>
+            </r>
+            <r>
+              <c>acc +8</c>
+            </r>
+            <r>
+              <c>jmp -190</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>nop -188</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>jmp +12</c>
+            </r>
+            <r>
+              <c>nop -5</c>
+            </r>
+            <r>
+              <c>nop -444</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>jmp -129</c>
+            </r>
+            <r>
+              <c>acc -11</c>
+            </r>
+            <r>
+              <c>acc +28</c>
+            </r>
+            <r>
+              <c>jmp -452</c>
+            </r>
+            <r>
+              <c>acc -4</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>nop -176</c>
+            </r>
+            <r>
+              <c>jmp -56</c>
+            </r>
+            <r>
+              <c>acc +47</c>
+            </r>
+            <r>
+              <c>acc +33</c>
+            </r>
+            <r>
+              <c>jmp -432</c>
+            </r>
+            <r>
+              <c>jmp -19</c>
+            </r>
+            <r>
+              <c>acc +32</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>nop -179</c>
+            </r>
+            <r>
+              <c>jmp -49</c>
+            </r>
+            <r>
+              <c>nop -66</c>
+            </r>
+            <r>
+              <c>acc +20</c>
+            </r>
+            <r>
+              <c>jmp -122</c>
+            </r>
+            <r>
+              <c>acc +1</c>
+            </r>
+            <r>
+              <c>acc +10</c>
+            </r>
+            <r>
+              <c>acc +16</c>
+            </r>
+            <r>
+              <c>jmp +40</c>
+            </r>
+            <r>
+              <c>acc +11</c>
+            </r>
+            <r>
+              <c>acc +6</c>
+            </r>
+            <r>
+              <c>jmp -454</c>
+            </r>
+            <r>
+              <c>acc -2</c>
+            </r>
+            <r>
+              <c>acc +12</c>
+            </r>
+            <r>
+              <c>nop -228</c>
+            </r>
+            <r>
+              <c>jmp -165</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>nop -212</c>
+            </r>
+            <r>
+              <c>acc +49</c>
+            </r>
+            <r>
+              <c>jmp -286</c>
+            </r>
+            <r>
+              <c>acc +42</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>acc +38</c>
+            </r>
+            <r>
+              <c>jmp -440</c>
+            </r>
+            <r>
+              <c>acc +29</c>
+            </r>
+            <r>
+              <c>acc +8</c>
+            </r>
+            <r>
+              <c>acc +21</c>
+            </r>
+            <r>
+              <c>jmp -288</c>
+            </r>
+            <r>
+              <c>acc +2</c>
+            </r>
+            <r>
+              <c>jmp -427</c>
+            </r>
+            <r>
+              <c>acc +17</c>
+            </r>
+            <r>
+              <c>acc +45</c>
+            </r>
+            <r>
+              <c>acc +33</c>
+            </r>
+            <r>
+              <c>jmp -333</c>
+            </r>
+            <r>
+              <c>acc +6</c>
+            </r>
+            <r>
+              <c>jmp -445</c>
+            </r>
+            <r>
+              <c>nop -283</c>
+            </r>
+            <r>
+              <c>acc -18</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+            <r>
+              <c>jmp -492</c>
+            </r>
+            <r>
+              <c>jmp +53</c>
+            </r>
+            <r>
+              <c>acc +26</c>
+            </r>
+            <r>
+              <c>jmp -107</c>
+            </r>
+            <r>
+              <c>nop -377</c>
+            </r>
+            <r>
+              <c>jmp -155</c>
+            </r>
+            <r>
+              <c>acc +22</c>
+            </r>
+            <r>
+              <c>jmp -523</c>
+            </r>
+            <r>
+              <c>jmp -127</c>
+            </r>
+            <r>
+              <c>acc +2</c>
+            </r>
+            <r>
+              <c>nop -168</c>
+            </r>
+            <r>
+              <c>acc +15</c>
+            </r>
+            <r>
+              <c>jmp -343</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>jmp -241</c>
+            </r>
+            <r>
+              <c>acc +30</c>
+            </r>
+            <r>
+              <c>acc +40</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>acc -11</c>
+            </r>
+            <r>
+              <c>jmp -216</c>
+            </r>
+            <r>
+              <c>acc +31</c>
+            </r>
+            <r>
+              <c>jmp -86</c>
+            </r>
+            <r>
+              <c>acc +34</c>
+            </r>
+            <r>
+              <c>acc -15</c>
+            </r>
+            <r>
+              <c>nop -4</c>
+            </r>
+            <r>
+              <c>jmp -74</c>
+            </r>
+            <r>
+              <c>acc -1</c>
+            </r>
+            <r>
+              <c>acc +13</c>
+            </r>
+            <r>
+              <c>acc -2</c>
+            </r>
+            <r>
+              <c>jmp -119</c>
+            </r>
+            <r>
+              <c>acc +21</c>
+            </r>
+            <r>
+              <c>nop -516</c>
+            </r>
+            <r>
+              <c>acc +24</c>
+            </r>
+            <r>
+              <c>jmp -580</c>
+            </r>
+            <r>
+              <c>nop -200</c>
+            </r>
+            <r>
+              <c>acc +18</c>
+            </r>
+            <r>
+              <c>jmp -318</c>
+            </r>
+            <r>
+              <c>acc +0</c>
+            </r>
+            <r>
+              <c>nop -483</c>
+            </r>
+            <r>
+              <c>acc +15</c>
+            </r>
+            <r>
+              <c>acc -9</c>
+            </r>
+            <r>
+              <c>jmp -30</c>
+            </r>
+            <r>
+              <c>jmp -462</c>
+            </r>
+            <r>
+              <c>jmp -476</c>
+            </r>
+            <r>
+              <c>acc +18</c>
+            </r>
+            <r>
+              <c>acc -14</c>
+            </r>
+            <r>
+              <c>jmp -91</c>
+            </r>
+            <r>
+              <c>acc -6</c>
+            </r>
+            <r>
+              <c>acc +32</c>
+            </r>
+            <r>
+              <c>nop -611</c>
+            </r>
+            <r>
+              <c>acc +8</c>
+            </r>
+            <r>
+              <c>jmp -613</c>
+            </r>
+            <r>
+              <c>acc +23</c>
+            </r>
+            <r>
+              <c>acc +7</c>
+            </r>
+            <r>
+              <c>acc +30</c>
+            </r>
+            <r>
+              <c>acc +48</c>
+            </r>
+            <r>
+              <c>jmp -222</c>
+            </r>
+            <r>
+              <c>jmp -326</c>
+            </r>
+            <r>
+              <c>acc +46</c>
+            </r>
+            <r>
+              <c>nop -108</c>
+            </r>
+            <r>
+              <c>acc +17</c>
+            </r>
+            <r>
+              <c>acc -16</c>
+            </r>
+            <r>
+              <c>jmp +1</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="409">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="354" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="9" />
+          <Fields>
+            <Field name="instruction" />
+          </Fields>
+          <Data>
+            <r>
+              <c>nop +0</c>
+            </r>
+            <r>
+              <c>acc +1</c>
+            </r>
+            <r>
+              <c>jmp +4</c>
+            </r>
+            <r>
+              <c>acc +3</c>
+            </r>
+            <r>
+              <c>jmp -3</c>
+            </r>
+            <r>
+              <c>acc -99</c>
+            </r>
+            <r>
+              <c>acc +1</c>
+            </r>
+            <r>
+              <c>jmp -4</c>
+            </r>
+            <r>
+              <c>acc +6</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="414">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="688.9999" y="557" width="913.0001" height="1021" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 414</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="384">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1266" y="1014" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_43768_f244af74de2828459069d7d03fff557c_\Engine_43768_057ae7b99b635946a4757018a50cb5ab~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="386">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="846" y="606" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>operation</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-12-08 11:16:11</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2020-12-08 11:16:11</StartDate>
+                  <EndDate>2020-12-08 11:16:11</EndDate>
+                  <Operand>jmp</Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[operation] = "jmp"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="387">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="894" y="702" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>operation</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-12-08 11:16:18</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2020-12-08 11:16:18</StartDate>
+                  <EndDate>2020-12-08 11:16:18</EndDate>
+                  <Operand>nop</Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[operation] = "nop"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="388">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1374" y="822" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_43768_f244af74de2828459069d7d03fff557c_\Engine_43768_b93665a13497274ba0845814a8d47f5b~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="389">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1518" y="774" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_43768_f244af74de2828459069d7d03fff557c_\Engine_43768_f9d074c8490b8d46a96ec01729d87bf3~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="390">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="713.9999" y="738.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="'nop'" field="operation" size="7" type="String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[operation = 'nop'
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="391">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="785.9999" y="738.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="'jmp'" field="operation" size="7" type="String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[operation = 'jmp'
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="392">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1302" y="810" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="393">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1302" y="906" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="change" selected="False" />
+                <SelectField field="Accumulator" selected="False" />
+                <SelectField field="Step" selected="False" />
+                <SelectField field="Times" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="394">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1362" y="918" width="100" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>find possible changes</Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="401">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="870" y="1002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Allow</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_Order" selected="True" rename="Source_Order" input="Source_" />
+                    <SelectField field="Source_operation" selected="True" rename="Source_operation" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="402">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="894" y="894" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>Iteration</FieldName>
+              <StartValue>0</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="404">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="870" y="1098" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="iif([Order]=[Source_Order],[Source_operation],[operation])" field="operation" size="8" type="String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[operation = iif([Order]=[Source_Order],[Source_operation],[operation])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="405">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="870" y="1194" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Order" selected="False" />
+                <SelectField field="Source_operation" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="407">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="786" y="1230" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Iteration" action="GroupBy" rename="Iteration" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="408">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1146" y="1494" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine2_43768_f244af74de2828459069d7d03fff557c_\Engine_43768_4aec1ba75a8b1546905fa09d296f559a~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="403">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="797" y="1349" width="158.7758" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Container 403</Caption>
+              <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+              <Disabled value="True" />
+              <Folded value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="396">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+                <Position x="822.0001" y="1494" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <TempFile>
+                  </TempFile>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+            </Node>
+            <Node ToolID="397">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+                <Position x="894.0001" y="1494" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <TempFile>
+                  </TempFile>
+                  <TempFileDataProfiling />
+                  <Layout>
+                    <ViewMode>Single</ViewMode>
+                    <ViewSize value="100" />
+                    <View1>
+                      <DefaultTab>Profile</DefaultTab>
+                      <Hints>
+                        <Table />
+                      </Hints>
+                    </View1>
+                    <View2 />
+                  </Layout>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+            </Node>
+            <Node ToolID="674">
+              <GuiSettings>
+                <Position x="858.0001" y="1398" />
+              </GuiSettings>
+              <Properties>
+                <Configuration />
+                <Annotation DisplayMode="0">
+                  <Name>AOC_BaseA_08_Part1_Iterative (395)</Name>
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+              </Properties>
+              <EngineSettings Macro="C:\Users\Jarrod\Documents\OptimizingAlteryx\AdventOfCode\2020\Day08\AOC_BaseA_08_Part1_Iterative.yxmc" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="421">
+          <GuiSettings>
+            <Position x="1146" y="1302" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="BatchMacroGroupBy"><![CDATA[Control=Iteration
+Input1=Iteration
+]]></Value>
+              <Value name="ControlParams"><![CDATA[Control Parameter (3)=Iteration
+]]></Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name>AOC_BaseA_08_Part2_batch (406)</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output8">
+              <RecordInfo>
+                <Field name="Order" source="RecordID: Starting Value=1" type="Int32" />
+                <Field description="TextToColumns: Parsed from instruction" name="operation" size="2147483647" source="Formula: iif([Order]=[Source_Order],[Source_operation],[operation])" type="V_String" />
+                <Field description="TextToColumns: Parsed from instruction" name="change" source="TextToColumns: Parsed from instruction" type="Int32" />
+                <Field name="Accumulator" source="Formula: (Multiple Sources)" type="Int32" />
+                <Field name="Step" source="Formula: (Multiple Sources)" type="Int32" />
+                <Field name="Times" source="Formula: (Multiple Sources)" type="Int32" />
+                <Field name="TerminateReason" size="1073741823" source="Formula: (Multiple Sources)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="AOC_BaseA_08_Part2_batch.yxmc" />
+        </Node>
+        <Node ToolID="676">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1146" y="1398" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>TerminateReason</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-12-08 14:38:05</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Finish</Operand>
+                  <StartDate>2020-12-08 14:38:05</StartDate>
+                  <EndDate>2020-12-08 14:38:05</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[TerminateReason] = "Finish"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="677">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1302" y="1314" width="132" height="132" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text><![CDATA[633	jmp	1	2188	634	1	Finish
+
+]]></Text>
+              <Font name="Arial" size="8.25" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="White" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="171" Connection="Output" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="Output" />
+      <Destination ToolID="174" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="Output" />
+      <Destination ToolID="171" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Output" />
+      <Destination ToolID="675" Connection="Input30" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Output" />
+      <Destination ToolID="401" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="402" Connection="Output" />
+      <Destination ToolID="401" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Output" />
+      <Destination ToolID="386" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="675" Connection="Iterative" />
+      <Destination ToolID="376" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="675" Connection="Output" />
+      <Destination ToolID="377" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="379" Connection="Output" />
+      <Destination ToolID="173" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="386" Connection="False" />
+      <Destination ToolID="387" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="386" Connection="True" />
+      <Destination ToolID="390" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="387" Connection="False" />
+      <Destination ToolID="389" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="387" Connection="True" />
+      <Destination ToolID="391" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="390" Connection="Output" />
+      <Destination ToolID="392" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="391" Connection="Output" />
+      <Destination ToolID="392" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="391" Connection="Output" />
+      <Destination ToolID="388" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="392" Connection="Output" />
+      <Destination ToolID="393" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="393" Connection="Output" />
+      <Destination ToolID="384" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="393" Connection="Output" />
+      <Destination ToolID="402" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="401" Connection="Output" />
+      <Destination ToolID="404" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="404" Connection="Output" />
+      <Destination ToolID="405" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="405" Connection="Output" />
+      <Destination ToolID="674" Connection="Input30" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="405" Connection="Output" />
+      <Destination ToolID="421" Connection="Input1" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="407" Connection="Output" />
+      <Destination ToolID="421" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="405" Connection="Output" />
+      <Destination ToolID="407" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="674" Connection="Iterative" />
+      <Destination ToolID="396" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="674" Connection="Output" />
+      <Destination ToolID="397" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="421" Connection="Output8" />
+      <Destination ToolID="676" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="676" Connection="True" />
+      <Destination ToolID="408" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AOC_BaseA_08</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,1943 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="186" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input11</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="3" />
+              <Fields>
+                <Field name="Number" />
+                <Field name="Last_SpokenOrder" />
+                <Field name="Prev_SpokenOrder" />
+                <Field name="Next_Number" />
+                <Field name="Next_SpokenOrder" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>7</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Next_SpokenOrder" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="198" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output12</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>I Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="108">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="186" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Number] != [Next_Number]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Number] != [Next_Number]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Next_SpokenOrder" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Next_SpokenOrder" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="109">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="162" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_Next_Number" selected="True" rename="Orig_Next_Number" input="Target_" />
+                <SelectField field="Target_Next_SpokenOrder" selected="True" rename="Orig_Next_SpokenOrder" input="Target_" />
+                <SelectField field="Source_Number" selected="False" rename="Source_Number" input="Source_" />
+                <SelectField field="Source_Last_SpokenOrder" selected="False" rename="Source_Last_SpokenOrder" input="Source_" />
+                <SelectField field="Source_Prev_SpokenOrder" selected="False" rename="Source_Prev_SpokenOrder" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: [Next_SpokenOrder]-[Last_SpokenOrder]" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="210" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Next_SpokenOrder]-[Last_SpokenOrder]" field="Next_Number" size="1" type="Byte" />
+            <FormulaField expression="[Last_SpokenOrder]" field="Prev_SpokenOrder" size="1" type="Byte" />
+            <FormulaField expression="[Next_SpokenOrder]" field="Last_SpokenOrder" size="1" type="Byte" />
+            <FormulaField expression="[Next_SpokenOrder]+1" field="Next_SpokenOrder" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Next_Number = [Next_SpokenOrder]-[Last_SpokenOrder]
+Prev_SpokenOrder = [Last_Spo...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="Formula: [Next_SpokenOrder]" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="Formula: [Last_SpokenOrder]" type="Byte" />
+            <Field name="Next_Number" source="Formula: [Next_SpokenOrder]-[Last_SpokenOrder]" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="111">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="186" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="(Multiple Sources)" type="Byte" />
+            <Field name="Last_SpokenOrder" source="(Multiple Sources)" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="(Multiple Sources)" type="Byte" />
+            <Field name="Next_Number" source="Formula: (Multiple Sources)" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: (Multiple Sources)" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="120">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNull</Operator>
+            <Field>Next_Number</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-12-23 11:36:06</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2020-12-23 11:36:06</StartDate>
+              <EndDate>2020-12-23 11:36:06</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IsNull([Next_Number])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: [Next_SpokenOrder]-[Last_SpokenOrder]" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: [Next_SpokenOrder]-[Last_SpokenOrder]" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="54" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Orig_Next_Number]" field="Number" size="1" type="Byte" />
+            <FormulaField expression="[Orig_Next_SpokenOrder]" field="Last_SpokenOrder" size="1" type="Byte" />
+            <FormulaField expression="0" field="Prev_SpokenOrder" size="1" type="Byte" />
+            <FormulaField expression="[Orig_Next_SpokenOrder]+1" field="Next_SpokenOrder" size="1" type="Byte" />
+            <FormulaField expression="0" field="Next_Number" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Number = [Orig_Next_Number]
+Last_SpokenOrder = [Orig_Next_SpokenOrder]
+Prev_Spok...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="Formula: [Orig_Next_Number]" type="Byte" />
+            <Field name="Last_SpokenOrder" source="Formula: [Orig_Next_SpokenOrder]" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="Formula: 0" type="Byte" />
+            <Field name="Orig_Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: 0" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Orig_Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="54" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: [Next_SpokenOrder]-[Last_SpokenOrder]" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="150" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="0" field="Next_Number" size="8" type="Int64" />
+            <FormulaField expression="[Orig_Next_SpokenOrder]+1" field="Next_SpokenOrder" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Next_Number = 0
+Next_SpokenOrder = [Orig_Next_SpokenOrder]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_Number" source="TextInput:" type="Byte" />
+            <Field name="Orig_Next_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: 0" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Orig_Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="66" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Orig_Next_Number" selected="False" />
+            <SelectField field="Orig_Next_SpokenOrder" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="Formula: [Orig_Next_Number]" type="Byte" />
+            <Field name="Last_SpokenOrder" source="Formula: [Orig_Next_SpokenOrder]" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="Formula: 0" type="Byte" />
+            <Field name="Next_Number" source="Formula: 0" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Orig_Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="126">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Orig_Next_Number" selected="False" />
+            <SelectField field="Orig_Next_SpokenOrder" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: 0" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Orig_Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Orig_Next_Number" selected="False" />
+            <SelectField field="Orig_Next_SpokenOrder" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Number" source="TextInput:" type="Byte" />
+            <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+            <Field name="Next_Number" source="Formula: [Next_SpokenOrder]-[Last_SpokenOrder]" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: [Next_SpokenOrder]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="186" y="894" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Next_SpokenOrder</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-12-23 11:49:44</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>2020</Operand>
+              <StartDate>2020-12-23 11:49:44</StartDate>
+              <EndDate>2020-12-23 11:49:44</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Next_SpokenOrder] = 2020</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Number" source="(Multiple Sources)" type="Byte" />
+            <Field name="Last_SpokenOrder" source="(Multiple Sources)" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="(Multiple Sources)" type="Byte" />
+            <Field name="Next_Number" source="Formula: (Multiple Sources)" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: (Multiple Sources)" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Number" source="(Multiple Sources)" type="Byte" />
+            <Field name="Last_SpokenOrder" source="(Multiple Sources)" type="Byte" />
+            <Field name="Prev_SpokenOrder" source="(Multiple Sources)" type="Byte" />
+            <Field name="Next_Number" source="Formula: (Multiple Sources)" type="Byte" />
+            <Field name="Next_SpokenOrder" source="Formula: (Multiple Sources)" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="138" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output129</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>O Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="137">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="592" y="89" width="158" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 137</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="131">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="618" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>
+              </TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="132">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="617" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Data" action="Concat" rename="Concat_Data">
+                  <Concat_Start />
+                  <Separator>,</Separator>
+                  <Concat_End />
+                </SummarizeField>
+                <SummarizeField field="nextSteps" action="GroupBy" rename="nextSteps" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Concat_Data" size="1073741823" source="Summarize: Concat - Data" type="V_WString" />
+                <Field name="nextSteps" size="1073741823" source="Summarize: GroupBy - nextSteps" type="V_WString" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="nextSteps" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="133">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="617" y="246" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="'{'+tostring([Next_Number])+','+tostring([Next_SpokenOrder])+'}'" field="nextSteps" size="1073741823" type="V_WString" />
+                <FormulaField expression="ToString([Number])+':'+tostring([Last_SpokenOrder])+':'+tostring([Prev_SpokenOrder])" field="Data" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>nextSteps = '{'+tostring([Next_Number])+','+tostring([Next_SpokenOrder])+'}'
+Dat...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Number" source="TextInput:" type="Byte" />
+                <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+                <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+                <Field name="Next_Number" source="TextInput:" type="Byte" />
+                <Field name="Next_SpokenOrder" source="TextInput:" type="Byte" />
+                <Field name="nextSteps" size="1073741823" source="Formula: '{'+tostring([Next_Number])+','+tostring([Next_SpokenOrder])+'}'" type="V_WString" />
+                <Field name="Data" size="1073741823" source="Formula: ToString([Number])+':'+tostring([Last_SpokenOrder])+':'+tostring([Prev_SpokenOrder])" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="134">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="618" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[nextSteps]+[Concat_Data]" field="Data" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Data = [nextSteps]+[Concat_Data]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Concat_Data" size="1073741823" source="Summarize: Concat - Data" type="V_WString" />
+                <Field name="nextSteps" size="1073741823" source="Summarize: GroupBy - nextSteps" type="V_WString" />
+                <Field name="Data" size="1073741823" source="Formula: [nextSteps]+[Concat_Data]" type="V_WString" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="nextSteps" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="135">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="617" y="534" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Concat_Data" selected="False" />
+                <SelectField field="nextSteps" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Data" size="1073741823" source="Formula: [nextSteps]+[Concat_Data]" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="136">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="618" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="3" />
+              <Fields>
+                <Field name="Number" />
+                <Field name="Last_SpokenOrder" />
+                <Field name="Prev_SpokenOrder" />
+                <Field name="Next_Number" />
+                <Field name="Next_SpokenOrder" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>3</c>
+                  <c>6</c>
+                  <c>5</c>
+                  <c>1</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>4</c>
+                  <c>1</c>
+                  <c>1</c>
+                  <c>7</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>0</c>
+                  <c>1</c>
+                  <c>7</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Number" source="TextInput:" type="Byte" />
+                <Field name="Last_SpokenOrder" source="TextInput:" type="Byte" />
+                <Field name="Prev_SpokenOrder" source="TextInput:" type="Byte" />
+                <Field name="Next_Number" source="TextInput:" type="Byte" />
+                <Field name="Next_SpokenOrder" source="TextInput:" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="414" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>{1,7}3:6:5,0:4:1,6:3:0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="22" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="140">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="414" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Data</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 200</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="142">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="510" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')" field="NextNumber" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')" field="NextSpokenOrder" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_CountMatches([Data], [NextNumber]+':\d+:\d+')" field="CheckIfNumberAppears" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], [NextNumber]+':(\d+):(\d+)', '$1')" field="NumberLastSeen" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], [NextNumber]+':(\d+):(\d+)', '$2')" field="NumberPrevSeen" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')" field="DataIFNotSeen" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NextNumber = REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')
+NextSpokenOrder = RE...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="NextNumber" size="1073741823" source="Formula: REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')" type="V_WString" />
+            <Field name="NextSpokenOrder" size="1073741823" source="Formula: REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')" type="V_WString" />
+            <Field name="CheckIfNumberAppears" size="1073741823" source="Formula: REGEX_CountMatches([Data], [NextNumber]+':\d+:\d+')" type="V_WString" />
+            <Field name="NumberLastSeen" size="1073741823" source="Formula: REGEX_Replace([Data], [NextNumber]+':(\d+):(\d+)', '$1')" type="V_WString" />
+            <Field name="NumberPrevSeen" size="1073741823" source="Formula: REGEX_Replace([Data], [NextNumber]+':(\d+):(\d+)', '$2')" type="V_WString" />
+            <Field name="DataIFNotSeen" size="1073741823" source="Formula: REGEX_Replace([Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="143">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="510" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_29908_71c86899ae11468d945e059232278f3a_\Engine_13132_e2dbb2da26074ab29cc866d1a422f422_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="144">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="654" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>{0,8}3:6:5,0:4:1,6:3:0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="22" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="145">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="642" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Data</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 2</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="22" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="146">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="642" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')" field="NextNumber" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')" field="NextSpokenOrder" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_CountMatches([Data], '[\},]'+[NextNumber]+':\d+')" field="CheckIfNumberAppears" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+).*', '$1')" field="NumberLastSeen" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+):(\d+).*', '$2')" field="NumberPrevSeen" size="1073741823" type="V_WString" />
+            <FormulaField expression="//check if the number appeared before&#xA;iif(REGEX_CountMatches([Data], [NextNumber]+':\d+:\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;[NextNumber]+':\d+:\d+',NextNumber+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'))" field="DataIFNotSeen" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NextNumber = REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')
+NextSpokenOrder = RE...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="22" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="NextNumber" size="1073741823" source="Formula: REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')" type="V_WString" />
+            <Field name="NextSpokenOrder" size="1073741823" source="Formula: REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')" type="V_WString" />
+            <Field name="CheckIfNumberAppears" size="1073741823" source="Formula: REGEX_CountMatches([Data], '[\},]'+[NextNumber]+':\d+')" type="V_WString" />
+            <Field name="NumberLastSeen" size="1073741823" source="Formula: REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+).*', '$1')" type="V_WString" />
+            <Field name="NumberPrevSeen" size="1073741823" source="Formula: REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+):(\d+).*', '$2')" type="V_WString" />
+            <Field name="DataIFNotSeen" size="1073741823" source="Formula: //check if the number appeared before&#xA;iif(REGEX_CountMatches([Data], [NextNumber]+':\d+:\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;[NextNumber]+':\d+:\d+',NextNumber+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Data], '.*'+[NextNumber]+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'))" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="642" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_29908_71c86899ae11468d945e059232278f3a_\Engine_13132_0c5a26e4f34a405a8259c8fc81421c54_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="148">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="414" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Data</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif(isempty([Row-1:Data]),[Data],
+//check if the number appeared before
+iif(REGEX_CountMatches([Row-1:Data], REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+')!=0,
+
+//overall regex Replace for the data side
+Regex_Replace(
+//IF number hasn't appeared then next number is 0 and the next spoken order increases 1
+REGEX_Replace([Row-1:Data], '{.*}', '{'+
+
+//this is the start of the {} data
+Tostring(
+//Last spoken order
+tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-
+//last time seen
+tonumber(REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+
+//increase spoken order by 1
+tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),
+
+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))
+
+,
+
+//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1
+
+
+//replace next number and order
+REGEX_Replace([Row-1:Data], '{.*}', '{0,'+
+tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')
++','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')+':0'
+
+
+))</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif(isempty([Row-1:Data]),[Data],
+//check if the number appea...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: iif(isempty([Row-1:Data]),[Data],&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')&#xA;+','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')+':0'&#xA;&#xA;&#xA;))" name="Data" size="2147483647" source="Formula: iif(isempty([Row-1:Data]),[Data],&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')&#xA;+','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')+':0'&#xA;&#xA;&#xA;))" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="149">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="414" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_29908_71c86899ae11468d945e059232278f3a_\Engine_13132_cc9e18d1192c4d54ba9c34c40956885d_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="150">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="414" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="151">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="414" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Data" action="Concat" rename="Data">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="152">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="858" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>{0,4}1:1:0,3:2:0,2:3:0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="22" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="153">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="858" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Data</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 2020</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="154">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="858" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Data</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression><![CDATA[
+iif(isempty([Row-1:Data]),[Data],
+
+//check if the number appeared before
+iif(REGEX_CountMatches([Row-1:Data], '[\},]'+
+//Number
+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')
+// Ending of pattern
++':\d+')!=0,
+
+//overall regex Replace for the data side
+Regex_Replace(
+//IF number hasn't appeared then next number is 0 and the next spoken order increases 1
+REGEX_Replace([Row-1:Data], '{.*}', '{'+
+
+//this is the start of the {} data
+Tostring(
+//Last spoken order
+tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-
+//last time seen
+tonumber(REGEX_Replace([Row-1:Data], '.*[\},]'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+).*', '$1')))+','+
+//increase spoken order by 1
+tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),
+
+//Find Pattern of last spoken number
+'[\},]'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+',
+//Replace with:
+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))
+
+,
+
+//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1
+
+
+//replace next number and order
+REGEX_Replace([Row-1:Data], '{.*}', '{0,'+
+//
+tostring(
+//Next OrderNumber
+tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)
++'}')+','+
+//Number 
+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')
+
+
+))]]></Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[
+iif(isempty([Row-1:Data]),[Data],
+
+//check if the number app...]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: &#xA;iif(isempty([Row-1:Data]),[Data],&#xA;&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], '[\},]'+&#xA;//Number&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')&#xA;// Ending of pattern&#xA;+':\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*[\},]'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;//Find Pattern of last spoken number&#xA;'[\},]'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+',&#xA;//Replace with:&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;//&#xA;tostring(&#xA;//Next OrderNumber&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)&#xA;+'}')+','+&#xA;//Number &#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')&#xA;&#xA;&#xA;))" name="Data" size="2147483647" source="Formula: &#xA;iif(isempty([Row-1:Data]),[Data],&#xA;&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], '[\},]'+&#xA;//Number&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')&#xA;// Ending of pattern&#xA;+':\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*[\},]'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;//Find Pattern of last spoken number&#xA;'[\},]'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+',&#xA;//Replace with:&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;//&#xA;tostring(&#xA;//Next OrderNumber&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)&#xA;+'}')+','+&#xA;//Number &#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')&#xA;&#xA;&#xA;))" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="155">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="858" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_29908_71c86899ae11468d945e059232278f3a_\Engine_13132_6c4b3f3a6b9a43558f21555416c8a413_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="156">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="858" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="157">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="858" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Data" action="Concat" rename="Data">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="158">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1014" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>{0,4}2:1,1:2,3:3</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="16" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="159">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="1014" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Data</UpdateField_Name>
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 2020</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="160">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="1014" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Data</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif(isempty([Row-1:Data]),[Data],
+//check if the number appeared before
+iif(REGEX_CountMatches([Row-1:Data], ','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+,')!=0,
+
+//overall regex Replace for the data side
+Regex_Replace(
+//IF number hasn't appeared then next number is 0 and the next spoken order increases 1
+REGEX_Replace([Row-1:Data], '{.*}', '{'+
+
+//this is the start of the {} data
+Tostring(
+//Last spoken order
+tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-
+//last time seen
+tonumber(REGEX_Replace([Row-1:Data], '.*,'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+
+//increase spoken order by 1
+tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),
+
+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))
+
+,
+
+//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1
+
+
+//replace next number and order
+REGEX_Replace([Row-1:Data], '{.*}', '{0,'+
+tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')
++','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':0'
+
+
+))</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif(isempty([Row-1:Data]),[Data],
+//check if the number appea...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: iif(isempty([Row-1:Data]),[Data],&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], ','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+,')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*,'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')&#xA;+','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':0'&#xA;&#xA;&#xA;))" name="Data" size="2147483647" source="Formula: iif(isempty([Row-1:Data]),[Data],&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], ','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+,')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*,'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')&#xA;+','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':0'&#xA;&#xA;&#xA;))" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="161">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1014" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_29908_71c86899ae11468d945e059232278f3a_\Engine_13132_f1e9d5d029f3401c91f8cd50a0244d8a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="162">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1014" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="163">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1014" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Data" action="Concat" rename="Data">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="2147483647" source="Summarize: Concat - Data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="164">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1014" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&#xA;iif(isempty([Data]),[Data],&#xA;&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Data], '[\},]'+&#xA;//Number&#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')&#xA;// Ending of pattern&#xA;+':\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Data], '.*[\},]'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;//Find Pattern of last spoken number&#xA;'[\},]'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':\d+',&#xA;//Replace with:&#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Data], '{.*}', '{0,'+&#xA;//&#xA;tostring(&#xA;//Next OrderNumber&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)&#xA;+'}')+','+&#xA;//Number &#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')&#xA;&#xA;&#xA;))" field="NewData" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], '{.*}', '{0,'+&#xA;//&#xA;tostring(&#xA;//Next OrderNumber&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)&#xA;+'}')+','+&#xA;//Number &#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')" field="IF not Seen" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NewData = 
+iif(isempty([Data]),[Data],
+
+//check if the number appeared before
+ii...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: iif(isempty([Row-1:Data]),[Data],&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], ','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+,')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*,'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')&#xA;+','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':0'&#xA;&#xA;&#xA;))" name="Data" size="2147483647" source="Formula: iif(isempty([Row-1:Data]),[Data],&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Row-1:Data], ','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+,')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Row-1:Data], '.*,'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':\d+:\d+',REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':'+REGEX_Replace([Row-1:Data], '.*'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':(\d+):(\d+).*', '$1'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Row-1:Data], '{.*}', '{0,'+&#xA;tostring(tonumber(REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}')&#xA;+','+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Row-1:Data], '{(\d+),(\d+)}.*', '$2')+':0'&#xA;&#xA;&#xA;))" type="V_String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="NewData" size="1073741823" source="Formula: &#xA;iif(isempty([Data]),[Data],&#xA;&#xA;//check if the number appeared before&#xA;iif(REGEX_CountMatches([Data], '[\},]'+&#xA;//Number&#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')&#xA;// Ending of pattern&#xA;+':\d+')!=0,&#xA;&#xA;//overall regex Replace for the data side&#xA;Regex_Replace(&#xA;//IF number hasn't appeared then next number is 0 and the next spoken order increases 1&#xA;REGEX_Replace([Data], '{.*}', '{'+&#xA;&#xA;//this is the start of the {} data&#xA;Tostring(&#xA;//Last spoken order&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))-&#xA;//last time seen&#xA;tonumber(REGEX_Replace([Data], '.*[\},]'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':(\d+).*', '$1')))+','+&#xA;//increase spoken order by 1&#xA;tostring(tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)+'}'),&#xA;&#xA;//Find Pattern of last spoken number&#xA;'[\},]'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':\d+',&#xA;//Replace with:&#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))&#xA;&#xA;,&#xA;&#xA;//If number IS seen, set the next number equal to difference of Last and Previous AND set the new number:Last:Prev so that LAST moves to PREV and increase spoken order by 1&#xA;&#xA;&#xA;//replace next number and order&#xA;REGEX_Replace([Data], '{.*}', '{0,'+&#xA;//&#xA;tostring(&#xA;//Next OrderNumber&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)&#xA;+'}')+','+&#xA;//Number &#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')&#xA;&#xA;&#xA;))" type="V_WString" />
+            <Field name="IF not Seen" size="1073741823" source="Formula: REGEX_Replace([Data], '{.*}', '{0,'+&#xA;//&#xA;tostring(&#xA;//Next OrderNumber&#xA;tonumber(REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2'))+1)&#xA;+'}')+','+&#xA;//Number &#xA;REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$1')+':'+REGEX_Replace([Data], '{(\d+),(\d+)}.*', '$2')" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="165">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1218" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_CountMatches([Data], '[\},]'+REGEX_Replace([Data], '.*{(\d+),(\d+)}.*', '$1')+':\d+')" field="Count Matches" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Data], '.*{(\d+),(\d+)}.*', '$1')" field="regex" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Count Matches = REGEX_CountMatches([Data], '[\},]'+REGEX_Replace([Data], '.*{(\d...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="19" source="TextInput:" type="String" />
+            <Field name="Count Matches" size="1073741823" source="Formula: REGEX_CountMatches([Data], '[\},]'+REGEX_Replace([Data], '.*{(\d+),(\d+)}.*', '$1')+':\d+')" type="V_WString" />
+            <Field name="regex" size="1073741823" source="Formula: REGEX_Replace([Data], '.*{(\d+),(\d+)}.*', '$1')" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="166">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1218" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Data" />
+          </Fields>
+          <Data>
+            <r>
+              <c>{3,5}33:2,13:5,3:25</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Data" size="19" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="True" />
+      <Destination ToolID="109" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="109" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="False" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="126" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="127" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="111" Connection="Output" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="True" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="True" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="False" />
+      <Destination ToolID="127" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="128" Connection="False" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="128" Connection="True" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="134" Connection="Output" />
+      <Destination ToolID="135" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="135" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="136" Connection="Output" />
+      <Destination ToolID="133" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="Output" />
+      <Destination ToolID="151" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Output" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Output" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="142" Connection="Output" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Output" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="146" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="146" Connection="Output" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="148" Connection="Output" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="Output" />
+      <Destination ToolID="140" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Output" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="152" Connection="Output" />
+      <Destination ToolID="157" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Output" />
+      <Destination ToolID="154" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Output" />
+      <Destination ToolID="155" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="156" Connection="Output" />
+      <Destination ToolID="153" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="157" Connection="Output" />
+      <Destination ToolID="156" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="158" Connection="Output" />
+      <Destination ToolID="163" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="159" Connection="Output" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="164" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="162" Connection="Output" />
+      <Destination ToolID="159" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="163" Connection="Output" />
+      <Destination ToolID="162" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="164" Connection="Output" />
+      <Destination ToolID="161" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="166" Connection="Output" />
+      <Destination ToolID="165" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="True" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (129)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day15Part2Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (10)</Name>
+          <ToolId value="10" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (11)</Description>
+              <Name>Macro Input (11)</Name>
+              <ToolId value="11" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (12)</Description>
+              <Name>Macro Output (12)</Name>
+              <ToolId value="12" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (129)</Description>
+              <Name>Macro Output (129)</Name>
+              <ToolId value="129" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input11</Input>
+        <Output>Output12</Output>
+        <IterationLimit value="10000" />
+        <LimitBehavior>Ignore</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="11" Selected="True" />
+        <Tool ToolId="12" Selected="True" />
+        <Tool ToolId="129" Selected="True" />
+        <Tool ToolId="131" Selected="False" />
+        <Tool ToolId="143" Selected="False" />
+        <Tool ToolId="147" Selected="False" />
+        <Tool ToolId="149" Selected="False" />
+        <Tool ToolId="155" Selected="False" />
+        <Tool ToolId="161" Selected="False" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

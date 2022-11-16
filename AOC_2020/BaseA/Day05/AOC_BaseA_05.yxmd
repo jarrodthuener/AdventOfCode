@@ -1,0 +1,3429 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="318" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="Total Rows" />
+            <Field name="Total Seats" />
+          </Fields>
+          <Data>
+            <r>
+              <c>128</c>
+              <c>8</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="210" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>TicketID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="210" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>SeatID</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>SeatID_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="174" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>TicketID</UpdateField_Name>
+          <CreateField_Name>MinSeatRange</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif([SeatID]='F',[Row-1:MinSeatRange],[Row-1:MinSeatRange]+[RowsAvailable])</Expression>
+          <GroupByFields>
+            <Field field="TicketID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif([SeatID]='F',[Row-1:MinSeatRange],[Row-1:MinSeatRange]+[R...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="174" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>TicketID</UpdateField_Name>
+          <CreateField_Name>RowsAvailable</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif([TicketIDIndex]&lt;=7,iif([Row-1:RowsAvailable]=0,[Total Rows]/2,[Row-1:RowsAvailable]/2),
+0)</Expression>
+          <GroupByFields>
+            <Field field="TicketID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif([TicketIDIndex]&lt;=7,iif([Row-1:RowsAvailable]=0,[Total Row...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="210" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>TicketID</UpdateField_Name>
+          <CreateField_Name>TicketIDIndex</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:TicketIDIndex]+1</Expression>
+          <GroupByFields>
+            <Field field="TicketID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:TicketIDIndex]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="210" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&lt;=</Operator>
+            <Field>TicketIDIndex</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-12-07 11:05:41</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>7</Operand>
+              <StartDate>2020-12-07 11:05:41</StartDate>
+              <EndDate>2020-12-07 11:05:41</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[TicketIDIndex] &lt;= 7</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="306" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>TicketID</UpdateField_Name>
+          <CreateField_Name>MinSeatRange</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif([SeatID]='L',[Row-1:MinSeatRange],[Row-1:MinSeatRange]+[SeatsAvailable])</Expression>
+          <GroupByFields>
+            <Field field="TicketID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif([SeatID]='L',[Row-1:MinSeatRange],[Row-1:MinSeatRange]+[S...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="306" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>TicketID</UpdateField_Name>
+          <CreateField_Name>SeatsAvailable</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>iif([Row-1:SeatsAvailable]=0,[Total Seats]/2,[Row-1:SeatsAvailable]/2)</Expression>
+          <GroupByFields>
+            <Field field="TicketID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>iif([Row-1:SeatsAvailable]=0,[Total Seats]/2,[Row-1:SeatsAvai...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="174" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Last</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False">
+            <Field name="TicketID" />
+          </GroupFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="294" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Last</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False">
+            <Field name="TicketID" />
+          </GroupFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="246" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="TicketID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="TicketID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_SeatID" selected="False" input="Left_" />
+                <SelectField field="Left_Total Rows" selected="False" input="Left_" />
+                <SelectField field="Left_Total Seats" selected="False" input="Left_" />
+                <SelectField field="Left_TicketIDIndex" selected="False" input="Left_" />
+                <SelectField field="Left_RowsAvailable" selected="False" input="Left_" />
+                <SelectField field="Left_MinSeatRange" selected="True" rename="Row" input="Left_" />
+                <SelectField field="Right_TicketID" selected="False" rename="Right_TicketID" input="Right_" />
+                <SelectField field="Right_SeatID" selected="False" rename="Right_SeatID" input="Right_" />
+                <SelectField field="Right_Total Rows" selected="False" rename="Right_Total Rows" input="Right_" />
+                <SelectField field="Right_Total Seats" selected="False" rename="Right_Total Seats" input="Right_" />
+                <SelectField field="Right_TicketIDIndex" selected="False" rename="Right_TicketIDIndex" input="Right_" />
+                <SelectField field="Right_SeatsAvailable" selected="False" input="Right_" />
+                <SelectField field="Right_MinSeatRange" selected="True" rename="Seat" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="174" y="1122" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_39528_e0bf457aa8994f04b446ebb093a00655_\Engine_19776_ab724f7d336b4d47a666e5fec85b84cf_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="246" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Row]*8+[Seat]" field="SeatID" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[SeatID = [Row]*8+[Seat]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="174" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="901" />
+          <Fields>
+            <Field name="SeatID" />
+          </Fields>
+          <Data>
+            <r>
+              <c>BBFBBBBRRL</c>
+            </r>
+            <r>
+              <c>FBFFFFBLRL</c>
+            </r>
+            <r>
+              <c>FBFBBFFRLR</c>
+            </r>
+            <r>
+              <c>FBFFFBFRLR</c>
+            </r>
+            <r>
+              <c>FFBBFFFLRR</c>
+            </r>
+            <r>
+              <c>FFBBBFFRRR</c>
+            </r>
+            <r>
+              <c>BFBBFBFLRL</c>
+            </r>
+            <r>
+              <c>BFFFBFFLRR</c>
+            </r>
+            <r>
+              <c>FBBBFFBLLR</c>
+            </r>
+            <r>
+              <c>BBFFBBFRRL</c>
+            </r>
+            <r>
+              <c>BFBBBBBRLR</c>
+            </r>
+            <r>
+              <c>FBBBBFFLLR</c>
+            </r>
+            <r>
+              <c>FFBFFFBLLR</c>
+            </r>
+            <r>
+              <c>FFBBFBFRRR</c>
+            </r>
+            <r>
+              <c>BBFBFFFRRR</c>
+            </r>
+            <r>
+              <c>FFBFFBBLLR</c>
+            </r>
+            <r>
+              <c>FBBFFBBLRL</c>
+            </r>
+            <r>
+              <c>FFBBBFBLLL</c>
+            </r>
+            <r>
+              <c>FFBFFBBLRR</c>
+            </r>
+            <r>
+              <c>FBFFBFBLLR</c>
+            </r>
+            <r>
+              <c>FFFBBBFLLL</c>
+            </r>
+            <r>
+              <c>BFBBFBFRLR</c>
+            </r>
+            <r>
+              <c>BBFBBBFLLL</c>
+            </r>
+            <r>
+              <c>FBBBFBBRLL</c>
+            </r>
+            <r>
+              <c>FFBBBBFRRL</c>
+            </r>
+            <r>
+              <c>BFBBBBFLRR</c>
+            </r>
+            <r>
+              <c>BBFBBFBLRL</c>
+            </r>
+            <r>
+              <c>FFBFFFBLRL</c>
+            </r>
+            <r>
+              <c>BFBBBBBRRR</c>
+            </r>
+            <r>
+              <c>FFFBFBFLLR</c>
+            </r>
+            <r>
+              <c>BFBFBBBLLR</c>
+            </r>
+            <r>
+              <c>FFBFBBBLRL</c>
+            </r>
+            <r>
+              <c>FFFBFBBLRR</c>
+            </r>
+            <r>
+              <c>BFFBFFFLLL</c>
+            </r>
+            <r>
+              <c>BFFFBFBLRL</c>
+            </r>
+            <r>
+              <c>BFBFFFBRLL</c>
+            </r>
+            <r>
+              <c>BBFFFFBRLR</c>
+            </r>
+            <r>
+              <c>FBBFFFBLRR</c>
+            </r>
+            <r>
+              <c>BFFFFBFLLL</c>
+            </r>
+            <r>
+              <c>BBBFFFFLLL</c>
+            </r>
+            <r>
+              <c>BFBFFBBRLL</c>
+            </r>
+            <r>
+              <c>BBFBFFFRRL</c>
+            </r>
+            <r>
+              <c>BFBBFFFRLR</c>
+            </r>
+            <r>
+              <c>BBFBFBFRRL</c>
+            </r>
+            <r>
+              <c>FBBFFBFRRL</c>
+            </r>
+            <r>
+              <c>BFBFBFFRRL</c>
+            </r>
+            <r>
+              <c>FFBFFFFLLR</c>
+            </r>
+            <r>
+              <c>FBBBFBBLLR</c>
+            </r>
+            <r>
+              <c>BBFFBFBRLL</c>
+            </r>
+            <r>
+              <c>BFFBFBBRLL</c>
+            </r>
+            <r>
+              <c>FBBFFFFRRR</c>
+            </r>
+            <r>
+              <c>BFFFBBBLRL</c>
+            </r>
+            <r>
+              <c>FFBBFFBLLL</c>
+            </r>
+            <r>
+              <c>FFFBBFFRRL</c>
+            </r>
+            <r>
+              <c>FBFBBBBLRR</c>
+            </r>
+            <r>
+              <c>FFBBBFFLLL</c>
+            </r>
+            <r>
+              <c>FBFBFFBRRR</c>
+            </r>
+            <r>
+              <c>FBBFFBBLLR</c>
+            </r>
+            <r>
+              <c>FBFFBFFRLL</c>
+            </r>
+            <r>
+              <c>BFBBBFFRLR</c>
+            </r>
+            <r>
+              <c>FBFFBBBLRR</c>
+            </r>
+            <r>
+              <c>FBFFFFBRLR</c>
+            </r>
+            <r>
+              <c>BBFFBBFLRL</c>
+            </r>
+            <r>
+              <c>FBFFBBFLRL</c>
+            </r>
+            <r>
+              <c>FBFBBFFRRR</c>
+            </r>
+            <r>
+              <c>BFBBBFBLRL</c>
+            </r>
+            <r>
+              <c>FBFBFFFLLR</c>
+            </r>
+            <r>
+              <c>FFFFBBBLLR</c>
+            </r>
+            <r>
+              <c>BFBFFBBLLR</c>
+            </r>
+            <r>
+              <c>BFFBBBFRLR</c>
+            </r>
+            <r>
+              <c>BFBBBFFLRR</c>
+            </r>
+            <r>
+              <c>BBFFFBBLLR</c>
+            </r>
+            <r>
+              <c>BFFFBBFLRL</c>
+            </r>
+            <r>
+              <c>FBFFBFBLRL</c>
+            </r>
+            <r>
+              <c>FBBBFFFRRL</c>
+            </r>
+            <r>
+              <c>FBFFFFBLLL</c>
+            </r>
+            <r>
+              <c>BFBFFBBRLR</c>
+            </r>
+            <r>
+              <c>BFBFBBBLRL</c>
+            </r>
+            <r>
+              <c>BFFBFBBRLR</c>
+            </r>
+            <r>
+              <c>FBBFBBBLLR</c>
+            </r>
+            <r>
+              <c>FFBFBFFRLL</c>
+            </r>
+            <r>
+              <c>FFFBBBBLRR</c>
+            </r>
+            <r>
+              <c>BFBFFFFLLL</c>
+            </r>
+            <r>
+              <c>BBFBFBBLLR</c>
+            </r>
+            <r>
+              <c>BFFFBBBRLR</c>
+            </r>
+            <r>
+              <c>FFBFFBFRLR</c>
+            </r>
+            <r>
+              <c>FBBFBBBLRL</c>
+            </r>
+            <r>
+              <c>BBFFFBBLLL</c>
+            </r>
+            <r>
+              <c>FFBFFBBRRR</c>
+            </r>
+            <r>
+              <c>FBBBBFBLLR</c>
+            </r>
+            <r>
+              <c>BBFBBFFRLL</c>
+            </r>
+            <r>
+              <c>BFBBBBFRLR</c>
+            </r>
+            <r>
+              <c>BBFBFFBRLR</c>
+            </r>
+            <r>
+              <c>FFBFFFFLLL</c>
+            </r>
+            <r>
+              <c>BBFBFBFRLL</c>
+            </r>
+            <r>
+              <c>FFBFFBBRLL</c>
+            </r>
+            <r>
+              <c>FBBFFFFRLR</c>
+            </r>
+            <r>
+              <c>FFBBBBBRRR</c>
+            </r>
+            <r>
+              <c>BBFFBBBLRL</c>
+            </r>
+            <r>
+              <c>BFFBBFBRLL</c>
+            </r>
+            <r>
+              <c>BFFFBBFRLL</c>
+            </r>
+            <r>
+              <c>BFFBFBFLRL</c>
+            </r>
+            <r>
+              <c>FBFFFFFRRR</c>
+            </r>
+            <r>
+              <c>BFFBFBBRRL</c>
+            </r>
+            <r>
+              <c>FBFBBBFLLR</c>
+            </r>
+            <r>
+              <c>FBFBFBBRLL</c>
+            </r>
+            <r>
+              <c>BBBFFFFRRR</c>
+            </r>
+            <r>
+              <c>BFBFBFFLRL</c>
+            </r>
+            <r>
+              <c>FFFFBFBRLL</c>
+            </r>
+            <r>
+              <c>FFBBFFBLRL</c>
+            </r>
+            <r>
+              <c>BBFFBFBLLL</c>
+            </r>
+            <r>
+              <c>BFFBBBBRLL</c>
+            </r>
+            <r>
+              <c>BFFBBBBRRR</c>
+            </r>
+            <r>
+              <c>BFBBBBFRRL</c>
+            </r>
+            <r>
+              <c>BBBFFFBLRL</c>
+            </r>
+            <r>
+              <c>FFBBFFFRRR</c>
+            </r>
+            <r>
+              <c>BFFFFFBRLR</c>
+            </r>
+            <r>
+              <c>FFFBBFBLLL</c>
+            </r>
+            <r>
+              <c>BFBFBBFRLR</c>
+            </r>
+            <r>
+              <c>FBBBFBFLRL</c>
+            </r>
+            <r>
+              <c>BFBFBFFRLR</c>
+            </r>
+            <r>
+              <c>BBFBBFFLRL</c>
+            </r>
+            <r>
+              <c>BFFFBFBLLL</c>
+            </r>
+            <r>
+              <c>BFFFFBBRLL</c>
+            </r>
+            <r>
+              <c>FFBFFFFRRL</c>
+            </r>
+            <r>
+              <c>BFFBFBBLLR</c>
+            </r>
+            <r>
+              <c>FFFFBBBLLL</c>
+            </r>
+            <r>
+              <c>FBBFFBBRRL</c>
+            </r>
+            <r>
+              <c>BFBFFFFLLR</c>
+            </r>
+            <r>
+              <c>FBFBFBFRLL</c>
+            </r>
+            <r>
+              <c>FBBBBBBLRR</c>
+            </r>
+            <r>
+              <c>BBFFFFBLRR</c>
+            </r>
+            <r>
+              <c>FFFFBFBRRR</c>
+            </r>
+            <r>
+              <c>FBBBBFBRLL</c>
+            </r>
+            <r>
+              <c>BBFBFBBLRR</c>
+            </r>
+            <r>
+              <c>FFBBFBFLLL</c>
+            </r>
+            <r>
+              <c>BFBBFFBLRL</c>
+            </r>
+            <r>
+              <c>FFFBBBBRRR</c>
+            </r>
+            <r>
+              <c>BFBBFFFRLL</c>
+            </r>
+            <r>
+              <c>BFBBBFBRRR</c>
+            </r>
+            <r>
+              <c>FFFFBBFRLR</c>
+            </r>
+            <r>
+              <c>FFBBFBFLRR</c>
+            </r>
+            <r>
+              <c>FFFFFBBLLR</c>
+            </r>
+            <r>
+              <c>BBFBBFBRLL</c>
+            </r>
+            <r>
+              <c>FBFBBBBRLR</c>
+            </r>
+            <r>
+              <c>BBFFFFBLRL</c>
+            </r>
+            <r>
+              <c>FBBFFFBLLR</c>
+            </r>
+            <r>
+              <c>FFBFFBBLLL</c>
+            </r>
+            <r>
+              <c>FFFBBBFLLR</c>
+            </r>
+            <r>
+              <c>FFFBBBFRRR</c>
+            </r>
+            <r>
+              <c>FFBBBFBRRR</c>
+            </r>
+            <r>
+              <c>FFFBBFFRRR</c>
+            </r>
+            <r>
+              <c>FFBBFFBLLR</c>
+            </r>
+            <r>
+              <c>BFBFFBFRRR</c>
+            </r>
+            <r>
+              <c>FFBFBBFLLR</c>
+            </r>
+            <r>
+              <c>BFFFFFFRRR</c>
+            </r>
+            <r>
+              <c>FFBFFBFLRL</c>
+            </r>
+            <r>
+              <c>BFFBFBBRRR</c>
+            </r>
+            <r>
+              <c>FBFBFFFRLL</c>
+            </r>
+            <r>
+              <c>BBBFFFBLLL</c>
+            </r>
+            <r>
+              <c>BFBBFBFRRL</c>
+            </r>
+            <r>
+              <c>BFFFFFBLRR</c>
+            </r>
+            <r>
+              <c>FBBBBBFRRR</c>
+            </r>
+            <r>
+              <c>FFBBBBFLRR</c>
+            </r>
+            <r>
+              <c>BBFBBBBLRR</c>
+            </r>
+            <r>
+              <c>BBFBFBFLLR</c>
+            </r>
+            <r>
+              <c>FFFFBBFRRR</c>
+            </r>
+            <r>
+              <c>FFBBBBBLLR</c>
+            </r>
+            <r>
+              <c>BFFFBFBRLR</c>
+            </r>
+            <r>
+              <c>FBBBFFBLLL</c>
+            </r>
+            <r>
+              <c>FFFFFFFRRR</c>
+            </r>
+            <r>
+              <c>FFFBFBFRRL</c>
+            </r>
+            <r>
+              <c>BFBBFBBLRR</c>
+            </r>
+            <r>
+              <c>FBBBBFBLRL</c>
+            </r>
+            <r>
+              <c>FBBBBFBRRR</c>
+            </r>
+            <r>
+              <c>BFFFFBFRRR</c>
+            </r>
+            <r>
+              <c>BFFBBFFLLL</c>
+            </r>
+            <r>
+              <c>FBBFBFBLRL</c>
+            </r>
+            <r>
+              <c>BFBBFFFRRL</c>
+            </r>
+            <r>
+              <c>FBFBFFBRLR</c>
+            </r>
+            <r>
+              <c>FBFFBFFLRR</c>
+            </r>
+            <r>
+              <c>BFFFBFBLLR</c>
+            </r>
+            <r>
+              <c>BFBBFFBRRR</c>
+            </r>
+            <r>
+              <c>BBFBBFBLLL</c>
+            </r>
+            <r>
+              <c>BFFBFFFLRR</c>
+            </r>
+            <r>
+              <c>FFFBBFFRLL</c>
+            </r>
+            <r>
+              <c>BFBBFFFLLL</c>
+            </r>
+            <r>
+              <c>BFFFBBBRLL</c>
+            </r>
+            <r>
+              <c>FBFFBBFRRR</c>
+            </r>
+            <r>
+              <c>FFBFBFBLLR</c>
+            </r>
+            <r>
+              <c>FBFFFFBLRR</c>
+            </r>
+            <r>
+              <c>FFBBFFFLLL</c>
+            </r>
+            <r>
+              <c>FFFBBBBRRL</c>
+            </r>
+            <r>
+              <c>BBFBFFFLLL</c>
+            </r>
+            <r>
+              <c>BBFFBBFLLR</c>
+            </r>
+            <r>
+              <c>BFBFBBBRRR</c>
+            </r>
+            <r>
+              <c>FBBBBFBRRL</c>
+            </r>
+            <r>
+              <c>FBFFFBFLLR</c>
+            </r>
+            <r>
+              <c>FBFBBBFRRR</c>
+            </r>
+            <r>
+              <c>BFFFBFBRRL</c>
+            </r>
+            <r>
+              <c>FBFBBBFLRL</c>
+            </r>
+            <r>
+              <c>BBFFBFFLRL</c>
+            </r>
+            <r>
+              <c>BBFBBFFLLR</c>
+            </r>
+            <r>
+              <c>FFFFBFFRLL</c>
+            </r>
+            <r>
+              <c>FFFBBBBLRL</c>
+            </r>
+            <r>
+              <c>FBBBFBFRLL</c>
+            </r>
+            <r>
+              <c>BBFFFBBLRL</c>
+            </r>
+            <r>
+              <c>FFFBFFBLRR</c>
+            </r>
+            <r>
+              <c>BBFBFBBRRL</c>
+            </r>
+            <r>
+              <c>FFFFBBBRRR</c>
+            </r>
+            <r>
+              <c>FFBBBBBLRL</c>
+            </r>
+            <r>
+              <c>FFFFFFBLLL</c>
+            </r>
+            <r>
+              <c>FBFFFFFRRL</c>
+            </r>
+            <r>
+              <c>FFFFFBBLRR</c>
+            </r>
+            <r>
+              <c>BFFFBBBRRL</c>
+            </r>
+            <r>
+              <c>FBBFFFFLRL</c>
+            </r>
+            <r>
+              <c>FFFFFBBRLR</c>
+            </r>
+            <r>
+              <c>FFBFFBFRLL</c>
+            </r>
+            <r>
+              <c>FFFBBBFRRL</c>
+            </r>
+            <r>
+              <c>BFBBBFFLRL</c>
+            </r>
+            <r>
+              <c>FFFFFBFLRR</c>
+            </r>
+            <r>
+              <c>BFBFBBBRLR</c>
+            </r>
+            <r>
+              <c>FBFBBBFLLL</c>
+            </r>
+            <r>
+              <c>BFBFFBFLRL</c>
+            </r>
+            <r>
+              <c>FFBFBFFRRR</c>
+            </r>
+            <r>
+              <c>FFBBFFFRLL</c>
+            </r>
+            <r>
+              <c>BFBFBFFLLL</c>
+            </r>
+            <r>
+              <c>FBFBFBBRLR</c>
+            </r>
+            <r>
+              <c>BFFBBBFRRL</c>
+            </r>
+            <r>
+              <c>FBFFBBBRRR</c>
+            </r>
+            <r>
+              <c>FBFBFBBLRR</c>
+            </r>
+            <r>
+              <c>BFBBBBFLLR</c>
+            </r>
+            <r>
+              <c>FFFBFFFRLR</c>
+            </r>
+            <r>
+              <c>BFBBFFBRRL</c>
+            </r>
+            <r>
+              <c>BFFFBFFLRL</c>
+            </r>
+            <r>
+              <c>BFBFBBFRRR</c>
+            </r>
+            <r>
+              <c>FBBFFBFLLL</c>
+            </r>
+            <r>
+              <c>FFFFFFBLRR</c>
+            </r>
+            <r>
+              <c>FBFFBFBLRR</c>
+            </r>
+            <r>
+              <c>FFBBBFFLRR</c>
+            </r>
+            <r>
+              <c>FBBBFFBRLL</c>
+            </r>
+            <r>
+              <c>BFFFBBBRRR</c>
+            </r>
+            <r>
+              <c>FFBFFFFRLL</c>
+            </r>
+            <r>
+              <c>BBFFFBFRRR</c>
+            </r>
+            <r>
+              <c>BFFBFBBLLL</c>
+            </r>
+            <r>
+              <c>BFBBFFBRLR</c>
+            </r>
+            <r>
+              <c>FFBFBBBLRR</c>
+            </r>
+            <r>
+              <c>FFFBFBBLLL</c>
+            </r>
+            <r>
+              <c>FFFBBFFLLL</c>
+            </r>
+            <r>
+              <c>FBBBBBBLRL</c>
+            </r>
+            <r>
+              <c>BFBFBBBLLL</c>
+            </r>
+            <r>
+              <c>BFBFFFFRRL</c>
+            </r>
+            <r>
+              <c>FFBFBBFRRR</c>
+            </r>
+            <r>
+              <c>FFBFBFBRRL</c>
+            </r>
+            <r>
+              <c>FFFBBBBRLL</c>
+            </r>
+            <r>
+              <c>BFFBFFBRLL</c>
+            </r>
+            <r>
+              <c>BBFFFFBRRL</c>
+            </r>
+            <r>
+              <c>FFBFBFBLLL</c>
+            </r>
+            <r>
+              <c>FFBFBFBRLL</c>
+            </r>
+            <r>
+              <c>FBFBBBFRRL</c>
+            </r>
+            <r>
+              <c>FBFFBBFRLR</c>
+            </r>
+            <r>
+              <c>BBBFFFFLRL</c>
+            </r>
+            <r>
+              <c>FBFBFFFRRL</c>
+            </r>
+            <r>
+              <c>FFFBFBFRLR</c>
+            </r>
+            <r>
+              <c>FBFBFBBRRL</c>
+            </r>
+            <r>
+              <c>BFBBFBBLLL</c>
+            </r>
+            <r>
+              <c>FFBBBBBRLL</c>
+            </r>
+            <r>
+              <c>BBFFBFBRRL</c>
+            </r>
+            <r>
+              <c>FFFBFFFRRR</c>
+            </r>
+            <r>
+              <c>FBBFBFBLLL</c>
+            </r>
+            <r>
+              <c>BFFFBFFRLR</c>
+            </r>
+            <r>
+              <c>FBFBFFBRLL</c>
+            </r>
+            <r>
+              <c>BBFBBFFLLL</c>
+            </r>
+            <r>
+              <c>FBBBBFFLRR</c>
+            </r>
+            <r>
+              <c>FFBBBFFLRL</c>
+            </r>
+            <r>
+              <c>FBBBFFBRRR</c>
+            </r>
+            <r>
+              <c>FFBBFBBRLR</c>
+            </r>
+            <r>
+              <c>FBFBBFFLLR</c>
+            </r>
+            <r>
+              <c>BFBBBFFLLR</c>
+            </r>
+            <r>
+              <c>FFFBBFFLRR</c>
+            </r>
+            <r>
+              <c>FBFFBFFLRL</c>
+            </r>
+            <r>
+              <c>BFBFBFFLRR</c>
+            </r>
+            <r>
+              <c>BBFBFFFLLR</c>
+            </r>
+            <r>
+              <c>FFFBBBBLLR</c>
+            </r>
+            <r>
+              <c>FFBBFFBRLL</c>
+            </r>
+            <r>
+              <c>BBBFFFBRLL</c>
+            </r>
+            <r>
+              <c>FBFFBFBRRL</c>
+            </r>
+            <r>
+              <c>BFBFFFFRLL</c>
+            </r>
+            <r>
+              <c>FBFBFBFRLR</c>
+            </r>
+            <r>
+              <c>BBFFFFFLLL</c>
+            </r>
+            <r>
+              <c>FFBFBBBLLR</c>
+            </r>
+            <r>
+              <c>FFBFBFFLRR</c>
+            </r>
+            <r>
+              <c>FBBBBFBRLR</c>
+            </r>
+            <r>
+              <c>FFBFBBBRLR</c>
+            </r>
+            <r>
+              <c>BFFBBBBLRL</c>
+            </r>
+            <r>
+              <c>FFBBBBBRLR</c>
+            </r>
+            <r>
+              <c>BFBBBFFRRR</c>
+            </r>
+            <r>
+              <c>FBFBBFBRLL</c>
+            </r>
+            <r>
+              <c>FFBFFFBRRL</c>
+            </r>
+            <r>
+              <c>BBFBFBFLLL</c>
+            </r>
+            <r>
+              <c>BFBBBFBRLR</c>
+            </r>
+            <r>
+              <c>BFBBFBFLLR</c>
+            </r>
+            <r>
+              <c>FBBFBFFRLL</c>
+            </r>
+            <r>
+              <c>FFBFBBFLRR</c>
+            </r>
+            <r>
+              <c>BFFBFBFRLL</c>
+            </r>
+            <r>
+              <c>FFBBFBBLRL</c>
+            </r>
+            <r>
+              <c>FBFBFBBLRL</c>
+            </r>
+            <r>
+              <c>BBFFFBFLLR</c>
+            </r>
+            <r>
+              <c>BFBFBBBLRR</c>
+            </r>
+            <r>
+              <c>BBFFBBBLLR</c>
+            </r>
+            <r>
+              <c>BBFFFFBRRR</c>
+            </r>
+            <r>
+              <c>BFFFFFBLRL</c>
+            </r>
+            <r>
+              <c>FBBBFBBRRR</c>
+            </r>
+            <r>
+              <c>BFBFFFBLLL</c>
+            </r>
+            <r>
+              <c>FFFBBFFLLR</c>
+            </r>
+            <r>
+              <c>BFFBBFFLLR</c>
+            </r>
+            <r>
+              <c>BBFBBBBLRL</c>
+            </r>
+            <r>
+              <c>FBBFBFFLRR</c>
+            </r>
+            <r>
+              <c>FBFBFFBLLR</c>
+            </r>
+            <r>
+              <c>BFFFFFFLLL</c>
+            </r>
+            <r>
+              <c>BFFBBFFRLL</c>
+            </r>
+            <r>
+              <c>BBFFFFFLLR</c>
+            </r>
+            <r>
+              <c>FBFFBBFRRL</c>
+            </r>
+            <r>
+              <c>FBBFFFFLLR</c>
+            </r>
+            <r>
+              <c>BFBFFBBRRL</c>
+            </r>
+            <r>
+              <c>FFBFFFBLLL</c>
+            </r>
+            <r>
+              <c>BFFFFFBLLR</c>
+            </r>
+            <r>
+              <c>FFBBBFBRRL</c>
+            </r>
+            <r>
+              <c>FFBBBBFLLR</c>
+            </r>
+            <r>
+              <c>BFBFFFBLLR</c>
+            </r>
+            <r>
+              <c>FFFFBFFRLR</c>
+            </r>
+            <r>
+              <c>BFBBFFBRLL</c>
+            </r>
+            <r>
+              <c>FFBBBBBLLL</c>
+            </r>
+            <r>
+              <c>FBBFBFFRRR</c>
+            </r>
+            <r>
+              <c>BFFFFFFLLR</c>
+            </r>
+            <r>
+              <c>FFBBBBBLRR</c>
+            </r>
+            <r>
+              <c>FFFFFBFRRR</c>
+            </r>
+            <r>
+              <c>BFFFBBBLLL</c>
+            </r>
+            <r>
+              <c>BFFFBFFRRR</c>
+            </r>
+            <r>
+              <c>FFBBBFBRLR</c>
+            </r>
+            <r>
+              <c>BFFBBBBLRR</c>
+            </r>
+            <r>
+              <c>BFBBBFFRRL</c>
+            </r>
+            <r>
+              <c>BFBFBFFRRR</c>
+            </r>
+            <r>
+              <c>BFBBFBBRLR</c>
+            </r>
+            <r>
+              <c>BFBBBBFRLL</c>
+            </r>
+            <r>
+              <c>FFBBBBFLLL</c>
+            </r>
+            <r>
+              <c>FFFBBFBLRR</c>
+            </r>
+            <r>
+              <c>FBBFBBFRLR</c>
+            </r>
+            <r>
+              <c>BBFBBFFLRR</c>
+            </r>
+            <r>
+              <c>FBBFBBBRRL</c>
+            </r>
+            <r>
+              <c>BFFBFFFRRL</c>
+            </r>
+            <r>
+              <c>BFFFFBFLRR</c>
+            </r>
+            <r>
+              <c>FFBFBBFLLL</c>
+            </r>
+            <r>
+              <c>FFBFBBBLLL</c>
+            </r>
+            <r>
+              <c>FBFFBFBRRR</c>
+            </r>
+            <r>
+              <c>FFFBFFBRLL</c>
+            </r>
+            <r>
+              <c>BFFFFBFLRL</c>
+            </r>
+            <r>
+              <c>FFFFBFFLLR</c>
+            </r>
+            <r>
+              <c>BBFBBBBRLL</c>
+            </r>
+            <r>
+              <c>FBFBBFBRRR</c>
+            </r>
+            <r>
+              <c>BFFFBBBLRR</c>
+            </r>
+            <r>
+              <c>FBFFFBFRLL</c>
+            </r>
+            <r>
+              <c>FFBBBFBLRL</c>
+            </r>
+            <r>
+              <c>FBFFFBBLRR</c>
+            </r>
+            <r>
+              <c>FFBBFBFRLR</c>
+            </r>
+            <r>
+              <c>FBBBBBFLRL</c>
+            </r>
+            <r>
+              <c>FFFFBFBLRR</c>
+            </r>
+            <r>
+              <c>BFBFBFBLRR</c>
+            </r>
+            <r>
+              <c>FFBBFFFLRL</c>
+            </r>
+            <r>
+              <c>BFFBBBFLLR</c>
+            </r>
+            <r>
+              <c>FFFFFFBRLR</c>
+            </r>
+            <r>
+              <c>FFBBBFBLRR</c>
+            </r>
+            <r>
+              <c>FBFBBFFRLL</c>
+            </r>
+            <r>
+              <c>BBFBFBFRLR</c>
+            </r>
+            <r>
+              <c>FBBFFFFLLL</c>
+            </r>
+            <r>
+              <c>BFBBFBFRRR</c>
+            </r>
+            <r>
+              <c>BFFBBBFRRR</c>
+            </r>
+            <r>
+              <c>FBFFFBFLRR</c>
+            </r>
+            <r>
+              <c>FBBFFBFLRL</c>
+            </r>
+            <r>
+              <c>BFBBFFFLRR</c>
+            </r>
+            <r>
+              <c>FFBFFFFLRL</c>
+            </r>
+            <r>
+              <c>BFFBFFBLLL</c>
+            </r>
+            <r>
+              <c>FFFBFBBRRR</c>
+            </r>
+            <r>
+              <c>BBFFBFFLRR</c>
+            </r>
+            <r>
+              <c>BBBFFFFRRL</c>
+            </r>
+            <r>
+              <c>FBBBFFBLRL</c>
+            </r>
+            <r>
+              <c>FBBFFBBLRR</c>
+            </r>
+            <r>
+              <c>FFBFBFFLLR</c>
+            </r>
+            <r>
+              <c>FFFBBFFRLR</c>
+            </r>
+            <r>
+              <c>FBBBFBBRLR</c>
+            </r>
+            <r>
+              <c>FFFFBBBLRR</c>
+            </r>
+            <r>
+              <c>BBFFBFBRRR</c>
+            </r>
+            <r>
+              <c>FBFBBFFLRL</c>
+            </r>
+            <r>
+              <c>FBBBBFFLLL</c>
+            </r>
+            <r>
+              <c>FFBFFBBRLR</c>
+            </r>
+            <r>
+              <c>BBFFFFFLRR</c>
+            </r>
+            <r>
+              <c>FFBFBFBRLR</c>
+            </r>
+            <r>
+              <c>FFBFBFBLRL</c>
+            </r>
+            <r>
+              <c>FBBBFBBLRL</c>
+            </r>
+            <r>
+              <c>FFFBFBBLRL</c>
+            </r>
+            <r>
+              <c>FBFBFFFRRR</c>
+            </r>
+            <r>
+              <c>BFFBFFFRLR</c>
+            </r>
+            <r>
+              <c>BFBBFFBLLR</c>
+            </r>
+            <r>
+              <c>BFBFFBFRLL</c>
+            </r>
+            <r>
+              <c>FBFBFBFRRR</c>
+            </r>
+            <r>
+              <c>FBFFFFBRLL</c>
+            </r>
+            <r>
+              <c>FFFFFBBRRR</c>
+            </r>
+            <r>
+              <c>FBBBFFFLRL</c>
+            </r>
+            <r>
+              <c>FFFBFFBRLR</c>
+            </r>
+            <r>
+              <c>BFBFFBFLRR</c>
+            </r>
+            <r>
+              <c>FBBFBBFRRL</c>
+            </r>
+            <r>
+              <c>BFBBBBFRRR</c>
+            </r>
+            <r>
+              <c>BFFFFBBLRR</c>
+            </r>
+            <r>
+              <c>FBFFFFFLLL</c>
+            </r>
+            <r>
+              <c>BFBFFFBRRL</c>
+            </r>
+            <r>
+              <c>FFFBFFBLRL</c>
+            </r>
+            <r>
+              <c>FFBFFFBLRR</c>
+            </r>
+            <r>
+              <c>FBBFFBFRLL</c>
+            </r>
+            <r>
+              <c>BBFBFFBLLL</c>
+            </r>
+            <r>
+              <c>BBFFBBFLLL</c>
+            </r>
+            <r>
+              <c>FFBBBFFRLL</c>
+            </r>
+            <r>
+              <c>BFBBFFFLRL</c>
+            </r>
+            <r>
+              <c>FBBFBFFLLR</c>
+            </r>
+            <r>
+              <c>FBFBFFBLLL</c>
+            </r>
+            <r>
+              <c>FFBBBFFLLR</c>
+            </r>
+            <r>
+              <c>FBBFFBFLRR</c>
+            </r>
+            <r>
+              <c>FBBFBBFRRR</c>
+            </r>
+            <r>
+              <c>BFFFFBBLLL</c>
+            </r>
+            <r>
+              <c>FFFBFFBLLR</c>
+            </r>
+            <r>
+              <c>FBFBFFFRLR</c>
+            </r>
+            <r>
+              <c>FBFBFBBRRR</c>
+            </r>
+            <r>
+              <c>FBFBBFBRRL</c>
+            </r>
+            <r>
+              <c>BBFBBFBRRR</c>
+            </r>
+            <r>
+              <c>FFFFBBBRLL</c>
+            </r>
+            <r>
+              <c>FBFFBBBLRL</c>
+            </r>
+            <r>
+              <c>BBBFFFFRLL</c>
+            </r>
+            <r>
+              <c>FBFFFBFLRL</c>
+            </r>
+            <r>
+              <c>BFFFFBFLLR</c>
+            </r>
+            <r>
+              <c>FBFBBFFRRL</c>
+            </r>
+            <r>
+              <c>BFFBFBBLRR</c>
+            </r>
+            <r>
+              <c>FBFBBBBRRL</c>
+            </r>
+            <r>
+              <c>FBFBFBBLLR</c>
+            </r>
+            <r>
+              <c>FBFFBBFLRR</c>
+            </r>
+            <r>
+              <c>FFFFBFFLLL</c>
+            </r>
+            <r>
+              <c>BFBFFFFRRR</c>
+            </r>
+            <r>
+              <c>BBFFBBBLRR</c>
+            </r>
+            <r>
+              <c>FBFFFFFLLR</c>
+            </r>
+            <r>
+              <c>BBFBFFFRLR</c>
+            </r>
+            <r>
+              <c>BFFFFBBRLR</c>
+            </r>
+            <r>
+              <c>FBFFFFFLRL</c>
+            </r>
+            <r>
+              <c>FBBBFBBLRR</c>
+            </r>
+            <r>
+              <c>BFFBBFBLLL</c>
+            </r>
+            <r>
+              <c>BFFBFBBLRL</c>
+            </r>
+            <r>
+              <c>BFFBBBFRLL</c>
+            </r>
+            <r>
+              <c>FFBFFBFRRR</c>
+            </r>
+            <r>
+              <c>BFBFBFBRLL</c>
+            </r>
+            <r>
+              <c>BBFBBFBLLR</c>
+            </r>
+            <r>
+              <c>FBFBBFBLRL</c>
+            </r>
+            <r>
+              <c>FBFFFBBRLR</c>
+            </r>
+            <r>
+              <c>BBFBFFBRLL</c>
+            </r>
+            <r>
+              <c>BBFFFBFRLR</c>
+            </r>
+            <r>
+              <c>FBBFFFBLLL</c>
+            </r>
+            <r>
+              <c>BBFBBBBLLL</c>
+            </r>
+            <r>
+              <c>BFFFFFFLRR</c>
+            </r>
+            <r>
+              <c>FBBBBBFRLL</c>
+            </r>
+            <r>
+              <c>BFFFBFBRRR</c>
+            </r>
+            <r>
+              <c>BFFFFFFLRL</c>
+            </r>
+            <r>
+              <c>FBBBBFBLRR</c>
+            </r>
+            <r>
+              <c>FBFFBBBRLR</c>
+            </r>
+            <r>
+              <c>FFBBFBFRRL</c>
+            </r>
+            <r>
+              <c>FFBBFBBRRL</c>
+            </r>
+            <r>
+              <c>FFFBFBFRRR</c>
+            </r>
+            <r>
+              <c>FFBBBBFLRL</c>
+            </r>
+            <r>
+              <c>BFBBFFFRRR</c>
+            </r>
+            <r>
+              <c>FBFBBBBRLL</c>
+            </r>
+            <r>
+              <c>FBFFBBFRLL</c>
+            </r>
+            <r>
+              <c>FFBFFFFRRR</c>
+            </r>
+            <r>
+              <c>BFFFFBBLLR</c>
+            </r>
+            <r>
+              <c>FBFBBFBLLR</c>
+            </r>
+            <r>
+              <c>BBFFBBBRRR</c>
+            </r>
+            <r>
+              <c>FBBFBBBRLR</c>
+            </r>
+            <r>
+              <c>BFBFBFFRLL</c>
+            </r>
+            <r>
+              <c>BFFBBFBLRL</c>
+            </r>
+            <r>
+              <c>BFFBFFFRRR</c>
+            </r>
+            <r>
+              <c>FFBBBFBRLL</c>
+            </r>
+            <r>
+              <c>FBFFBFFRRL</c>
+            </r>
+            <r>
+              <c>FBBBBFFRRR</c>
+            </r>
+            <r>
+              <c>FFFBBBFRLL</c>
+            </r>
+            <r>
+              <c>BBFFFBBRLL</c>
+            </r>
+            <r>
+              <c>BBFFFBBRLR</c>
+            </r>
+            <r>
+              <c>FFBBFFFRRL</c>
+            </r>
+            <r>
+              <c>BBFFBFBLRR</c>
+            </r>
+            <r>
+              <c>BBFBFFBRRR</c>
+            </r>
+            <r>
+              <c>BFBBBBBLRR</c>
+            </r>
+            <r>
+              <c>BFFBBFFLRL</c>
+            </r>
+            <r>
+              <c>BBFFFFBLLL</c>
+            </r>
+            <r>
+              <c>FFFFBFBRRL</c>
+            </r>
+            <r>
+              <c>FBBFFBBRRR</c>
+            </r>
+            <r>
+              <c>FBBBFFFLRR</c>
+            </r>
+            <r>
+              <c>FBBFBBFLRR</c>
+            </r>
+            <r>
+              <c>FBBBFBBLLL</c>
+            </r>
+            <r>
+              <c>FFFFBBFLRL</c>
+            </r>
+            <r>
+              <c>FFFFFBBLLL</c>
+            </r>
+            <r>
+              <c>BFBBBBBLLR</c>
+            </r>
+            <r>
+              <c>BFBFFFFLRR</c>
+            </r>
+            <r>
+              <c>FBFFFFBLLR</c>
+            </r>
+            <r>
+              <c>BBFFBBBRLL</c>
+            </r>
+            <r>
+              <c>FBFFBFFRRR</c>
+            </r>
+            <r>
+              <c>FFBBFBFLLR</c>
+            </r>
+            <r>
+              <c>BBFBBBFLRR</c>
+            </r>
+            <r>
+              <c>FBBBBBBRLL</c>
+            </r>
+            <r>
+              <c>FFFFFFBLLR</c>
+            </r>
+            <r>
+              <c>FFFFFBFRLR</c>
+            </r>
+            <r>
+              <c>FBFFBFBRLL</c>
+            </r>
+            <r>
+              <c>BBFFBFFRRR</c>
+            </r>
+            <r>
+              <c>BFFBFFFLLR</c>
+            </r>
+            <r>
+              <c>FFBBFBBLRR</c>
+            </r>
+            <r>
+              <c>BBFFBBBRLR</c>
+            </r>
+            <r>
+              <c>FFBBFFBRRL</c>
+            </r>
+            <r>
+              <c>FBBBBFFRRL</c>
+            </r>
+            <r>
+              <c>BFBFFFFRLR</c>
+            </r>
+            <r>
+              <c>BFBBBFBLLL</c>
+            </r>
+            <r>
+              <c>BFBFFFBRRR</c>
+            </r>
+            <r>
+              <c>FBBBFFFRLR</c>
+            </r>
+            <r>
+              <c>BFBBFFBLRR</c>
+            </r>
+            <r>
+              <c>BBFBBFFRLR</c>
+            </r>
+            <r>
+              <c>BBFFFBBRRR</c>
+            </r>
+            <r>
+              <c>FFFFBBBRRL</c>
+            </r>
+            <r>
+              <c>FFBFBBFRLL</c>
+            </r>
+            <r>
+              <c>FBFFFFBRRL</c>
+            </r>
+            <r>
+              <c>FBBBFFBRLR</c>
+            </r>
+            <r>
+              <c>FFBFFFBRRR</c>
+            </r>
+            <r>
+              <c>FBBBBBBLLL</c>
+            </r>
+            <r>
+              <c>BFFBFFBLRL</c>
+            </r>
+            <r>
+              <c>FBFFBBBRLL</c>
+            </r>
+            <r>
+              <c>BBFBBBFRLR</c>
+            </r>
+            <r>
+              <c>BFBFBFBRLR</c>
+            </r>
+            <r>
+              <c>BBFFFFBRLL</c>
+            </r>
+            <r>
+              <c>FFBBFBBLLR</c>
+            </r>
+            <r>
+              <c>FFBBFFBRLR</c>
+            </r>
+            <r>
+              <c>BBFBBBBRLR</c>
+            </r>
+            <r>
+              <c>BFBBBFBLLR</c>
+            </r>
+            <r>
+              <c>FFFFBFFRRR</c>
+            </r>
+            <r>
+              <c>BBFFFBFRRL</c>
+            </r>
+            <r>
+              <c>FBBFBBBLLL</c>
+            </r>
+            <r>
+              <c>FFFBFFFLRL</c>
+            </r>
+            <r>
+              <c>BFFFFBBRRR</c>
+            </r>
+            <r>
+              <c>FFFBFBFLRL</c>
+            </r>
+            <r>
+              <c>BBFFBBFRRR</c>
+            </r>
+            <r>
+              <c>FBBFFFFLRR</c>
+            </r>
+            <r>
+              <c>FFFBBBFLRL</c>
+            </r>
+            <r>
+              <c>BFFBBBFLLL</c>
+            </r>
+            <r>
+              <c>BFBBFFBLLL</c>
+            </r>
+            <r>
+              <c>FFFFFFBLRL</c>
+            </r>
+            <r>
+              <c>FBFFBFFLLL</c>
+            </r>
+            <r>
+              <c>FBBBBBBRRR</c>
+            </r>
+            <r>
+              <c>FBBFFBBRLR</c>
+            </r>
+            <r>
+              <c>BFFFBBBLLR</c>
+            </r>
+            <r>
+              <c>BBFBBBBRRR</c>
+            </r>
+            <r>
+              <c>BFBFBFFLLR</c>
+            </r>
+            <r>
+              <c>BFBFFBFRLR</c>
+            </r>
+            <r>
+              <c>FBBBFFFRRR</c>
+            </r>
+            <r>
+              <c>FFBFBBFRLR</c>
+            </r>
+            <r>
+              <c>FFFFFBFRLL</c>
+            </r>
+            <r>
+              <c>FFBFBBBRRR</c>
+            </r>
+            <r>
+              <c>BFBFFBBLLL</c>
+            </r>
+            <r>
+              <c>FBBBBBFRLR</c>
+            </r>
+            <r>
+              <c>FFBBFBBLLL</c>
+            </r>
+            <r>
+              <c>BFBFFBBLRL</c>
+            </r>
+            <r>
+              <c>FBBFBFBRRL</c>
+            </r>
+            <r>
+              <c>BFFBBBBRRL</c>
+            </r>
+            <r>
+              <c>FBBFFFBLRL</c>
+            </r>
+            <r>
+              <c>FBBFBFBLLR</c>
+            </r>
+            <r>
+              <c>FBBFBBBLRR</c>
+            </r>
+            <r>
+              <c>BFBBBFBRRL</c>
+            </r>
+            <r>
+              <c>FBBBFBFLLL</c>
+            </r>
+            <r>
+              <c>BFFFBFFLLR</c>
+            </r>
+            <r>
+              <c>FBBBFBFLRR</c>
+            </r>
+            <r>
+              <c>FFBFFBBLRL</c>
+            </r>
+            <r>
+              <c>BBFBBBBLLR</c>
+            </r>
+            <r>
+              <c>BFFFBFFLLL</c>
+            </r>
+            <r>
+              <c>FBFFFFFLRR</c>
+            </r>
+            <r>
+              <c>BBFBFBBLRL</c>
+            </r>
+            <r>
+              <c>BFBFBBFRRL</c>
+            </r>
+            <r>
+              <c>FBFBFFBLRR</c>
+            </r>
+            <r>
+              <c>BFFFFFFRRL</c>
+            </r>
+            <r>
+              <c>BFFFFBFRLR</c>
+            </r>
+            <r>
+              <c>BFBBFBBRLL</c>
+            </r>
+            <r>
+              <c>BBFFFFFRLL</c>
+            </r>
+            <r>
+              <c>FFBBFFFLLR</c>
+            </r>
+            <r>
+              <c>FFFBFFFLRR</c>
+            </r>
+            <r>
+              <c>FFFBFFBRRR</c>
+            </r>
+            <r>
+              <c>BBFBFFBLLR</c>
+            </r>
+            <r>
+              <c>BFFBFFFRLL</c>
+            </r>
+            <r>
+              <c>FBFBFFBRRL</c>
+            </r>
+            <r>
+              <c>BFBBBFFLLL</c>
+            </r>
+            <r>
+              <c>BBFFBFBLRL</c>
+            </r>
+            <r>
+              <c>FBFBBFFLRR</c>
+            </r>
+            <r>
+              <c>FBBFBBBRRR</c>
+            </r>
+            <r>
+              <c>FFFBBFBRLL</c>
+            </r>
+            <r>
+              <c>FBBFBFBRRR</c>
+            </r>
+            <r>
+              <c>BFFFBBFLLL</c>
+            </r>
+            <r>
+              <c>FBBBFFBLRR</c>
+            </r>
+            <r>
+              <c>BFBFFBBRRR</c>
+            </r>
+            <r>
+              <c>FFFFFFBRLL</c>
+            </r>
+            <r>
+              <c>BBFFFBFLRL</c>
+            </r>
+            <r>
+              <c>BFBFBFBRRR</c>
+            </r>
+            <r>
+              <c>BFFFBBFRLR</c>
+            </r>
+            <r>
+              <c>BFBFFFBLRR</c>
+            </r>
+            <r>
+              <c>FFFBFFBRRL</c>
+            </r>
+            <r>
+              <c>BBFFFBBRRL</c>
+            </r>
+            <r>
+              <c>BFBBBFBRLL</c>
+            </r>
+            <r>
+              <c>BFBFFFBLRL</c>
+            </r>
+            <r>
+              <c>FFFBFFFLLR</c>
+            </r>
+            <r>
+              <c>BFFBFFFLRL</c>
+            </r>
+            <r>
+              <c>BBFBBFBLRR</c>
+            </r>
+            <r>
+              <c>FBBBFBBRRL</c>
+            </r>
+            <r>
+              <c>FBBFBFFRLR</c>
+            </r>
+            <r>
+              <c>FBFFFFFRLR</c>
+            </r>
+            <r>
+              <c>FBBBBFFRLR</c>
+            </r>
+            <r>
+              <c>BFBFBBFRLL</c>
+            </r>
+            <r>
+              <c>BBFBFBFRRR</c>
+            </r>
+            <r>
+              <c>BFBFBFBRRL</c>
+            </r>
+            <r>
+              <c>FBBBBBBRLR</c>
+            </r>
+            <r>
+              <c>BFBFBBFLLR</c>
+            </r>
+            <r>
+              <c>BFFFBBFRRL</c>
+            </r>
+            <r>
+              <c>BBBFFFFRLR</c>
+            </r>
+            <r>
+              <c>BBBFFFBLLR</c>
+            </r>
+            <r>
+              <c>FBFBBBFLRR</c>
+            </r>
+            <r>
+              <c>FBFFFBBLRL</c>
+            </r>
+            <r>
+              <c>FBFFBBBLLR</c>
+            </r>
+            <r>
+              <c>BFBFBBFLRR</c>
+            </r>
+            <r>
+              <c>BFBBFBBLRL</c>
+            </r>
+            <r>
+              <c>BFFFFFBRRL</c>
+            </r>
+            <r>
+              <c>FFBBFFFRLR</c>
+            </r>
+            <r>
+              <c>BFFBBFFRLR</c>
+            </r>
+            <r>
+              <c>BFBFBFBLRL</c>
+            </r>
+            <r>
+              <c>BFFBFBFRLR</c>
+            </r>
+            <r>
+              <c>FFBBFFBRRR</c>
+            </r>
+            <r>
+              <c>BFBBBBBLLL</c>
+            </r>
+            <r>
+              <c>BBFFFFFRRL</c>
+            </r>
+            <r>
+              <c>BBFFFFFLRL</c>
+            </r>
+            <r>
+              <c>FFFBBFFLRL</c>
+            </r>
+            <r>
+              <c>BFBBFBFRLL</c>
+            </r>
+            <r>
+              <c>FFFBBBBLLL</c>
+            </r>
+            <r>
+              <c>FFFFFBFLRL</c>
+            </r>
+            <r>
+              <c>FFFFBBFLRR</c>
+            </r>
+            <r>
+              <c>FBFFFBFRRR</c>
+            </r>
+            <r>
+              <c>BFFBBBBLLL</c>
+            </r>
+            <r>
+              <c>BBFBBFFRRL</c>
+            </r>
+            <r>
+              <c>BFFFBBFLLR</c>
+            </r>
+            <r>
+              <c>FBBBFFFLLL</c>
+            </r>
+            <r>
+              <c>FFBFFBBRRL</c>
+            </r>
+            <r>
+              <c>BFBBBFBLRR</c>
+            </r>
+            <r>
+              <c>BFFBBBFLRL</c>
+            </r>
+            <r>
+              <c>BFBBBBBRLL</c>
+            </r>
+            <r>
+              <c>FFFBBBFRLR</c>
+            </r>
+            <r>
+              <c>FFFFBFFRRL</c>
+            </r>
+            <r>
+              <c>FFBFBFFLLL</c>
+            </r>
+            <r>
+              <c>BBFBFFFLRL</c>
+            </r>
+            <r>
+              <c>BFFFBBFLRR</c>
+            </r>
+            <r>
+              <c>FFFBFBFRLL</c>
+            </r>
+            <r>
+              <c>BFBFFBBLRR</c>
+            </r>
+            <r>
+              <c>FFFBFBBLLR</c>
+            </r>
+            <r>
+              <c>BBFFFFFRLR</c>
+            </r>
+            <r>
+              <c>FFBFBFFRRL</c>
+            </r>
+            <r>
+              <c>FFFFFBBLRL</c>
+            </r>
+            <r>
+              <c>FBBBFBFRRL</c>
+            </r>
+            <r>
+              <c>FBBBBFBLLL</c>
+            </r>
+            <r>
+              <c>FFFFBBBRLR</c>
+            </r>
+            <r>
+              <c>FBBBBFFLRL</c>
+            </r>
+            <r>
+              <c>BFBBBBBRRL</c>
+            </r>
+            <r>
+              <c>BBFFBFBLLR</c>
+            </r>
+            <r>
+              <c>FBFBFFFLRL</c>
+            </r>
+            <r>
+              <c>FBFFFBFRRL</c>
+            </r>
+            <r>
+              <c>FFFBBFBLRL</c>
+            </r>
+            <r>
+              <c>BFFFFFBLLL</c>
+            </r>
+            <r>
+              <c>BFFBFBFLLL</c>
+            </r>
+            <r>
+              <c>FFFFBBFRRL</c>
+            </r>
+            <r>
+              <c>FFFBFBBRLR</c>
+            </r>
+            <r>
+              <c>FBFBBBBRRR</c>
+            </r>
+            <r>
+              <c>FBFFBBBLLL</c>
+            </r>
+            <r>
+              <c>FFBBBBFRRR</c>
+            </r>
+            <r>
+              <c>BFFFFBFRLL</c>
+            </r>
+            <r>
+              <c>BBFBFBBRLR</c>
+            </r>
+            <r>
+              <c>BFFBBBFLRR</c>
+            </r>
+            <r>
+              <c>FBBFBFFRRL</c>
+            </r>
+            <r>
+              <c>FFFFFBFLLL</c>
+            </r>
+            <r>
+              <c>BBFBFBFLRR</c>
+            </r>
+            <r>
+              <c>FFBFBBFLRL</c>
+            </r>
+            <r>
+              <c>BFFBBFBRLR</c>
+            </r>
+            <r>
+              <c>FFBBBFFRLR</c>
+            </r>
+            <r>
+              <c>FFFBBFBRLR</c>
+            </r>
+            <r>
+              <c>FBFBBBBLLR</c>
+            </r>
+            <r>
+              <c>BFFBBBBLLR</c>
+            </r>
+            <r>
+              <c>BBFBFBFLRL</c>
+            </r>
+            <r>
+              <c>BBFFFFFRRR</c>
+            </r>
+            <r>
+              <c>FFFBFFFRRL</c>
+            </r>
+            <r>
+              <c>FBBFFBFRRR</c>
+            </r>
+            <r>
+              <c>BBFFBFFRLL</c>
+            </r>
+            <r>
+              <c>FFBBFBFRLL</c>
+            </r>
+            <r>
+              <c>FFFFBFBLLR</c>
+            </r>
+            <r>
+              <c>BBFFBBFRLL</c>
+            </r>
+            <r>
+              <c>BFBBBBFLRL</c>
+            </r>
+            <r>
+              <c>FBFFBFFRLR</c>
+            </r>
+            <r>
+              <c>BFBFBBFLLL</c>
+            </r>
+            <r>
+              <c>FFFFBBFLLL</c>
+            </r>
+            <r>
+              <c>BFBBBBBLRL</c>
+            </r>
+            <r>
+              <c>FFBFBFBLRR</c>
+            </r>
+            <r>
+              <c>BFFFFFBRRR</c>
+            </r>
+            <r>
+              <c>FBFBBBBLRL</c>
+            </r>
+            <r>
+              <c>FBBFBBFLLR</c>
+            </r>
+            <r>
+              <c>FBBFFFFRRL</c>
+            </r>
+            <r>
+              <c>FBFFFBFLLL</c>
+            </r>
+            <r>
+              <c>FBFFBBBRRL</c>
+            </r>
+            <r>
+              <c>FFBFFFFRLR</c>
+            </r>
+            <r>
+              <c>FBBFBBBRLL</c>
+            </r>
+            <r>
+              <c>FFFFBFBRLR</c>
+            </r>
+            <r>
+              <c>FFBFBBBRRL</c>
+            </r>
+            <r>
+              <c>BFFBFBFRRL</c>
+            </r>
+            <r>
+              <c>FFBFFBFLLL</c>
+            </r>
+            <r>
+              <c>BFFBFBFLRR</c>
+            </r>
+            <r>
+              <c>BBFBFFBLRL</c>
+            </r>
+            <r>
+              <c>BBFFBFFLLR</c>
+            </r>
+            <r>
+              <c>BFBBBBFLLL</c>
+            </r>
+            <r>
+              <c>BBFBBFFRRR</c>
+            </r>
+            <r>
+              <c>BBFFFBBLRR</c>
+            </r>
+            <r>
+              <c>BFBFFBFRRL</c>
+            </r>
+            <r>
+              <c>FBBFBFBLRR</c>
+            </r>
+            <r>
+              <c>BBFBBBFRRR</c>
+            </r>
+            <r>
+              <c>FFFBBFBLLR</c>
+            </r>
+            <r>
+              <c>FFFBFFFLLL</c>
+            </r>
+            <r>
+              <c>FBBBFBFLLR</c>
+            </r>
+            <r>
+              <c>BFBBFBFLLL</c>
+            </r>
+            <r>
+              <c>BFBFBFBLLL</c>
+            </r>
+            <r>
+              <c>BBFFBBFLRR</c>
+            </r>
+            <r>
+              <c>FFFBFBFLRR</c>
+            </r>
+            <r>
+              <c>BFFFFFFRLR</c>
+            </r>
+            <r>
+              <c>BBFBFBBRRR</c>
+            </r>
+            <r>
+              <c>BBFFFBFRLL</c>
+            </r>
+            <r>
+              <c>FFFFBBFRLL</c>
+            </r>
+            <r>
+              <c>FBBFBBFRLL</c>
+            </r>
+            <r>
+              <c>FBFFFFBRRR</c>
+            </r>
+            <r>
+              <c>FBFFBBFLLR</c>
+            </r>
+            <r>
+              <c>BFFBFFBLLR</c>
+            </r>
+            <r>
+              <c>FFBFFBFLRR</c>
+            </r>
+            <r>
+              <c>FBFFBFBRLR</c>
+            </r>
+            <r>
+              <c>FBFBBFFLLL</c>
+            </r>
+            <r>
+              <c>FBBFFFBRRL</c>
+            </r>
+            <r>
+              <c>FBFBFBFRRL</c>
+            </r>
+            <r>
+              <c>FFBFBFBRRR</c>
+            </r>
+            <r>
+              <c>FBFBFBFLRL</c>
+            </r>
+            <r>
+              <c>FFFBFBBRLL</c>
+            </r>
+            <r>
+              <c>FBBBFFFLLR</c>
+            </r>
+            <r>
+              <c>FFBBBBFRLL</c>
+            </r>
+            <r>
+              <c>FBFFFBBRLL</c>
+            </r>
+            <r>
+              <c>BFFBFFBLRR</c>
+            </r>
+            <r>
+              <c>FBBFBBFLRL</c>
+            </r>
+            <r>
+              <c>FBFFFBBRRR</c>
+            </r>
+            <r>
+              <c>FBFFFBBLLR</c>
+            </r>
+            <r>
+              <c>BFFBFFBRRR</c>
+            </r>
+            <r>
+              <c>FBBBFBFRRR</c>
+            </r>
+            <r>
+              <c>FBFFFFFRLL</c>
+            </r>
+            <r>
+              <c>BBFBBBFRLL</c>
+            </r>
+            <r>
+              <c>FFFBFFBLLL</c>
+            </r>
+            <r>
+              <c>FFBFFFFLRR</c>
+            </r>
+            <r>
+              <c>FBFFFBBRRL</c>
+            </r>
+            <r>
+              <c>BBFFBFFRLR</c>
+            </r>
+            <r>
+              <c>FBFBFBBLLL</c>
+            </r>
+            <r>
+              <c>FBBBBBBLLR</c>
+            </r>
+            <r>
+              <c>FBFBBFBLLL</c>
+            </r>
+            <r>
+              <c>BBFBFFFLRR</c>
+            </r>
+            <r>
+              <c>BFFFFBBRRL</c>
+            </r>
+            <r>
+              <c>BBFFFBFLRR</c>
+            </r>
+            <r>
+              <c>FFBFFFBRLL</c>
+            </r>
+            <r>
+              <c>FFFFBBBLRL</c>
+            </r>
+            <r>
+              <c>BFBBBFFRLL</c>
+            </r>
+            <r>
+              <c>BBFBFFFRLL</c>
+            </r>
+            <r>
+              <c>FBFBBBBLLL</c>
+            </r>
+            <r>
+              <c>BBFBBFBRLR</c>
+            </r>
+            <r>
+              <c>BBFFBFBRLR</c>
+            </r>
+            <r>
+              <c>BFBFFFFLRL</c>
+            </r>
+            <r>
+              <c>FBBBFBFRLR</c>
+            </r>
+            <r>
+              <c>FFBFFFBRLR</c>
+            </r>
+            <r>
+              <c>FBBBBBFLLR</c>
+            </r>
+            <r>
+              <c>FFBBBFBLLR</c>
+            </r>
+            <r>
+              <c>BFFBBFBRRL</c>
+            </r>
+            <r>
+              <c>BBFFBFFRRL</c>
+            </r>
+            <r>
+              <c>FFFFFFBRRR</c>
+            </r>
+            <r>
+              <c>FFBBFBBRRR</c>
+            </r>
+            <r>
+              <c>FBBBBBBRRL</c>
+            </r>
+            <r>
+              <c>BFFBBFFRRL</c>
+            </r>
+            <r>
+              <c>FBBFBFBRLR</c>
+            </r>
+            <r>
+              <c>FBBFFFFRLL</c>
+            </r>
+            <r>
+              <c>FBBBBBFLLL</c>
+            </r>
+            <r>
+              <c>FBBFFFBRRR</c>
+            </r>
+            <r>
+              <c>BFFFFBBLRL</c>
+            </r>
+            <r>
+              <c>FFFFBFBLLL</c>
+            </r>
+            <r>
+              <c>FBFBFFFLLL</c>
+            </r>
+            <r>
+              <c>FBFBBFBLRR</c>
+            </r>
+            <r>
+              <c>FFFFBFFLRR</c>
+            </r>
+            <r>
+              <c>FFFBBBFLRR</c>
+            </r>
+            <r>
+              <c>FBFFBFFLLR</c>
+            </r>
+            <r>
+              <c>BBFFBFFLLL</c>
+            </r>
+            <r>
+              <c>FFBFFBFRRL</c>
+            </r>
+            <r>
+              <c>BFBBFBBRRR</c>
+            </r>
+            <r>
+              <c>BBFFFBFLLL</c>
+            </r>
+            <r>
+              <c>FBFFBFBLLL</c>
+            </r>
+            <r>
+              <c>BFFBFFBRRL</c>
+            </r>
+            <r>
+              <c>BBFBFFBLRR</c>
+            </r>
+            <r>
+              <c>FBFBFFFLRR</c>
+            </r>
+            <r>
+              <c>BFBBFBBLLR</c>
+            </r>
+            <r>
+              <c>BFFBBFFRRR</c>
+            </r>
+            <r>
+              <c>FFFFFFBRRL</c>
+            </r>
+            <r>
+              <c>BBBFFFFLLR</c>
+            </r>
+            <r>
+              <c>BFBFFBFLLL</c>
+            </r>
+            <r>
+              <c>FBBBBBFRRL</c>
+            </r>
+            <r>
+              <c>BFFBBBBRLR</c>
+            </r>
+            <r>
+              <c>FFBBFBFLRL</c>
+            </r>
+            <r>
+              <c>FBFBFFBLRL</c>
+            </r>
+            <r>
+              <c>FFBBBBFRLR</c>
+            </r>
+            <r>
+              <c>BBFBBFBRRL</c>
+            </r>
+            <r>
+              <c>FFFFFBFLLR</c>
+            </r>
+            <r>
+              <c>FBFBFBFLLL</c>
+            </r>
+            <r>
+              <c>BFBFBFBLLR</c>
+            </r>
+            <r>
+              <c>FFFBFFFRLL</c>
+            </r>
+            <r>
+              <c>BFFBBFBLLR</c>
+            </r>
+            <r>
+              <c>FFBBFBBRLL</c>
+            </r>
+            <r>
+              <c>FFFBBFBRRL</c>
+            </r>
+            <r>
+              <c>FBBFFBBLLL</c>
+            </r>
+            <r>
+              <c>FFFBBBBRLR</c>
+            </r>
+            <r>
+              <c>FFFBBFBRRR</c>
+            </r>
+            <r>
+              <c>BBFFBBBRRL</c>
+            </r>
+            <r>
+              <c>FBBFBFFLRL</c>
+            </r>
+            <r>
+              <c>FBBBBBFLRR</c>
+            </r>
+            <r>
+              <c>BBFBFFBRRL</c>
+            </r>
+            <r>
+              <c>FFFBFBFLLL</c>
+            </r>
+            <r>
+              <c>FBBBFFFRLL</c>
+            </r>
+            <r>
+              <c>BFFBFBFLLR</c>
+            </r>
+            <r>
+              <c>FFBBBBBRRL</c>
+            </r>
+            <r>
+              <c>BFFBBFFLRR</c>
+            </r>
+            <r>
+              <c>FBBFBFBRLL</c>
+            </r>
+            <r>
+              <c>BFFFBFFRRL</c>
+            </r>
+            <r>
+              <c>BBFFFFBLLR</c>
+            </r>
+            <r>
+              <c>BBFFBBFRLR</c>
+            </r>
+            <r>
+              <c>BFFFBBFRRR</c>
+            </r>
+            <r>
+              <c>FBFBBFBRLR</c>
+            </r>
+            <r>
+              <c>FFFFFBBRLL</c>
+            </r>
+            <r>
+              <c>FBBFFFBRLL</c>
+            </r>
+            <r>
+              <c>BFFFFFBRLL</c>
+            </r>
+            <r>
+              <c>BFFFBFBLRR</c>
+            </r>
+            <r>
+              <c>BFFBFFBRLR</c>
+            </r>
+            <r>
+              <c>FFFFBFBLRL</c>
+            </r>
+            <r>
+              <c>FFBFFBFLLR</c>
+            </r>
+            <r>
+              <c>FBBFBFFLLL</c>
+            </r>
+            <r>
+              <c>BFFBFBFRRR</c>
+            </r>
+            <r>
+              <c>BBFBBBFLRL</c>
+            </r>
+            <r>
+              <c>BBBFFFFLRR</c>
+            </r>
+            <r>
+              <c>BFBBFFFLLR</c>
+            </r>
+            <r>
+              <c>FBBFFFBRLR</c>
+            </r>
+            <r>
+              <c>FFFFFBFRRL</c>
+            </r>
+            <r>
+              <c>FFFBFBBRRL</c>
+            </r>
+            <r>
+              <c>BBBFFFBLRR</c>
+            </r>
+            <r>
+              <c>FFBFBBFRRL</c>
+            </r>
+            <r>
+              <c>FFBBFFBLRR</c>
+            </r>
+            <r>
+              <c>BBFFBBBLLL</c>
+            </r>
+            <r>
+              <c>BFBFBBBRRL</c>
+            </r>
+            <r>
+              <c>BFFFBFBRLL</c>
+            </r>
+            <r>
+              <c>FFBFBBBRLL</c>
+            </r>
+            <r>
+              <c>FBFBFBFLRR</c>
+            </r>
+            <r>
+              <c>FBFFFBBLLL</c>
+            </r>
+            <r>
+              <c>FBBFFBFLLR</c>
+            </r>
+            <r>
+              <c>BFFFFBFRRL</c>
+            </r>
+            <r>
+              <c>FFBBBFFRRL</c>
+            </r>
+            <r>
+              <c>FFBFBFFLRL</c>
+            </r>
+            <r>
+              <c>BBFBBBFLLR</c>
+            </r>
+            <r>
+              <c>FBBFFBFRLR</c>
+            </r>
+            <r>
+              <c>FBBFFBBRLL</c>
+            </r>
+            <r>
+              <c>BFBFFFBRLR</c>
+            </r>
+            <r>
+              <c>BFFFBFFRLL</c>
+            </r>
+            <r>
+              <c>BBFBFBBRLL</c>
+            </r>
+            <r>
+              <c>BFFFFFFRLL</c>
+            </r>
+            <r>
+              <c>FBFBBBFRLL</c>
+            </r>
+            <r>
+              <c>BFBBFBFLRR</c>
+            </r>
+            <r>
+              <c>BFBFBBBRLL</c>
+            </r>
+            <r>
+              <c>BBFBBBFRRL</c>
+            </r>
+            <r>
+              <c>BFFBBFBRRR</c>
+            </r>
+            <r>
+              <c>BFBFFBFLLR</c>
+            </r>
+            <r>
+              <c>FBFBFBFLLR</c>
+            </r>
+            <r>
+              <c>FFFFFBBRRL</c>
+            </r>
+            <r>
+              <c>FBFBBBFRLR</c>
+            </r>
+            <r>
+              <c>FBFFBBFLLL</c>
+            </r>
+            <r>
+              <c>FFBFBFFRLR</c>
+            </r>
+            <r>
+              <c>BBFBFBBLLL</c>
+            </r>
+            <r>
+              <c>FFFFBFFLRL</c>
+            </r>
+            <r>
+              <c>FBBFBBFLLL</c>
+            </r>
+            <r>
+              <c>BFBFBBFLRL</c>
+            </r>
+            <r>
+              <c>FFFFBBFLLR</c>
+            </r>
+            <r>
+              <c>BFBBFBBRRL</c>
+            </r>
+            <r>
+              <c>FBBBFFBRRL</c>
+            </r>
+            <r>
+              <c>FBBBBFFRLL</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="210" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="318" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="SeatID" action="Max" rename="Max_SeatID" />
+            <SummarizeField field="SeatID" action="Min" rename="Min_SeatID" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="SeatID" />
+          </Fields>
+          <Data>
+            <r>
+              <c>BFFFBBFRRR</c>
+            </r>
+            <r>
+              <c>FFFBBBFRRR</c>
+            </r>
+            <r>
+              <c>BBFFBBFRLL</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="318" y="1146" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>SeatID</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>[Min_SeatID]</Expression_Init>
+          <Expression_Cond>SeatID &lt;= [Max_SeatID]</Expression_Cond>
+          <Expression_Loop>SeatID + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="270" y="1230" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="SeatID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="SeatID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_SeatID" selected="True" rename="Right_SeatID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="186" y="1326" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_39528_e0bf457aa8994f04b446ebb093a00655_\Engine_19776_9703bd23a977403c9512943ba99a6e78_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="270" y="1326" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_39528_e0bf457aa8994f04b446ebb093a00655_\Engine_19776_0a9858b411de4d2ea2f47fe49ceb4b4b_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="354" y="1326" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Jarrod\AppData\Local\Temp\Engine_39528_e0bf457aa8994f04b446ebb093a00655_\Engine_19776_7e8ac4a1b3384e9081de0ebc22709cdf_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="22" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="False" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="16" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Join" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="26" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Left" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Join" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Right" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Vertical</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AOC_BaseA_05</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

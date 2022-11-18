@@ -8,7 +8,7 @@ def get_data(day):
         Split From Here
         [actual data]
     """
-    file_name = f"python/data/day{day}.txt"
+    file_name = f"data/day{day}.txt"
 
     with open(file_name) as fp:
         data = fp.read().strip().split("Split From Here")

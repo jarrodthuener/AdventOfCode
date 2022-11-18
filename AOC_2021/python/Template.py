@@ -9,13 +9,13 @@ sampleData,fullData = get_data(1)
 def part1solution(puzzleData):
     """
     Objective:
-    """
-    # set variables to be used in the for loop
 
-
-    """
     Steps to be taken to solve the problem:
+
     """
+
+
+
 
 #Run the sampleData
 print("Part 1 sample data answer: "+ str(part1solution(sampleData)))
@@ -27,13 +27,13 @@ print("Part 1 full data answer: "+ str(part1solution(fullData)))
 def part2solution(puzzleData):
     """
     Objective:
-    """
-    # set variables to be used in the for loop
 
-
-    """
     Steps to be taken to solve the problem:
+
     """
+
+
+
 
 #Run the sampleData
 print("Part 2 sample data answer: "+ str(part2solution(sampleData)))

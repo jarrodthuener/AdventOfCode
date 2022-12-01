@@ -2,13 +2,20 @@ from get_data import get_data
 
 import pandas as pd
 import numpy as np
+# np.random.BitGenerator = np.random.bit_generator.BitGenerator
 # split the data.txt file into sampleData and fullData sets (split by "Split From Here")
 sampleData,fullData = get_data(4)
 
 # ----below is the rest of the code to solve for the day's problem.----
 # the two functions part1solution() and part2solution() will be called at the end for each set of data to retrieve the answer
+# print(sampleData)
+# newSampleData = sampleData[2:]
+# # newSampleData.split()
+#
+# for row in newSampleData:
+#     print(row.split())
 
-
+# https://www.youtube.com/watch?v=Jv8dQT3uodY
 
 def part1solution(puzzleData):
     """
@@ -42,6 +49,8 @@ def part1solution(puzzleData):
 
     # split the board lines into columns by a single space
     df[["a","b","c","d","e"]] = df[0].str.split(' ', 4, expand=True)
+
+    # df[["a","b","c","d","e"]] = df[0].str.split()
 
     # drop the first field
     df = df.drop([0],axis=1)
@@ -78,7 +87,7 @@ def part1solution(puzzleData):
         for boardNum in range(df['boardNum'].max()+1):
             # print(df[df['boardNum']==boardNum])
             if checkBoard(df,boardNum):
-                # now we found the first solved board, so let's find all of the numbers to add them up
+                # now we found the first solved board, so let's find all the numbers to add them up
                 """keep this line below for future reference, it is how we will identify boards that have been solved"""
                 df["solved"]=np.where(df['boardNum'] == boardNum,True,df["solved"])
 
@@ -139,10 +148,10 @@ def part1solution(puzzleData):
 
 
 #Run the sampleData
-# print("Part 1 sample data answer: "+ str(part1solution(sampleData)))
+print("Part 1 sample data answer: "+ str(part1solution(sampleData)))
 
 #Run the fullData
-print("Part 1 full data answer: "+ str(part1solution(fullData)))
+# print("Part 1 full data answer: "+ str(part1solution(fullData)))
 
 
 def part2solution(puzzleData):

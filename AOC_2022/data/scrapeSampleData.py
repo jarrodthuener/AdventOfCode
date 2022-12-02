@@ -30,7 +30,7 @@ else:
 savePath = "..\data"
 dataFileName = "day"+str(day)+".txt"
 dataFilePath = os.path.join(savePath,dataFileName)
-sessionId = "53616c7465645f5f171de526164fe64941c492e2318272b5704497cd2f570bbf550538ff96de4f53e1739777dc3e277a6f1adabbd12963476e477d8977bfac74"
+sessionId = ""
 sampleDataURL = 'https://adventofcode.com/'+year+'/day/'+day
 fullDataURL = 'https://adventofcode.com/'+year+'/day/'+day+"/input"
 
@@ -42,7 +42,7 @@ def pullSampleData():
     options.headless = True
     browser = webdriver.Chrome(options=options)
     browser.get(sampleDataURL)
-    browser.add_cookie({"name":"session", "value":"53616c7465645f5f171de526164fe64941c492e2318272b5704497cd2f570bbf550538ff96de4f53e1739777dc3e277a6f1adabbd12963476e477d8977bfac74"})
+    browser.add_cookie({"name":"session", "value":sessionId})
     elements = browser.find_elements(By.TAG_NAME, "code")
     return elements[0].text
 

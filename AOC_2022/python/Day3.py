@@ -77,7 +77,29 @@ def part2solution(puzzleData):
     find what the max value is for the top 3 elves
     """
 
-    return
+    charIntSum = 0
+
+    def charIntConv(char):
+        if ord(char) < 91:
+            return ord(char) - 38
+        else:
+            return ord(char) - 96
+
+    for a in list(range(len(puzzleData)))[0::3]:
+        matchedChar = ''
+        firstElf = puzzleData[a]
+        secondElf = puzzleData[a+1]
+        thirdElf = puzzleData[a+2]
+
+        for i in firstElf:
+            if secondElf.__contains__(i) and thirdElf.__contains__(i):
+                matchedChar = i
+                charIntSum += charIntConv(matchedChar)
+                break
+            else:
+                continue
+
+    return charIntSum
 
 
 #Run the sampleData

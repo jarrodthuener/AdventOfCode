@@ -1,0 +1,412 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="486" y="318" width="124" height="312" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Right-click on connection to switch from Sample to Full Data</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings>
+        <Position x="366" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Folder Browse (14)">..\Data</Value>
+          <Value name="Check Box (16)">False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro=".\OpenAndSplitData.yxmc" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="162" width="144" height="168" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Data file needs to be setup like:
+
+{sampledata
+...
+....
+end of sample data}
+Split From Here     &lt;--- this text should be exact
+{Full data
+...
+...
+end of full data}</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="354" y="162" width="96" height="216" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Example:
+891291
+43923
+
+492301
+482
+148
+Split From Here
+982092
+2542
+
+424
+627
+8585
+
+46746</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="left([Field_1],1)" field="oppMove" size="1" type="V_WString" />
+            <FormulaField expression="right([Field_1],1)" field="yourMove" size="1" type="V_WString" />
+            <FormulaField expression="iif((&#xA;([oppMove]='A' &amp;&amp; [yourMove]='X') ||&#xA;([oppMove]='B' &amp;&amp; [yourMove]='Y') ||&#xA;([oppMove]='C' &amp;&amp; [yourMove]='Z'))&#xA;	,3/*Draw*/,iif((&#xA;([oppMove]='A' &amp;&amp; [yourMove]='Y') ||&#xA;([oppMove]='B' &amp;&amp; [yourMove]='Z') ||&#xA;([oppMove]='C' &amp;&amp; [yourMove]='X')),6/*win*/,&#xA;0/*lose*/&#xA;))&#xA;" field="outcomeScore" size="4" type="Int32" />
+            <FormulaField expression="iif([yourMove]='X',1,&#xA;iif([yourMove]='Y',2,3))&#xA;" field="selectionScore" size="4" type="Int32" />
+            <FormulaField expression="[outcomeScore]+[selectionScore]" field="Total Score" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>oppMove = left([Field_1],1)
+yourMove = right([Field_1],1)
+outcomeScore = iif((
+(...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="750" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Total Score" action="Sum" rename="Sum_Total Score" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="846" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_28224_39ebc6d3f256264082d1d7d0c878714e_\Engine_28224_a47c9a9bf8b0cd4090c1d90e4879b115~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="left([Field_1],1)" field="oppMove" size="1" type="V_WString" />
+            <FormulaField expression="right([Field_1],1)" field="outcome" size="1073741823" type="V_WString" />
+            <FormulaField expression="iif([outcome] = 'X',/*lose*/&#xA;	Switch([oppMove],null(),'A','Z','B','X','C','Y'),&#xA;iif([outcome] = 'Y',/*Draw*/&#xA;	Switch([oppMove],null(),'A','X','B','Y','C','Z'),&#xA;	Switch([oppMove],null(),'A','Y','B','Z','C','X')))/*win*/&#xA;" field="yourMove" size="1" type="V_WString" />
+            <FormulaField expression="iif([outcome] = 'X',0,&#xA;iif([outcome] = 'Y',3,6))&#xA;" field="outcomeScore" size="4" type="Int32" />
+            <FormulaField expression="iif([yourMove]='X',1,&#xA;iif([yourMove]='Y',2,3))&#xA;" field="selectionScore" size="4" type="Int32" />
+            <FormulaField expression="[outcomeScore]+[selectionScore]" field="Total Score" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>oppMove = left([Field_1],1)
+outcome = right([Field_1],1)
+yourMove = iif([outcome...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="750" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Total Score" action="Sum" rename="Sum_Total Score" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="846" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_28224_39ebc6d3f256264082d1d7d0c878714e_\Engine_28224_cecac457fe43aa4185a66bc359b62558~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="left([Field_1],1)" field="oppMove" size="1" type="V_WString" />
+            <FormulaField expression="right([Field_1],1)" field="yourMove" size="1073741823" type="V_WString" />
+            <FormulaField expression="iif((&#xA;([oppMove]='A' &amp;&amp; [yourMove]='X') ||&#xA;([oppMove]='B' &amp;&amp; [yourMove]='Y') ||&#xA;([oppMove]='C' &amp;&amp; [yourMove]='Z'))&#xA;	,3/*Draw*/,iif((&#xA;([oppMove]='A' &amp;&amp; [yourMove]='Y') ||&#xA;([oppMove]='B' &amp;&amp; [yourMove]='Z') ||&#xA;([oppMove]='C' &amp;&amp; [yourMove]='X')),6/*win*/,&#xA;0/*lose*/&#xA;))&#xA;" field="outcomeScore" size="4" type="Int32" />
+            <FormulaField expression="iif([yourMove]='X',1,&#xA;iif([yourMove]='Y',2,3))&#xA;" field="selectionScore" size="4" type="Int32" />
+            <FormulaField expression="[outcomeScore]+[selectionScore]" field="Total Score" size="4" type="Int32" />
+            <FormulaField expression="right([Field_1],1)" field="pt2outcome" size="1073741823" type="V_WString" />
+            <FormulaField expression="iif([pt2outcome] = 'X',/*lose*/&#xA;	Switch([oppMove],null(),'A','Z','B','X','C','Y'),&#xA;iif([pt2outcome] = 'Y',/*Draw*/&#xA;	Switch([oppMove],null(),'A','X','B','Y','C','Z'),&#xA;	Switch([oppMove],null(),'A','Y','B','Z','C','X')))/*win*/&#xA;" field="pt2yourMove" size="1" type="V_WString" />
+            <FormulaField expression="iif([pt2outcome] = 'X',0,&#xA;iif([pt2outcome] = 'Y',3,6))&#xA;" field="pt2outcomeScore" size="4" type="Int32" />
+            <FormulaField expression="iif([pt2yourMove]='X',1,&#xA;iif([pt2yourMove]='Y',2,3))&#xA;" field="pt2selectionScore" size="4" type="Int32" />
+            <FormulaField expression="[pt2outcomeScore]+[pt2selectionScore]" field="pt2Total Score" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>oppMove = left([Field_1],1)
+yourMove = right([Field_1],1)
+outcomeScore = iif((
+(...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="750" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Total Score" action="Sum" rename="Part1_Total Score" />
+            <SummarizeField field="pt2Total Score" action="Sum" rename="Part2_Total Score" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="846" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_28224_39ebc6d3f256264082d1d7d0c878714e_\Engine_28224_c11f5f410b60c943a696106561cec1c6~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="FullData" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="FullData" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="FullData" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="575a69f7-b8e3-4238-83af-39024910867e" />
+      <Telemetry>
+        <PreviousWorkflowId value="45732476-cb01-49f7-92ea-00ec0bcc5e83" />
+        <OriginWorkflowId value="45732476-cb01-49f7-92ea-00ec0bcc5e83" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

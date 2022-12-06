@@ -10,8 +10,8 @@ def get_data(day):
     """
     file_name = f"../data/day{day}.txt"
 
-    with open(file_name) as fp:
-        data = fp.read().strip().split("Split From Here")
+    with open(file_name,'r') as fp:
+        data = fp.read().split("Split From Here")
         data = [d.strip().split("\n") for d in data]
         return data
 

@@ -1,6 +1,6 @@
 import datetime
 import os
-
+import pyarrow as pa
 import dateutil.parser
 from selenium.webdriver.common.by import By
 from selenium import webdriver
@@ -8,7 +8,8 @@ from selenium.webdriver.chrome.options import Options
 import requests
 from datetime import datetime
 import pytz
-
+import pandas as pd
+import numpy as np
 
 """define variables needed"""
 # these will be pulled in dynamically
@@ -77,5 +78,9 @@ else:
 
 
 
-print(type(fullDailyData))
-print(fullDailyData)
+# print(type(fullDailyData))
+# print(np.array(fullDailyData.split('\n')))
+# array = np.asarray(fullDailyData.split('\n'))
+
+print(pd.DataFrame(fullDailyData.split('\n'),columns=["data"]))
+# print(pa.Table.from_arrays(array,names='data'))

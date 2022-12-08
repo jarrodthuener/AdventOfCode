@@ -35,8 +35,10 @@ sessionId = ""
 sampleDataURL = 'https://adventofcode.com/'+year+'/day/'+day
 fullDataURL = 'https://adventofcode.com/'+year+'/day/'+day+"/input"
 
-
-
+# headers = {"cookie":"session="+sessionId,"User-Agent":"jarrodthuener@gmail.com"}
+# print(headers)
+# fullData = requests.get(fullDataURL,headers=headers)
+# print(fullData.text)
 
 def pullSampleData():
     options = Options()

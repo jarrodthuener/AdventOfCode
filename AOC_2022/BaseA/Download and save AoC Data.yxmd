@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings Plugin="PuzzleDataInput">
+        <Position x="79" y="223" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <folderPath>C:\AOC\AdventOfCode\AOC_2021\data</folderPath>
+          <year>2021</year>
+          <day>1</day>
+          <customDate>true</customDate>
+          <sessionID>53616c7465645f5fb6ae3ad553873afe97eb074ac7532d662f94095b22d088561c96ca6859fa1bf4b8607b3a019f3b7a2cffc25dc39e3c5760f76ed3430b3387</sessionID>
+          <darkMode>true</darkMode>
+          <Secrets />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <SdkSettings Manifest="True" Language="Python" PluginDir="PuzzleDataInput" Transport="arrow">
+          <CustomParameters>
+            <Version Value="2.1.0" />
+            <ToolVersion Value="1.0" />
+          </CustomParameters>
+          <InputConnections />
+          <OutputConnections>
+            <Connection AllowMultiple="False" Label="" Name="Output" Optional="False" Type="Connection" />
+          </OutputConnections>
+        </SdkSettings>
+      </Properties>
+      <EngineSettings EngineDll="SdkEnginePlugin.dll" EngineDllEntryPoint="SdkEnginePlugin" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="175" y="223" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_27492_e51b9c42d10af149b9d6a1bffab80d85_\Engine_27492_f095ad3b2b1f7645bf5bbe8918e7ade3~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="54" width="301" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 6</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="PuzzleDataInput">
+            <Position x="79" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <folderPath>C:\AOC\AdventOfCode\AOC_2022\data</folderPath>
+              <year>2022</year>
+              <day>9</day>
+              <customDate>true</customDate>
+              <sessionID>53616c7465645f5fb6ae3ad553873afe97eb074ac7532d662f94095b22d088561c96ca6859fa1bf4b8607b3a019f3b7a2cffc25dc39e3c5760f76ed3430b3387</sessionID>
+              <darkMode>true</darkMode>
+              <filePath>C:\fakepath\Day3.yxmd</filePath>
+              <Secrets />
+              <checkbox1>true</checkbox1>
+              <checkbox2>true</checkbox2>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <SdkSettings Manifest="True" Language="Python" PluginDir="PuzzleDataInput" Transport="arrow">
+              <CustomParameters>
+                <Version Value="2.1.0" />
+                <ToolVersion Value="1.0" />
+              </CustomParameters>
+              <InputConnections />
+              <OutputConnections>
+                <Connection AllowMultiple="False" Label="" Name="Output" Optional="False" Type="Connection" />
+              </OutputConnections>
+            </SdkSettings>
+          </Properties>
+          <EngineSettings EngineDll="SdkEnginePlugin.dll" EngineDllEntryPoint="SdkEnginePlugin" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="271" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\temp\Engine_15336_5b94d570d15c9641ba985df44657caf5_\Engine_15336_0f4b41b21e51704b9c681352c926a373~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="175" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="__index_level_0__" selected="True" />
+                <SelectField field="InputData" selected="True" />
+                <SelectField field="dataFileName" selected="True" />
+                <SelectField field="dataFilePath" selected="True" />
+                <SelectField field="sampleDataURL" selected="True" />
+                <SelectField field="fullDataURL" selected="True" />
+                <SelectField field="data" selected="True" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Download and save AoC Data</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="1dfcccae-ff9c-4207-b753-826a79df33b5" />
+      <Telemetry>
+        <PreviousWorkflowId value="08552ee0-57a0-4cba-ad8d-37a7016d8439" />
+        <OriginWorkflowId value="08552ee0-57a0-4cba-ad8d-37a7016d8439" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

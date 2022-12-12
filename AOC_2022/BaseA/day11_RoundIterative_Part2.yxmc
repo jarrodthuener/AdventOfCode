@@ -104,7 +104,7 @@
             <Field name="Monkey" source="TextInput:" type="Byte" />
             <Field name="If_false" source="TextInput:" type="Byte" />
             <Field name="If_true" source="TextInput:" type="Byte" />
-            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Int64" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
             <Field name="Operation" size="9" source="TextInput:" type="String" />
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
@@ -159,7 +159,7 @@ boolean = -1
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="old" selected="True" type="Int64" size="8" />
+            <SelectField field="old" selected="True" type="Double" size="8" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -173,7 +173,7 @@ boolean = -1
             <Field name="Monkey" source="TextInput:" type="Byte" />
             <Field name="If_false" source="TextInput:" type="Byte" />
             <Field name="If_true" source="TextInput:" type="Byte" />
-            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Int64" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
             <Field name="Operation" size="9" source="TextInput:" type="String" />
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
@@ -309,12 +309,12 @@ boolean = -1
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Expression>mod([new],[Test]) = 0</Expression>
+          <Expression>mod(floor([new]),[Test]) = 0</Expression>
           <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>mod([new],[Test]) = 0</DefaultAnnotationText>
+          <DefaultAnnotationText>mod(floor([new]),[Test]) = 0</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="True">
@@ -322,12 +322,12 @@ boolean = -1
             <Field name="Monkey" source="TextInput:" type="Byte" />
             <Field name="If_false" source="TextInput:" type="Byte" />
             <Field name="If_true" source="TextInput:" type="Byte" />
-            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Int64" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
             <Field name="Operation" size="9" source="TextInput:" type="String" />
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
-            <Field name="new" source="Formula: floor(ToNumber([new])/3)" type="Int16" />
+            <Field name="new" source="DynamicReplace:" type="Int16" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
@@ -335,12 +335,12 @@ boolean = -1
             <Field name="Monkey" source="TextInput:" type="Byte" />
             <Field name="If_false" source="TextInput:" type="Byte" />
             <Field name="If_true" source="TextInput:" type="Byte" />
-            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Int64" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
             <Field name="Operation" size="9" source="TextInput:" type="String" />
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
-            <Field name="new" source="Formula: floor(ToNumber([new])/3)" type="Int16" />
+            <Field name="new" source="DynamicReplace:" type="Int16" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -395,7 +395,7 @@ boolean = -1
             <SelectField field="Test" selected="False" />
             <SelectField field="round" selected="False" />
             <SelectField field="inspectionCount" selected="False" />
-            <SelectField field="new" selected="True" type="String" size="21" />
+            <SelectField field="new" selected="True" type="String" size="16384" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -407,7 +407,7 @@ boolean = -1
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
-            <Field name="new" size="21" source="Formula: floor(ToNumber([new])/3)" type="String" />
+            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -492,7 +492,7 @@ boolean = -1
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="trim([old]+','+[Concat_new],',')" field="old" size="2147483647" type="V_String" />
+            <FormulaField expression="trim([old]+','+[Concat_new],',')" field="old" size="11" type="String" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -604,7 +604,7 @@ boolean = -1
             <SelectField field="Test" selected="False" />
             <SelectField field="round" selected="False" />
             <SelectField field="inspectionCount" selected="False" />
-            <SelectField field="new" selected="True" type="String" size="21" />
+            <SelectField field="new" selected="True" type="String" size="16384" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -616,7 +616,7 @@ boolean = -1
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
-            <Field name="new" size="21" source="Formula: floor(ToNumber([new])/3)" type="String" />
+            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -641,7 +641,7 @@ boolean = -1
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
-            <Field name="new" size="21" source="Formula: floor(ToNumber([new])/3)" type="String" />
+            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -737,38 +737,6 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="Formula: [inspectionCount]+iif(isnull([Count]),0,[Count])" type="Byte" />
             <Field name="Count" source="Summarize: Count - Monkey" type="Int64" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="123">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="594" y="174" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="floor(ToNumber([new])/3)" field="new" size="8" type="Int64" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[new = floor(ToNumber([new])/3)
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="Monkey" source="TextInput:" type="Byte" />
-            <Field name="If_false" source="TextInput:" type="Byte" />
-            <Field name="If_true" source="TextInput:" type="Byte" />
-            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Int64" />
-            <Field name="Operation" size="9" source="TextInput:" type="String" />
-            <Field name="Test" source="TextInput:" type="Byte" />
-            <Field name="round" source="TextInput:" type="Byte" />
-            <Field name="inspectionCount" source="TextInput:" type="Byte" />
-            <Field name="new" source="Formula: floor(ToNumber([new])/3)" type="Int16" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -932,7 +900,7 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
     </Connection>
     <Connection>
       <Origin ToolID="98" Connection="Output" />
-      <Destination ToolID="123" Connection="Input" />
+      <Destination ToolID="105" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="99" Connection="Output" />
@@ -999,10 +967,6 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
       <Destination ToolID="122" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="123" Connection="Output" />
-      <Destination ToolID="105" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="125" Connection="Output" />
       <Destination ToolID="100" Connection="Input" />
     </Connection>
@@ -1030,7 +994,7 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>day11_RoundIterative</Name>
+      <Name>day11_RoundIterative_Part2</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
@@ -1045,9 +1009,9 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
         <Description />
         <File />
       </Example>
-      <WorkflowId value="40efab2d-bbc2-4e52-b9aa-eee4141be343" />
+      <WorkflowId value="31aa59e6-3dfb-4699-a24a-a785b6052965" />
       <Telemetry>
-        <PreviousWorkflowId value="" />
+        <PreviousWorkflowId value="40efab2d-bbc2-4e52-b9aa-eee4141be343" />
         <OriginWorkflowId value="40efab2d-bbc2-4e52-b9aa-eee4141be343" />
       </Telemetry>
     </MetaInfo>
@@ -1087,7 +1051,7 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
       <IterativeMacro>
         <Input>Input92</Input>
         <Output>Output95</Output>
-        <IterationLimit value="8" />
+        <IterationLimit value="4" />
         <LimitBehavior>Ignore</LimitBehavior>
         <OutputMode>AllSame</OutputMode>
       </IterativeMacro>

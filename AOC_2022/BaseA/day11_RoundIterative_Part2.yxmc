@@ -25,6 +25,7 @@
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
@@ -37,6 +38,7 @@
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -68,6 +70,7 @@
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -75,7 +78,7 @@
     </Node>
     <Node ToolID="98">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicReplace.DynamicReplace">
-        <Position x="498" y="198" />
+        <Position x="486" y="318" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -109,6 +112,7 @@
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="new" source="DynamicReplace:" type="Int16" />
           </RecordInfo>
         </MetaInfo>
@@ -143,6 +147,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="outputfield" size="3" source="Formula: 'new'" type="String" />
             <Field name="boolean" source="Formula: -1" type="Int16" />
           </RecordInfo>
@@ -178,6 +183,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="new" source="Formula: 2" type="Int64" />
           </RecordInfo>
         </MetaInfo>
@@ -220,6 +226,7 @@ boolean = -1
                 <Field name="Test" />
                 <Field name="round" />
                 <Field name="inspectionCount" />
+                <Field name="modValue" />
               </Fields>
               <Data>
                 <r>
@@ -231,6 +238,7 @@ boolean = -1
                   <c>23</c>
                   <c>0</c>
                   <c>0</c>
+                  <c>96577</c>
                 </r>
                 <r>
                   <c>1</c>
@@ -241,6 +249,7 @@ boolean = -1
                   <c>19</c>
                   <c>0</c>
                   <c>0</c>
+                  <c>96577</c>
                 </r>
                 <r>
                   <c>2</c>
@@ -251,6 +260,7 @@ boolean = -1
                   <c>13</c>
                   <c>0</c>
                   <c>0</c>
+                  <c>96577</c>
                 </r>
                 <r>
                   <c>3</c>
@@ -261,6 +271,7 @@ boolean = -1
                   <c>17</c>
                   <c>0</c>
                   <c>0</c>
+                  <c>96577</c>
                 </r>
               </Data>
             </Configuration>
@@ -268,7 +279,8 @@ boolean = -1
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
           <Left value="True" />
         </Annotation>
         <MetaInfo connection="Output">
@@ -281,6 +293,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -288,7 +301,7 @@ boolean = -1
     </Node>
     <Node ToolID="104">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1530" y="114" />
+        <Position x="1554" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -305,7 +318,7 @@ boolean = -1
     </Node>
     <Node ToolID="105">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="690" y="174" />
+        <Position x="582" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -327,6 +340,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="new" source="DynamicReplace:" type="Int16" />
           </RecordInfo>
         </MetaInfo>
@@ -340,6 +354,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="new" source="DynamicReplace:" type="Int16" />
           </RecordInfo>
         </MetaInfo>
@@ -348,7 +363,7 @@ boolean = -1
     </Node>
     <Node ToolID="106">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="954" y="162" />
+        <Position x="978" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -380,7 +395,7 @@ boolean = -1
     </Node>
     <Node ToolID="108">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="786" y="162" />
+        <Position x="774" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -407,7 +422,8 @@ boolean = -1
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
-            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="new" size="16384" source="Formula: Mod([new], [modValue])" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -415,7 +431,7 @@ boolean = -1
     </Node>
     <Node ToolID="109">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1146" y="198" />
+        <Position x="1170" y="318" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -452,6 +468,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
           <SortInfo noProgress="True">
             <Field field="Monkey" />
@@ -467,6 +484,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="Concat_new" size="2147483647" source="Summarize: Concat - new" type="V_String" />
           </RecordInfo>
           <SortInfo>
@@ -487,7 +505,7 @@ boolean = -1
     </Node>
     <Node ToolID="110">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1242" y="306" />
+        <Position x="1266" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -511,6 +529,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="Concat_new" size="2147483647" source="Summarize: Concat - new" type="V_String" />
           </RecordInfo>
           <SortInfo>
@@ -522,7 +541,7 @@ boolean = -1
     </Node>
     <Node ToolID="111">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1434" y="186" />
+        <Position x="1458" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -546,6 +565,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="(Multiple Sources)" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -553,7 +573,7 @@ boolean = -1
     </Node>
     <Node ToolID="112">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1338" y="270" />
+        <Position x="1362" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -578,6 +598,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="Concat_new" size="2147483647" source="Summarize: Concat - new" type="V_String" />
           </RecordInfo>
           <SortInfo>
@@ -589,7 +610,7 @@ boolean = -1
     </Node>
     <Node ToolID="117">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="786" y="222" />
+        <Position x="774" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -616,7 +637,8 @@ boolean = -1
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
-            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="new" size="16384" source="Formula: Mod([new], [modValue])" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -624,7 +646,7 @@ boolean = -1
     </Node>
     <Node ToolID="118">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="882" y="162" />
+        <Position x="894" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -641,7 +663,8 @@ boolean = -1
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
-            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="new" size="16384" source="Formula: Mod([new], [modValue])" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -702,6 +725,7 @@ boolean = -1
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="Count" source="Summarize: Count - Monkey" type="Int64" />
           </RecordInfo>
         </MetaInfo>
@@ -736,6 +760,7 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="Formula: [inspectionCount]+iif(isnull([Count]),0,[Count])" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="Count" source="Summarize: Count - Monkey" type="Int64" />
           </RecordInfo>
         </MetaInfo>
@@ -768,6 +793,7 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
             <Field name="new" source="Formula: 2" type="Int64" />
           </RecordInfo>
         </MetaInfo>
@@ -776,7 +802,7 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
     </Node>
     <Node ToolID="126">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1050" y="174" />
+        <Position x="1074" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -847,6 +873,7 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
@@ -859,10 +886,77 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
             <Field name="Test" source="TextInput:" type="Byte" />
             <Field name="round" source="TextInput:" type="Byte" />
             <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="133">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Mod([new], [modValue])" field="new" size="2" type="Int16" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[new = Mod([new], [modValue])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="If_false" source="TextInput:" type="Byte" />
+            <Field name="If_true" source="TextInput:" type="Byte" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
+            <Field name="Operation" size="9" source="TextInput:" type="String" />
+            <Field name="Test" source="TextInput:" type="Byte" />
+            <Field name="round" source="TextInput:" type="Byte" />
+            <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="new" source="Formula: Mod([new], [modValue])" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="135">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Mod([new], [modValue])" field="new" size="2" type="Int16" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[new = Mod([new], [modValue])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="If_false" source="TextInput:" type="Byte" />
+            <Field name="If_true" source="TextInput:" type="Byte" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
+            <Field name="Operation" size="9" source="TextInput:" type="String" />
+            <Field name="Test" source="TextInput:" type="Byte" />
+            <Field name="round" source="TextInput:" type="Byte" />
+            <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="new" source="Formula: Mod([new], [modValue])" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
   </Nodes>
   <Connections>
@@ -916,11 +1010,11 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
     </Connection>
     <Connection>
       <Origin ToolID="105" Connection="True" />
-      <Destination ToolID="108" Connection="Input" />
+      <Destination ToolID="133" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="105" Connection="False" />
-      <Destination ToolID="117" Connection="Input" />
+      <Destination ToolID="135" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="106" Connection="Output" />
@@ -973,6 +1067,14 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
     <Connection>
       <Origin ToolID="127" Connection="True" />
       <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="135" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

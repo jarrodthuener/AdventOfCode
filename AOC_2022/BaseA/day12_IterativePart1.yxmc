@@ -1,0 +1,1990 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="186" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input27</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="39" />
+              <Fields>
+                <Field name="Step" />
+                <Field name="currentSpaceFlag" />
+                <Field name="y" />
+                <Field name="Space" />
+                <Field name="x" />
+                <Field name="path" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>2</c>
+                  <c>r</c>
+                  <c>4</c>
+                  <c>4,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>g</c>
+                  <c>6</c>
+                  <c>6,5</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>c</c>
+                  <c>3</c>
+                  <c>3,3</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>True</c>
+                  <c>2</c>
+                  <c>a</c>
+                  <c>1</c>
+                  <c>1,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>f</c>
+                  <c>5</c>
+                  <c>5,5</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>z</c>
+                  <c>5</c>
+                  <c>5,3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>E</c>
+                  <c>6</c>
+                  <c>6,3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>e</c>
+                  <c>4</c>
+                  <c>4,5</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>b</c>
+                  <c>2</c>
+                  <c>2,5</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>a</c>
+                  <c>1</c>
+                  <c>1,3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>1</c>
+                  <c>o</c>
+                  <c>6</c>
+                  <c>6,1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>w</c>
+                  <c>7</c>
+                  <c>7,4</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>j</c>
+                  <c>8</c>
+                  <c>8,4</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>1</c>
+                  <c>m</c>
+                  <c>8</c>
+                  <c>8,1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>t</c>
+                  <c>4</c>
+                  <c>4,4</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>2</c>
+                  <c>x</c>
+                  <c>6</c>
+                  <c>6,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>1</c>
+                  <c>b</c>
+                  <c>3</c>
+                  <c>3,1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>i</c>
+                  <c>8</c>
+                  <c>8,5</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>h</c>
+                  <c>7</c>
+                  <c>7,5</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>x</c>
+                  <c>7</c>
+                  <c>7,3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>k</c>
+                  <c>8</c>
+                  <c>8,3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>2</c>
+                  <c>b</c>
+                  <c>2</c>
+                  <c>2,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>s</c>
+                  <c>4</c>
+                  <c>4,3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>2</c>
+                  <c>l</c>
+                  <c>8</c>
+                  <c>8,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>3</c>
+                  <c>c</c>
+                  <c>2</c>
+                  <c>2,3</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>c</c>
+                  <c>2</c>
+                  <c>2,4</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>1</c>
+                  <c>p</c>
+                  <c>5</c>
+                  <c>5,1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>a</c>
+                  <c>1</c>
+                  <c>1,4</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>1</c>
+                  <c>n</c>
+                  <c>7</c>
+                  <c>7,1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>2</c>
+                  <c>x</c>
+                  <c>7</c>
+                  <c>7,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>v</c>
+                  <c>6</c>
+                  <c>6,4</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>2</c>
+                  <c>c</c>
+                  <c>3</c>
+                  <c>3,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>c</c>
+                  <c>3</c>
+                  <c>3,4</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>2</c>
+                  <c>y</c>
+                  <c>5</c>
+                  <c>5,2</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>1</c>
+                  <c>q</c>
+                  <c>4</c>
+                  <c>4,1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>d</c>
+                  <c>3</c>
+                  <c>3,5</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>5</c>
+                  <c>a</c>
+                  <c>1</c>
+                  <c>1,5</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>True</c>
+                  <c>1</c>
+                  <c>a</c>
+                  <c>2</c>
+                  <c>2,1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>False</c>
+                  <c>4</c>
+                  <c>u</c>
+                  <c>5</c>
+                  <c>5,4</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1698" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output31</Name>
+          <Abbrev>o</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1206" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>REGEX_Match([Space], "E",0)&amp;&amp;[currentSpaceFlag]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>REGEX_Match([Space], "E",0)&amp;&amp;[currentSpaceFlag]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Step" order="Asc" />
+            <Field field="currentSpaceFlag" order="Asc" />
+            <Field field="y" order="Asc" />
+            <Field field="Space" order="Asc" />
+            <Field field="x" order="Asc" />
+            <Field field="path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Step" order="Asc" />
+            <Field field="currentSpaceFlag" order="Asc" />
+            <Field field="y" order="Asc" />
+            <Field field="Space" order="Asc" />
+            <Field field="x" order="Asc" />
+            <Field field="path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1734" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1638" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="102" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsTrue</Operator>
+            <Field>currentSpaceFlag</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-13 09:40:49</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2022-12-13 09:40:49</StartDate>
+              <EndDate>2022-12-13 09:40:49</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[currentSpaceFlag] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="198" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 4</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="294" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))" field="adj_x" size="2" type="Int16" />
+            <FormulaField expression="iif([RowCount]=3,y+1,iif([RowCount]=4,y-1,y))" field="adj_y" size="2" type="Int16" />
+            <FormulaField expression="[Step]+1" field="Step" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>adj_x = iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))
+adj_y = iif([RowCount]=3,y...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="adj_x" source="Formula: iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))" type="Int16" />
+            <Field name="adj_y" source="Formula: iif([RowCount]=3,y+1,iif([RowCount]=4,y-1,y))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="402" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_x" />
+            <Field field="adj_y" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="x" />
+            <Field field="y" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_y" selected="False" input="Left_" />
+                <SelectField field="Left_x" selected="False" input="Left_" />
+                <SelectField field="Left_RowCount" selected="False" input="Left_" />
+                <SelectField field="Left_adj_x" selected="False" input="Left_" />
+                <SelectField field="Left_adj_y" selected="False" input="Left_" />
+                <SelectField field="Right_Step" selected="True" rename="Right_Step" input="Right_" />
+                <SelectField field="Right_currentSpaceFlag" selected="True" rename="Right_currentSpaceFlag" input="Right_" />
+                <SelectField field="Right_Space" selected="True" rename="Right_Space" input="Right_" />
+                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="adj_x" source="Formula: iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))" type="Int16" />
+            <Field name="adj_y" source="Formula: iif([RowCount]=3,y+1,iif([RowCount]=4,y-1,y))" type="Int16" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="adj_x" />
+            <Field field="adj_y" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="x" />
+            <Field field="y" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="990" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="(Multiple Sources)" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="path" size="3" source="(Multiple Sources)" type="String" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1098" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Step" action="GroupBy" rename="Step" />
+            <SummarizeField field="currentSpaceFlag" action="GroupBy" rename="currentSpaceFlag" />
+            <SummarizeField field="y" action="GroupBy" rename="y" />
+            <SummarizeField field="Space" action="GroupBy" rename="Space" />
+            <SummarizeField field="x" action="GroupBy" rename="x" />
+            <SummarizeField field="path" action="GroupBy" rename="path" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Step" order="Asc" />
+            <Field field="currentSpaceFlag" order="Asc" />
+            <Field field="y" order="Asc" />
+            <Field field="Space" order="Asc" />
+            <Field field="x" order="Asc" />
+            <Field field="path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="498" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>(REGEX_Match([Space],'S|E',0)||REGEX_Match([Right_Space],'S|E',0)||(CharToInt([Space])-CharToInt([Right_Space]) &gt;=-1)) 
+&amp;&amp;
+!Contains([path],[Right_path])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>(REGEX_Match([Space],'S|E',0)||REGEX_Match([Right_Space],'S|E',0)||(CharToInt([S...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="858" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Space" selected="False" />
+            <SelectField field="Right_Step" selected="False" />
+            <SelectField field="Right_currentSpaceFlag" selected="False" />
+            <SelectField field="Right_Space" selected="True" rename="Space" />
+            <SelectField field="Right_path" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="path" size="3" source="Formula: [path]+'|'+[Right_path]" type="String" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="198" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToString(x)+','+tostring(y)" field="path" size="3" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[path = ToString(x)+','+tostring(y)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="774" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[path]+'|'+[Right_path]" field="path" size="3" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[path = [path]+'|'+[Right_path]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="Formula: [path]+'|'+[Right_path]" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Right_path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings>
+        <Position x="1578" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1446" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1542" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-13 12:00:21</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-13 12:00:21</StartDate>
+              <EndDate>2022-12-13 12:00:21</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="678" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>REGEX_Match([Space],'E',0)</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>REGEX_Match([Space],'E',0)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="798" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 4</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+          <RecordCount value="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="RowCount" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="870" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))" field="adj_x" size="2" type="Int16" />
+            <FormulaField expression="iif([RowCount]=3,y+1,iif([RowCount]=4,y-1,y))" field="adj_y" size="2" type="Int16" />
+            <FormulaField expression="ToString(x)+','+ToString(y)" field="path" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>adj_x = iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))
+adj_y = iif([RowCount]=3,y...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="adj_x" source="Formula: iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))" type="Int16" />
+            <Field name="adj_y" source="Formula: iif([RowCount]=3,y+1,iif([RowCount]=4,y-1,y))" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1038" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_x" />
+            <Field field="adj_y" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="x" />
+            <Field field="y" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_y" selected="False" input="Left_" />
+                <SelectField field="Left_x" selected="False" input="Left_" />
+                <SelectField field="Left_RowCount" selected="False" input="Left_" />
+                <SelectField field="Left_adj_x" selected="False" input="Left_" />
+                <SelectField field="Left_adj_y" selected="False" input="Left_" />
+                <SelectField field="Right_Space" selected="True" rename="Right_Space" input="Right_" />
+                <SelectField field="Right_Step" selected="True" rename="Right_Step" input="Right_" />
+                <SelectField field="Right_currentSpaceFlag" selected="True" rename="Right_currentSpaceFlag" input="Right_" />
+                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+            <Field name="RowCount" type="Int32" />
+            <Field name="adj_x" source="Formula: iif([RowCount]=1,x+1,iif([RowCount]=2,x-1,x))" type="Int16" />
+            <Field name="adj_y" source="Formula: iif([RowCount]=3,y+1,iif([RowCount]=4,y-1,y))" type="Int16" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="adj_x" />
+            <Field field="adj_y" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="x" />
+            <Field field="y" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1134" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Right_Space</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-13 11:36:16</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>z</Operand>
+              <StartDate>2022-12-13 11:36:16</StartDate>
+              <EndDate>2022-12-13 11:36:16</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Right_Space] = "z"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1230" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Right_path]+'|'+[path]" field="path" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[path = [Right_path]+'|'+[path]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="Formula: [Right_path]+'|'+[path]" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1314" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="path" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path" size="3" source="Formula: [Right_path]+'|'+[path]" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="822" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToString(x)+','+ToString(y)" field="path" size="3" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[path = ToString(x)+','+ToString(y)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="TextInput:" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="path" size="3" source="Formula: ToString(x)+','+ToString(y)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1326" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_path" selected="True" rename="Source_path" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+            <Field name="Source_path" size="3" source="Formula: [Right_path]+'|'+[path]" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1530" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>EndsWith([path],[Source_path])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>EndsWith([path],[Source_path])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+            <Field name="Source_path" size="3" source="Formula: [Right_path]+'|'+[path]" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Step" source="Summarize: GroupBy - Step" type="Byte" />
+            <Field name="currentSpaceFlag" source="Summarize: GroupBy - currentSpaceFlag" type="Bool" />
+            <Field name="y" source="Summarize: GroupBy - y" type="Byte" />
+            <Field name="Space" size="1" source="Summarize: GroupBy - Space" type="String" />
+            <Field name="x" source="Summarize: GroupBy - x" type="Byte" />
+            <Field name="path" size="3" source="Summarize: GroupBy - path" type="String" />
+            <Field name="Source_path" size="3" source="Formula: [Right_path]+'|'+[path]" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="846" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Step</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value="," />
+          <NumFields value="3" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+            <Field description="TextToColumns: Parsed from Step" name="1" source="TextToColumns: Parsed from Step" type="Byte" />
+            <Field description="TextToColumns: Parsed from Step" name="2" source="TextToColumns: Parsed from Step" type="Byte" />
+            <Field description="TextToColumns: Parsed from Step" name="3" source="TextToColumns: Parsed from Step" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Right_path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="750" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+            <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="Space" size="1" source="TextInput:" type="String" />
+            <Field name="path" size="3" source="TextInput:" type="String" />
+            <Field name="Right_Step" source="TextInput:" type="Byte" />
+            <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+            <Field name="y" source="TextInput:" type="Byte" />
+            <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+            <Field name="x" source="TextInput:" type="Byte" />
+            <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Right_path" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="521" y="257" width="193" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 68</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="546" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Step" order="Ascending" />
+                <Field field="Right_Space" order="Ascending" />
+                <Field field="Right_path" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Step - Ascending
+Right_Space - Ascending
+Right_path - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+                <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="Space" size="1" source="TextInput:" type="String" />
+                <Field name="path" size="3" source="TextInput:" type="String" />
+                <Field name="Right_Step" source="TextInput:" type="Byte" />
+                <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="y" source="TextInput:" type="Byte" />
+                <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+                <Field name="x" source="TextInput:" type="Byte" />
+                <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="630" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Right_path" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Unique">
+              <RecordInfo>
+                <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+                <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="Space" size="1" source="TextInput:" type="String" />
+                <Field name="path" size="3" source="TextInput:" type="String" />
+                <Field name="Right_Step" source="TextInput:" type="Byte" />
+                <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="y" source="TextInput:" type="Byte" />
+                <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+                <Field name="x" source="TextInput:" type="Byte" />
+                <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="Right_path" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+            <MetaInfo connection="Duplicates">
+              <RecordInfo>
+                <Field name="Step" source="Formula: [Step]+1" type="Byte" />
+                <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="Space" size="1" source="TextInput:" type="String" />
+                <Field name="path" size="3" source="TextInput:" type="String" />
+                <Field name="Right_Step" source="TextInput:" type="Byte" />
+                <Field name="Right_currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="y" source="TextInput:" type="Byte" />
+                <Field name="Right_Space" size="1" source="TextInput:" type="String" />
+                <Field name="x" source="TextInput:" type="Byte" />
+                <Field name="Right_path" size="3" source="Formula: ToString(x)+','+tostring(y)" type="String" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="Right_path" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="497" y="629" width="205" height="169" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 46</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="618" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Step" selected="False" />
+                <SelectField field="currentSpaceFlag" selected="False" />
+                <SelectField field="Space" selected="False" />
+                <SelectField field="Right_Step" selected="True" rename="Step" />
+                <SelectField field="Right_currentSpaceFlag" selected="True" rename="currentSpaceFlag" />
+                <SelectField field="Right_Space" selected="True" rename="Space" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Step" source="TextInput:" type="Byte" />
+                <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="y" source="TextInput:" type="Byte" />
+                <Field name="Space" size="1" source="TextInput:" type="String" />
+                <Field name="x" source="TextInput:" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="522" y="678" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Step" source="TextInput:" type="Byte" />
+                <Field name="currentSpaceFlag" source="TextInput:" type="Bool" />
+                <Field name="y" source="TextInput:" type="Byte" />
+                <Field name="Space" size="1" source="TextInput:" type="String" />
+                <Field name="x" source="TextInput:" type="Byte" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="x" order="" />
+                <Field field="y" order="" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="False" />
+      <Destination ToolID="56" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output9" />
+      <Destination ToolID="56" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="True" />
+      <Destination ToolID="66" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="66" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="True" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="False" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="36" Connection="False" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="39" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Join" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Right" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="False" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="True" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="True" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="True" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="False" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="61" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Output" />
+      <Destination ToolID="61" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Join" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="True" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="True" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="True" />
+      <Destination ToolID="55" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Unique" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Unique" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (33)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>day12_IterativePart1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="e896181f-221c-460b-b4c6-f723ed053ed5" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="e896181f-221c-460b-b4c6-f723ed053ed5" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (29)</Name>
+          <ToolId value="29" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (30)</Name>
+              <ToolId value="30" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (31)</Name>
+              <ToolId value="31" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (33)</Name>
+              <ToolId value="33" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input27</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="100" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="30" Selected="True" />
+        <Tool ToolId="31" Selected="False" />
+        <Tool ToolId="33" Selected="True" />
+        <Tool ToolId="55" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

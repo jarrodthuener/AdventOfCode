@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2022.3">
+<AlteryxDocument yxmdVer="2022.1">
   <Nodes>
     <Node ToolID="110">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
@@ -16,7 +16,7 @@
     </Node>
     <Node ToolID="111">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="726" y="54" />
+        <Position x="42" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -27,7 +27,7 @@
           <Optional value="False" />
           <TextInput>
             <Configuration>
-              <NumRows value="4" />
+              <NumRows value="8" />
               <Fields>
                 <Field name="Monkey" />
                 <Field name="If_false" />
@@ -84,6 +84,50 @@
                   <c>0</c>
                   <c>96577</c>
                 </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                  <c />
+                </r>
               </Data>
             </Configuration>
           </TextInput>
@@ -91,7 +135,8 @@
         <Annotation DisplayMode="0">
           <Name />
           <AnnotationText>Input</AnnotationText>
-          <DefaultAnnotationText />
+          <DefaultAnnotationText>Input
+Input</DefaultAnnotationText>
           <Left value="True" />
         </Annotation>
         <MetaInfo connection="Output">
@@ -112,7 +157,7 @@
     </Node>
     <Node ToolID="112">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="522" y="258" />
+        <Position x="462" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -122,7 +167,8 @@
         <Annotation DisplayMode="0">
           <Name />
           <AnnotationText>I Output</AnnotationText>
-          <DefaultAnnotationText />
+          <DefaultAnnotationText>I Output
+I Output</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -130,7 +176,7 @@
     </Node>
     <Node ToolID="122">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="198" y="246" />
+        <Position x="282" y="246" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -149,11 +195,12 @@
             <Field name="Monkey" source="TextInput:" type="Int32" />
             <Field name="If_false" source="TextInput:" type="Int32" />
             <Field name="If_true" source="TextInput:" type="Int32" />
-            <Field name="old" size="2147483647" source="(Multiple Sources)" type="V_String" />
+            <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
             <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
             <Field name="Test" source="TextInput:" type="Int32" />
             <Field name="round" source="Formula: [round]+1" type="Int32" />
             <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -161,7 +208,7 @@
     </Node>
     <Node ToolID="138">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="378" y="162" />
+        <Position x="318" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -180,11 +227,12 @@
             <Field name="Monkey" source="TextInput:" type="Int32" />
             <Field name="If_false" source="TextInput:" type="Int32" />
             <Field name="If_true" source="TextInput:" type="Int32" />
-            <Field name="old" size="2147483647" source="(Multiple Sources)" type="V_String" />
+            <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
             <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
             <Field name="Test" source="TextInput:" type="Int32" />
             <Field name="round" source="Formula: [round]+1" type="Int32" />
             <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
@@ -192,11 +240,12 @@
             <Field name="Monkey" source="TextInput:" type="Int32" />
             <Field name="If_false" source="TextInput:" type="Int32" />
             <Field name="If_true" source="TextInput:" type="Int32" />
-            <Field name="old" size="2147483647" source="(Multiple Sources)" type="V_String" />
+            <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
             <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
             <Field name="Test" source="TextInput:" type="Int32" />
             <Field name="round" source="Formula: [round]+1" type="Int32" />
             <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -204,7 +253,7 @@
     </Node>
     <Node ToolID="139">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="498" y="138" />
+        <Position x="438" y="138" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -214,15 +263,16 @@
         <Annotation DisplayMode="0">
           <Name />
           <AnnotationText>Output</AnnotationText>
-          <DefaultAnnotationText />
+          <DefaultAnnotationText>Output
+o Output</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
     </Node>
-    <Node ToolID="140">
+    <Node ToolID="154">
       <GuiSettings>
-        <Position x="114" y="246" />
+        <Position x="54" y="246" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -231,14 +281,222 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <MetaInfo connection="Output95">
+          <RecordInfo>
+            <Field name="Monkey" source="TextInput:" type="Int32" />
+            <Field name="If_false" source="TextInput:" type="Int32" />
+            <Field name="If_true" source="TextInput:" type="Int32" />
+            <Field name="old" size="2147483647" source="(Multiple Sources)" type="V_String" />
+            <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Test" source="TextInput:" type="Int32" />
+            <Field name="round" source="TextInput:" type="Int32" />
+            <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
       </Properties>
       <EngineSettings Macro=".\\day11_RoundIterative_Part2.yxmc" />
+    </Node>
+    <Node ToolID="153">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="137" y="377" width="481" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 153</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="141">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="162" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>old</Field>
+              <Delimeters value="," />
+              <NumFields value="1" />
+              <Flags value="16" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Monkey" source="TextInput:" type="Int32" />
+                <Field name="If_false" source="TextInput:" type="Int32" />
+                <Field name="If_true" source="TextInput:" type="Int32" />
+                <Field description="TextToColumns: Parsed from old" name="old" size="2147483647" source="TextToColumns: Parsed from old" type="V_String" />
+                <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="Test" source="TextInput:" type="Int32" />
+                <Field name="round" source="TextInput:" type="Int32" />
+                <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+                <Field name="modValue" source="TextInput:" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+        <Node ToolID="144">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="246" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="old" selected="True" type="Int64" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Monkey" source="TextInput:" type="Int32" />
+                <Field name="If_false" source="TextInput:" type="Int32" />
+                <Field name="If_true" source="TextInput:" type="Int32" />
+                <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Int64" />
+                <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="Test" source="TextInput:" type="Int32" />
+                <Field name="round" source="TextInput:" type="Int32" />
+                <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+                <Field name="modValue" source="TextInput:" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="146">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="534" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Monkey" action="GroupBy" rename="Monkey" />
+                <SummarizeField field="If_false" action="GroupBy" rename="If_false" />
+                <SummarizeField field="If_true" action="GroupBy" rename="If_true" />
+                <SummarizeField field="old" action="Concat" rename="old">
+                  <Concat_Start />
+                  <Separator>,</Separator>
+                  <Concat_End />
+                </SummarizeField>
+                <SummarizeField field="Operation" action="GroupBy" rename="Operation" />
+                <SummarizeField field="Test" action="GroupBy" rename="Test" />
+                <SummarizeField field="round" action="GroupBy" rename="round" />
+                <SummarizeField field="inspectionCount" action="GroupBy" rename="inspectionCount" />
+                <SummarizeField field="modValue" action="GroupBy" rename="modValue" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Monkey" source="TextInput:" type="Int32" />
+                <Field name="If_false" source="TextInput:" type="Int32" />
+                <Field name="If_true" source="TextInput:" type="Int32" />
+                <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
+                <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="Test" source="TextInput:" type="Int32" />
+                <Field name="round" source="TextInput:" type="Int32" />
+                <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+                <Field name="modValue" source="TextInput:" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="149">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="342" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Mod([old], [modValue])" field="old" size="8" type="Int64" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[old = Mod([old], [modValue])
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Monkey" source="TextInput:" type="Int32" />
+                <Field name="If_false" source="TextInput:" type="Int32" />
+                <Field name="If_true" source="TextInput:" type="Int32" />
+                <Field description="TextToColumns: Parsed from old" name="old" source="Formula: Mod([old], [modValue])" type="Int64" />
+                <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="Test" source="TextInput:" type="Int32" />
+                <Field name="round" source="TextInput:" type="Int32" />
+                <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+                <Field name="modValue" source="TextInput:" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="150">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="438" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="old" selected="True" type="V_WString" size="9999" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Monkey" source="TextInput:" type="Int32" />
+                <Field name="If_false" source="TextInput:" type="Int32" />
+                <Field name="If_true" source="TextInput:" type="Int32" />
+                <Field description="TextToColumns: Parsed from old" name="old" size="9999" source="Formula: Mod([old], [modValue])" type="V_WString" />
+                <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="Test" source="TextInput:" type="Int32" />
+                <Field name="round" source="TextInput:" type="Int32" />
+                <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
+                <Field name="modValue" source="TextInput:" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
     </Node>
   </Nodes>
   <Connections>
     <Connection>
       <Origin ToolID="111" Connection="Output" />
-      <Destination ToolID="140" Connection="Input92" />
+      <Destination ToolID="154" Connection="Input92" />
     </Connection>
     <Connection>
       <Origin ToolID="122" Connection="Output" />
@@ -253,8 +511,28 @@
       <Destination ToolID="139" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="140" Connection="Output95" />
+      <Origin ToolID="154" Connection="Output95" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Output" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="146" Connection="Output" />
       <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="150" Connection="Output" />
+      <Destination ToolID="146" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -359,7 +637,7 @@
         <Tool ToolId="111" Selected="True" />
         <Tool ToolId="112" Selected="True" />
         <Tool ToolId="139" Selected="True" />
-        <Tool ToolId="140" Selected="True" />
+        <Tool ToolId="154" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />

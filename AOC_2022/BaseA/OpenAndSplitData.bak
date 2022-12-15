@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <AlteryxDocument yxmdVer="2022.3">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
-        <Position x="258" y="209" />
+        <Position x="258" y="449" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -16,7 +16,7 @@
                 <IgnoreErrors>False</IgnoreErrors>
                 <AllowShareWrite>False</AllowShareWrite>
                 <ImportLine>1</ImportLine>
-                <FieldLen>254</FieldLen>
+                <FieldLen>5000</FieldLen>
                 <SingleThreadRead>False</SingleThreadRead>
                 <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
                 <Delimeter>\0</Delimeter>
@@ -34,9 +34,12 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="254" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -44,7 +47,7 @@
     </Node>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="66" y="210" />
+        <Position x="66" y="450" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -73,7 +76,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="162" y="209" />
+        <Position x="162" y="449" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -97,7 +100,7 @@
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="354" y="210" />
+        <Position x="354" y="450" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -118,7 +121,7 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="254" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -127,7 +130,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="450" y="210" />
+        <Position x="450" y="450" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -155,13 +158,13 @@
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Field_1" size="254" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Field_1" size="254" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -170,7 +173,7 @@
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="546" y="198" />
+        <Position x="546" y="438" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -198,13 +201,13 @@
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Field_1" size="254" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Field_1" size="254" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -216,6 +219,7 @@
         <Position x="0" y="0" width="59" height="59" />
       </GuiSettings>
       <Properties>
+        <Configuration />
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText />
@@ -225,14 +229,16 @@
     </Node>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="882" y="258" />
+        <Position x="1074" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Name>Output9</Name>
+          <Name>FullData</Name>
+          <Abbrev>F</Abbrev>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <AnnotationText>Output</AnnotationText>
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
@@ -241,19 +247,261 @@
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="918" y="174" />
+        <Position x="1074" y="378" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Name>Output4</Name>
+          <Name>Sample</Name>
+          <Abbrev>S</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="666" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="version" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="666" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="version" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FolderBrowse.FolderBrowse">
+        <Position x="54" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Folder Browse (14)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="66" y="162" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="750" y="102" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check Box (16)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="750" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="750" y="192" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="954" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="750" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="954" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: C:\AOC\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="846" y="186" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings>
+        <Position x="858" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Split to Blocks (23)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Split to Blocks.yxmc" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings>
+        <Position x="858" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Split to Blocks (20)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Split to Blocks.yxmc" />
     </Node>
   </Nodes>
   <Connections>
@@ -278,12 +526,76 @@
       <Destination ToolID="8" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="8" Connection="False" />
-      <Destination ToolID="10" Connection="Input" />
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="12" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="8" Connection="True" />
+      <Origin ToolID="8" Connection="False" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="18" Connection="Action" />
+      <Destination ToolID="17" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="24" Connection="Action" />
+      <Destination ToolID="21" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="14" Connection="Question" />
+      <Destination ToolID="15" Connection="Question" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="15" Connection="Action" />
+      <Destination ToolID="2" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="16" Connection="Question" />
+      <Destination ToolID="18" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="16" Connection="Question" />
+      <Destination ToolID="24" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Left" />
+      <Destination ToolID="19" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output12" />
+      <Destination ToolID="19" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Right" />
+      <Destination ToolID="26" Connection="Input16" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
       <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Left" />
+      <Destination ToolID="22" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output12" />
+      <Destination ToolID="22" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Right" />
+      <Destination ToolID="25" Connection="Input16" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -296,16 +608,30 @@
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
-    <PredictiveToolsCodePage value="0" />
+    <PredictiveToolsCodePage value="1252" />
     <DisableAllOutput value="False" />
     <ShowAllMacroMessages value="False" />
     <ShowConnectionStatusIsOn value="True" />
     <ShowConnectionStatusOnlyWhenRunning value="True" />
     <ZoomLevel value="0" />
     <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Folder Browse (14)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Check Box (16)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name />
+      <Name>OpenAndSplitData</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
@@ -320,17 +646,58 @@
         <Description />
         <File />
       </Example>
-      <WorkflowId value="00000000-0000-0000-0000-000000000000" />
+      <WorkflowId value="7b97f944-a5a5-45ef-89bd-dd2282f216b6" />
       <Telemetry>
         <PreviousWorkflowId value="" />
-        <OriginWorkflowId value="00000000-0000-0000-0000-000000000000" />
+        <OriginWorkflowId value="7b97f944-a5a5-45ef-89bd-dd2282f216b6" />
       </Telemetry>
     </MetaInfo>
     <Events>
       <Enabled value="True" />
     </Events>
     <RuntimeProperties>
-      <Actions />
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="15" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>2/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="18" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>17/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="24" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>21/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
       <Questions>
         <Question>
           <Type>Tab</Type>
@@ -350,6 +717,21 @@
               <Name>Macro Output (11)</Name>
               <ToolId value="11" />
             </Question>
+            <Question>
+              <Type>FolderBrowse</Type>
+              <Description>Data Folder</Description>
+              <Name>Folder Browse (14)</Name>
+              <ToolId value="14" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>Split to blocks</Description>
+              <Name>Check Box (16)</Name>
+              <ToolId value="16" />
+              <Questions />
+              <Default value="True" />
+              <Collapsable value="False" />
+            </Question>
           </Questions>
         </Question>
       </Questions>
@@ -362,7 +744,12 @@
       <Wiz_CustomHelp value="False" />
       <Wiz_CustomGraphic value="False" />
       <Wiz_ShowOutput value="True" />
-      <Wiz_OpenOutputTools />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="10" Selected="True" />
+        <Tool ToolId="11" Selected="True" />
+        <Tool ToolId="25" Selected="True" />
+        <Tool ToolId="26" Selected="True" />
+      </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
       <Wiz_ChainRunWizard />

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2022.3">
+<AlteryxDocument yxmdVer="2022.1">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
@@ -86,7 +86,7 @@ Split From Here
         </Annotation>
       </Properties>
     </Node>
-    <Node ToolID="85">
+    <Node ToolID="887">
       <GuiSettings>
         <Position x="246" y="534" />
       </GuiSettings>
@@ -100,9 +100,6 @@ Split From Here
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro=".\\OpenAndSplitData.yxmc" />
     </Node>
@@ -112,7 +109,7 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25732_98d5a62abd0ddb468819e13a1a06763e_\Engine_25732_307dda5666f549418b09cf68172beb21~.yxdb</TempFile>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_21128_4848023f5bfc454d80232ed789372582_\Engine_21128_70dc0af0ea970a43ab0fd53a0ae4186a~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -337,7 +334,7 @@ old = replace([old],' ','')
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25732_98d5a62abd0ddb468819e13a1a06763e_\Engine_25732_fce758c23909a1438efd19e80436830c~.yxdb</TempFile>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_21128_4848023f5bfc454d80232ed789372582_\Engine_21128_9a760737da116848809446586c731b12~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -410,7 +407,7 @@ old = replace([old],' ','')
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25732_98d5a62abd0ddb468819e13a1a06763e_\Engine_25732_186e21d09a44f54284d93d4b2c1e6f2b~.yxdb</TempFile>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_21128_4848023f5bfc454d80232ed789372582_\Engine_21128_8298388c94e09d45b46b80a16cfa64fe~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -530,8 +527,6 @@ old = replace([old],' ','')
             <Field name="1" source="CrossTab:Header:RecordID:1:Sum:" type="Int64" />
             <Field name="2" source="CrossTab:Header:RecordID:2:Sum:" type="Int64" />
           </RecordInfo>
-          <SortInfo>
-          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
@@ -659,7 +654,7 @@ old = replace([old],' ','')
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
     </Node>
-    <Node ToolID="885">
+    <Node ToolID="889">
       <GuiSettings>
         <Position x="438" y="870" />
       </GuiSettings>
@@ -692,7 +687,7 @@ modValue=modValue
         <Configuration>
           <Caption>Container 633</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
+          <Disabled value="True" />
           <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
@@ -859,11 +854,11 @@ inspectionCount=inspectionCount
   </Nodes>
   <Connections>
     <Connection>
-      <Origin ToolID="85" Connection="FullData" />
+      <Origin ToolID="887" Connection="FullData" />
       <Destination ToolID="83" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="85" Connection="Sample" />
+      <Origin ToolID="887" Connection="FullData" />
       <Destination ToolID="86" Connection="Input" />
     </Connection>
     <Connection>
@@ -936,7 +931,7 @@ inspectionCount=inspectionCount
     </Connection>
     <Connection>
       <Origin ToolID="872" Connection="Output" />
-      <Destination ToolID="885" Connection="Input92" />
+      <Destination ToolID="889" Connection="Input92" />
     </Connection>
     <Connection>
       <Origin ToolID="877" Connection="Output" />
@@ -947,11 +942,11 @@ inspectionCount=inspectionCount
       <Destination ToolID="880" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="885" Connection="Iterate" />
+      <Origin ToolID="889" Connection="Iterate" />
       <Destination ToolID="635" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="885" Connection="Output139" />
+      <Origin ToolID="889" Connection="Output139" />
       <Destination ToolID="877" Connection="Input" />
     </Connection>
     <Connection>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2022.1">
+<AlteryxDocument yxmdVer="2022.3">
   <Nodes>
     <Node ToolID="94">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
@@ -396,7 +396,7 @@ Input</DefaultAnnotationText>
     </Node>
     <Node ToolID="108">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="774" y="282" />
+        <Position x="834" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -424,7 +424,7 @@ Input</DefaultAnnotationText>
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
             <Field name="modValue" source="TextInput:" type="Int32" />
-            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
+            <Field name="new" size="16384" source="Formula: Mod([new], [modValue])" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -611,7 +611,7 @@ Input</DefaultAnnotationText>
     </Node>
     <Node ToolID="117">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="774" y="342" />
+        <Position x="834" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -639,7 +639,7 @@ Input</DefaultAnnotationText>
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
             <Field name="modValue" source="TextInput:" type="Int32" />
-            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
+            <Field name="new" size="16384" source="Formula: Mod([new], [modValue])" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -665,7 +665,7 @@ Input</DefaultAnnotationText>
           <RecordInfo>
             <Field name="monkey" source="TextInput:" type="Byte" />
             <Field name="modValue" source="TextInput:" type="Int32" />
-            <Field name="new" size="16384" source="DynamicReplace:" type="String" />
+            <Field name="new" size="16384" source="Formula: Mod([new], [modValue])" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -893,6 +893,72 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Mod([new], [modValue])" field="new" size="16384" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[new = Mod([new], [modValue])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="If_false" source="TextInput:" type="Byte" />
+            <Field name="If_true" source="TextInput:" type="Byte" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
+            <Field name="Operation" size="9" source="TextInput:" type="String" />
+            <Field name="Test" source="TextInput:" type="Byte" />
+            <Field name="round" source="TextInput:" type="Byte" />
+            <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="new" source="Formula: Mod([new], [modValue])" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Mod([new], [modValue])" field="new" size="16384" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[new = Mod([new], [modValue])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="If_false" source="TextInput:" type="Byte" />
+            <Field name="If_true" source="TextInput:" type="Byte" />
+            <Field description="TextToColumns: Parsed from old" name="old" source="TextToColumns: Parsed from old" type="Double" />
+            <Field name="Operation" size="9" source="TextInput:" type="String" />
+            <Field name="Test" source="TextInput:" type="Byte" />
+            <Field name="round" source="TextInput:" type="Byte" />
+            <Field name="inspectionCount" source="TextInput:" type="Byte" />
+            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="new" source="Formula: Mod([new], [modValue])" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -945,11 +1011,11 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
     </Connection>
     <Connection>
       <Origin ToolID="105" Connection="False" />
-      <Destination ToolID="108" Connection="Input" />
+      <Destination ToolID="129" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="105" Connection="True" />
-      <Destination ToolID="117" Connection="Input" />
+      <Destination ToolID="128" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="106" Connection="Output" />
@@ -1002,6 +1068,14 @@ inspectionCount = [inspectionCount]+iif(isnull([Count]),0,[Count])
     <Connection>
       <Origin ToolID="127" Connection="True" />
       <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="128" Connection="Output" />
+      <Destination ToolID="108" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

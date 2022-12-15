@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2022.1">
+<AlteryxDocument yxmdVer="2022.3">
   <Nodes>
     <Node ToolID="110">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
@@ -16,7 +16,7 @@
     </Node>
     <Node ToolID="111">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="42" y="114" />
+        <Position x="54" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -141,14 +141,14 @@ Input</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Monkey" source="TextInput:" type="Int32" />
-            <Field name="If_false" source="TextInput:" type="Int32" />
-            <Field name="If_true" source="TextInput:" type="Int32" />
-            <Field name="old" size="2147483647" source="TextInput:" type="V_String" />
-            <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
-            <Field name="Test" source="TextInput:" type="Int32" />
-            <Field name="round" source="TextInput:" type="Int32" />
-            <Field name="inspectionCount" source="TextInput:" type="Int32" />
+            <Field name="Monkey" source="TextInput:" type="Byte" />
+            <Field name="If_false" source="TextInput:" type="Byte" />
+            <Field name="If_true" source="TextInput:" type="Byte" />
+            <Field name="old" size="11" source="TextInput:" type="String" />
+            <Field name="Operation" size="9" source="TextInput:" type="String" />
+            <Field name="Test" source="TextInput:" type="Byte" />
+            <Field name="round" source="TextInput:" type="Byte" />
+            <Field name="inspectionCount" source="TextInput:" type="Byte" />
             <Field name="modValue" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -157,7 +157,7 @@ Input</DefaultAnnotationText>
     </Node>
     <Node ToolID="112">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="462" y="258" />
+        <Position x="474" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -176,7 +176,7 @@ I Output</DefaultAnnotationText>
     </Node>
     <Node ToolID="122">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="282" y="246" />
+        <Position x="294" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -192,15 +192,15 @@ I Output</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Monkey" source="TextInput:" type="Int32" />
-            <Field name="If_false" source="TextInput:" type="Int32" />
-            <Field name="If_true" source="TextInput:" type="Int32" />
+            <Field name="Monkey" source="Summarize: GroupBy - Monkey" type="Int32" />
+            <Field name="If_false" source="Summarize: GroupBy - If_false" type="Int32" />
+            <Field name="If_true" source="Summarize: GroupBy - If_true" type="Int32" />
             <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
-            <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
-            <Field name="Test" source="TextInput:" type="Int32" />
+            <Field name="Operation" size="2147483647" source="Summarize: GroupBy - Operation" type="V_String" />
+            <Field name="Test" source="Summarize: GroupBy - Test" type="Int32" />
             <Field name="round" source="Formula: [round]+1" type="Int32" />
-            <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
-            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="inspectionCount" source="Summarize: GroupBy - inspectionCount" type="Int32" />
+            <Field name="modValue" source="Summarize: GroupBy - modValue" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -208,7 +208,7 @@ I Output</DefaultAnnotationText>
     </Node>
     <Node ToolID="138">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="318" y="162" />
+        <Position x="330" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -224,28 +224,28 @@ I Output</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Monkey" source="TextInput:" type="Int32" />
-            <Field name="If_false" source="TextInput:" type="Int32" />
-            <Field name="If_true" source="TextInput:" type="Int32" />
+            <Field name="Monkey" source="Summarize: GroupBy - Monkey" type="Int32" />
+            <Field name="If_false" source="Summarize: GroupBy - If_false" type="Int32" />
+            <Field name="If_true" source="Summarize: GroupBy - If_true" type="Int32" />
             <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
-            <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
-            <Field name="Test" source="TextInput:" type="Int32" />
+            <Field name="Operation" size="2147483647" source="Summarize: GroupBy - Operation" type="V_String" />
+            <Field name="Test" source="Summarize: GroupBy - Test" type="Int32" />
             <Field name="round" source="Formula: [round]+1" type="Int32" />
-            <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
-            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="inspectionCount" source="Summarize: GroupBy - inspectionCount" type="Int32" />
+            <Field name="modValue" source="Summarize: GroupBy - modValue" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Monkey" source="TextInput:" type="Int32" />
-            <Field name="If_false" source="TextInput:" type="Int32" />
-            <Field name="If_true" source="TextInput:" type="Int32" />
+            <Field name="Monkey" source="Summarize: GroupBy - Monkey" type="Int32" />
+            <Field name="If_false" source="Summarize: GroupBy - If_false" type="Int32" />
+            <Field name="If_true" source="Summarize: GroupBy - If_true" type="Int32" />
             <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
-            <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
-            <Field name="Test" source="TextInput:" type="Int32" />
+            <Field name="Operation" size="2147483647" source="Summarize: GroupBy - Operation" type="V_String" />
+            <Field name="Test" source="Summarize: GroupBy - Test" type="Int32" />
             <Field name="round" source="Formula: [round]+1" type="Int32" />
-            <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
-            <Field name="modValue" source="TextInput:" type="Int32" />
+            <Field name="inspectionCount" source="Summarize: GroupBy - inspectionCount" type="Int32" />
+            <Field name="modValue" source="Summarize: GroupBy - modValue" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -253,7 +253,7 @@ I Output</DefaultAnnotationText>
     </Node>
     <Node ToolID="139">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="438" y="138" />
+        <Position x="450" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -270,9 +270,9 @@ o Output</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
     </Node>
-    <Node ToolID="155">
+    <Node ToolID="156">
       <GuiSettings>
-        <Position x="54" y="246" />
+        <Position x="66" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -299,7 +299,7 @@ o Output</DefaultAnnotationText>
     </Node>
     <Node ToolID="153">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="137" y="377" width="481" height="165" />
+        <Position x="149" y="317" width="481" height="165" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -317,7 +317,7 @@ o Output</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="141">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="162" y="438" />
+            <Position x="174" y="366" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -349,7 +349,7 @@ o Output</DefaultAnnotationText>
         </Node>
         <Node ToolID="144">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="246" y="426" />
+            <Position x="258" y="366" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -383,7 +383,7 @@ o Output</DefaultAnnotationText>
         </Node>
         <Node ToolID="146">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="534" y="426" />
+            <Position x="546" y="366" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -410,23 +410,33 @@ o Output</DefaultAnnotationText>
             </Annotation>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="Monkey" source="TextInput:" type="Int32" />
-                <Field name="If_false" source="TextInput:" type="Int32" />
-                <Field name="If_true" source="TextInput:" type="Int32" />
+                <Field name="Monkey" source="Summarize: GroupBy - Monkey" type="Int32" />
+                <Field name="If_false" source="Summarize: GroupBy - If_false" type="Int32" />
+                <Field name="If_true" source="Summarize: GroupBy - If_true" type="Int32" />
                 <Field name="old" size="1073741823" source="Summarize: Concat - old" type="V_WString" />
-                <Field name="Operation" size="2147483647" source="TextInput:" type="V_String" />
-                <Field name="Test" source="TextInput:" type="Int32" />
-                <Field name="round" source="TextInput:" type="Int32" />
-                <Field name="inspectionCount" source="(Multiple Sources)" type="Int32" />
-                <Field name="modValue" source="TextInput:" type="Int32" />
+                <Field name="Operation" size="2147483647" source="Summarize: GroupBy - Operation" type="V_String" />
+                <Field name="Test" source="Summarize: GroupBy - Test" type="Int32" />
+                <Field name="round" source="Summarize: GroupBy - round" type="Int32" />
+                <Field name="inspectionCount" source="Summarize: GroupBy - inspectionCount" type="Int32" />
+                <Field name="modValue" source="Summarize: GroupBy - modValue" type="Int32" />
               </RecordInfo>
+              <SortInfo>
+                <Field field="Monkey" order="Asc" />
+                <Field field="If_false" order="Asc" />
+                <Field field="If_true" order="Asc" />
+                <Field field="Operation" order="Asc" />
+                <Field field="Test" order="Asc" />
+                <Field field="round" order="Asc" />
+                <Field field="inspectionCount" order="Asc" />
+                <Field field="modValue" order="Asc" />
+              </SortInfo>
             </MetaInfo>
           </Properties>
           <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
         </Node>
         <Node ToolID="149">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="342" y="426" />
+            <Position x="354" y="366" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -458,7 +468,7 @@ o Output</DefaultAnnotationText>
         </Node>
         <Node ToolID="150">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="438" y="426" />
+            <Position x="450" y="366" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -496,7 +506,7 @@ o Output</DefaultAnnotationText>
   <Connections>
     <Connection>
       <Origin ToolID="111" Connection="Output" />
-      <Destination ToolID="155" Connection="Input92" />
+      <Destination ToolID="156" Connection="Input92" />
     </Connection>
     <Connection>
       <Origin ToolID="122" Connection="Output" />
@@ -511,7 +521,7 @@ o Output</DefaultAnnotationText>
       <Destination ToolID="139" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="155" Connection="Output95" />
+      <Origin ToolID="156" Connection="Output95" />
       <Destination ToolID="141" Connection="Input" />
     </Connection>
     <Connection>
@@ -545,22 +555,13 @@ o Output</DefaultAnnotationText>
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
-    <RunWithE2 value="True" />
     <PredictiveToolsCodePage value="1252" />
     <DisableAllOutput value="False" />
-    <ShowAllMacroMessages value="False" />
+    <ShowAllMacroMessages value="True" />
     <ShowConnectionStatusIsOn value="True" />
     <ShowConnectionStatusOnlyWhenRunning value="True" />
     <ZoomLevel value="0" />
     <LayoutType>Horizontal</LayoutType>
-    <Constants>
-      <Constant>
-        <Namespace>Question</Namespace>
-        <Name>Macro Output (139)</Name>
-        <Value />
-        <IsNumeric value="False" />
-      </Constant>
-    </Constants>
     <MetaInfo>
       <NameIsFileName value="True" />
       <Name>day11_Multi-RoundIterative_Part2</Name>
@@ -637,7 +638,7 @@ o Output</DefaultAnnotationText>
         <Tool ToolId="111" Selected="True" />
         <Tool ToolId="112" Selected="True" />
         <Tool ToolId="139" Selected="True" />
-        <Tool ToolId="155" Selected="True" />
+        <Tool ToolId="156" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />

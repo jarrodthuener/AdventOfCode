@@ -35,9 +35,6 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro=".\OpenAndSplitData.yxmc" />
     </Node>
@@ -112,7 +109,7 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_10768_efcabd6a622642158a38237915fa8cb1_\Engine_4744_5b3675d865f94acf8105b3de5f67e596_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_11240_31caa835413c45d0b394fceb4101dcdf_\Engine_15092_8471efb1de5342fab817bf62bf5e7072_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -134,16 +131,17 @@ Split From Here
     </Node>
     <Node ToolID="85">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="738" y="546" />
+        <Position x="750" y="690" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_10768_efcabd6a622642158a38237915fa8cb1_\Engine_4744_ce8da4b718c2477da9990101e508f71f_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_11240_31caa835413c45d0b394fceb4101dcdf_\Engine_15092_0def73d1d29345279cf45de7ccc0a9d2_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
             <View1>
+              <DefaultTab>Profile</DefaultTab>
               <Hints>
                 <Table />
               </Hints>
@@ -161,7 +159,7 @@ Split From Here
     </Node>
     <Node ToolID="86">
       <GuiSettings Plugin="AlteryxBasePluginsGui.JSONParse.JSONParse">
-        <Position x="330" y="522" />
+        <Position x="342" y="666" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -179,7 +177,7 @@ Split From Here
     </Node>
     <Node ToolID="87">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="234" y="522" />
+        <Position x="246" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -205,7 +203,7 @@ Split From Here
     </Node>
     <Node ToolID="88">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="426" y="534" />
+        <Position x="438" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -232,7 +230,7 @@ Split From Here
     </Node>
     <Node ToolID="90">
       <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
-        <Position x="534" y="534" />
+        <Position x="546" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -272,6 +270,42 @@ Split From Here
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
     </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="342" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Field_1</Field>
+          <RegExExpression value="(.*\{)(\[.?\])" />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>Field_1</RootName>
+            <NumFields value="7" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="RegExOut1" type="V_String" size="5000" />
+            <Field field="RegExOut2" type="V_String" size="5000" />
+          </ParseComplex>
+          <Match>
+            <Field>Field_1_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -289,6 +323,10 @@ Split From Here
     <Connection>
       <Origin ToolID="87" Connection="Output" />
       <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="88" Connection="Output" />

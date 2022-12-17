@@ -109,7 +109,7 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_24720_c6f2f8ff0f44d647bbd022d30a82dc55_\Engine_24720_7a73afc0da74634ea0ca7def56ff5524~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_1844_063690203e216840bbd64d83e570f5a6_\Engine_1844_a06529689c029746a034f034f8ff6585~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -181,11 +181,14 @@ Split From Here
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field description="Formula: iif(isnull([Field_1]),[Row-1:Block]+1,[Row-1:Block])" name="Block" source="CrossTab:Group:First:" type="Int32" />
+            <Field name="Block" source="CrossTab:Group:First:" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="If_false" size="5000" source="Formula: iif(isempty([RegExOut3]),trim([RegExOut2]),[RegExOut3])" type="V_String" />
+            <Field description="RegEx: Parsed from Field_1" name="If_true" size="5000" source="Formula: iif(isempty([RegExOut3]),trim([RegExOut2]),[RegExOut3])" type="V_String" />
+            <Field description="RegEx: Parsed from Field_1" name="Monkey" size="5000" source="Formula: iif(isempty([RegExOut3]),trim([RegExOut2]),[RegExOut3])" type="V_String" />
+            <Field description="RegEx: Parsed from Field_1" name="Operation" size="5000" source="Formula: iif(isempty([RegExOut3]),trim([RegExOut2]),[RegExOut3])" type="V_String" />
+            <Field description="RegEx: Parsed from Field_1" name="Starting_items" size="5000" source="Formula: iif(isempty([RegExOut3]),trim([RegExOut2]),[RegExOut3])" type="V_String" />
+            <Field description="RegEx: Parsed from Field_1" name="Test" size="5000" source="Formula: iif(isempty([RegExOut3]),trim([RegExOut2]),[RegExOut3])" type="V_String" />
           </RecordInfo>
-          <SortInfo>
-            <Field field="Block" order="Asc" />
-          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
@@ -331,7 +334,7 @@ old = replace([old],' ','')
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_24720_c6f2f8ff0f44d647bbd022d30a82dc55_\Engine_24720_2039562a00474c44a2ecbe6859187302~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_1844_063690203e216840bbd64d83e570f5a6_\Engine_1844_810431f2ae14da43ba419b0ece143535~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -404,7 +407,7 @@ old = replace([old],' ','')
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_24720_c6f2f8ff0f44d647bbd022d30a82dc55_\Engine_24720_ac16bcf8fe213741a9388578184eb742~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_1844_063690203e216840bbd64d83e570f5a6_\Engine_1844_8866a85f860ca548a31ca2f7a3aac362~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -524,6 +527,8 @@ old = replace([old],' ','')
             <Field name="1" source="CrossTab:Header:RecordID:1:Sum:" type="Int64" />
             <Field name="2" source="CrossTab:Header:RecordID:2:Sum:" type="Int64" />
           </RecordInfo>
+          <SortInfo>
+          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
@@ -653,7 +658,7 @@ round - Ascending</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
     </Node>
-    <Node ToolID="891">
+    <Node ToolID="892">
       <GuiSettings>
         <Position x="438" y="870" />
       </GuiSettings>
@@ -930,7 +935,7 @@ inspectionCount=inspectionCount
     </Connection>
     <Connection>
       <Origin ToolID="872" Connection="Output" />
-      <Destination ToolID="891" Connection="Input92" />
+      <Destination ToolID="892" Connection="Input92" />
     </Connection>
     <Connection>
       <Origin ToolID="877" Connection="Output" />
@@ -941,11 +946,11 @@ inspectionCount=inspectionCount
       <Destination ToolID="880" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="891" Connection="Iterate" />
+      <Origin ToolID="892" Connection="Iterate" />
       <Destination ToolID="635" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="891" Connection="Output139" />
+      <Origin ToolID="892" Connection="Output139" />
       <Destination ToolID="877" Connection="Input" />
     </Connection>
     <Connection>
@@ -983,9 +988,10 @@ inspectionCount=inspectionCount
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
     <PredictiveToolsCodePage value="1252" />
     <DisableAllOutput value="False" />
-    <ShowAllMacroMessages value="True" />
+    <ShowAllMacroMessages value="False" />
     <ShowConnectionStatusIsOn value="True" />
     <ShowConnectionStatusOnlyWhenRunning value="False" />
     <ZoomLevel value="0" />

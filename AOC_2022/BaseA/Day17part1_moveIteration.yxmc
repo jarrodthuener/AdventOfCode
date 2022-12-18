@@ -1,0 +1,1048 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="246" y="162" width="100" height="64" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[gas pushes shape over 1
+only modifies x variable
+and remove first gas move ]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="113">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="258" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif(isempty([gas]),[InitialGas],[gas])" field="gas" size="40" type="String" />
+            <FormulaField expression="iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" field="new_X" size="4" type="Int32" />
+            <FormulaField expression="REGEX_Replace([gas], '.(.*)', '$1')" field="gas" size="40" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>gas = iif(isempty([gas]),[InitialGas],[gas])
+new_X = iif(left([gas],1)='&lt;',[X_Sh...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_X" source="Formula: iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="114">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="426" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[new_X] >7 || [new_X]<1
+|| 
+Contains([occCoor],  '|'+tostring([new_X])+','+tostring([Y_Shape])+'|')
+/*Regex_Match([occCoor], '^'+tostring([new_X])+','+tostring([Y_Shape])+'\|.*')
+||
+Regex_Match([occCoor], '.*\|'+tostring([new_X])+','+tostring([Y_Shape])+'$')
+||
+Regex_Match([occCoor], '.*\|'+tostring([new_X])+','+tostring([Y_Shape])+'\|.*')*/
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[new_X] &gt;7 || [new_X]&lt;1
+|| 
+Contains([occCoor],  '|'+tostring([new_X])+','+tostr...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_X" source="Formula: iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_X" source="Formula: iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="115">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="402" y="54" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>check if new x is hitting anything</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="117">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="402" y="378" width="156" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>will likely need all previous coordinates.</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings>
+        <Position x="534" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="558" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_X" source="Formula: iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="642" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-17 12:35:52</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-17 12:35:52</StartDate>
+              <EndDate>2022-12-17 12:35:52</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_X" source="Formula: iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_X" source="Formula: iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="124">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="738" y="150" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Not hitting anything, proceed with new coordinates</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="738" y="318" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>hitting something, revert to old coordinates</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="126">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="occCoor" selected="True" />
+            <SelectField field="gas" selected="True" />
+            <SelectField field="X_Shape" selected="False" />
+            <SelectField field="new_X" selected="True" rename="X_Shape" />
+            <SelectField field="Y_Shape" selected="True" />
+            <SelectField field="Count" selected="False" />
+            <SelectField field="MaxY" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="Formula: iif(left([gas],1)='&lt;',[X_Shape]-1,[X_Shape]+1)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="new_X" selected="False" />
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="870" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="954" y="138" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>now move down 1 cell</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="130">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="978" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Y_Shape]-1" field="new_y" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[new_y = [Y_Shape]-1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_y" source="Formula: [Y_Shape]-1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="131">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1122" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[Contains([occCoor], '|'+tostring([X_Shape])+','+tostring([new_y])+'|')
+
+/*Regex_Match([occCoor], '^'+tostring([X_Shape])+','+tostring([new_y])+'\|.*')
+||
+Regex_Match([occCoor], '.*\|'+tostring([X_Shape])+','+tostring([new_y])+'$')
+||
+Regex_Match([occCoor], '.*\|'+tostring([X_Shape])+','+tostring([new_y])+'\|.*')*/
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Contains([occCoor], '|'+tostring([X_Shape])+','+tostring([new_y])+'|')
+
+/*Regex_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_y" source="Formula: [Y_Shape]-1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_y" source="Formula: [Y_Shape]-1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1098" y="66" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>check if new x is hitting anything</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="133">
+      <GuiSettings>
+        <Position x="1230" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="134">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1290" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_y" source="Formula: [Y_Shape]-1" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="135">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-17 12:35:52</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-17 12:35:52</StartDate>
+              <EndDate>2022-12-17 12:35:52</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_y" source="Formula: [Y_Shape]-1" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+            <Field name="new_y" source="Formula: [Y_Shape]-1" type="Int32" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="136">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1506" y="138" width="112" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Not hitting anything, proceed with new coordinates and iterate</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="137">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1470" y="366" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>hitting something, revert to old coordinates</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1494" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="occCoor" selected="True" />
+            <SelectField field="gas" selected="True" />
+            <SelectField field="X_Shape" selected="True" />
+            <SelectField field="new_X" selected="False" rename="X_Shape" />
+            <SelectField field="Y_Shape" selected="False" />
+            <SelectField field="Count" selected="False" />
+            <SelectField field="new_y" selected="True" rename="Y_Shape" />
+            <SelectField field="MaxY" selected="True" />
+            <SelectField field="InitialGas" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="Formula: [Y_Shape]-1" type="Int32" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="139">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1494" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="new_y" selected="False" />
+            <SelectField field="Count" selected="False" />
+            <SelectField field="new_X" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="Formula: REGEX_Replace([gas], '.(.*)', '$1')" type="String" />
+            <Field name="X_Shape" source="(Multiple Sources)" type="Int32" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="140">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="141">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input110</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="4" />
+              <Fields>
+                <Field name="occCoor" />
+                <Field name="gas" />
+                <Field name="X_Shape" />
+                <Field name="Y_Shape" />
+                <Field name="MaxY" />
+                <Field name="InitialGas" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1,0|2,0|3,0|4,0|5,0|6,0|7,0</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                  <c>3</c>
+                  <c>4</c>
+                  <c>9999999</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                </r>
+                <r>
+                  <c>1,0|2,0|3,0|4,0|5,0|6,0|7,0</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                  <c>4</c>
+                  <c>4</c>
+                  <c>9999999</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                </r>
+                <r>
+                  <c>1,0|2,0|3,0|4,0|5,0|6,0|7,0</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>9999999</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                </r>
+                <r>
+                  <c>1,0|2,0|3,0|4,0|5,0|6,0|7,0</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>9999999</c>
+                  <c>&gt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="occCoor" size="27" source="TextInput:" type="String" />
+            <Field name="gas" size="40" source="TextInput:" type="String" />
+            <Field name="X_Shape" source="TextInput:" type="Byte" />
+            <Field name="Y_Shape" source="TextInput:" type="Byte" />
+            <Field name="MaxY" source="TextInput:" type="Int32" />
+            <Field name="InitialGas" size="40" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="142">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1650" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="143">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1590" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="122" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output9" />
+      <Destination ToolID="122" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="True" />
+      <Destination ToolID="121" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="True" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="False" />
+      <Destination ToolID="127" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="126" Connection="Output" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="127" Connection="Output" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="128" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Output" />
+      <Destination ToolID="134" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="133" Connection="Output9" />
+      <Destination ToolID="134" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="131" Connection="True" />
+      <Destination ToolID="133" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="134" Connection="Output" />
+      <Destination ToolID="135" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="135" Connection="True" />
+      <Destination ToolID="138" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="135" Connection="False" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="Output" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="139" Connection="Output" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day17part1_moveIteration</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="1974dddb-5e2e-4198-b074-f8ef38c9c702" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="1974dddb-5e2e-4198-b074-f8ef38c9c702" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (140)</Name>
+          <ToolId value="140" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (141)</Name>
+              <ToolId value="141" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (142)</Name>
+              <ToolId value="142" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (143)</Name>
+              <ToolId value="143" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input110</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="1000" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="121" Selected="True" />
+        <Tool ToolId="133" Selected="True" />
+        <Tool ToolId="141" Selected="True" />
+        <Tool ToolId="142" Selected="True" />
+        <Tool ToolId="143" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

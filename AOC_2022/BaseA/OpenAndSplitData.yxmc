@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2022.1">
+<AlteryxDocument yxmdVer="2022.3">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
@@ -16,7 +16,7 @@
                 <IgnoreErrors>False</IgnoreErrors>
                 <AllowShareWrite>False</AllowShareWrite>
                 <ImportLine>1</ImportLine>
-                <FieldLen>5000</FieldLen>
+                <FieldLen>50000</FieldLen>
                 <SingleThreadRead>False</SingleThreadRead>
                 <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
                 <Delimeter>\0</Delimeter>
@@ -34,9 +34,12 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -118,7 +121,7 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -155,13 +158,13 @@
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -198,13 +201,13 @@
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
             <Field description="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" name="version" source="Formula: iif([Field_1]=&quot;Split From Here&quot;,1,[Row-1:version])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -282,7 +285,7 @@ S Output</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -308,7 +311,7 @@ S Output</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -374,12 +377,12 @@ Split to blocks</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Left">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="Right">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -413,7 +416,7 @@ Update Detour Direction from Question</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -434,12 +437,12 @@ Update Detour Direction from Question</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Left">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="Right">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -458,7 +461,7 @@ Update Detour Direction from Question</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Field_1" size="5000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
+            <Field name="Field_1" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\data\day1.txt" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>

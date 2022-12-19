@@ -109,7 +109,7 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_33092_b8dc888d09b0499ba4865f2c7f4ac6ab_\Engine_16496_4b9712900a9e42bab9e47ed541ad882d_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_13056_5191404570f590469340d3bdcff87dea_\Engine_13056_67e64dcd4ac07b4e96990820ddc112c7~.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -210,7 +210,7 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_33092_b8dc888d09b0499ba4865f2c7f4ac6ab_\Engine_16496_67a68b44b4dc4eaab78a887193ce3327_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_13056_5191404570f590469340d3bdcff87dea_\Engine_13056_f092203275275d42b5c6ceb73571728b~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -323,7 +323,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="128">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="162" y="1062" />
+        <Position x="90" y="1062" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -331,6 +331,9 @@ exposed sides = 6-[count]
             <SummarizeField field="x" action="Max" rename="Max_x" />
             <SummarizeField field="y" action="Max" rename="Max_y" />
             <SummarizeField field="z" action="Max" rename="Max_z" />
+            <SummarizeField field="x" action="Min" rename="Min_x" />
+            <SummarizeField field="y" action="Min" rename="Min_y" />
+            <SummarizeField field="z" action="Min" rename="Min_z" />
           </SummarizeFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -343,7 +346,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="129">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
-        <Position x="246" y="1062" />
+        <Position x="174" y="1062" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -352,6 +355,9 @@ exposed sides = 6-[count]
             <Field name="Max_x" />
             <Field name="Max_y" />
             <Field name="Max_z" />
+            <Field name="Min_x" selected="False" />
+            <Field name="Min_y" selected="False" />
+            <Field name="Min_z" selected="False" />
             <Field name="*Unknown" selected="False" />
           </Fields>
           <CopyOutput value="False" />
@@ -368,7 +374,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="130">
       <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
-        <Position x="330" y="1062" />
+        <Position x="366" y="1062" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -378,8 +384,9 @@ exposed sides = 6-[count]
           <CreateField_Type>Int32</CreateField_Type>
           <CreateField_Size>4</CreateField_Size>
           <Expression_Init>[Max_x]</Expression_Init>
-          <Expression_Cond>x&gt;= 0</Expression_Cond>
+          <Expression_Cond>x&gt;= [Min_x]</Expression_Cond>
           <Expression_Loop>x- 1</Expression_Loop>
+          <RecordCount value="22" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -391,7 +398,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="131">
       <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
-        <Position x="402" y="1062" />
+        <Position x="462" y="1062" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -401,8 +408,9 @@ exposed sides = 6-[count]
           <CreateField_Type>Int32</CreateField_Type>
           <CreateField_Size>4</CreateField_Size>
           <Expression_Init>[max_y]</Expression_Init>
-          <Expression_Cond>y&gt;= 0</Expression_Cond>
+          <Expression_Cond>y&gt;= [min_y]</Expression_Cond>
           <Expression_Loop>y- 1</Expression_Loop>
+          <RecordCount value="484" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -414,7 +422,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="132">
       <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
-        <Position x="486" y="1062" />
+        <Position x="558" y="1062" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -424,8 +432,9 @@ exposed sides = 6-[count]
           <CreateField_Type>Int32</CreateField_Type>
           <CreateField_Size>4</CreateField_Size>
           <Expression_Init>[Max_z]</Expression_Init>
-          <Expression_Cond>z&gt;= 0</Expression_Cond>
+          <Expression_Cond>z&gt;= [min_z]</Expression_Cond>
           <Expression_Loop>z- 1</Expression_Loop>
+          <RecordCount value="10648" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -437,7 +446,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="134">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="702" y="1026" />
+        <Position x="750" y="1026" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -474,7 +483,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="135">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="570" y="1062" />
+        <Position x="654" y="1062" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -515,7 +524,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="137">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="810" y="1062" />
+        <Position x="846" y="1062" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -535,7 +544,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="138">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="906" y="1074" />
+        <Position x="942" y="1074" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -560,7 +569,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="139">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="990" y="1074" />
+        <Position x="1038" y="1074" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -571,49 +580,6 @@ exposed sides = 6-[count]
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText><![CDATA[CubeId = [CubeId]+[Max_CubeId]
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="176">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1254" y="438" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="True">
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="177">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1350" y="438" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[Sum_exposed sides]-[airPocketSides]" field="Total Exposed sides minus airpockets" size="4" type="Int32" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[Total Exposed sides minus airpockets = [Sum_exposed sides]-[airPocketSides]
 ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
@@ -652,9 +618,6 @@ exposed sides = 6-[count]
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro="Day18_FindAdjacentCubes.yxmc" />
     </Node>
@@ -670,7 +633,7 @@ exposed sides = 6-[count]
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\BaseA\Day18_FindAdjacentCubes.yxmc" />
+      <EngineSettings Macro="Day18_FindAdjacentCubes.yxmc" />
     </Node>
     <Node ToolID="181">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
@@ -698,7 +661,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="182">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1086" y="1074" />
+        <Position x="1134" y="1074" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -769,7 +732,7 @@ exposed sides = 6-[count]
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\BaseA\Day18_FindAdjacentCubes.yxmc" />
+      <EngineSettings Macro="Day18_FindAdjacentCubes.yxmc" />
     </Node>
     <Node ToolID="188">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
@@ -909,7 +872,7 @@ exposed sides = 6-[count]
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\BaseA\Day18_FindAdjacentCubes.yxmc" />
+      <EngineSettings Macro="Day18_FindAdjacentCubes.yxmc" />
     </Node>
     <Node ToolID="195">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MakeGroup.MakeGroup">
@@ -934,7 +897,7 @@ exposed sides = 6-[count]
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_33092_b8dc888d09b0499ba4865f2c7f4ac6ab_\Engine_16496_32c3fc9fc6d34d1b96703207bd3ec150_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_13056_5191404570f590469340d3bdcff87dea_\Engine_13056_1308cc5a6e0b094a845863ec68daf14f~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1452,7 +1415,7 @@ exposed sides = 6-[count]
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\BaseA\Day18_FindAdjacentCubes.yxmc" />
+      <EngineSettings Macro="Day18_FindAdjacentCubes.yxmc" />
     </Node>
     <Node ToolID="217">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
@@ -1460,7 +1423,7 @@ exposed sides = 6-[count]
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_33092_b8dc888d09b0499ba4865f2c7f4ac6ab_\Engine_16496_bd99ded32b604075b38dfb13ca3fbebc_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_13056_5191404570f590469340d3bdcff87dea_\Engine_13056_2a291a4bf3fce94093724fdf0a39ed00~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1531,11 +1494,11 @@ exposed sides = 6-[count]
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\BaseA\Day18_FindAdjacentCubes.yxmc" />
+      <EngineSettings Macro="Day18_FindAdjacentCubes.yxmc" />
     </Node>
     <Node ToolID="221">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1122" y="894" />
+        <Position x="1230" y="894" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1560,7 +1523,7 @@ exposed sides = 6-[count]
     </Node>
     <Node ToolID="222">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1302" y="846" />
+        <Position x="1326" y="846" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -1726,7 +1689,7 @@ exposed sides = 6-[count]
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings Macro="C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\BaseA\Day18_FindAdjacentCubes.yxmc" />
+      <EngineSettings Macro="Day18_FindAdjacentCubes.yxmc" />
     </Node>
     <Node ToolID="229">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
@@ -1734,7 +1697,7 @@ exposed sides = 6-[count]
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_33092_b8dc888d09b0499ba4865f2c7f4ac6ab_\Engine_16496_81dfa97d646b459e872b89b56c42f53d_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_13056_5191404570f590469340d3bdcff87dea_\Engine_13056_f7b772fb3f5001498b5592e0e3b8e988~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1974,6 +1937,245 @@ exposed sides = 6-[count]
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
     </Node>
+    <Node ToolID="241">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2742" y="1098" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CubeId" selected="False" />
+            <SelectField field="x" selected="False" />
+            <SelectField field="y" selected="False" />
+            <SelectField field="z" selected="False" />
+            <SelectField field="Right_CubeId" selected="True" rename="CubeId" />
+            <SelectField field="Right_x" selected="True" rename="x" />
+            <SelectField field="Right_y" selected="True" rename="y" />
+            <SelectField field="Right_z" selected="True" rename="z" type="String" size="16384" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="242">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2838" y="1098" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_2276_be46ec6235c46d43afefa881c882699f_\Engine_2276_51ab899438532043ad164426a290515c~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="243">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="2934" y="1098" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>scatter</type>
+              <mode>markers</mode>
+              <xsrc>x</xsrc>
+              <ysrc>y</ysrc>
+              <marker>
+                <size>6</size>
+                <line>
+                  <width>0</width>
+                </line>
+              </marker>
+            </Traces>
+            <Layout>
+              <title>
+                <text>016</text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+              </font>
+              <autosize>false</autosize>
+              <width>700</width>
+              <height>849</height>
+              <showlegend>true</showlegend>
+              <hovermode>closest</hovermode>
+              <xaxis>
+                <range>0</range>
+                <range>20</range>
+                <autorange>false</autorange>
+                <title>
+                  <text>x</text>
+                </title>
+                <type>linear</type>
+                <tickfont>
+                  <size>12</size>
+                </tickfont>
+                <nticks>0</nticks>
+              </xaxis>
+              <yaxis>
+                <range>0</range>
+                <range>20</range>
+                <autorange>false</autorange>
+                <title>
+                  <text>y</text>
+                </title>
+                <type>linear</type>
+              </yaxis>
+              <margin>
+                <pad>0</pad>
+                <t>100</t>
+                <b>80</b>
+                <l>80</l>
+                <r>80</r>
+              </margin>
+            </Layout>
+            <Batch>
+              <ColumnsToBatchBy json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">z</ColumnsToBatchBy>
+              <TemplateString>@[z](z)</TemplateString>
+            </Batch>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="244">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="3030" y="1098" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>
+          </TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="245">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerRender.PortfolioComposerRender">
+        <Position x="3030" y="1050" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFileType>pdf</TempFileType>
+          <BatchMode value="False" />
+          <DataField>Chart</DataField>
+          <Separator>Breaking</Separator>
+          <EmbedDependencies value="False" />
+          <ShowHeader value="False" />
+          <ShowFooter value="False" />
+          <PortraitMode value="True" />
+          <PaperType Width="612" Height="792" Left="36" Right="36" Top="36" Bottom="36" />
+          <DefaultStyles>
+            <Style Name="TextStyle" FontName="Arial" FontSize="14" Justify="Left" ForeColor="#000000" Locale="1033" />
+          </DefaultStyles>
+          <PNGResolution>1</PNGResolution>
+          <PNGLargerAction>squeeze</PNGLargerAction>
+          <PNGLargerThanPageChoice>warning</PNGLargerThanPageChoice>
+          <PNGTransparentBG value="False" />
+          <PNGBackColor value="#ffffff" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerRenderPlugin" />
+    </Node>
+    <Node ToolID="246">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2838" y="1134" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="padleft([z],3,'0')" field="z" size="16384" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[z = padleft([z],3,'0')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="247">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="270" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Min_x" />
+            <Field name="Min_y" />
+            <Field name="Min_z" />
+            <Field name="Max_x" selected="False" />
+            <Field name="Max_y" selected="False" />
+            <Field name="Max_z" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>[_CurrentField_]-1</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[_CurrentField_]-1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -2057,16 +2259,12 @@ exposed sides = 6-[count]
       <Destination ToolID="121" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="127" Connection="Output" />
-      <Destination ToolID="176" Connection="Left" />
-    </Connection>
-    <Connection>
       <Origin ToolID="128" Connection="Output" />
       <Destination ToolID="129" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="129" Connection="Output" />
-      <Destination ToolID="130" Connection="Input" />
+      <Destination ToolID="247" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="130" Connection="Output" />
@@ -2103,10 +2301,6 @@ exposed sides = 6-[count]
     <Connection>
       <Origin ToolID="139" Connection="Output" />
       <Destination ToolID="189" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="176" Connection="Join" />
-      <Destination ToolID="177" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="179" Connection="Output13" />
@@ -2261,6 +2455,10 @@ exposed sides = 6-[count]
       <Destination ToolID="218" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="216" Connection="Output13" />
+      <Destination ToolID="241" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="218" Connection="Output" />
       <Destination ToolID="219" Connection="Input" />
     </Connection>
@@ -2332,6 +2530,30 @@ exposed sides = 6-[count]
       <Origin ToolID="240" Connection="Output" />
       <Destination ToolID="232" Connection="Input" />
     </Connection>
+    <Connection>
+      <Origin ToolID="241" Connection="Output" />
+      <Destination ToolID="242" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="241" Connection="Output" />
+      <Destination ToolID="246" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="243" Connection="Output" />
+      <Destination ToolID="244" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="243" Connection="Output" />
+      <Destination ToolID="245" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="246" Connection="Output" />
+      <Destination ToolID="243" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="247" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
   </Connections>
   <Properties>
     <Memory default="True" />
@@ -2343,6 +2565,7 @@ exposed sides = 6-[count]
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
     <PredictiveToolsCodePage value="1252" />
     <DisableAllOutput value="False" />
     <ShowAllMacroMessages value="False" />

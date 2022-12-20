@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="115">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="318" y="330" />
+        <Position x="342" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -66,21 +66,20 @@
     </Node>
     <Node ToolID="117">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="450" y="318" />
+        <Position x="438" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[GeoRobots]+1" field="GeoRobots" size="1" type="Byte" />
-            <FormulaField expression="[Ore]-[GeoRobotCost_Ore]" field="Ore" size="1" type="Byte" />
-            <FormulaField expression="[Obsidian]-[GeoRobotCost_Obs]" field="Obsidian" size="1" type="Byte" />
+            <FormulaField expression="min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" field="GeoBuildLimit" size="4" type="Int32" />
+            <FormulaField expression="[GeoRobots]+[GeoBuildLimit]" field="GeoRobots" size="1" type="Byte" />
+            <FormulaField expression="[Ore]-([GeoRobotCost_Ore]*[GeoBuildLimit])" field="Ore" size="1" type="Byte" />
+            <FormulaField expression="[Obsidian]-([GeoRobotCost_Obs]*[GeoBuildLimit])" field="Obsidian" size="1" type="Byte" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>GeoRobots = [GeoRobots]+1
-Ore = [Ore]-[GeoRobotCost_Ore]
-Obsidian = [Obsidian]-[...</DefaultAnnotationText>
+          <DefaultAnnotationText>GeoBuildLimit = min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCo...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
@@ -93,14 +92,15 @@ Obsidian = [Obsidian]-[...</DefaultAnnotationText>
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
             <Field name="OreRobots" source="TextInput:" type="Byte" />
-            <Field name="Ore" source="Formula: [Ore]-[GeoRobotCost_Ore]" type="Byte" />
+            <Field name="Ore" source="Formula: [Ore]-([GeoRobotCost_Ore]*[GeoBuildLimit])" type="Byte" />
             <Field name="ClayRobots" source="TextInput:" type="Byte" />
             <Field name="Clay" source="TextInput:" type="Byte" />
             <Field name="ObsRobots" source="TextInput:" type="Byte" />
-            <Field name="Obsidian" source="Formula: [Obsidian]-[GeoRobotCost_Obs]" type="Byte" />
-            <Field name="GeoRobots" source="Formula: [GeoRobots]+1" type="Byte" />
+            <Field name="Obsidian" source="Formula: [Obsidian]-([GeoRobotCost_Obs]*[GeoBuildLimit])" type="Byte" />
+            <Field name="GeoRobots" source="Formula: [GeoRobots]+[GeoBuildLimit]" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -108,7 +108,7 @@ Obsidian = [Obsidian]-[...</DefaultAnnotationText>
     </Node>
     <Node ToolID="118">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="582" y="354" />
+        <Position x="522" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -140,6 +140,7 @@ Obsidian = [Obsidian]-[...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -147,20 +148,24 @@ Obsidian = [Obsidian]-[...</DefaultAnnotationText>
     </Node>
     <Node ToolID="119">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="306" y="486" />
+        <Position x="246" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Expression>[Ore] &gt;= [ObsRobotCost_Ore]
 &amp;&amp;
-[Clay] &gt;= [ObsRobotCost_Clay]</Expression>
+[Clay] &gt;= [ObsRobotCost_Clay]
+&amp;&amp;
+[ObsRobots]&lt;[GeoRobotCost_Obs]</Expression>
           <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText>[Ore] &gt;= [ObsRobotCost_Ore]
 &amp;&amp;
-[Clay] &gt;= [ObsRobotCost_Clay]</DefaultAnnotationText>
+[Clay] &gt;= [ObsRobotCost_Clay]
+&amp;&amp;
+[ObsRobots]&lt;[Geo...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="True">
@@ -181,6 +186,7 @@ Obsidian = [Obsidian]-[...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
@@ -201,6 +207,7 @@ Obsidian = [Obsidian]-[...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -208,21 +215,20 @@ Obsidian = [Obsidian]-[...</DefaultAnnotationText>
     </Node>
     <Node ToolID="120">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="486" y="474" />
+        <Position x="426" y="318" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[ObsRobots]+1" field="ObsRobots" size="1" type="Byte" />
-            <FormulaField expression="[Ore]-[ObsRobotCost_Ore]" field="Ore" size="1" type="Byte" />
-            <FormulaField expression="[Clay]-[ObsRobotCost_Clay]" field="Clay" size="1" type="Byte" />
+            <FormulaField expression="min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" field="ObsBuildLimit" size="4" type="Int32" />
+            <FormulaField expression="[ObsRobots]+[ObsBuildLimit]" field="ObsRobots" size="1" type="Byte" />
+            <FormulaField expression="[Ore]-([ObsRobotCost_Ore]*[ObsBuildLimit])" field="Ore" size="1" type="Byte" />
+            <FormulaField expression="[Clay]-([ObsRobotCost_Clay]*[ObsBuildLimit])" field="Clay" size="1" type="Byte" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>ObsRobots = [ObsRobots]+1
-Ore = [Ore]-[ObsRobotCost_Ore]
-Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
+          <DefaultAnnotationText>ObsBuildLimit = min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_C...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
@@ -235,14 +241,16 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
             <Field name="OreRobots" source="TextInput:" type="Byte" />
-            <Field name="Ore" source="Formula: [Ore]-[ObsRobotCost_Ore]" type="Byte" />
+            <Field name="Ore" source="Formula: [Ore]-([ObsRobotCost_Ore]*[ObsBuildLimit])" type="Byte" />
             <Field name="ClayRobots" source="TextInput:" type="Byte" />
-            <Field name="Clay" source="Formula: [Clay]-[ObsRobotCost_Clay]" type="Byte" />
-            <Field name="ObsRobots" source="Formula: [ObsRobots]+1" type="Byte" />
+            <Field name="Clay" source="Formula: [Clay]-([ObsRobotCost_Clay]*[ObsBuildLimit])" type="Byte" />
+            <Field name="ObsRobots" source="Formula: [ObsRobots]+[ObsBuildLimit]" type="Byte" />
             <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -250,7 +258,7 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
     </Node>
     <Node ToolID="121">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="582" y="510" />
+        <Position x="522" y="354" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -282,6 +290,8 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -289,11 +299,13 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
     </Node>
     <Node ToolID="122">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="306" y="726" />
+        <Position x="246" y="570" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Expression><![CDATA[[Ore] >= [ClayRobotCost_Ore]
+&&
+[ClayRobots] < [ObsRobotCost_Clay]
 
 ]]></Expression>
           <Mode>Custom</Mode>
@@ -301,6 +313,8 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText><![CDATA[[Ore] >= [ClayRobotCost_Ore]
+&&
+[ClayRobots] < [ObsRobotCost_Clay]
 
 ]]></DefaultAnnotationText>
           <Left value="False" />
@@ -323,6 +337,8 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
@@ -343,6 +359,8 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -350,20 +368,20 @@ Clay = [Clay]-[ObsRobot...</DefaultAnnotationText>
     </Node>
     <Node ToolID="123">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="486" y="714" />
+        <Position x="426" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[ClayRobots]+1" field="ClayRobots" size="1" type="Byte" />
-            <FormulaField expression="[Ore]-[ClayRobotCost_Ore]" field="Ore" size="1" type="Byte" />
+            <FormulaField expression="FLOOR([Ore]/[ClayRobotCost_Ore])" field="ClayBuildLimit" size="4" type="Int32" />
+            <FormulaField expression="[ClayRobots]+[ClayBuildLimit]" field="ClayRobots" size="1" type="Byte" />
+            <FormulaField expression="[Ore]-([ClayRobotCost_Ore]*[ClayBuildLimit])" field="Ore" size="1" type="Byte" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[ClayRobots = [ClayRobots]+1
-Ore = [Ore]-[ClayRobotCost_Ore]
-]]></DefaultAnnotationText>
+          <DefaultAnnotationText>ClayBuildLimit = FLOOR([Ore]/[ClayRobotCost_Ore])
+ClayRobots = [ClayRobots]+[Cla...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
@@ -376,14 +394,17 @@ Ore = [Ore]-[ClayRobotCost_Ore]
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
             <Field name="OreRobots" source="TextInput:" type="Byte" />
-            <Field name="Ore" source="Formula: [Ore]-[ClayRobotCost_Ore]" type="Byte" />
-            <Field name="ClayRobots" source="Formula: [ClayRobots]+1" type="Byte" />
+            <Field name="Ore" source="Formula: [Ore]-([ClayRobotCost_Ore]*[ClayBuildLimit])" type="Byte" />
+            <Field name="ClayRobots" source="Formula: [ClayRobots]+[ClayBuildLimit]" type="Byte" />
             <Field name="Clay" source="(Multiple Sources)" type="Byte" />
             <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -391,7 +412,7 @@ Ore = [Ore]-[ClayRobotCost_Ore]
     </Node>
     <Node ToolID="124">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="582" y="750" />
+        <Position x="522" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -423,6 +444,9 @@ Ore = [Ore]-[ClayRobotCost_Ore]
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -430,7 +454,7 @@ Ore = [Ore]-[ClayRobotCost_Ore]
     </Node>
     <Node ToolID="126">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="462" y="234" />
+        <Position x="402" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -464,7 +488,7 @@ Ore = [Ore]-[ClayRobotCost_Ore]
     </Node>
     <Node ToolID="127">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="690" y="306" />
+        <Position x="738" y="150" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -503,7 +527,7 @@ Ore = [Ore]-[ClayRobotCost_Ore]
             <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Ore" source="(Multiple Sources)" type="Byte" />
             <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Clay" source="(Multiple Sources)" type="Byte" />
@@ -512,6 +536,10 @@ Ore = [Ore]-[ClayRobotCost_Ore]
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+            <Field name="OreBuildLimit" source="Formula: floor([Ore]/[OreRobotCost_Ore])" type="Int32" />
           </RecordInfo>
           <SortInfo noProgress="True">
             <Field field="Blueprint" />
@@ -526,7 +554,7 @@ Ore = [Ore]-[ClayRobotCost_Ore]
             <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Ore" source="(Multiple Sources)" type="Byte" />
             <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Clay" source="(Multiple Sources)" type="Byte" />
@@ -535,6 +563,10 @@ Ore = [Ore]-[ClayRobotCost_Ore]
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="TextInput:" type="Byte" />
             <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+            <Field name="OreBuildLimit" source="Formula: floor([Ore]/[OreRobotCost_Ore])" type="Int32" />
             <Field name="Right_OreRobots" source="TextInput:" type="Byte" />
             <Field name="Right_ClayRobots" source="TextInput:" type="Byte" />
             <Field name="Right_ObsRobots" source="TextInput:" type="Byte" />
@@ -561,7 +593,7 @@ Ore = [Ore]-[ClayRobotCost_Ore]
     </Node>
     <Node ToolID="128">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="786" y="306" />
+        <Position x="834" y="150" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -589,7 +621,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
             <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Ore" source="Formula: [Ore]+[Right_OreRobots]" type="Byte" />
             <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Clay" source="Formula: [Clay]+[Right_ClayRobots]" type="Byte" />
@@ -598,6 +630,10 @@ Obsidian = [Obsid...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="Formula: [Geodes]+[Right_GeoRobots]" type="Byte" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+            <Field name="OreBuildLimit" source="Formula: floor([Ore]/[OreRobotCost_Ore])" type="Int32" />
             <Field name="Right_OreRobots" source="TextInput:" type="Byte" />
             <Field name="Right_ClayRobots" source="TextInput:" type="Byte" />
             <Field name="Right_ObsRobots" source="TextInput:" type="Byte" />
@@ -612,13 +648,17 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="129">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="882" y="306" />
+        <Position x="930" y="150" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
+            <SelectField field="GeoBuildLimit" selected="False" />
+            <SelectField field="ObsBuildLimit" selected="False" />
+            <SelectField field="ClayBuildLimit" selected="False" />
+            <SelectField field="OreBuildLimit" selected="False" />
             <SelectField field="Right_OreRobots" selected="False" />
             <SelectField field="Right_ClayRobots" selected="False" />
             <SelectField field="Right_ObsRobots" selected="False" />
@@ -640,7 +680,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
             <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Ore" source="Formula: [Ore]+[Right_OreRobots]" type="Byte" />
             <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Clay" source="Formula: [Clay]+[Right_ClayRobots]" type="Byte" />
@@ -659,7 +699,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="130">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="210" y="234" />
+        <Position x="150" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -712,7 +752,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="132">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="114" y="234" />
+        <Position x="54" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -814,7 +854,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="133">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1086" y="366" />
+        <Position x="1122" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -832,7 +872,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="134">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1038" y="246" />
+        <Position x="1026" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -850,7 +890,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="135">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="990" y="354" />
+        <Position x="1026" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -871,7 +911,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
             <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Ore" source="Formula: [Ore]+[Right_OreRobots]" type="Byte" />
             <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Clay" source="Formula: [Clay]+[Right_ClayRobots]" type="Byte" />
@@ -894,7 +934,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
             <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Ore" source="Formula: [Ore]+[Right_OreRobots]" type="Byte" />
             <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Clay" source="Formula: [Clay]+[Right_ClayRobots]" type="Byte" />
@@ -913,7 +953,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="136">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-        <Position x="930" y="210" width="59" height="59" />
+        <Position x="870" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -925,70 +965,9 @@ Obsidian = [Obsid...</DefaultAnnotationText>
         </Annotation>
       </Properties>
     </Node>
-    <Node ToolID="137">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="402" y="714" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression><![CDATA[floor([ObsRobotCost_Clay]/([ObsRobotCost_Ore]+[ObsRobotCost_Ore]))>
-([ClayRobots])/[OreRobots]
-
-]]></Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>floor([ObsRobotCost_Clay]/([ObsRobotCost_Ore]+[ObsRobotCost_Ore]))&gt;
-([ClayRobots...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="True">
-          <RecordInfo>
-            <Field name="Blueprint" source="TextInput:" type="Byte" />
-            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
-            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
-            <Field name="ClayRobots" source="TextInput:" type="Byte" />
-            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
-            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
-            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
-            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
-            <Field name="Geodes" source="TextInput:" type="Byte" />
-            <Field name="Minute" source="TextInput:" type="Byte" />
-          </RecordInfo>
-        </MetaInfo>
-        <MetaInfo connection="False">
-          <RecordInfo>
-            <Field name="Blueprint" source="TextInput:" type="Byte" />
-            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
-            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
-            <Field name="ClayRobots" source="TextInput:" type="Byte" />
-            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
-            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
-            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
-            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
-            <Field name="Geodes" source="TextInput:" type="Byte" />
-            <Field name="Minute" source="TextInput:" type="Byte" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
     <Node ToolID="138">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="858" y="246" />
+        <Position x="930" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1012,7 +991,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
             <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
             <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Ore" source="Formula: [Ore]+[Right_OreRobots]" type="Byte" />
             <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Clay" source="Formula: [Clay]+[Right_ClayRobots]" type="Byte" />
@@ -1021,6 +1000,10 @@ Obsidian = [Obsid...</DefaultAnnotationText>
             <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
             <Field name="Geodes" source="Formula: [Geodes]+[Right_GeoRobots]" type="Byte" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+            <Field name="OreBuildLimit" source="Formula: floor([Ore]/[OreRobotCost_Ore])" type="Int32" />
             <Field name="Right_OreRobots" source="TextInput:" type="Byte" />
             <Field name="Right_ClayRobots" source="TextInput:" type="Byte" />
             <Field name="Right_ObsRobots" source="TextInput:" type="Byte" />
@@ -1033,68 +1016,9 @@ Obsidian = [Obsid...</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="139">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="390" y="474" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>floor([GeoRobotCost_Obs]/([GeoRobotCost_Ore]))&gt;
-([ObsRobots])/[OreRobots]</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>floor([GeoRobotCost_Obs]/([GeoRobotCost_Ore]))&gt;
-([ObsRobots])/[OreRobots]</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="True">
-          <RecordInfo>
-            <Field name="Blueprint" source="TextInput:" type="Byte" />
-            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
-            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
-            <Field name="ClayRobots" source="TextInput:" type="Byte" />
-            <Field name="Clay" source="TextInput:" type="Byte" />
-            <Field name="ObsRobots" source="TextInput:" type="Byte" />
-            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
-            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
-            <Field name="Geodes" source="TextInput:" type="Byte" />
-            <Field name="Minute" source="TextInput:" type="Byte" />
-          </RecordInfo>
-        </MetaInfo>
-        <MetaInfo connection="False">
-          <RecordInfo>
-            <Field name="Blueprint" source="TextInput:" type="Byte" />
-            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
-            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
-            <Field name="OreRobots" source="TextInput:" type="Byte" />
-            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
-            <Field name="ClayRobots" source="TextInput:" type="Byte" />
-            <Field name="Clay" source="TextInput:" type="Byte" />
-            <Field name="ObsRobots" source="TextInput:" type="Byte" />
-            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
-            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
-            <Field name="Geodes" source="TextInput:" type="Byte" />
-            <Field name="Minute" source="TextInput:" type="Byte" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
     <Node ToolID="140">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="150" y="738" width="100" height="40" />
+        <Position x="90" y="582" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1114,7 +1038,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="141">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="150" y="486" width="100" height="40" />
+        <Position x="90" y="330" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1134,7 +1058,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="142">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="150" y="342" width="100" height="40" />
+        <Position x="90" y="186" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1154,7 +1078,7 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Node>
     <Node ToolID="143">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="678" y="654" width="192" height="72" />
+        <Position x="618" y="498" width="192" height="72" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1167,6 +1091,673 @@ Obsidian = [Obsid...</DefaultAnnotationText>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="144">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="246" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="TextInput:" type="Byte" />
+            <Field name="ObsRobots" source="TextInput:" type="Byte" />
+            <Field name="Obsidian" source="TextInput:" type="Byte" />
+            <Field name="GeoRobots" source="TextInput:" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="TextInput:" type="Byte" />
+            <Field name="ObsRobots" source="TextInput:" type="Byte" />
+            <Field name="Obsidian" source="TextInput:" type="Byte" />
+            <Field name="GeoRobots" source="TextInput:" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="145">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="618" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="TextInput:" type="Byte" />
+            <Field name="ObsRobots" source="TextInput:" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="146">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="246" y="18" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check Box (146)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="162" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="TextInput:" type="Byte" />
+            <Field name="ObsRobots" source="TextInput:" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="TextInput:" type="Byte" />
+            <Field name="ObsRobots" source="TextInput:" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="148">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="618" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="149">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="270" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[Ore] >= [OreRobotCost_Ore] && [OreRobots]<max([OreRobotCost_Ore],[ClayRobotCost_Ore],[ObsRobotCost_Ore],[GeoRobotCost_Ore])
+
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Ore] &gt;= [OreRobotCost_Ore] &amp;&amp; [OreRobots]&lt;max([OreRobotCost_Ore],[ClayRobotCost...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="150">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="438" y="786" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="floor([Ore]/[OreRobotCost_Ore])" field="OreBuildLimit" size="4" type="Int32" />
+            <FormulaField expression="[OreRobots]+[OreBuildLimit]" field="OreRobots" size="1" type="Byte" />
+            <FormulaField expression="[Ore]-([OreRobotCost_Ore]*[OreBuildLimit])" field="Ore" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>OreBuildLimit = floor([Ore]/[OreRobotCost_Ore])
+OreRobots = [OreRobots]+[OreBuil...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="Formula: [OreRobots]+[OreBuildLimit]" type="Byte" />
+            <Field name="Ore" source="Formula: [Ore]-([OreRobotCost_Ore]*[OreBuildLimit])" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+            <Field name="OreBuildLimit" source="Formula: floor([Ore]/[OreRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="151">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="546" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+            <Field name="OreBuildLimit" source="Formula: floor([Ore]/[OreRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="152">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="642" y="726" width="192" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[first check ratio of geode needs for obsidian, then ratio obsidian needs for ]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="153">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="138" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="TextInput:" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="154">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="618" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="155">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="162" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="TextInput:" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="156">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="642" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blueprint" source="TextInput:" type="Byte" />
+            <Field name="OreRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ClayRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="ObsRobotCost_Clay" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Ore" source="TextInput:" type="Byte" />
+            <Field name="GeoRobotCost_Obs" source="TextInput:" type="Byte" />
+            <Field name="OreRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Ore" source="(Multiple Sources)" type="Byte" />
+            <Field name="ClayRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Clay" source="(Multiple Sources)" type="Byte" />
+            <Field name="ObsRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Obsidian" source="(Multiple Sources)" type="Byte" />
+            <Field name="GeoRobots" source="(Multiple Sources)" type="Byte" />
+            <Field name="Geodes" source="TextInput:" type="Byte" />
+            <Field name="Minute" source="TextInput:" type="Byte" />
+            <Field name="GeoBuildLimit" source="Formula: min(FLOOR([Ore]/[GeoRobotCost_Ore]),FLOOR([Obsidian]/[GeoRobotCost_Obs]))" type="Int32" />
+            <Field name="ObsBuildLimit" source="Formula: min(FLOOR([Ore]/[ObsRobotCost_Ore]),FLOOR([Clay]/[ObsRobotCost_Clay]))" type="Int32" />
+            <Field name="ClayBuildLimit" source="Formula: FLOOR([Ore]/[ClayRobotCost_Ore])" type="Int32" />
+            <Field name="OreBuildLimit" source="Formula: floor([Ore]/[OreRobotCost_Ore])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="157">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="162" y="222" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check Box (157)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="158">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="42" y="390" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check Box (158)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="159">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="150" y="726" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check Box (159)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="160">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="246" y="96" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="161">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="162" y="270" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="162">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="66" y="462" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="163">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="156" y="780" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
@@ -1188,7 +1779,11 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="118" Connection="Output" />
-      <Destination ToolID="119" Connection="Input" />
+      <Destination ToolID="145" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Right" />
+      <Destination ToolID="145" Connection="Right" />
     </Connection>
     <Connection name="#2">
       <Origin ToolID="119" Connection="False" />
@@ -1200,11 +1795,15 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="119" Connection="True" />
-      <Destination ToolID="139" Connection="Input" />
+      <Destination ToolID="120" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="121" Connection="Output" />
-      <Destination ToolID="122" Connection="Input" />
+      <Destination ToolID="148" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="Right" />
+      <Destination ToolID="148" Connection="Right" />
     </Connection>
     <Connection name="#2">
       <Origin ToolID="122" Connection="False" />
@@ -1214,21 +1813,25 @@ Obsidian = [Obsid...</DefaultAnnotationText>
       <Origin ToolID="123" Connection="Output" />
       <Destination ToolID="124" Connection="Input" />
     </Connection>
-    <Connection name="#3">
-      <Origin ToolID="137" Connection="False" />
-      <Destination ToolID="124" Connection="Input" />
-    </Connection>
     <Connection>
       <Origin ToolID="122" Connection="True" />
-      <Destination ToolID="137" Connection="Input" />
+      <Destination ToolID="123" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="124" Connection="Output" />
-      <Destination ToolID="127" Connection="Left" />
+      <Destination ToolID="154" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Right" />
+      <Destination ToolID="154" Connection="Right" />
     </Connection>
     <Connection>
       <Origin ToolID="126" Connection="Output" />
       <Destination ToolID="127" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="156" Connection="Output" />
+      <Destination ToolID="127" Connection="Left" />
     </Connection>
     <Connection>
       <Origin ToolID="127" Connection="Join" />
@@ -1252,11 +1855,15 @@ Obsidian = [Obsid...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="130" Connection="Output" />
-      <Destination ToolID="115" Connection="Input" />
+      <Destination ToolID="126" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="130" Connection="Output" />
-      <Destination ToolID="126" Connection="Input" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="160" Connection="Action" />
+      <Destination ToolID="144" Connection="Action" />
     </Connection>
     <Connection>
       <Origin ToolID="132" Connection="Output" />
@@ -1267,16 +1874,84 @@ Obsidian = [Obsid...</DefaultAnnotationText>
       <Destination ToolID="133" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="137" Connection="True" />
-      <Destination ToolID="123" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="138" Connection="Output" />
       <Destination ToolID="134" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="139" Connection="True" />
-      <Destination ToolID="120" Connection="Input" />
+      <Origin ToolID="144" Connection="Left" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="161" Connection="Action" />
+      <Destination ToolID="147" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="146" Connection="Question" />
+      <Destination ToolID="160" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="Left" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="148" Connection="Output" />
+      <Destination ToolID="153" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="162" Connection="Action" />
+      <Destination ToolID="153" Connection="Action" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="149" Connection="False" />
+      <Destination ToolID="151" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="150" Connection="Output" />
+      <Destination ToolID="151" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="True" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Output" />
+      <Destination ToolID="156" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="Right" />
+      <Destination ToolID="156" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Left" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Output" />
+      <Destination ToolID="155" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="163" Connection="Action" />
+      <Destination ToolID="155" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="Left" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="157" Connection="Question" />
+      <Destination ToolID="161" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="158" Connection="Question" />
+      <Destination ToolID="162" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="159" Connection="Question" />
+      <Destination ToolID="163" Connection="Question" />
     </Connection>
   </Connections>
   <Properties>
@@ -1309,6 +1984,30 @@ Obsidian = [Obsid...</DefaultAnnotationText>
         <Value />
         <IsNumeric value="True" />
       </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Check Box (146)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Check Box (157)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Check Box (158)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Check Box (159)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
     </Constants>
     <MetaInfo>
       <NameIsFileName value="True" />
@@ -1327,17 +2026,68 @@ Obsidian = [Obsid...</DefaultAnnotationText>
         <Description />
         <File />
       </Example>
-      <WorkflowId value="00000000-0000-0000-0000-000000000000" />
+      <WorkflowId value="96d59a0e-ac27-4449-a68b-bfa3c31cbf04" />
       <Telemetry>
         <PreviousWorkflowId value="" />
-        <OriginWorkflowId value="00000000-0000-0000-0000-000000000000" />
+        <OriginWorkflowId value="96d59a0e-ac27-4449-a68b-bfa3c31cbf04" />
       </Telemetry>
     </MetaInfo>
     <Events>
       <Enabled value="False" />
     </Events>
     <RuntimeProperties>
-      <Actions />
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="160" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>144/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="161" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>147/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="162" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>153/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="163" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>155/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
       <Questions>
         <Question>
           <Type>Tab</Type>
@@ -1373,6 +2123,42 @@ Obsidian = [Obsid...</DefaultAnnotationText>
               <Increment value="1" />
               <Default value="24" />
               <Decimals value="0" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>SkipGeodeBuild</Description>
+              <Name>Check Box (146)</Name>
+              <ToolId value="146" />
+              <Questions />
+              <Default value="False" />
+              <Collapsable value="False" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>SkipObsidianBuild</Description>
+              <Name>Check Box (157)</Name>
+              <ToolId value="157" />
+              <Questions />
+              <Default value="False" />
+              <Collapsable value="False" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>SkipClayBuild</Description>
+              <Name>Check Box (158)</Name>
+              <ToolId value="158" />
+              <Questions />
+              <Default value="False" />
+              <Collapsable value="False" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>SkipOreBuild</Description>
+              <Name>Check Box (159)</Name>
+              <ToolId value="159" />
+              <Questions />
+              <Default value="False" />
+              <Collapsable value="False" />
             </Question>
           </Questions>
         </Question>

@@ -23,7 +23,7 @@
     </Node>
     <Node ToolID="86">
       <GuiSettings>
-        <Position x="138" y="438" />
+        <Position x="102" y="462" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -105,11 +105,11 @@ Split From Here
     </Node>
     <Node ToolID="84">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="234" y="402" />
+        <Position x="294" y="402" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_20848_f5931a90bb8e4c319f2fd98e9423bc41_\Engine_9956_c1790f830f484a7bb1cdcdc945db82e9_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_1712_dc9c7ab5cfaa4d74b6fa42fb726605c0_\Engine_9956_c3677a9b885e4a35a993915789c5ea78_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -238,7 +238,7 @@ Split From Here
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>C:\temp\Engine_20848_f5931a90bb8e4c319f2fd98e9423bc41_\Engine_9956_39189f3e85044f199f4d37ebc56fbef3_.yxdb</TempFile>
+              <TempFile>C:\temp\Engine_1712_dc9c7ab5cfaa4d74b6fa42fb726605c0_\Engine_9956_d4213dac4865480fb1b2fa3138697124_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -266,7 +266,7 @@ Split From Here
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>C:\temp\Engine_20848_f5931a90bb8e4c319f2fd98e9423bc41_\Engine_9956_711bfe937c554cbdbfe4a44b9edaa527_.yxdb</TempFile>
+              <TempFile>C:\temp\Engine_1712_dc9c7ab5cfaa4d74b6fa42fb726605c0_\Engine_9956_2901683a8b9a400291ac1ff86bd7d3fe_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -518,11 +518,13 @@ RecordID - Ascending</DefaultAnnotationText>
           </GuiSettings>
           <Properties>
             <Configuration>
-              <Text><![CDATA[5427 is too low
+              <Text>5427 is too low
 
 AMP = 4556
 
-]]></Text>
+
+14226 is too high
+7304 is too low</Text>
               <Font name="Arial" size="8.25" style="0" />
               <TextColor name="Black" />
               <FillColor name="White" />
@@ -536,7 +538,7 @@ AMP = 4556
             </Annotation>
           </Properties>
         </Node>
-        <Node ToolID="395">
+        <Node ToolID="468">
           <GuiSettings>
             <Position x="618" y="461" />
           </GuiSettings>
@@ -554,7 +556,7 @@ AMP = 4556
     </Node>
     <Node ToolID="188">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-        <Position x="210" y="630" />
+        <Position x="246" y="618" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -641,6 +643,27 @@ AMP = 4556
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="413">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="198" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_1" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
     <Node ToolID="348">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -1346,7 +1369,7 @@ AMP = 4556
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
         </Node>
-        <Node ToolID="396">
+        <Node ToolID="469">
           <GuiSettings>
             <Position x="534" y="702" />
           </GuiSettings>
@@ -1360,7 +1383,7 @@ AMP = 4556
           </Properties>
           <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day20_IterativeMacro.yxmc" />
         </Node>
-        <Node ToolID="397">
+        <Node ToolID="470">
           <GuiSettings>
             <Position x="606" y="786" />
           </GuiSettings>
@@ -1374,7 +1397,7 @@ AMP = 4556
           </Properties>
           <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day20_IterativeMacro.yxmc" />
         </Node>
-        <Node ToolID="398">
+        <Node ToolID="471">
           <GuiSettings>
             <Position x="606" y="870" />
           </GuiSettings>
@@ -1388,7 +1411,7 @@ AMP = 4556
           </Properties>
           <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day20_IterativeMacro.yxmc" />
         </Node>
-        <Node ToolID="399">
+        <Node ToolID="472">
           <GuiSettings>
             <Position x="894" y="702" />
           </GuiSettings>
@@ -1402,7 +1425,7 @@ AMP = 4556
           </Properties>
           <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day20_IterativeMacro.yxmc" />
         </Node>
-        <Node ToolID="400">
+        <Node ToolID="473">
           <GuiSettings>
             <Position x="894" y="786" />
           </GuiSettings>
@@ -1416,7 +1439,7 @@ AMP = 4556
           </Properties>
           <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day20_IterativeMacro.yxmc" />
         </Node>
-        <Node ToolID="401">
+        <Node ToolID="474">
           <GuiSettings>
             <Position x="606" y="942" />
           </GuiSettings>
@@ -1430,7 +1453,7 @@ AMP = 4556
           </Properties>
           <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day20_IterativeMacro.yxmc" />
         </Node>
-        <Node ToolID="402">
+        <Node ToolID="475">
           <GuiSettings>
             <Position x="894" y="870" />
           </GuiSettings>
@@ -1444,7 +1467,7 @@ AMP = 4556
           </Properties>
           <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day20_IterativeMacro.yxmc" />
         </Node>
-        <Node ToolID="403">
+        <Node ToolID="476">
           <GuiSettings>
             <Position x="894" y="942" />
           </GuiSettings>
@@ -1464,11 +1487,11 @@ AMP = 4556
   <Connections>
     <Connection>
       <Origin ToolID="86" Connection="FullData" />
-      <Destination ToolID="84" Connection="Input" />
+      <Destination ToolID="87" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="86" Connection="FullData" />
-      <Destination ToolID="87" Connection="Input" />
+      <Destination ToolID="413" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="87" Connection="Output" />
@@ -1488,7 +1511,11 @@ AMP = 4556
     </Connection>
     <Connection>
       <Origin ToolID="187" Connection="Output" />
-      <Destination ToolID="395" Connection="Input" />
+      <Destination ToolID="468" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="188" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="154" Connection="Output" />
@@ -1531,83 +1558,83 @@ AMP = 4556
       <Destination ToolID="166" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="395" Connection="Iterate" />
+      <Origin ToolID="468" Connection="Iterate" />
       <Destination ToolID="149" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="395" Connection="Output" />
+      <Origin ToolID="468" Connection="Output" />
       <Destination ToolID="150" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="395" Connection="Output" />
+      <Origin ToolID="468" Connection="Output" />
       <Destination ToolID="154" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="324" Connection="Output" />
-      <Destination ToolID="188" Connection="Input" />
+      <Destination ToolID="469" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="324" Connection="Output" />
-      <Destination ToolID="396" Connection="Input" />
+      <Origin ToolID="413" Connection="Output" />
+      <Destination ToolID="84" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="327" Connection="Output" />
-      <Destination ToolID="397" Connection="Input" />
+      <Destination ToolID="470" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="330" Connection="Output" />
-      <Destination ToolID="398" Connection="Input" />
+      <Destination ToolID="471" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="333" Connection="Output" />
-      <Destination ToolID="399" Connection="Input" />
+      <Destination ToolID="472" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="336" Connection="Output" />
-      <Destination ToolID="400" Connection="Input" />
+      <Destination ToolID="473" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="339" Connection="Output" />
-      <Destination ToolID="401" Connection="Input" />
+      <Destination ToolID="474" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="342" Connection="Output" />
-      <Destination ToolID="402" Connection="Input" />
+      <Destination ToolID="475" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="345" Connection="Output" />
-      <Destination ToolID="403" Connection="Input" />
+      <Destination ToolID="476" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="396" Connection="Output" />
+      <Origin ToolID="469" Connection="Output" />
       <Destination ToolID="326" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="397" Connection="Output" />
+      <Origin ToolID="470" Connection="Output" />
       <Destination ToolID="329" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="398" Connection="Output" />
+      <Origin ToolID="471" Connection="Output" />
       <Destination ToolID="332" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="399" Connection="Output" />
+      <Origin ToolID="472" Connection="Output" />
       <Destination ToolID="335" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="400" Connection="Output" />
+      <Origin ToolID="473" Connection="Output" />
       <Destination ToolID="338" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="401" Connection="Output" />
+      <Origin ToolID="474" Connection="Output" />
       <Destination ToolID="341" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="402" Connection="Output" />
+      <Origin ToolID="475" Connection="Output" />
       <Destination ToolID="344" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="403" Connection="Output" />
+      <Origin ToolID="476" Connection="Output" />
       <Destination ToolID="347" Connection="Input" />
     </Connection>
   </Connections>

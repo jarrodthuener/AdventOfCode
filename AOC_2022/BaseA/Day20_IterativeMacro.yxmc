@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="88">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="654" y="90" />
+        <Position x="570" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -18,19 +18,19 @@
         <MetaInfo connection="True">
           <RecordInfo>
             <Field name="Order" scale="1" size="11" source="RecordID: Starting Value=1" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
             <Field name="Order" scale="1" size="11" source="RecordID: Starting Value=1" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -38,7 +38,7 @@
     </Node>
     <Node ToolID="89">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="462" y="90" />
+        <Position x="378" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -56,10 +56,10 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Order" source="RecordID: Starting Value=1" type="Int32" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
           <SortInfo>
             <Field field="Order" order="Asc" />
@@ -70,7 +70,7 @@
     </Node>
     <Node ToolID="93">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="558" y="90" />
+        <Position x="474" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -89,10 +89,10 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Order" scale="1" size="11" source="RecordID: Starting Value=1" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -100,7 +100,7 @@
     </Node>
     <Node ToolID="94">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="846" y="102" />
+        <Position x="1146" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -116,12 +116,11 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Order" scale="1" size="11" source="(Multiple Sources)" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
-            <Field name="NetChange" scale="1" size="11" source="Formula: tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" type="FixedDecimal" />
+            <Field name="Order" scale="1" size="11" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -129,7 +128,7 @@
     </Node>
     <Node ToolID="95">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1170" y="174" />
+        <Position x="1434" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -144,12 +143,11 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Order" scale="1" size="11" source="(Multiple Sources)" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
-            <Field name="NetChange" scale="1" size="11" source="Formula: tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" type="FixedDecimal" />
+            <Field name="Order" scale="1" size="11" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -157,7 +155,7 @@
     </Node>
     <Node ToolID="96">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1242" y="6" />
+        <Position x="1434" y="6" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -165,6 +163,7 @@
           <CommaDecimal value="False" />
           <SelectFields>
             <SelectField field="Order" selected="False" />
+            <SelectField field="NewOrder" selected="False" />
             <SelectField field="NetChange" selected="False" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
@@ -176,10 +175,10 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -225,10 +224,10 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -236,7 +235,7 @@
     </Node>
     <Node ToolID="99">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1338" y="42" />
+        <Position x="1530" y="42" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -254,7 +253,7 @@
     </Node>
     <Node ToolID="102">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1302" y="186" />
+        <Position x="1530" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -270,38 +269,9 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
     </Node>
-    <Node ToolID="103">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="750" y="54" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" field="NetChange" size="11.1" type="FixedDecimal" />
-            <FormulaField expression="iif([NetChange]=0,[Order],&#xA;&#xA;iif([NetChange] &lt; 0,&#xA;IIF([NetChange]+[Order]&lt;1,[Count]+[NetChange]+[Order],[NetChange]+[Order]-.5),&#xA;&#xA;iif([NetChange]+[Order]&gt;[Count],[NetChange]+[Order]-[Count]+0.5,[NetChange]+[Order]+0.5)))&#xA;" field="Order" size="11.1" type="FixedDecimal" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>NetChange = tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="Order" scale="1" size="11" source="Formula: iif([NetChange]=0,[Order],&#xA;&#xA;iif([NetChange] &lt; 0,&#xA;IIF([NetChange]+[Order]&lt;1,[Count]+[NetChange]+[Order],[NetChange]+[Order]-.5),&#xA;&#xA;iif([NetChange]+[Order]&gt;[Count],[NetChange]+[Order]-[Count]+0.5,[NetChange]+[Order]+0.5)))&#xA;" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
-            <Field name="NetChange" scale="1" size="11" source="Formula: tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" type="FixedDecimal" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
     <Node ToolID="104">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-        <Position x="1326" y="102" />
+        <Position x="1530" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -325,7 +295,7 @@
     </Node>
     <Node ToolID="105">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="942" y="78" />
+        <Position x="1242" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -341,12 +311,11 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Order" scale="1" size="11" source="(Multiple Sources)" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
-            <Field name="NetChange" scale="1" size="11" source="Formula: tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" type="FixedDecimal" />
+            <Field name="Order" scale="1" size="11" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -354,7 +323,7 @@
     </Node>
     <Node ToolID="108">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1158" y="18" />
+        <Position x="1338" y="18" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -369,12 +338,11 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Order" scale="1" size="11" source="(Multiple Sources)" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
-            <Field name="NetChange" scale="1" size="11" source="Formula: tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" type="FixedDecimal" />
+            <Field name="Order" scale="1" size="11" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -396,18 +364,18 @@
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -415,7 +383,7 @@
     </Node>
     <Node ToolID="110">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1062" y="174" />
+        <Position x="1338" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -429,40 +397,514 @@
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Order" scale="1" size="11" source="(Multiple Sources)" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
-            <Field name="NetChange" scale="1" size="11" source="Formula: tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" type="FixedDecimal" />
+            <Field name="Order" scale="1" size="11" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Order" scale="1" size="11" source="(Multiple Sources)" type="FixedDecimal" />
-            <Field name="index" source="TextInput:" type="Byte" />
-            <Field name="data" source="TextInput:" type="Byte" />
-            <Field name="Count" source="TextInput:" type="Byte" />
-            <Field name="Iteration" source="Formula: [Iteration]+1" type="Byte" />
-            <Field name="NetChange" scale="1" size="11" source="Formula: tonumber(iif(abs([data])&gt;[Count],[data]-FLOOR([data]/[Count]),[data]))" type="FixedDecimal" />
+            <Field name="Order" scale="1" size="11" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="810" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([data]&lt;0,&#xA;-(mod(ABS([data]),[Count]-1)),Mod([data],[Count]-1))" field="NetChange" size="11.1" type="FixedDecimal" />
+            <FormulaField expression="[NetChange]+[Order]" field="rawNewOrder" size="4" type="Int32" />
+            <FormulaField expression="iif([rawNewOrder]&lt;=1,[Count]+[rawNewOrder]-1.5,&#xA;iif([rawNewOrder]&gt;=[Count],[rawNewOrder]-[Count]-1,[rawNewOrder]-.5))&#xA;&#xA;&#xA;/*iif([NetChange]+[Order] &gt;= [Count],&#xA;mod([NetChange]+[Order],[Count]-1)+.5,&#xA;&#xA;iif([NetChange]+[Order] &lt;= [Count],&#xA;mod([NetChange]+[Order],[Count]-1)-.5&#xA;&#xA;iif([NetChange]+[Order] ==0, 0,[Count]))*/" field="NewOrder" size="11.1" type="FixedDecimal" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NetChange = iif([data]&lt;0,
+-(mod(ABS([data]),[Count]-1)),Mod([data],[Count]-1))
+r...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Order" scale="1" size="11" source="RecordID: Starting Value=1" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
+            <Field name="NetChange" scale="1" size="11" source="Formula: iif([data]&lt;0,&#xA;-(mod(ABS([data]),[Count]-1)),Mod([data],[Count]-1))" type="FixedDecimal" />
+            <Field name="rawNewOrder" source="Formula: [NetChange]+[Order]" type="Int32" />
+            <Field name="NewOrder" scale="1" size="11" source="Formula: iif([rawNewOrder]&lt;=1,[Count]+[rawNewOrder]-1.5,&#xA;iif([rawNewOrder]&gt;=[Count],[rawNewOrder]-[Count]-1,[rawNewOrder]-.5))&#xA;&#xA;&#xA;/*iif([NetChange]+[Order] &gt;= [Count],&#xA;mod([NetChange]+[Order],[Count]-1)+.5,&#xA;&#xA;iif([NetChange]+[Order] &lt;= [Count],&#xA;mod([NetChange]+[Order],[Count]-1)-.5&#xA;&#xA;iif([NetChange]+[Order] ==0, 0,[Count]))*/" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="689" y="221" width="158" height="240" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 123</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="103">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="714" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="iif([data]&lt;0,&#xA;-(mod(-[data],[Count]-1)),Mod([data],[Count]-1))" field="NetChange" size="11.1" type="FixedDecimal" />
+                <FormulaField expression="iif([NetChange]+[Order] &gt;= [Count],&#xA;mod([NetChange]+[Order],[Count]+1)+.5,&#xA;iif([NetChange]+[Order] ==0, iif([NetChange]&gt;=0,0,[Count]),null()))" field="NewOrder" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NetChange = iif([data]&lt;0,
+-(mod(-[data],[Count]-1)),Mod([data],[Count]-1))
+NewOr...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Order" scale="1" size="11" source="RecordID: Starting Value=1" type="FixedDecimal" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+                <Field name="NetChange" scale="1" size="11" source="Formula: iif([data]&lt;0,&#xA;-(mod(-[data],[Count]-1)),Mod([data],[Count]-1))" type="FixedDecimal" />
+                <Field name="NewOrder" source="Formula: iif([NetChange]+[Order] &gt;= [Count],&#xA;mod([NetChange]+[Order],[Count]+1)+.5,&#xA;iif([NetChange]+[Order] ==0, iif([NetChange]&gt;=0,0,[Count]),null()))" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="124">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="906" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Order" selected="False" />
+            <SelectField field="NewOrder" selected="True" rename="Order" />
+            <SelectField field="index" selected="True" />
+            <SelectField field="data" selected="True" />
+            <SelectField field="Count" selected="True" />
+            <SelectField field="Iteration" selected="True" />
+            <SelectField field="NetChange" selected="False" />
+            <SelectField field="rawNewOrder" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Order" scale="1" size="11" source="Formula: iif([rawNewOrder]&lt;=1,[Count]+[rawNewOrder]-1.5,&#xA;iif([rawNewOrder]&gt;=[Count],[rawNewOrder]-[Count]-1,[rawNewOrder]-.5))&#xA;&#xA;&#xA;/*iif([NetChange]+[Order] &gt;= [Count],&#xA;mod([NetChange]+[Order],[Count]-1)+.5,&#xA;&#xA;iif([NetChange]+[Order] &lt;= [Count],&#xA;mod([NetChange]+[Order],[Count]-1)-.5&#xA;&#xA;iif([NetChange]+[Order] ==0, 0,[Count]))*/" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="702" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Order</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Order]+1</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Order]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: [Row-1:Order]+1" name="Order" scale="1" size="11" source="Formula: [Row-1:Order]+1" type="FixedDecimal" />
+            <Field name="index" source="RecordID: Starting Value=0" type="Int32" />
+            <Field name="data" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day20.txt" type="Int32" />
+            <Field name="Count" source="Summarize: Count - index" type="Int64" />
+            <Field name="Iteration" source="Formula: [Iteration]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="329" y="257" width="158" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 121</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="111">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="354" y="329" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Order" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="112">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="450" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>Order</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Order" source="RecordID: Starting Value=1" type="Int32" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="Order" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="114">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="678" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="CEIL([data]/[Count])+1" field="data" size="1" type="Byte" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[data = CEIL([data]/[Count])+1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Order" scale="1" size="11" source="RecordID: Starting Value=1" type="FixedDecimal" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="Formula: CEIL([data]/[Count])+1" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="115">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="546" y="330" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_Order" selected="False" rename="Source_Order" input="Source_" />
+                    <SelectField field="Source_index" selected="False" rename="Source_index" input="Source_" />
+                    <SelectField field="Source_data" selected="True" rename="multiple" input="Source_" />
+                    <SelectField field="Source_Count" selected="False" rename="Source_Count" input="Source_" />
+                    <SelectField field="Source_Iteration" selected="False" rename="Source_Iteration" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Order" source="RecordID: Starting Value=1" type="Int32" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+                <Field name="multiple" source="Formula: CEIL([data]/[Count])+1" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="116">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+            <Position x="678" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>Order</UpdateField_Name>
+              <CreateField_Name>RowCount</CreateField_Name>
+              <CreateField_Type>Int32</CreateField_Type>
+              <CreateField_Size>4</CreateField_Size>
+              <Expression_Init>1</Expression_Init>
+              <Expression_Cond>RowCount &lt;= Multiple</Expression_Cond>
+              <Expression_Loop>RowCount + 1</Expression_Loop>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Order" source="RecordID: Starting Value=1" type="Int32" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+                <Field name="multiple" source="Formula: CEIL([data]/[Count])+1" type="Byte" />
+                <Field name="RowCount" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+        </Node>
+        <Node ToolID="117">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="774" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="RowCount" order="Ascending" />
+                <Field field="Order" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>RowCount - Ascending
+Order - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Order" source="RecordID: Starting Value=1" type="Int32" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+                <Field name="multiple" source="Formula: CEIL([data]/[Count])+1" type="Byte" />
+                <Field name="RowCount" type="Int32" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="118">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="870" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RecordID</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+                <Field name="Order" source="RecordID: Starting Value=1" type="Int32" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+                <Field name="multiple" source="Formula: CEIL([data]/[Count])+1" type="Byte" />
+                <Field name="RowCount" type="Int32" />
+              </RecordInfo>
+              <SortInfo>
+                <Field field="RecordID" order="Asc" />
+              </SortInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="119">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="774" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Order]+[data]" field="Order" size="11.1" type="FixedDecimal" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Order = [Order]+[data]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Order" scale="1" size="11" source="Formula: [Order]+[data]" type="FixedDecimal" />
+                <Field name="index" source="TextInput:" type="Byte" />
+                <Field name="data" source="TextInput:" type="Byte" />
+                <Field name="Count" source="TextInput:" type="Byte" />
+                <Field name="Iteration" source="TextInput:" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="120">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="941" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left" />
+              <JoinInfo connection="Right" />
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Order" selected="True" rename="Right_Order" input="Right_" />
+                    <SelectField field="Right_index" selected="True" rename="Right_index" input="Right_" />
+                    <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                    <SelectField field="Right_Count" selected="True" rename="Right_Count" input="Right_" />
+                    <SelectField field="Right_Iteration" selected="True" rename="Right_Iteration" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
   </Nodes>
   <Connections>
-    <Connection name="#2">
-      <Origin ToolID="88" Connection="False" />
-      <Destination ToolID="94" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="103" Connection="Output" />
-      <Destination ToolID="94" Connection="Input" />
-    </Connection>
     <Connection>
       <Origin ToolID="88" Connection="True" />
       <Destination ToolID="103" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="False" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="True" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="True" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="True" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="False" />
+      <Destination ToolID="125" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="89" Connection="Output" />
@@ -511,6 +953,58 @@
     <Connection>
       <Origin ToolID="110" Connection="True" />
       <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="103" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="111" Connection="Output" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="115" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="115" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="116" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="116" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="Output" />
+      <Destination ToolID="118" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="120" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="120" Connection="Left" />
     </Connection>
   </Connections>
   <Properties>

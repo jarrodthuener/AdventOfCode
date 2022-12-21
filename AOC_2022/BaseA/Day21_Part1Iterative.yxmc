@@ -1,0 +1,1203 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsEmpty</Operator>
+            <Field>Number</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-21 08:23:31</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2022-12-21 08:23:31</StartDate>
+              <EndDate>2022-12-21 08:23:31</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IsEmpty([Number])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="726" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="monkey" action="GroupBy" rename="monkey" />
+            <SummarizeField field="Number" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="Summarize: GroupBy - monkey" type="V_String" />
+            <Field name="Count" source="Summarize: Count" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="monkey" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="258" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="monkey" />
+            <Field field="operation" />
+          </KeyFields>
+          <DataFields>
+            <Field field="monkey" selected="False" />
+            <Field field="var1" selected="True" />
+            <Field field="operation" selected="False" />
+            <Field field="var2" selected="True" />
+            <Field field="Number" selected="False" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="96">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="342" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Value" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="monkey" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_monkey" selected="False" rename="Right_monkey" input="Right_" />
+                <SelectField field="Right_operation" selected="False" rename="Right_operation" input="Right_" />
+                <SelectField field="Right_var2" selected="False" input="Right_" />
+                <SelectField field="Right_var1" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Value" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Value" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="monkey" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="97">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="822" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-21 08:26:19</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>2</Operand>
+              <StartDate>2022-12-21 08:26:19</StartDate>
+              <EndDate>2022-12-21 08:26:19</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="Summarize: GroupBy - monkey" type="V_String" />
+            <Field name="Count" source="Summarize: Count" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="monkey" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="Summarize: GroupBy - monkey" type="V_String" />
+            <Field name="Count" source="Summarize: Count" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="monkey" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="726" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="monkey" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="monkey" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Number" selected="True" input="Left_" type="Int64" size="8" />
+                <SelectField field="Right_monkey" selected="False" rename="Right_monkey" input="Right_" />
+                <SelectField field="Right_Count" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="monkey" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="monkey" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="Summarize: GroupBy - monkey" type="V_String" />
+            <Field name="Count" source="Summarize: Count" type="Int64" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="monkey" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="103">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="822" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="monkey" />
+            <Field field="operation" />
+          </GroupFields>
+          <HeaderField field="Name" />
+          <DataField field="Number" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="CrossTab:Group:First:" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="CrossTab:Group:First:" type="V_String" />
+            <Field name="var2" source="(Multiple Sources)" type="Int64" />
+            <Field name="var1" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="monkey" order="Asc" />
+            <Field field="operation" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="104">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="918" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([operation]='+',&#xA;[var1]+[var2],&#xA;iif([operation]='-',&#xA;[var1]-[var2],&#xA;iif([operation]='/',&#xA;[var1]/[var2], [var1]*[var2])))" field="Number" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Number = iif([operation]='+',
+[var1]+[var2],
+iif([operation]='-',
+[var1]-[var2],...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="CrossTab:Group:First:" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="CrossTab:Group:First:" type="V_String" />
+            <Field name="var2" source="(Multiple Sources)" type="Int64" />
+            <Field name="var1" source="(Multiple Sources)" type="Int64" />
+            <Field name="Number" source="Formula: iif([operation]='+',&#xA;[var1]+[var2],&#xA;iif([operation]='-',&#xA;[var1]-[var2],&#xA;iif([operation]='/',&#xA;[var1]/[var2], [var1]*[var2])))" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="monkey" order="Asc" />
+            <Field field="operation" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="105">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1014" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="106">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1110" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="monkey" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="monkey" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_monkey" selected="False" rename="Right_monkey" input="Right_" />
+                <SelectField field="Right_var1" selected="False" rename="Right_var1" input="Right_" />
+                <SelectField field="Right_operation" selected="False" rename="Right_operation" input="Right_" />
+                <SelectField field="Right_var2" selected="False" rename="Right_var2" input="Right_" />
+                <SelectField field="Right_Number" selected="False" rename="Right_Number" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="monkey" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="monkey" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="monkey" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="107">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1206" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1302" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Number" action="CountNull" rename="CountNull_Number" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CountNull_Number" source="Summarize: CountNull - Number" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="187">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1398" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="CountNull_Number" source="Summarize: CountNull - Number" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="188">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1494" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>CountNull_Number</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-21 08:34:18</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2022-12-21 08:34:18</StartDate>
+              <EndDate>2022-12-21 08:34:18</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[CountNull_Number] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="CountNull_Number" source="Summarize: CountNull - Number" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="CountNull_Number" source="Summarize: CountNull - Number" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="189">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1590" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CountNull_Number" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="190">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1590" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="CountNull_Number" source="Summarize: CountNull - Number" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="191">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="192">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Input</Name>
+          <Abbrev>O</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Day21_IterationInput.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText>Day21_IterationInput.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="196">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1686" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="197">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1686" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="198">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="630" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="199">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="438" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>REGEX_Match([Value],'\d+')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>REGEX_Match([Value],'\d+')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Value" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Value" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Value" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="200">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1686" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">Day21_IterationInput.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day21_IterationInput.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="201">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1494" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>isempty([Number])&amp;&amp;IsEmpty([var1])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>isempty([Number])&amp;&amp;IsEmpty([var1])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="CountNull_Number" source="Summarize: CountNull - Number" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var2" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="var1" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="CountNull_Number" source="Summarize: CountNull - Number" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="202">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1590" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_23520_6a210f5d957c435d91ab9de0587c6284_\Engine_9956_4f40f82fa7fb412e80bec8dcc7cf90fb_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="203">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1590" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_23520_6a210f5d957c435d91ab9de0587c6284_\Engine_9956_09360374978a4bdd90b50a8e0a8882aa_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="204">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="534" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Value" selected="True" rename="Number" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field_1" name="monkey" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field description="TextToColumns: Parsed from Field_1" name="operation" size="50000" source="(Multiple Sources)" type="V_String" />
+            <Field name="Name" size="4" source="Transpose:" type="String" />
+            <Field name="Number" size="50000" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Number" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="93" Connection="True" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="False" />
+      <Destination ToolID="96" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="96" Connection="Left" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="93" Connection="False" />
+      <Destination ToolID="105" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="105" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="True" />
+      <Destination ToolID="106" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="106" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="96" Connection="Join" />
+      <Destination ToolID="198" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="204" Connection="Output" />
+      <Destination ToolID="198" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="96" Connection="Left" />
+      <Destination ToolID="199" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="True" />
+      <Destination ToolID="100" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="198" Connection="Output" />
+      <Destination ToolID="100" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Join" />
+      <Destination ToolID="103" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Output" />
+      <Destination ToolID="104" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="106" Connection="Join" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="106" Connection="Right" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="106" Connection="Left" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="186" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output" />
+      <Destination ToolID="187" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="186" Connection="Output" />
+      <Destination ToolID="187" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="188" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="201" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="188" Connection="True" />
+      <Destination ToolID="189" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="188" Connection="False" />
+      <Destination ToolID="190" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="189" Connection="Output" />
+      <Destination ToolID="196" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="189" Connection="Output" />
+      <Destination ToolID="200" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="190" Connection="Output" />
+      <Destination ToolID="197" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="192" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="198" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="199" Connection="True" />
+      <Destination ToolID="204" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="201" Connection="True" />
+      <Destination ToolID="202" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="201" Connection="False" />
+      <Destination ToolID="203" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day21_Part1Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b1300076-bf75-404b-8184-2eb76e774f1a" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="b1300076-bf75-404b-8184-2eb76e774f1a" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (191)</Name>
+          <ToolId value="191" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (192)</Name>
+              <ToolId value="192" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (196)</Name>
+              <ToolId value="196" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (197)</Description>
+              <Name>Macro Output (197)</Name>
+              <ToolId value="197" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="2000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="192" Selected="True" />
+        <Tool ToolId="197" Selected="True" />
+        <Tool ToolId="196" Selected="True" />
+        <Tool ToolId="200" Selected="True" />
+        <Tool ToolId="202" Selected="False" />
+        <Tool ToolId="203" Selected="False" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

@@ -109,14 +109,16 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_11240_31caa835413c45d0b394fceb4101dcdf_\Engine_15092_8471efb1de5342fab817bf62bf5e7072_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_13032_90931a915b724310bc46596b65b4e9b6_\Engine_14932_b96a4a43974d40b6960d7f131791c148_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
             <View1>
               <DefaultTab>Profile</DefaultTab>
-              <Hints />
+              <Hints>
+                <Table />
+              </Hints>
             </View1>
             <View2 />
           </Layout>
@@ -131,11 +133,11 @@ Split From Here
     </Node>
     <Node ToolID="85">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="750" y="690" />
+        <Position x="726" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_11240_31caa835413c45d0b394fceb4101dcdf_\Engine_15092_0def73d1d29345279cf45de7ccc0a9d2_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_13032_90931a915b724310bc46596b65b4e9b6_\Engine_14932_649a59263917447cb79d5237e02d11a2_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -159,7 +161,7 @@ Split From Here
     </Node>
     <Node ToolID="86">
       <GuiSettings Plugin="AlteryxBasePluginsGui.JSONParse.JSONParse">
-        <Position x="342" y="666" />
+        <Position x="438" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -203,7 +205,7 @@ Split From Here
     </Node>
     <Node ToolID="88">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="438" y="678" />
+        <Position x="534" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -230,7 +232,7 @@ Split From Here
     </Node>
     <Node ToolID="90">
       <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
-        <Position x="546" y="678" />
+        <Position x="630" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -257,8 +259,6 @@ Split From Here
             <Field description="Formula: iif(isnull([Field_1]),[Row-1:Block]+1,[Row-1:Block])" name="Block" source="CrossTab:Group:First:" type="Int32" />
             <Field name="JSON_Name" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
             <Field description="Formula: [Row-1:item]+1" name="item" source="CrossTab:Group:First:" type="Int32" />
-            <Field name="1" size="1073741823" source="JSONParse: " type="V_WString" />
-            <Field name="2" size="1073741823" source="JSONParse: " type="V_WString" />
             <Field name="_Null_" size="1073741823" source="JSONParse: " type="V_WString" />
           </RecordInfo>
           <SortInfo>
@@ -272,14 +272,14 @@ Split From Here
     </Node>
     <Node ToolID="91">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
-        <Position x="342" y="582" />
+        <Position x="342" y="534" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Field>Field_1</Field>
-          <RegExExpression value="(.*\{)(\[.?\])" />
+          <RegExExpression value="\[.]" />
           <CaseInsensitve value="True" />
-          <Method>ParseSimple</Method>
+          <Method>Replace</Method>
           <Replace expression="">
             <CopyUnmatched value="True" />
           </Replace>
@@ -290,8 +290,7 @@ Split From Here
             <ErrorHandling>Warn</ErrorHandling>
           </ParseSimple>
           <ParseComplex>
-            <Field field="RegExOut1" type="V_String" size="5000" />
-            <Field field="RegExOut2" type="V_String" size="5000" />
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
           </ParseComplex>
           <Match>
             <Field>Field_1_Matched</Field>
@@ -305,6 +304,26 @@ Split From Here
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="92">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="342" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="replace([Field_1],'[]','[z]')" field="Field_1" size="50000" type="V_String" />
+            <FormulaField expression="Replace(Replace(Replace([Field_1], '[[', '{{&quot;a&quot;:'),'[','{'), ']', '}')" field="Field_1" size="50000" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Field_1 = replace([Field_1],'[]','[z]')
+Field_1 = Replace(Replace(Replace([Field...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
   </Nodes>
   <Connections>
@@ -322,11 +341,11 @@ Split From Here
     </Connection>
     <Connection>
       <Origin ToolID="87" Connection="Output" />
-      <Destination ToolID="86" Connection="Input" />
+      <Destination ToolID="91" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="87" Connection="Output" />
-      <Destination ToolID="91" Connection="Input" />
+      <Destination ToolID="92" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="88" Connection="Output" />
@@ -335,6 +354,10 @@ Split From Here
     <Connection>
       <Origin ToolID="90" Connection="Output" />
       <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

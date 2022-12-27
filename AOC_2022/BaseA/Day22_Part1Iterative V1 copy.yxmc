@@ -1,0 +1,2013 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="115">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="378" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Step" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="currStep" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Step" selected="False" input="Left_" />
+                <SelectField field="Right_currRow" selected="True" input="Right_" />
+                <SelectField field="Right_currCol" selected="True" input="Right_" />
+                <SelectField field="Right_facing" selected="True" input="Right_" />
+                <SelectField field="Right_currStep" selected="True" input="Right_" />
+                <SelectField field="Left_tiles" selected="True" input="Left_" />
+                <SelectField field="Left_turnDirection" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Step" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Step" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="currStep" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="119">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="462" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[facing] = 0 ||
+[facing] = 2</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[facing] = 0 ||
+[facing] = 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="120">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="558" y="138" width="96" height="64" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Facing left or right
+look at columns in the same row</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="582" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="row" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="currRow" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="row" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="row" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="currRow" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="726" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>facing</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-22 11:44:36</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2022-12-22 11:44:36</StartDate>
+              <EndDate>2022-12-22 11:44:36</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[facing] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="row" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="row" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="846" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[currRow]+[tiles]" field="TargetRow" size="4" type="Int32" />
+            <FormulaField expression="iif([row]=[currRow],'path',&#xA;iif([row]&lt;[currRow],'wrap',&#xA;iif([spaceType]='wall','wall',&#xA;iif([row]=[TargetRow],'end','path'))))" field="moveDesc" size="5" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TargetRow = [currRow]+[tiles]
+moveDesc = iif([row]=[currRow],'path',
+iif([row]&lt;[...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="TargetRow" source="Formula: [currRow]+[tiles]" type="Int32" />
+            <Field name="moveDesc" size="5" source="Formula: iif([row]=[currRow],'path',&#xA;iif([row]&lt;[currRow],'wrap',&#xA;iif([spaceType]='wall','wall',&#xA;iif([row]=[TargetRow],'end','path'))))" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="column" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="124">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="738" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>facing</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-22 11:44:36</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2022-12-22 11:44:36</StartDate>
+              <EndDate>2022-12-22 11:44:36</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[facing] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="column" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="column" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="582" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="column" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="currCol" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="column" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="column" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="currCol" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="366" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Current Iteration</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="130">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="210" y="54" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Map Layout</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="131">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="210" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Steps needed to be taken</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1938" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Step" action="Max" rename="Max_Step" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Max_Step" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="133">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="2046" y="198" width="100" height="112" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Max Steps needed to determine End of instructions</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="137">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="846" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[currCol]+[tiles]" field="TargetColumn" size="4" type="Int32" />
+            <FormulaField expression="iif([column]=[currCol],'path',&#xA;iif([column]&lt;[currCol],'wrap',&#xA;iif([spaceType]='wall','wall',&#xA;iif([column]=[TargetColumn],'end','path'))))" field="moveDesc" size="6" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TargetColumn = [currCol]+[tiles]
+moveDesc = iif([column]=[currCol],'path',
+iif([...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="TargetColumn" source="Formula: [currCol]+[tiles]" type="Int32" />
+            <Field name="moveDesc" size="6" source="Formula: iif([column]=[currCol],'path',&#xA;iif([column]&lt;[currCol],'wrap',&#xA;iif([spaceType]='wall','wall',&#xA;iif([column]=[TargetColumn],'end','path'))))" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="row" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="870" y="102" width="96" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Find first wall, wrap or stopping point.</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="139">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1026" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="moveDesc" action="GroupBy" rename="moveDesc" />
+            <SummarizeField field="column" action="Min" rename="Min_column" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="141">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1122" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[moveDesc]!='path'</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[moveDesc]!='path'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="142">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1218" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Min_column" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Min_column - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="143">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1314" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="144">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1026" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="moveDesc" action="GroupBy" rename="moveDesc" />
+            <SummarizeField field="column" action="Max" rename="Max_column" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="146">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1122" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[moveDesc]!='path'</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[moveDesc]!='path'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1218" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Max_column" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Max_column - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="148">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1314" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="149">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="846" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[currCol]-[tiles]" field="TargetColumn" size="4" type="Int32" />
+            <FormulaField expression="iif([column]=[currRow],'start',&#xA;iif([column]&gt;[currRow],'wrap',&#xA;iif([spaceType]='wall','wall',&#xA;iif([column]=[TargetColumn],'end','path'))))" field="moveDesc" size="6" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TargetColumn = [currCol]-[tiles]
+moveDesc = iif([column]=[currRow],'start',
+iif(...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="TargetColumn" source="Formula: [currCol]-[tiles]" type="Int32" />
+            <Field name="moveDesc" size="6" source="Formula: iif([column]=[currRow],'start',&#xA;iif([column]&gt;[currRow],'wrap',&#xA;iif([spaceType]='wall','wall',&#xA;iif([column]=[TargetColumn],'end','path'))))" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="row" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="182">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="183">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="184">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="185">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="2394" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="187">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Map</Name>
+          <Abbrev>M</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day22_Map.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText>Day22_Map.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\AOC\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="188">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day22_Part1Iteration.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText>Day22_Part1Iteration.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="189">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Directions</Name>
+          <Abbrev>D</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day22_Instructions.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText>Day22_Instructions.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Step" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="192">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="2394" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>IterateOutput</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="194">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1638" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="195">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1698" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([moveDesc]='wall',[Min_column]-1,[Min_column])" field="currCol" size="4" type="Int32" />
+            <FormulaField expression="[facing]+iif([turnDirection]='R',1,-1)" field="newFacing" size="1" type="Byte" />
+            <FormulaField expression="iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" field="facing" size="1" type="Byte" />
+            <FormulaField expression="[currStep]+1" field="currStep" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>currCol = iif([moveDesc]='wall',[Min_column]-1,[Min_column])
+newFacing = [facing...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="newFacing" source="Formula: [facing]+iif([turnDirection]='R',1,-1)" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="197">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1398" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[moveDesc] in ('wall','stop')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[moveDesc] in ('wall','stop')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="198">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2286" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="moveDesc" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="tiles" selected="False" />
+            <SelectField field="turnDirection" selected="False" />
+            <SelectField field="newFacing" selected="False" />
+            <SelectField field="Max_Step" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="199">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="2058" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="newFacing" source="Formula: [facing]+iif([turnDirection]='R',1,-1)" type="Byte" />
+            <Field name="Max_Step" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="201">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2154" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[currStep] &gt;
+[Max_Step]
+
+// stop the iterations if true</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[currStep] &gt;
+[Max_Step]
+
+// stop the iterations if true</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="newFacing" source="Formula: [facing]+iif([turnDirection]='R',1,-1)" type="Byte" />
+            <Field name="Max_Step" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="moveDesc" size="6" source="Summarize: GroupBy - moveDesc" type="V_WString" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="newFacing" source="Formula: [facing]+iif([turnDirection]='R',1,-1)" type="Byte" />
+            <Field name="Max_Step" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="202">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2286" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="moveDesc" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="tiles" selected="False" />
+            <SelectField field="turnDirection" selected="False" />
+            <SelectField field="newFacing" selected="False" />
+            <SelectField field="Max_Step" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="205">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="990" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="moveDesc" action="GroupBy" rename="moveDesc" />
+            <SummarizeField field="row" action="Min" rename="Min_row" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="206">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1086" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[moveDesc] != 'path'</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[moveDesc] != 'path'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="moveDesc" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="207">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1182" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Min_row" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Min_row - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="209">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1410" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[moveDesc] in ('wall','stop')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[moveDesc] in ('wall','stop')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="211">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1638" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="212">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1734" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([moveDesc]='wall',[Min_row]-1,[Min_row])" field="currRow" size="4" type="Int32" />
+            <FormulaField expression="[facing]+iif([turnDirection]='R',1,-1)" field="newFacing" size="1" type="Byte" />
+            <FormulaField expression="iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" field="facing" size="1" type="Byte" />
+            <FormulaField expression="[currStep]+1" field="currStep" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>currRow = iif([moveDesc]='wall',[Min_row]-1,[Min_row])
+newFacing = [facing]+iif(...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="currRow" source="Formula: iif([moveDesc]='wall',[Min_row]-1,[Min_row])" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="newFacing" source="Formula: [facing]+iif([turnDirection]='R',1,-1)" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="213">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1482" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: iif([moveDesc]='wall',[Min_column]-1,[Min_column])" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,4,&#xA;iif([newFacing]=5,0,[newFacing]))" type="Byte" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="214">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1278" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="moveDesc" size="5" source="Summarize: GroupBy - moveDesc" type="String" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="204">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2381" y="449" width="158" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 204</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="203">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2406" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day22_Part1Iteration.yxdb</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+                <WriteCompatibleVersion>False</WriteCompatibleVersion>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Day22_Part1Iteration.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="115" Connection="Join" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="115" Connection="Join" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="True" />
+      <Destination ToolID="121" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="184" Connection="Output" />
+      <Destination ToolID="121" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="False" />
+      <Destination ToolID="125" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="184" Connection="Output" />
+      <Destination ToolID="125" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Join" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="True" />
+      <Destination ToolID="137" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="False" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="205" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="True" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Join" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="199" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="195" Connection="Output" />
+      <Destination ToolID="199" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="137" Connection="Output" />
+      <Destination ToolID="139" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="139" Connection="Output" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="True" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="142" Connection="Output" />
+      <Destination ToolID="143" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="143" Connection="Output" />
+      <Destination ToolID="197" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Output" />
+      <Destination ToolID="146" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="146" Connection="True" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="Output" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="182" Connection="Output" />
+      <Destination ToolID="115" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="183" Connection="Output" />
+      <Destination ToolID="115" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="183" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="184" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="188" Connection="Output" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="189" Connection="Output" />
+      <Destination ToolID="183" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="194" Connection="Output" />
+      <Destination ToolID="195" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="197" Connection="True" />
+      <Destination ToolID="194" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="213" Connection="Output" />
+      <Destination ToolID="194" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="198" Connection="Output" />
+      <Destination ToolID="186" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="199" Connection="Output" />
+      <Destination ToolID="201" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="201" Connection="True" />
+      <Destination ToolID="198" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="201" Connection="False" />
+      <Destination ToolID="202" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="202" Connection="Output" />
+      <Destination ToolID="192" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="202" Connection="Output" />
+      <Destination ToolID="203" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="205" Connection="Output" />
+      <Destination ToolID="206" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="206" Connection="True" />
+      <Destination ToolID="207" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="207" Connection="Output" />
+      <Destination ToolID="214" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="209" Connection="True" />
+      <Destination ToolID="211" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="213" Connection="Output" />
+      <Destination ToolID="211" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="211" Connection="Output" />
+      <Destination ToolID="212" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="214" Connection="Output" />
+      <Destination ToolID="209" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day22_Part1Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="236ab066-59d9-448b-b980-74a06c479f95" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="236ab066-59d9-448b-b980-74a06c479f95" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (185)</Name>
+          <ToolId value="185" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (186)</Name>
+              <ToolId value="186" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (187)</Name>
+              <ToolId value="187" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (188)</Name>
+              <ToolId value="188" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (189)</Name>
+              <ToolId value="189" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (192)</Name>
+              <ToolId value="192" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Iterate</Input>
+        <Output>IterateOutput</Output>
+        <IterationLimit value="10000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="186" Selected="True" />
+        <Tool ToolId="187" Selected="True" />
+        <Tool ToolId="188" Selected="True" />
+        <Tool ToolId="189" Selected="True" />
+        <Tool ToolId="203" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

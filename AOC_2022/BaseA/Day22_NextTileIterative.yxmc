@@ -1,0 +1,1379 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="196">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="282" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="nextRow" />
+            <Field field="nextCol" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="row" />
+            <Field field="column" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="nextRow" />
+            <Field field="nextCol" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="row" />
+            <Field field="column" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="200">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="486" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>spaceType</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-23 20:34:47</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>open</Operand>
+              <StartDate>2022-12-23 20:34:47</StartDate>
+              <EndDate>2022-12-23 20:34:47</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[spaceType] = "open"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="201">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="606" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="nextRow" selected="False" />
+            <SelectField field="nextCol" selected="False" />
+            <SelectField field="column" selected="False" />
+            <SelectField field="row" selected="False" />
+            <SelectField field="map" selected="False" />
+            <SelectField field="spaceType" selected="False" />
+            <SelectField field="Min_row" selected="False" />
+            <SelectField field="Max_row" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="Max_column" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="202">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="702" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="currRow" selected="False" />
+            <SelectField field="currCol" selected="False" />
+            <SelectField field="row" selected="True" rename="currRow" />
+            <SelectField field="column" selected="True" rename="currCol" />
+            <SelectField field="facing" selected="True" />
+            <SelectField field="currStep" selected="True" />
+            <SelectField field="tiles" selected="True" />
+            <SelectField field="turnDirection" selected="True" />
+            <SelectField field="nextRow" selected="False" />
+            <SelectField field="nextCol" selected="False" />
+            <SelectField field="map" selected="False" />
+            <SelectField field="spaceType" selected="False" />
+            <SelectField field="Min_row" selected="False" />
+            <SelectField field="Max_row" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="Max_column" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="203">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="510" y="186" width="96" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>the next tile doesn't exist, so find the wrap around tile</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="204">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="486" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="currRow" />
+            <Field field="currCol" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="row" />
+            <Field field="column" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="currRow" />
+            <Field field="currCol" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="currRow" order="" />
+            <Field field="currCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="row" />
+            <Field field="column" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="205">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="822" y="366" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Tile Move Output ]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="206">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="366" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="column" selected="False" />
+            <SelectField field="row" selected="False" />
+            <SelectField field="map" selected="False" />
+            <SelectField field="spaceType" selected="False" />
+            <SelectField field="Min_row" selected="False" />
+            <SelectField field="Max_row" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="Max_column" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="207">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="582" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" field="nextRow" size="1" type="Byte" />
+            <FormulaField expression="iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" field="nextCol" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>nextRow = iif([facing]=1,[Min_row],
+iif([facing]=3,[Max_row],
+[currRow]))
+nextCo...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="currRow" order="" />
+            <Field field="currCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="208">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="798" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="nextRow" />
+            <Field field="nextCol" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="row" />
+            <Field field="column" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="nextRow" />
+            <Field field="nextCol" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="row" />
+            <Field field="column" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="210">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="906" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>spaceType</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-23 20:34:47</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>open</Operand>
+              <StartDate>2022-12-23 20:34:47</StartDate>
+              <EndDate>2022-12-23 20:34:47</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[spaceType] = "open"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="211">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1122" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="column" selected="False" />
+            <SelectField field="row" selected="False" />
+            <SelectField field="map" selected="False" />
+            <SelectField field="spaceType" selected="False" />
+            <SelectField field="Min_row" selected="False" />
+            <SelectField field="Max_row" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="Max_column" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="nextRow" order="" />
+            <Field field="nextCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="212">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1026" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="currRow" selected="False" />
+            <SelectField field="currCol" selected="False" />
+            <SelectField field="row" selected="True" rename="currRow" />
+            <SelectField field="column" selected="True" rename="currCol" />
+            <SelectField field="facing" selected="True" />
+            <SelectField field="currStep" selected="True" />
+            <SelectField field="tiles" selected="True" />
+            <SelectField field="turnDirection" selected="True" />
+            <SelectField field="nextRow" selected="False" />
+            <SelectField field="nextCol" selected="False" />
+            <SelectField field="map" selected="False" />
+            <SelectField field="spaceType" selected="False" />
+            <SelectField field="Min_row" selected="False" />
+            <SelectField field="Max_row" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="Max_column" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="213">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="678" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="column" selected="False" />
+            <SelectField field="row" selected="False" />
+            <SelectField field="map" selected="False" />
+            <SelectField field="spaceType" selected="False" />
+            <SelectField field="Min_row" selected="False" />
+            <SelectField field="Max_row" selected="False" />
+            <SelectField field="Min_column" selected="False" />
+            <SelectField field="Max_column" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="currRow" order="" />
+            <Field field="currCol" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="214">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1122" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="215">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1206" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: (Multiple Sources)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="(Multiple Sources)" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[Min_row],&#xA;iif([facing]=3,[Max_row],&#xA;[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[Min_column],&#xA;iif([facing]=2,[Max_column],&#xA;[currCol]))" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="218">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="219">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="220">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Map Input</Name>
+          <Abbrev>M</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Day22_Map.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText>Day22_Map.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="X" name="column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="Y" name="row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="map" size="50000" source="File: C:\Users\jarro\PycharmProjects\AdventOfCode\AOC_2022\Data\day22.txt" type="V_String" />
+            <Field name="spaceType" size="1073741823" source="Formula: iif([map]='.','open',iif([map]='#','wall','none'))" type="V_WString" />
+            <Field description="Y" name="Min_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="Y" name="Max_row" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="Min_column" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field description="X" name="Max_column" source="Formula: [Row-1:column]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="221">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Iterative Steps</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Day22_CurrentTurnInput.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText>Day22_CurrentTurnInput.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="222">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1410" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="223">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1290" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="224">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="162" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" field="nextRow" size="1" type="Byte" />
+            <FormulaField expression="iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" field="nextCol" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>nextRow = iif([facing]=1,[currRow]+1,
+iif([facing]=3,[currRow]-1,[currRow]))
+nex...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1 (BatchMacro)" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1 (BatchMacro)" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="RegEx: Parsed from Field_1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+            <Field name="nextRow" source="Formula: iif([facing]=1,[currRow]+1,&#xA;iif([facing]=3,[currRow]-1,[currRow]))" type="Byte" />
+            <Field name="nextCol" source="Formula: iif([facing]=0,[currCol]+1,&#xA;iif([facing]=2,[currCol]-1,[currCol]))" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="227">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1230" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>tiles</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-12-23 21:51:10</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2022-12-23 21:51:10</StartDate>
+              <EndDate>2022-12-23 21:51:10</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[tiles] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="Formula: [tiles]-1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="Formula: [tiles]-1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="228">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1134" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[tiles]-1" field="tiles" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[tiles = [tiles]-1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Y" name="currRow" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="X" name="currCol" source="Formula: [Row-1:column]+1" type="Int32" />
+            <Field name="facing" source="Formula: iif([newFacing]=-1,3,&#xA;iif([newFacing]=4,0,[newFacing]))" type="Int16" />
+            <Field name="currStep" source="Formula: [currStep]+1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="tiles" source="Formula: [tiles]-1" type="Int32" />
+            <Field description="RegEx: Parsed from Field_1" name="turnDirection" size="1" source="RegEx: Parsed from Field_1" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="229">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1421" y="233" width="158" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 229</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="226">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1446" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">Day22_CurrentTurnInput.yxdb</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+                <WriteCompatibleVersion>False</WriteCompatibleVersion>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Day22_CurrentTurnInput.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="196" Connection="Join" />
+      <Destination ToolID="200" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="196" Connection="Left" />
+      <Destination ToolID="206" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="200" Connection="False" />
+      <Destination ToolID="201" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="200" Connection="True" />
+      <Destination ToolID="202" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="201" Connection="Output" />
+      <Destination ToolID="215" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="211" Connection="Output" />
+      <Destination ToolID="215" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="227" Connection="False" />
+      <Destination ToolID="215" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="202" Connection="Output" />
+      <Destination ToolID="214" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="212" Connection="Output" />
+      <Destination ToolID="214" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="204" Connection="Join" />
+      <Destination ToolID="207" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="206" Connection="Output" />
+      <Destination ToolID="204" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="Output" />
+      <Destination ToolID="204" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="207" Connection="Output" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="208" Connection="Join" />
+      <Destination ToolID="210" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="210" Connection="False" />
+      <Destination ToolID="211" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="210" Connection="True" />
+      <Destination ToolID="212" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="213" Connection="Output" />
+      <Destination ToolID="208" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="Output" />
+      <Destination ToolID="208" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="214" Connection="Output" />
+      <Destination ToolID="228" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="215" Connection="Output" />
+      <Destination ToolID="223" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="Output" />
+      <Destination ToolID="196" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="224" Connection="Output" />
+      <Destination ToolID="196" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="220" Connection="Output" />
+      <Destination ToolID="218" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="221" Connection="Output" />
+      <Destination ToolID="224" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="227" Connection="True" />
+      <Destination ToolID="222" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="227" Connection="True" />
+      <Destination ToolID="226" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="228" Connection="Output" />
+      <Destination ToolID="227" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day22_NextTileIterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b29c88b5-eff7-45e9-bc4d-b1acbb64c2e1" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="b29c88b5-eff7-45e9-bc4d-b1acbb64c2e1" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (219)</Name>
+          <ToolId value="219" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (220)</Name>
+              <ToolId value="220" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (221)</Name>
+              <ToolId value="221" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (222)</Name>
+              <ToolId value="222" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (223)</Name>
+              <ToolId value="223" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Iterative Steps</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="100" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="220" Selected="True" />
+        <Tool ToolId="221" Selected="True" />
+        <Tool ToolId="222" Selected="True" />
+        <Tool ToolId="223" Selected="True" />
+        <Tool ToolId="226" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

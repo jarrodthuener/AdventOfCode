@@ -109,7 +109,7 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25976_99036c50a2ac4afa95fccc1bc1dc3f6c_\Engine_9564_2137af51ea284cd084ce01a4004d7d8f_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_e7e3fa79e1bc426cb2fe4d85d64fff2b_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -289,13 +289,13 @@ Split From Here
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="ToString([Col])+'|'+tostring([Row])" field="BlizzardID" size="8" type="V_WString" />
+            <FormulaField expression="ToString([Col])+','+tostring([Row])" field="BlizzardID" size="8" type="V_WString" />
             <FormulaField expression="0" field="Minute" size="4" type="Int32" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[BlizzardID = ToString([Col])+'|'+tostring([Row])
+          <DefaultAnnotationText><![CDATA[BlizzardID = ToString([Col])+','+tostring([Row])
 Minute = 0
 ]]></DefaultAnnotationText>
           <Left value="False" />
@@ -421,7 +421,7 @@ Minute = 0
     </Node>
     <Node ToolID="170">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1446" y="654" />
+        <Position x="1302" y="582" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -481,7 +481,7 @@ Minute = 0
     </Node>
     <Node ToolID="173">
       <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
-        <Position x="1542" y="654" />
+        <Position x="1566" y="654" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -848,7 +848,7 @@ Minute - Ascending</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25976_99036c50a2ac4afa95fccc1bc1dc3f6c_\Engine_9564_c64fe6fd24be466b86d879d122bb2163_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_6903be4f36e84bce88999b63596209b2_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -876,7 +876,7 @@ Minute - Ascending</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25976_99036c50a2ac4afa95fccc1bc1dc3f6c_\Engine_9564_84f8822036e940908f3c071e37bab608_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_107ad02073f94a0eab4a51a604d25202_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -904,7 +904,7 @@ Minute - Ascending</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25976_99036c50a2ac4afa95fccc1bc1dc3f6c_\Engine_9564_f62cf44f4571473da4dda610256acd17_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_e6a0d9eab14243bfbd8b651e5f0802e8_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -932,7 +932,7 @@ Minute - Ascending</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25976_99036c50a2ac4afa95fccc1bc1dc3f6c_\Engine_9564_af368ad48f354068bbd6584fc3989fb1_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_d2f49a710ca6466eb56e6587ddfee148_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1036,11 +1036,11 @@ Minute - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="200">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2046" y="1242" />
+        <Position x="2214" y="1122" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_25976_99036c50a2ac4afa95fccc1bc1dc3f6c_\Engine_9564_bf5e6f6d118c4dc380e73c84c6cc533d_.yxdb</TempFile>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_2d0df1bfaa934810b6ec7ee967ee56d9_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1081,119 +1081,6 @@ Minute - Ascending</DefaultAnnotationText>
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
-    </Node>
-    <Node ToolID="203">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="2610" y="1194" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="Row" />
-            <Field field="Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Row" />
-            <Field field="Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="Right_Minute" selected="True" rename="Right_Minute" input="Right_" />
-                <SelectField field="Right_blizzard" selected="True" rename="Right_blizzard" input="Right_" />
-                <SelectField field="Right_Start_Col" selected="True" rename="Right_Start_Col" input="Right_" />
-                <SelectField field="Right_Start_Row" selected="True" rename="Right_Start_Row" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Min_Row" selected="True" rename="Right_Min_Row" input="Right_" />
-                <SelectField field="Right_Min_Col" selected="True" rename="Right_Min_Col" input="Right_" />
-                <SelectField field="Right_Max_Row" selected="True" rename="Right_Max_Row" input="Right_" />
-                <SelectField field="Right_Max_Col" selected="True" rename="Right_Max_Col" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="204">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2334" y="1206" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="blizzard" selected="False" />
-            <SelectField field="Min_Row" selected="False" />
-            <SelectField field="Min_Col" selected="False" />
-            <SelectField field="Max_Row" selected="False" />
-            <SelectField field="Max_Col" selected="False" />
-            <SelectField field="Start_Col" selected="False" />
-            <SelectField field="Start_Row" selected="False" />
-            <SelectField field="End_Col" selected="False" />
-            <SelectField field="End_Row" selected="False" />
-            <SelectField field="*Unknown" selected="True" />
-          </SelectFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-    </Node>
-    <Node ToolID="205">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2454" y="1158" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="*Unknown" selected="True" />
-          </SelectFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-    </Node>
-    <Node ToolID="207">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="2442" y="1278" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[Minute]-1" field="Minute" size="4" type="Int32" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[Minute = [Minute]-1
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
     <Node ToolID="208">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
@@ -1301,7 +1188,7 @@ Minute - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="216">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2070" y="1326" />
+        <Position x="2034" y="1266" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1361,45 +1248,1371 @@ Minute - Ascending</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="219">
+    <Node ToolID="265">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="2442" y="1206" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Spaces Free of Blizzards by Minute</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="278">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="2682" y="918" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Spaces Free of Blizzards by Minute</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="280">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1361" y="1673" width="1261" height="1082" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 280</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="203">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1589" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Row" />
+                <Field field="Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Row" />
+                <Field field="Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="Right_Minute" selected="True" rename="Right_Minute" input="Right_" />
+                    <SelectField field="Right_blizzard" selected="True" rename="Right_blizzard" input="Right_" />
+                    <SelectField field="Right_Start_Col" selected="True" rename="Right_Start_Col" input="Right_" />
+                    <SelectField field="Right_Start_Row" selected="True" rename="Right_Start_Row" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Min_Row" selected="True" rename="Right_Min_Row" input="Right_" />
+                    <SelectField field="Right_Min_Col" selected="True" rename="Right_Min_Col" input="Right_" />
+                    <SelectField field="Right_Max_Row" selected="True" rename="Right_Max_Row" input="Right_" />
+                    <SelectField field="Right_Max_Col" selected="True" rename="Right_Max_Col" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="204">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1386" y="1758" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="blizzard" selected="False" />
+                <SelectField field="Min_Row" selected="False" />
+                <SelectField field="Min_Col" selected="False" />
+                <SelectField field="Max_Row" selected="False" />
+                <SelectField field="Max_Col" selected="False" />
+                <SelectField field="Start_Col" selected="False" />
+                <SelectField field="Start_Row" selected="False" />
+                <SelectField field="End_Col" selected="False" />
+                <SelectField field="End_Row" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="205">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1481" y="1722" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="207">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1482" y="1805" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Minute]-1" field="Minute" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Minute = [Minute]-1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="219">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1854" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[BlizzardID]+':'+[Right_BlizzardID]" field="path" size="1073741823" type="V_WString" />
+                <FormulaField expression="[Minute]+1" field="Max_Minute" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[path = [BlizzardID]+':'+[Right_BlizzardID]
+Max_Minute = [Minute]+1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="221">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1938" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="BlizzardID" selected="True" />
+                <SelectField field="Col" selected="True" rename="Begin_Col" />
+                <SelectField field="Row" selected="True" rename="Begin_Row" />
+                <SelectField field="Minute" selected="True" rename="Min_Minute" />
+                <SelectField field="Max_Minute" selected="True" />
+                <SelectField field="path" selected="True" />
+                <SelectField field="Right_BlizzardID" selected="False" />
+                <SelectField field="Right_Col" selected="True" rename="End_Col" />
+                <SelectField field="Right_Row" selected="True" rename="End_Row" />
+                <SelectField field="Right_Minute" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="224">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1590" y="1806" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Col" />
+                <Field field="Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Col" />
+                <Field field="Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="Right_Minute" selected="True" rename="Right_Minute" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="225">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1686" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Col] = [Right_Col]-1
+||
+[Col] = [Right_Col]
+||
+[Col] = [Right_Col]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Col] = [Right_Col]-1
+||
+[Col] = [Right_Col]
+||
+[Col] = [Right_Col]+1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="226">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1674" y="1806" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Row] = [Right_Row]-1
+||
+[Row] = [Right_Row]
+||
+[Row] = [Right_Row]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Row] = [Right_Row]-1
+||
+[Row] = [Right_Row]
+||
+[Row] = [Right_Row]+1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="227">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1782" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="228">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1422" y="1973" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Row" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Row" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="231">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1422" y="2058" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Col" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Col" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="232">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1518" y="1974" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="233">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1506" y="2058" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="234">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="1638" y="2022" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="235">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1782" y="2010" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="237">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2058" y="1986" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Row" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Row" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="238">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2370" y="2034" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="240">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2058" y="2070" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Col" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Col" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="241">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2154" y="1986" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="242">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2142" y="2070" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="243">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2274" y="2034" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="245">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1866" y="2010" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="BlizzardID" selected="True" />
+                <SelectField field="Max_Minute" selected="False" />
+                <SelectField field="path" selected="True" />
+                <SelectField field="Right_BlizzardID" selected="False" />
+                <SelectField field="Begin_Col" selected="True" />
+                <SelectField field="Begin_Row" selected="True" />
+                <SelectField field="Min_Minute" selected="True" />
+                <SelectField field="End_Col" selected="False" />
+                <SelectField field="End_Row" selected="False" />
+                <SelectField field="Right_Begin_Col" selected="False" />
+                <SelectField field="Right_Begin_Row" selected="False" />
+                <SelectField field="Right_Min_Minute" selected="False" />
+                <SelectField field="Right_Max_Minute" selected="True" rename="Max_Minute" />
+                <SelectField field="Right_path" selected="False" rename="path" />
+                <SelectField field="Right_End_Col" selected="True" rename="End_Col" />
+                <SelectField field="Right_End_Row" selected="True" rename="End_Row" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="246">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2046" y="2238" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Row" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Row" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="247">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2358" y="2286" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="248">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2046" y="2322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Col" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Col" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="249">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2142" y="2238" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="250">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2130" y="2322" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="251">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2262" y="2286" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="252">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1722" y="2274" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="BlizzardID" selected="True" />
+                <SelectField field="Max_Minute" selected="False" />
+                <SelectField field="path" selected="True" />
+                <SelectField field="Right_BlizzardID" selected="False" />
+                <SelectField field="Begin_Col" selected="True" />
+                <SelectField field="Begin_Row" selected="True" />
+                <SelectField field="Min_Minute" selected="True" />
+                <SelectField field="End_Col" selected="False" />
+                <SelectField field="End_Row" selected="False" />
+                <SelectField field="Right_Begin_Col" selected="False" />
+                <SelectField field="Right_Begin_Row" selected="False" />
+                <SelectField field="Right_Min_Minute" selected="False" />
+                <SelectField field="Right_Max_Minute" selected="True" rename="Max_Minute" />
+                <SelectField field="Right_path" selected="False" rename="path" />
+                <SelectField field="Right_End_Col" selected="True" rename="End_Col" />
+                <SelectField field="Right_End_Row" selected="True" rename="End_Row" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="253">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2046" y="2466" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Row" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Row" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="254">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2358" y="2514" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="255">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="2046" y="2550" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="End_Col" />
+                <Field field="Max_Minute" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Begin_Col" />
+                <Field field="Min_Minute" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                    <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
+                    <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
+                    <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
+                    <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
+                    <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
+                    <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
+                    <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
+                    <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                    <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="256">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2142" y="2466" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
+||
+[End_Col] = [Begin_Col]
+||
+[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="257">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2130" y="2550" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+1</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
+||
+[End_Row] = [Begin_Row]
+||
+[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="258">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2262" y="2514" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="259">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1866" y="2502" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="BlizzardID" selected="True" />
+                <SelectField field="Max_Minute" selected="False" />
+                <SelectField field="path" selected="True" />
+                <SelectField field="Right_BlizzardID" selected="False" />
+                <SelectField field="Begin_Col" selected="True" />
+                <SelectField field="Begin_Row" selected="True" />
+                <SelectField field="Min_Minute" selected="True" />
+                <SelectField field="End_Col" selected="False" />
+                <SelectField field="End_Row" selected="False" />
+                <SelectField field="Right_Begin_Col" selected="False" />
+                <SelectField field="Right_Begin_Row" selected="False" />
+                <SelectField field="Right_Min_Minute" selected="False" />
+                <SelectField field="Right_Max_Minute" selected="True" rename="Max_Minute" />
+                <SelectField field="Right_path" selected="False" rename="path" />
+                <SelectField field="Right_End_Col" selected="True" rename="End_Col" />
+                <SelectField field="Right_End_Row" selected="True" rename="End_Row" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="261">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="1818" y="2274" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="path" />
+                <Field field="Min_Minute" />
+                <Field field="Max_Minute" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="262">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2034" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Max_Minute" />
+                <Field field="End_Col" />
+                <Field field="End_Row" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="263">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="1962" y="2010" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Max_Minute" />
+                <Field field="End_Col" />
+                <Field field="End_Row" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="264">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2538" y="2022" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-12-28 16:23:45</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-12-28 16:23:45</StartDate>
+                  <EndDate>2022-12-28 16:23:45</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="281">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="2886" y="1194" />
+        <Position x="2538" y="1038" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[BlizzardID]+':'+[Right_BlizzardID]" field="path" size="1073741823" type="V_WString" />
-            <FormulaField expression="[Minute]+1" field="Max_Minute" size="4" type="Int32" />
+            <FormulaField expression="[Start_Col]" field="Curr_Col" size="4" type="Int32" />
+            <FormulaField expression="[Start_Row]" field="Curr_Row" size="4" type="Int32" />
+            <FormulaField expression="1" field="Minute" size="4" type="Int32" />
+            <FormulaField expression="ToString([Curr_Col])+'|'+tostring([Curr_Row])" field="Path" size="1073741823" type="V_WString" />
+            <FormulaField expression="ToString([End_Col])+'|'+tostring([End_Row])" field="EndPathID" size="1073741823" type="V_WString" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[path = [BlizzardID]+':'+[Right_BlizzardID]
-Max_Minute = [Minute]+1
+          <DefaultAnnotationText>Curr_Col = [Start_Col]
+Curr_Row = [Start_Row]
+Minute = 1
+Path = ToString([Curr_C...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="286">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="3714" y="954" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_73232534a68644c59df3537bfe7dcc2e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="287">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="2886" y="1230" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Curr_Row" />
+            <Field field="Minute" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Row" />
+            <Field field="Minute" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Minute" selected="True" rename="Right_Minute" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="288">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2682" y="1302" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="blizzard" selected="False" />
+            <SelectField field="Min_Row" selected="False" />
+            <SelectField field="Min_Col" selected="False" />
+            <SelectField field="Max_Row" selected="False" />
+            <SelectField field="Max_Col" selected="False" />
+            <SelectField field="Start_Col" selected="False" />
+            <SelectField field="Start_Row" selected="False" />
+            <SelectField field="End_Col" selected="False" />
+            <SelectField field="End_Row" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="289">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="3150" y="1230" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Path]+':'+[Right_BlizzardID]" field="path" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[path = [Path]+':'+[Right_BlizzardID]
 ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="221">
+    <Node ToolID="290">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2970" y="1194" />
+        <Position x="3474" y="1206" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <OrderChanged value="True" />
+          <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="BlizzardID" selected="True" />
-            <SelectField field="Col" selected="True" rename="Begin_Col" />
-            <SelectField field="Row" selected="True" rename="Begin_Row" />
-            <SelectField field="Minute" selected="True" rename="Min_Minute" />
-            <SelectField field="Max_Minute" selected="True" />
-            <SelectField field="path" selected="True" />
             <SelectField field="Right_BlizzardID" selected="False" />
-            <SelectField field="Right_Col" selected="True" rename="End_Col" />
-            <SelectField field="Right_Row" selected="True" rename="End_Row" />
+            <SelectField field="Right_Col" selected="False" />
+            <SelectField field="Right_Row" selected="False" />
             <SelectField field="Right_Minute" selected="False" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
@@ -1412,14 +2625,14 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="224">
+    <Node ToolID="291">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="2610" y="1266" />
+        <Position x="2886" y="1302" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
           <JoinInfo connection="Left">
-            <Field field="Col" />
+            <Field field="Curr_Col" />
             <Field field="Minute" />
           </JoinInfo>
           <JoinInfo connection="Right">
@@ -1448,59 +2661,59 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
     </Node>
-    <Node ToolID="225">
+    <Node ToolID="292">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="2706" y="1194" />
+        <Position x="2982" y="1230" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Expression>[Col] = [Right_Col]-1
+          <Expression>[Curr_Col] = [Right_Col]-1
 ||
-[Col] = [Right_Col]
+[Curr_Col] = [Right_Col]
 ||
-[Col] = [Right_Col]+1</Expression>
+[Curr_Col] = [Right_Col]+1</Expression>
           <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>[Col] = [Right_Col]-1
+          <DefaultAnnotationText>[Curr_Col] = [Right_Col]-1
 ||
-[Col] = [Right_Col]
+[Curr_Col] = [Right_Col]
 ||
-[Col] = [Right_Col]+1</DefaultAnnotationText>
+[Curr_Col] = [Right_Co...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="226">
+    <Node ToolID="293">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="2694" y="1266" />
+        <Position x="2982" y="1302" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Expression>[Row] = [Right_Row]-1
+          <Expression>[Curr_Row] = [Right_Row]-1
 ||
-[Row] = [Right_Row]
+[Curr_Row] = [Right_Row]
 ||
-[Row] = [Right_Row]+1</Expression>
+[Curr_Row] = [Right_Row]+1</Expression>
           <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>[Row] = [Right_Row]-1
+          <DefaultAnnotationText>[Curr_Row] = [Right_Row]-1
 ||
-[Row] = [Right_Row]
+[Curr_Row] = [Right_Row]
 ||
-[Row] = [Right_Row]+1</DefaultAnnotationText>
+[Curr_Row] = [Right_Ro...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="227">
+    <Node ToolID="294">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="2814" y="1194" />
+        <Position x="3078" y="1230" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1517,375 +2730,24 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
     </Node>
-    <Node ToolID="228">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3234" y="1170" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="End_Row" />
-            <Field field="Max_Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Begin_Row" />
-            <Field field="Min_Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="231">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3234" y="1254" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="End_Col" />
-            <Field field="Max_Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Begin_Col" />
-            <Field field="Min_Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="232">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3330" y="1170" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>[End_Col] = [Begin_Col]-1
-||
-[End_Col] = [Begin_Col]
-||
-[End_Col] = [Begin_Col]+1</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
-||
-[End_Col] = [Begin_Col]
-||
-[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="233">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3318" y="1254" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>[End_Row] = [Begin_Row]-1
-||
-[End_Row] = [Begin_Row]
-||
-[End_Row] = [Begin_Row]+1</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
-||
-[End_Row] = [Begin_Row]
-||
-[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="234">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="3450" y="1218" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
-    <Node ToolID="235">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="3594" y="1206" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="237">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3870" y="1182" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="End_Row" />
-            <Field field="Max_Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Begin_Row" />
-            <Field field="Min_Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="238">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="4182" y="1230" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="240">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3870" y="1266" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="End_Col" />
-            <Field field="Max_Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Begin_Col" />
-            <Field field="Min_Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="241">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3966" y="1182" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>[End_Col] = [Begin_Col]-1
-||
-[End_Col] = [Begin_Col]
-||
-[End_Col] = [Begin_Col]+1</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
-||
-[End_Col] = [Begin_Col]
-||
-[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="242">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3954" y="1266" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>[End_Row] = [Begin_Row]-1
-||
-[End_Row] = [Begin_Row]
-||
-[End_Row] = [Begin_Row]+1</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
-||
-[End_Row] = [Begin_Row]
-||
-[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="243">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="4086" y="1230" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
-    <Node ToolID="245">
+    <Node ToolID="295">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="3678" y="1206" />
+        <Position x="2682" y="1230" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="True" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="BlizzardID" selected="True" />
-            <SelectField field="Max_Minute" selected="False" />
-            <SelectField field="path" selected="True" />
-            <SelectField field="Right_BlizzardID" selected="False" />
-            <SelectField field="Begin_Col" selected="True" />
-            <SelectField field="Begin_Row" selected="True" />
-            <SelectField field="Min_Minute" selected="True" />
+            <SelectField field="Start_Col" selected="False" />
+            <SelectField field="Start_Row" selected="False" />
             <SelectField field="End_Col" selected="False" />
             <SelectField field="End_Row" selected="False" />
-            <SelectField field="Right_Begin_Col" selected="False" />
-            <SelectField field="Right_Begin_Row" selected="False" />
-            <SelectField field="Right_Min_Minute" selected="False" />
-            <SelectField field="Right_Max_Minute" selected="True" rename="Max_Minute" />
-            <SelectField field="Right_path" selected="False" rename="path" />
-            <SelectField field="Right_End_Col" selected="True" rename="End_Col" />
-            <SelectField field="Right_End_Row" selected="True" rename="End_Row" />
+            <SelectField field="Path" selected="True" />
+            <SelectField field="EndPathID" selected="True" />
+            <SelectField field="Curr_Col" selected="True" />
+            <SelectField field="Curr_Row" selected="True" />
+            <SelectField field="Minute" selected="True" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -1897,80 +2759,71 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="246">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3858" y="1434" />
+    <Node ToolID="296">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="3378" y="1230" />
       </GuiSettings>
       <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="End_Row" />
-            <Field field="Max_Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Begin_Row" />
-            <Field field="Min_Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
+        <Configuration>
+          <Expression>[EndPathID] = [Right_BlizzardID]</Expression>
+          <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <DefaultAnnotationText>[EndPathID] = [Right_BlizzardID]</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="247">
+    <Node ToolID="297">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="4170" y="1482" />
+        <Position x="3606" y="1278" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Minute]+1" field="Minute" size="4" type="Int32" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
+          <DefaultAnnotationText><![CDATA[Minute = [Minute]+1
 ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="248">
+    <Node ToolID="299">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="3570" y="1206" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_c0d7d8e0fd4743498e19e18eed04f30c_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="300">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3858" y="1518" />
+        <Position x="2898" y="1422" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
           <JoinInfo connection="Left">
-            <Field field="End_Col" />
-            <Field field="Max_Minute" />
+            <Field field="Curr_Row" />
+            <Field field="Minute" />
           </JoinInfo>
           <JoinInfo connection="Right">
-            <Field field="Begin_Col" />
-            <Field field="Min_Minute" />
+            <Field field="Row" />
+            <Field field="Minute" />
           </JoinInfo>
           <SelectConfiguration>
             <Configuration outputConnection="Join">
@@ -1978,15 +2831,9 @@ Max_Minute = [Minute]+1
               <CommaDecimal value="False" />
               <SelectFields>
                 <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
                 <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
                 <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Minute" selected="True" rename="Right_Minute" input="Right_" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -2000,59 +2847,167 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
     </Node>
-    <Node ToolID="249">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3954" y="1434" />
+    <Node ToolID="301">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2694" y="1494" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Expression>[End_Col] = [Begin_Col]-1
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="blizzard" selected="False" />
+            <SelectField field="Min_Row" selected="False" />
+            <SelectField field="Min_Col" selected="False" />
+            <SelectField field="Max_Row" selected="False" />
+            <SelectField field="Max_Col" selected="False" />
+            <SelectField field="Start_Col" selected="False" />
+            <SelectField field="Start_Row" selected="False" />
+            <SelectField field="End_Col" selected="False" />
+            <SelectField field="End_Row" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="302">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="3162" y="1422" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Path]+':'+[Right_BlizzardID]" field="path" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[path = [Path]+':'+[Right_BlizzardID]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="303">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="3486" y="1398" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Right_BlizzardID" selected="False" />
+            <SelectField field="Right_Col" selected="False" />
+            <SelectField field="Right_Row" selected="False" />
+            <SelectField field="Right_Minute" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="304">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="2898" y="1494" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Curr_Col" />
+            <Field field="Minute" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Col" />
+            <Field field="Minute" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
+                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Minute" selected="True" rename="Right_Minute" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="305">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2994" y="1422" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Curr_Col] = [Right_Col]-1
 ||
-[End_Col] = [Begin_Col]
+[Curr_Col] = [Right_Col]
 ||
-[End_Col] = [Begin_Col]+1</Expression>
+[Curr_Col] = [Right_Col]+1</Expression>
           <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
+          <DefaultAnnotationText>[Curr_Col] = [Right_Col]-1
 ||
-[End_Col] = [Begin_Col]
+[Curr_Col] = [Right_Col]
 ||
-[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
+[Curr_Col] = [Right_Co...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="250">
+    <Node ToolID="306">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3942" y="1518" />
+        <Position x="2994" y="1494" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Expression>[End_Row] = [Begin_Row]-1
+          <Expression>[Curr_Row] = [Right_Row]-1
 ||
-[End_Row] = [Begin_Row]
+[Curr_Row] = [Right_Row]
 ||
-[End_Row] = [Begin_Row]+1</Expression>
+[Curr_Row] = [Right_Row]+1</Expression>
           <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
+          <DefaultAnnotationText>[Curr_Row] = [Right_Row]-1
 ||
-[End_Row] = [Begin_Row]
+[Curr_Row] = [Right_Row]
 ||
-[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
+[Curr_Row] = [Right_Ro...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="251">
+    <Node ToolID="307">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="4074" y="1482" />
+        <Position x="3090" y="1422" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -2069,31 +3024,24 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
     </Node>
-    <Node ToolID="252">
+    <Node ToolID="308">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="3534" y="1470" />
+        <Position x="2694" y="1422" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="True" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="BlizzardID" selected="True" />
-            <SelectField field="Max_Minute" selected="False" />
-            <SelectField field="path" selected="True" />
-            <SelectField field="Right_BlizzardID" selected="False" />
-            <SelectField field="Begin_Col" selected="True" />
-            <SelectField field="Begin_Row" selected="True" />
-            <SelectField field="Min_Minute" selected="True" />
+            <SelectField field="Start_Col" selected="False" />
+            <SelectField field="Start_Row" selected="False" />
             <SelectField field="End_Col" selected="False" />
             <SelectField field="End_Row" selected="False" />
-            <SelectField field="Right_Begin_Col" selected="False" />
-            <SelectField field="Right_Begin_Row" selected="False" />
-            <SelectField field="Right_Min_Minute" selected="False" />
-            <SelectField field="Right_Max_Minute" selected="True" rename="Max_Minute" />
-            <SelectField field="Right_path" selected="False" rename="path" />
-            <SelectField field="Right_End_Col" selected="True" rename="End_Col" />
-            <SelectField field="Right_End_Row" selected="True" rename="End_Row" />
+            <SelectField field="Path" selected="True" />
+            <SelectField field="EndPathID" selected="True" />
+            <SelectField field="Curr_Col" selected="True" />
+            <SelectField field="Curr_Row" selected="True" />
+            <SelectField field="Minute" selected="True" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -2105,100 +3053,49 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="253">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3858" y="1662" />
+    <Node ToolID="309">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="3390" y="1422" />
       </GuiSettings>
       <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="End_Row" />
-            <Field field="Max_Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Begin_Row" />
-            <Field field="Min_Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
+        <Configuration>
+          <Expression>[EndPathID] = [Right_BlizzardID]</Expression>
+          <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <DefaultAnnotationText>[EndPathID] = [Right_BlizzardID]</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="254">
+    <Node ToolID="310">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="4170" y="1710" />
+        <Position x="3618" y="1470" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[path]+':'+[Right_path]" field="path" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Minute]+1" field="Minute" size="4" type="Int32" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[path = [path]+':'+[Right_path]
+          <DefaultAnnotationText><![CDATA[Minute = [Minute]+1
 ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="255">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="3858" y="1746" />
+    <Node ToolID="312">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="3582" y="1398" />
       </GuiSettings>
       <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="End_Col" />
-            <Field field="Max_Minute" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Begin_Col" />
-            <Field field="Min_Minute" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Right_BlizzardID" selected="True" rename="Right_BlizzardID" input="Right_" />
-                <SelectField field="Right_Begin_Col" selected="True" rename="Right_Begin_Col" input="Right_" />
-                <SelectField field="Right_Begin_Row" selected="True" rename="Right_Begin_Row" input="Right_" />
-                <SelectField field="Right_Min_Minute" selected="True" rename="Right_Min_Minute" input="Right_" />
-                <SelectField field="Right_Max_Minute" selected="True" rename="Right_Max_Minute" input="Right_" />
-                <SelectField field="Right_path" selected="True" rename="Right_path" input="Right_" />
-                <SelectField field="Right_End_Col" selected="True" rename="Right_End_Col" input="Right_" />
-                <SelectField field="Right_End_Row" selected="True" rename="Right_End_Row" input="Right_" />
-                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
-                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
+        <Configuration>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_ed492c6dfbde43cb94f9bba7d3856a11_.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -2206,102 +3103,23 @@ Max_Minute = [Minute]+1
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="256">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3954" y="1662" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>[End_Col] = [Begin_Col]-1
-||
-[End_Col] = [Begin_Col]
-||
-[End_Col] = [Begin_Col]+1</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>[End_Col] = [Begin_Col]-1
-||
-[End_Col] = [Begin_Col]
-||
-[End_Col] = [Begin_Col]+...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="257">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="3942" y="1746" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Expression>[End_Row] = [Begin_Row]-1
-||
-[End_Row] = [Begin_Row]
-||
-[End_Row] = [Begin_Row]+1</Expression>
-          <Mode>Custom</Mode>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>[End_Row] = [Begin_Row]-1
-||
-[End_Row] = [Begin_Row]
-||
-[End_Row] = [Begin_Row]+...</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="258">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="4074" y="1710" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
-    <Node ToolID="259">
+    <Node ToolID="313">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="3678" y="1698" />
+        <Position x="3474" y="1278" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <OrderChanged value="True" />
+          <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="BlizzardID" selected="True" />
-            <SelectField field="Max_Minute" selected="False" />
-            <SelectField field="path" selected="True" />
+            <SelectField field="Curr_Col" selected="False" />
+            <SelectField field="Curr_Row" selected="False" />
             <SelectField field="Right_BlizzardID" selected="False" />
-            <SelectField field="Begin_Col" selected="True" />
-            <SelectField field="Begin_Row" selected="True" />
-            <SelectField field="Min_Minute" selected="True" />
-            <SelectField field="End_Col" selected="False" />
-            <SelectField field="End_Row" selected="False" />
-            <SelectField field="Right_Begin_Col" selected="False" />
-            <SelectField field="Right_Begin_Row" selected="False" />
-            <SelectField field="Right_Min_Minute" selected="False" />
-            <SelectField field="Right_Max_Minute" selected="True" rename="Max_Minute" />
-            <SelectField field="Right_path" selected="False" rename="path" />
-            <SelectField field="Right_End_Col" selected="True" rename="End_Col" />
-            <SelectField field="Right_End_Row" selected="True" rename="End_Row" />
+            <SelectField field="Right_Col" selected="True" rename="Curr_Col" />
+            <SelectField field="Right_Row" selected="True" rename="Curr_Row" />
+            <SelectField field="Right_Minute" selected="False" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -2313,17 +3131,23 @@ Max_Minute = [Minute]+1
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="261">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="3630" y="1470" />
+    <Node ToolID="314">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="3498" y="1482" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <UniqueFields>
-            <Field field="path" />
-            <Field field="Min_Minute" />
-            <Field field="Max_Minute" />
-          </UniqueFields>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Curr_Col" selected="False" />
+            <SelectField field="Curr_Row" selected="False" />
+            <SelectField field="Right_BlizzardID" selected="False" />
+            <SelectField field="Right_Col" selected="True" rename="Curr_Col" />
+            <SelectField field="Right_Row" selected="True" rename="Curr_Row" />
+            <SelectField field="Right_Minute" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -2331,78 +3155,180 @@ Max_Minute = [Minute]+1
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="262">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="3066" y="1194" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <UniqueFields>
-            <Field field="Max_Minute" />
-            <Field field="End_Col" />
-            <Field field="End_Row" />
-          </UniqueFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-    </Node>
-    <Node ToolID="263">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="3774" y="1206" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <UniqueFields>
-            <Field field="Max_Minute" />
-            <Field field="End_Col" />
-            <Field field="End_Row" />
-          </UniqueFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-    </Node>
-    <Node ToolID="264">
+    <Node ToolID="316">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="4350" y="1218" />
+        <Position x="3246" y="1230" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Mode>Simple</Mode>
-          <Simple>
-            <Operator>=</Operator>
-            <Operands>
-              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
-              <DateType>fixed</DateType>
-              <PeriodDate>2022-12-28 16:23:45</PeriodDate>
-              <PeriodType>
-              </PeriodType>
-              <PeriodCount>0</PeriodCount>
-              <StartDate>2022-12-28 16:23:45</StartDate>
-              <EndDate>2022-12-28 16:23:45</EndDate>
-              <Operand>
-              </Operand>
-            </Operands>
-          </Simple>
+          <Expression>REGEX_CountMatches([Path], [Right_BlizzardID])&lt;5</Expression>
+          <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <DefaultAnnotationText>REGEX_CountMatches([Path], [Right_BlizzardID])&lt;5</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="317">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="3246" y="1422" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>REGEX_CountMatches([Path], [Right_BlizzardID])&lt;5</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>REGEX_CountMatches([Path], [Right_BlizzardID])&lt;5</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="330">
+      <GuiSettings>
+        <Position x="2682" y="978" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Day24_IterativePart1 (318)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="C:\AOC\AdventOfCode\AOC_2022\BaseA\Day24_IterativePart1.yxmc" />
+    </Node>
+    <Node ToolID="320">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2778" y="942" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_e1b9707264fc48e29b21d6c593ce353f_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="321">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2778" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\temp\Engine_20628_a76fee8cb02a4762bc3d15e621afba3a_\Engine_21664_6818886296a5407795f34507f3f3c4c1_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="323">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2502" y="930" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="blizzard" selected="False" />
+            <SelectField field="Min_Row" selected="False" />
+            <SelectField field="Min_Col" selected="False" />
+            <SelectField field="Max_Row" selected="False" />
+            <SelectField field="Max_Col" selected="False" />
+            <SelectField field="Start_Col" selected="False" />
+            <SelectField field="Start_Row" selected="False" />
+            <SelectField field="End_Col" selected="False" />
+            <SelectField field="End_Row" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="326">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2670" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day24_CurrentStep.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day24_CurrentStep.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="327">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2598" y="918" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day24_BlizzardsFreeSpaces.yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Day24_BlizzardsFreeSpaces.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
     <Node ToolID="202">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -4238,6 +5164,54 @@ Row = iif(...</DefaultAnnotationText>
       <Destination ToolID="196" Connection="Left" />
     </Connection>
     <Connection>
+      <Origin ToolID="208" Connection="True" />
+      <Destination ToolID="212" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="212" Connection="True" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="212" Connection="False" />
+      <Destination ToolID="214" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="213" Connection="Output" />
+      <Destination ToolID="215" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="214" Connection="Output" />
+      <Destination ToolID="215" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="215" Connection="Join" />
+      <Destination ToolID="216" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="216" Connection="Output" />
+      <Destination ToolID="281" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="217" Connection="Output" />
+      <Destination ToolID="218" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="True" />
+      <Destination ToolID="204" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="True" />
+      <Destination ToolID="288" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="True" />
+      <Destination ToolID="301" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="True" />
+      <Destination ToolID="323" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="203" Connection="Join" />
       <Destination ToolID="225" Connection="Input" />
     </Connection>
@@ -4264,38 +5238,6 @@ Row = iif(...</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="207" Connection="Output" />
       <Destination ToolID="224" Connection="Right" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="208" Connection="True" />
-      <Destination ToolID="212" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="212" Connection="True" />
-      <Destination ToolID="213" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="212" Connection="False" />
-      <Destination ToolID="214" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="213" Connection="Output" />
-      <Destination ToolID="215" Connection="Left" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="214" Connection="Output" />
-      <Destination ToolID="215" Connection="Right" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="215" Connection="Join" />
-      <Destination ToolID="216" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="217" Connection="Output" />
-      <Destination ToolID="218" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="218" Connection="True" />
-      <Destination ToolID="204" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="219" Connection="Output" />
@@ -4488,6 +5430,154 @@ Row = iif(...</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="263" Connection="Unique" />
       <Destination ToolID="240" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="281" Connection="Output" />
+      <Destination ToolID="330" Connection="Current Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="323" Connection="Output" />
+      <Destination ToolID="330" Connection="BlizzardFree Spaces" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="281" Connection="Output" />
+      <Destination ToolID="326" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="287" Connection="Join" />
+      <Destination ToolID="292" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="288" Connection="Output" />
+      <Destination ToolID="291" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="295" Connection="Output" />
+      <Destination ToolID="291" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="288" Connection="Output" />
+      <Destination ToolID="287" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="295" Connection="Output" />
+      <Destination ToolID="287" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="289" Connection="Output" />
+      <Destination ToolID="316" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="290" Connection="Output" />
+      <Destination ToolID="299" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="291" Connection="Join" />
+      <Destination ToolID="293" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="292" Connection="True" />
+      <Destination ToolID="294" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="293" Connection="True" />
+      <Destination ToolID="294" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="294" Connection="Output" />
+      <Destination ToolID="289" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="296" Connection="True" />
+      <Destination ToolID="290" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="296" Connection="False" />
+      <Destination ToolID="313" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="297" Connection="Output" />
+      <Destination ToolID="308" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="300" Connection="Join" />
+      <Destination ToolID="305" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="301" Connection="Output" />
+      <Destination ToolID="304" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="308" Connection="Output" />
+      <Destination ToolID="304" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="301" Connection="Output" />
+      <Destination ToolID="300" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="308" Connection="Output" />
+      <Destination ToolID="300" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="302" Connection="Output" />
+      <Destination ToolID="317" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="303" Connection="Output" />
+      <Destination ToolID="312" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="304" Connection="Join" />
+      <Destination ToolID="306" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="305" Connection="True" />
+      <Destination ToolID="307" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="306" Connection="True" />
+      <Destination ToolID="307" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="307" Connection="Output" />
+      <Destination ToolID="302" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="True" />
+      <Destination ToolID="303" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="False" />
+      <Destination ToolID="314" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="313" Connection="Output" />
+      <Destination ToolID="297" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="314" Connection="Output" />
+      <Destination ToolID="310" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="316" Connection="True" />
+      <Destination ToolID="296" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="317" Connection="True" />
+      <Destination ToolID="309" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="330" Connection="Output" />
+      <Destination ToolID="320" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="330" Connection="Iterate Output" />
+      <Destination ToolID="321" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="323" Connection="Output" />
+      <Destination ToolID="327" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="104" Connection="Output" />

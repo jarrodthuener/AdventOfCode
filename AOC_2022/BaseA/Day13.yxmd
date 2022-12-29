@@ -109,7 +109,7 @@ Split From Here
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_13032_90931a915b724310bc46596b65b4e9b6_\Engine_14932_b96a4a43974d40b6960d7f131791c148_.yxdb</TempFile>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_19500_b2c2e95488b34fccb4a99a54f4556763_\Engine_18544_90a4502ecae84f27a2b95ccde26a33bf_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -133,11 +133,11 @@ Split From Here
     </Node>
     <Node ToolID="85">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="726" y="738" />
+        <Position x="1362" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\temp\Engine_13032_90931a915b724310bc46596b65b4e9b6_\Engine_14932_649a59263917447cb79d5237e02d11a2_.yxdb</TempFile>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_19500_b2c2e95488b34fccb4a99a54f4556763_\Engine_18544_5dedf8c1dc23488f971abb62d1c5d76e_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -161,7 +161,7 @@ Split From Here
     </Node>
     <Node ToolID="86">
       <GuiSettings Plugin="AlteryxBasePluginsGui.JSONParse.JSONParse">
-        <Position x="438" y="738" />
+        <Position x="510" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -205,7 +205,7 @@ Split From Here
     </Node>
     <Node ToolID="88">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="534" y="738" />
+        <Position x="606" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -232,7 +232,7 @@ Split From Here
     </Node>
     <Node ToolID="90">
       <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
-        <Position x="630" y="738" />
+        <Position x="1266" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -259,7 +259,8 @@ Split From Here
             <Field description="Formula: iif(isnull([Field_1]),[Row-1:Block]+1,[Row-1:Block])" name="Block" source="CrossTab:Group:First:" type="Int32" />
             <Field name="JSON_Name" size="1073741823" source="CrossTab:Group:First:" type="V_WString" />
             <Field description="Formula: [Row-1:item]+1" name="item" source="CrossTab:Group:First:" type="Int32" />
-            <Field name="_Null_" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="1" size="1073741823" source="JSONParse: " type="V_WString" />
+            <Field name="2" size="1073741823" source="JSONParse: " type="V_WString" />
           </RecordInfo>
           <SortInfo>
             <Field field="Block" order="Asc" />
@@ -312,18 +313,184 @@ Split From Here
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="replace([Field_1],'[]','[z]')" field="Field_1" size="50000" type="V_String" />
-            <FormulaField expression="Replace(Replace(Replace([Field_1], '[[', '{{&quot;a&quot;:'),'[','{'), ']', '}')" field="Field_1" size="50000" type="V_String" />
+            <FormulaField expression="replace([Field_1],'[]','[&quot;z&quot;]')" field="Field_1" size="50000" type="V_String" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>Field_1 = replace([Field_1],'[]','[z]')
-Field_1 = Replace(Replace(Replace([Field...</DefaultAnnotationText>
+          <DefaultAnnotationText><![CDATA[Field_1 = replace([Field_1],'[]','["z"]')
+]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="690" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="774" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>JSON_Name</Field>
+          <Delimeters value="." />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="858" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="padleft([JSON_Name],3,'0')" field="JSON_Name" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[JSON_Name = padleft([JSON_Name],3,'0')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="96">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="942" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="RecordID" action="GroupBy" rename="RecordID" />
+            <SummarizeField field="JSON_Name" action="Concat" rename="Concat_JSON_Name">
+              <Concat_Start />
+              <Separator>.</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="97">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1014" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_RecordID" selected="True" input="Left_" />
+                <SelectField field="Left_Block" selected="True" input="Left_" />
+                <SelectField field="Left_record" selected="True" input="Left_" />
+                <SelectField field="Left_JSON_Name" selected="False" input="Left_" />
+                <SelectField field="Right_Concat_JSON_Name" selected="True" rename="JSON_Name" input="Right_" />
+                <SelectField field="Left_JSON_ValueString" selected="True" input="Left_" />
+                <SelectField field="Left_item" selected="True" input="Left_" />
+                <SelectField field="Right_RecordID" selected="False" rename="Right_RecordID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="98">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1158" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_19500_b2c2e95488b34fccb4a99a54f4556763_\Engine_18544_0cbe0010daeb457dbc7bddf1e13433ca_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1158" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_19500_b2c2e95488b34fccb4a99a54f4556763_\Engine_18544_babe5adf9b104a4899a7d88704fdd8c1_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1158" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\jarro\AppData\Local\Temp\Engine_19500_b2c2e95488b34fccb4a99a54f4556763_\Engine_18544_7984bc614bef447c9460189ee99904b5_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
   </Nodes>
   <Connections>
@@ -332,7 +499,7 @@ Field_1 = Replace(Replace(Replace([Field...</DefaultAnnotationText>
       <Destination ToolID="84" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="2" Connection="Sample" />
+      <Origin ToolID="2" Connection="FullData" />
       <Destination ToolID="87" Connection="Input" />
     </Connection>
     <Connection>
@@ -349,7 +516,7 @@ Field_1 = Replace(Replace(Replace([Field...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="88" Connection="Output" />
-      <Destination ToolID="90" Connection="Input" />
+      <Destination ToolID="93" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="90" Connection="Output" />
@@ -358,6 +525,42 @@ Field_1 = Replace(Replace(Replace([Field...</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="92" Connection="Output" />
       <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="97" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="96" Connection="Output" />
+      <Destination ToolID="97" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="96" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Left" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Join" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Right" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Join" />
+      <Destination ToolID="90" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

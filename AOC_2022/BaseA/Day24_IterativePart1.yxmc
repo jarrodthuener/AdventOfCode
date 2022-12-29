@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="267">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="702" y="78" />
+        <Position x="378" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -37,7 +37,7 @@
         <MetaInfo connection="Left">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -54,7 +54,7 @@
         <MetaInfo connection="Join">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -89,7 +89,7 @@
     </Node>
     <Node ToolID="268">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="498" y="150" />
+        <Position x="174" y="150" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -126,7 +126,7 @@
     </Node>
     <Node ToolID="271">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1074" y="78" />
+        <Position x="750" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -143,7 +143,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -156,13 +156,16 @@
             <Field name="Right_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Right_Minute" source="Formula: 0" type="Int32" />
           </RecordInfo>
+          <SortInfo>
+            <Field field="Right_BlizzardID" order="Asc" />
+          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
     <Node ToolID="272">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1362" y="54" />
+        <Position x="1038" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -184,7 +187,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -199,7 +202,7 @@
     </Node>
     <Node ToolID="273">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="702" y="150" />
+        <Position x="378" y="150" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -233,7 +236,7 @@
         <MetaInfo connection="Left">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -250,7 +253,7 @@
         <MetaInfo connection="Join">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -285,7 +288,7 @@
     </Node>
     <Node ToolID="274">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="798" y="78" />
+        <Position x="474" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -308,7 +311,7 @@
         <MetaInfo connection="True">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -329,7 +332,7 @@
         <MetaInfo connection="False">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -352,7 +355,7 @@
     </Node>
     <Node ToolID="275">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="798" y="162" />
+        <Position x="474" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -375,7 +378,7 @@
         <MetaInfo connection="True">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -396,7 +399,7 @@
         <MetaInfo connection="False">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -419,7 +422,7 @@
     </Node>
     <Node ToolID="276">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="882" y="102" />
+        <Position x="558" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -436,7 +439,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -455,7 +458,7 @@
     </Node>
     <Node ToolID="279">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="498" y="78" />
+        <Position x="174" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -482,7 +485,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -497,7 +500,7 @@
     </Node>
     <Node ToolID="283">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1266" y="78" />
+        <Position x="942" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -512,7 +515,7 @@
         <MetaInfo connection="True">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -525,11 +528,14 @@
             <Field name="Right_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Right_Minute" source="Formula: 0" type="Int32" />
           </RecordInfo>
+          <SortInfo>
+            <Field field="Right_BlizzardID" order="Asc" />
+          </SortInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -542,13 +548,16 @@
             <Field name="Right_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Right_Minute" source="Formula: 0" type="Int32" />
           </RecordInfo>
+          <SortInfo>
+            <Field field="Right_BlizzardID" order="Asc" />
+          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
     <Node ToolID="284">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1650" y="246" />
+        <Position x="1326" y="246" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -565,7 +574,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
             <Field description="Formula: [Row-1:Col]+1" name="Start_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Start_Row" source="RecordID: Starting Value=1" type="Int32" />
@@ -580,7 +589,7 @@
     </Node>
     <Node ToolID="285">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1554" y="234" />
+        <Position x="1230" y="234" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -605,7 +614,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
             <Field description="Formula: [Row-1:Col]+1" name="Start_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Start_Row" source="RecordID: Starting Value=1" type="Int32" />
@@ -620,22 +629,22 @@
     </Node>
     <Node ToolID="315">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1170" y="78" />
+        <Position x="846" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Expression>REGEX_CountMatches([Path], [Right_BlizzardID])&lt;5</Expression>
+          <Expression>!REGEX_Match([Path], '.*('+[Right_BlizzardID]+':?)\1{3,}.*')</Expression>
           <Mode>Custom</Mode>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>REGEX_CountMatches([Path], [Right_BlizzardID])&lt;5</DefaultAnnotationText>
+          <DefaultAnnotationText>!REGEX_Match([Path], '.*('+[Right_BlizzardID]+':?)\1{3,}.*')</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -648,11 +657,14 @@
             <Field name="Right_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Right_Minute" source="Formula: 0" type="Int32" />
           </RecordInfo>
+          <SortInfo>
+            <Field field="Right_BlizzardID" order="Asc" />
+          </SortInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -665,6 +677,9 @@
             <Field name="Right_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Right_Minute" source="Formula: 0" type="Int32" />
           </RecordInfo>
+          <SortInfo>
+            <Field field="Right_BlizzardID" order="Asc" />
+          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
@@ -684,7 +699,7 @@
     </Node>
     <Node ToolID="317">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="378" y="174" />
+        <Position x="54" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -696,7 +711,7 @@
           <FileInput>
             <Configuration>
               <Passwords />
-              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day24_BlizzardsFreeSpaces.yxdb</File>
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\\Day24_BlizzardsFreeSpaces.yxdb</File>
               <FormatSpecificOptions />
             </Configuration>
           </FileInput>
@@ -707,9 +722,6 @@
           <DefaultAnnotationText>Day24_BlizzardsFreeSpaces.yxdb</DefaultAnnotationText>
           <Left value="True" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="BlizzardID" size="8" source="Formula: ToString([Col])+','+tostring([Row])" type="V_WString" />
@@ -723,7 +735,7 @@
     </Node>
     <Node ToolID="318">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1530" y="54" />
+        <Position x="1206" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -741,7 +753,7 @@
     </Node>
     <Node ToolID="319">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="390" y="78" />
+        <Position x="66" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -753,7 +765,7 @@
           <FileInput>
             <Configuration>
               <Passwords />
-              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day24_CurrentStep.yxdb</File>
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">.\\Day24_CurrentStep.yxdb</File>
               <FormatSpecificOptions />
             </Configuration>
           </FileInput>
@@ -764,13 +776,10 @@
           <DefaultAnnotationText>Day24_CurrentStep.yxdb</DefaultAnnotationText>
           <Left value="True" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
             <Field description="Formula: [Row-1:Col]+1" name="Start_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Start_Row" source="RecordID: Starting Value=1" type="Int32" />
@@ -785,7 +794,7 @@
     </Node>
     <Node ToolID="320">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1746" y="126" />
+        <Position x="1422" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -803,7 +812,7 @@
     </Node>
     <Node ToolID="321">
       <GuiSettings>
-        <Position x="1458" y="102" />
+        <Position x="1134" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -812,9 +821,6 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output9">
           <RecordInfo>
             <Field name="Count" source="(Multiple Sources)" type="Int64" />
@@ -825,7 +831,7 @@
     </Node>
     <Node ToolID="322">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="1362" y="198" />
+        <Position x="1038" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -848,7 +854,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -868,7 +874,7 @@
     </Node>
     <Node ToolID="323">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1458" y="246" />
+        <Position x="1134" y="246" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -897,7 +903,7 @@
         <MetaInfo connection="True">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -915,7 +921,7 @@
         <MetaInfo connection="False">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -935,12 +941,11 @@
     </Node>
     <Node ToolID="326">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="978" y="90" />
+        <Position x="654" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <UniqueFields>
-            <Field field="Path" />
             <Field field="Right_BlizzardID" />
           </UniqueFields>
         </Configuration>
@@ -952,7 +957,7 @@
         <MetaInfo connection="Unique">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -966,14 +971,13 @@
             <Field name="Right_Minute" source="Formula: 0" type="Int32" />
           </RecordInfo>
           <SortInfo>
-            <Field field="Path" order="Asc" />
             <Field field="Right_BlizzardID" order="Asc" />
           </SortInfo>
         </MetaInfo>
         <MetaInfo connection="Duplicates">
           <RecordInfo>
             <Field name="Path" size="1073741823" source="Formula: [Path]+':'+[Right_BlizzardID]" type="V_WString" />
-            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
+            <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+','+tostring([End_Row])" type="V_WString" />
             <Field description="Formula: [Row-1:Col]+1" name="Curr_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
             <Field name="Curr_Row" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="Minute" source="Formula: [Minute]+1" type="Int32" />
@@ -987,7 +991,6 @@
             <Field name="Right_Minute" source="Formula: 0" type="Int32" />
           </RecordInfo>
           <SortInfo>
-            <Field field="Path" order="Asc" />
             <Field field="Right_BlizzardID" order="Asc" />
           </SortInfo>
         </MetaInfo>
@@ -996,13 +999,13 @@
     </Node>
     <Node ToolID="325">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1745" y="197" width="158" height="165" />
+        <Position x="1421" y="197" width="158" height="165" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Caption>Container 325</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
+          <Disabled value="True" />
           <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
@@ -1014,11 +1017,11 @@
       <ChildNodes>
         <Node ToolID="324">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1770" y="246" />
+            <Position x="1446" y="246" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <File FileFormat="19" MaxRecords="">C:\AOC\AdventOfCode\AOC_2022\BaseA\Day24_CurrentStep.yxdb</File>
+              <File FileFormat="19" MaxRecords="">.\\Day24_CurrentStep.yxdb</File>
               <Passwords />
               <Disable>False</Disable>
               <FormatSpecificOptions>
@@ -1033,22 +1036,6 @@
               <DefaultAnnotationText>Day24_CurrentStep.yxdb</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
-            <MetaInfo connection="Output">
-              <RecordInfo>
-                <Field description="Formula: [Row-1:Col]+1" name="Start_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
-                <Field name="Start_Row" source="RecordID: Starting Value=1" type="Int32" />
-                <Field description="Formula: [Row-1:Col]+1" name="End_Col" source="Formula: [Row-1:Col]+1" type="Int32" />
-                <Field name="End_Row" source="RecordID: Starting Value=1" type="Int32" />
-                <Field name="Curr_Col" source="Formula: [Start_Col]" type="Int32" />
-                <Field name="Curr_Row" source="Formula: [Start_Row]" type="Int32" />
-                <Field name="Minute" source="Formula: 1" type="Int32" />
-                <Field name="Path" size="1073741823" source="Formula: ToString([Curr_Col])+'|'+tostring([Curr_Row])" type="V_WString" />
-                <Field name="EndPathID" size="1073741823" source="Formula: ToString([End_Col])+'|'+tostring([End_Row])" type="V_WString" />
-              </RecordInfo>
-            </MetaInfo>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>

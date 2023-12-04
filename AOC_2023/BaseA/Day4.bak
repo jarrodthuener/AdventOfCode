@@ -1,0 +1,1608 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings>
+        <Position x="54" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Folder Browse (14)">..\Data</Value>
+          <Value name="Check Box (16)">False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro=".\OpenAndSplitData.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="246" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_1" selected="True" rename="data" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="438" y="54" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Part 1</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="354" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Row</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="450" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>data_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="546" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Row</UpdateField_Name>
+          <CreateField_Name>Column</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Column]+1</Expression>
+          <GroupByFields>
+            <Field field="Row" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Column]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="582" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Row" />
+          </GroupFields>
+          <HeaderField field="Column" />
+          <DataField field="data" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="CrossTab:Group:First:" type="Int32" />
+            <Field name="1" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="2" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="3" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="4" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="5" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="6" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="7" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="8" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="9" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="10" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="11" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="12" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="13" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="14" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="15" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="16" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="17" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="18" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="19" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="20" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="21" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="22" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="23" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="24" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="25" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="26" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="27" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="28" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="29" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="30" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="31" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="32" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="33" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="34" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="35" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="36" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="37" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="38" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="39" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="40" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="41" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="42" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="43" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="44" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="45" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="46" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="47" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="48" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="49" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="50" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="51" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="52" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="53" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="54" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="55" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="56" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="57" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="58" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="59" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="60" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="61" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="62" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="63" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="64" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="65" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="66" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="67" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="68" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="69" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="70" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="71" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="72" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="73" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="74" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="75" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="76" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="77" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="78" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="79" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="80" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="81" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="82" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="83" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="84" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="85" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="86" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="87" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="88" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="89" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="90" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="91" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="92" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="93" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="94" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="95" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="96" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="97" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="98" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="99" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="100" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="101" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="102" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="103" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="104" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="105" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="106" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="107" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="108" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="109" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="110" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="111" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="112" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="113" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="114" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="115" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="116" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="117" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="118" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="119" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="120" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="121" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="122" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="123" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="124" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="125" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="126" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="127" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="128" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="129" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="130" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="131" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="132" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="133" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="134" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="135" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="136" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="137" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="138" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="139" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+            <Field name="140" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day3.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="678" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3044_77b01336a26111418e2047df05f1f8d8_\Engine_3044_18259220584be94f874a92e05668eae5~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="762" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>REGEX_Match([data], '\d') || 
+[data] == '.'</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1758" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3044_77b01336a26111418e2047df05f1f8d8_\Engine_3044_3bbcb6439a925a4bb9b46f44882bf291~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="930" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-12-03 00:35:15</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>.</Operand>
+              <StartDate>2023-12-03 00:35:15</StartDate>
+              <EndDate>2023-12-03 00:35:15</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="750" y="162" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>True = . or Digit</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="918" y="126" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>True = Digit</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1062" y="54" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>find consecutive digits</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToString(Row)+'|'+ToString([Column])" field="Coor" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Coor = ToString(Row)+'|'+ToString([Column])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1686" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3044_77b01336a26111418e2047df05f1f8d8_\Engine_3044_060ab2ece323ae43825e9bf398416fd0~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1722" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Row" />
+            <Field field="Column" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="joinRow" />
+            <Field field="joinColumn" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                <SelectField field="Right_Column" selected="True" rename="Right_Column" input="Right_" />
+                <SelectField field="Right_Coor" selected="True" rename="Right_Coor" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2046" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Number" action="Sum" rename="Sum_Number" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1818" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Group" action="GroupBy" rename="Group" />
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="Column" action="GroupBy" rename="Column" />
+            <SummarizeField field="Coor" action="GroupBy" rename="Coor" />
+            <SummarizeField field="data" action="GroupBy" rename="data" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1926" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Group" action="GroupBy" rename="Group" />
+            <SummarizeField field="data" action="Concat" rename="Number">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1818" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Group" action="GroupBy" rename="Group" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1830" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Number" selected="True" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1926" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Group" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Group" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Group" selected="False" rename="Right_Group" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2142" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3044_77b01336a26111418e2047df05f1f8d8_\Engine_3044_12bb9cd36d7f7c4cbffc2afd58e6275b~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1806" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-12-03 13:33:02</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>*</Operand>
+              <StartDate>2023-12-03 13:33:02</StartDate>
+              <EndDate>2023-12-03 13:33:02</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[data] = "*"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1926" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Row" />
+            <Field field="Column" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="joinRow" />
+            <Field field="joinColumn" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                <SelectField field="Right_Column" selected="True" rename="Right_Column" input="Right_" />
+                <SelectField field="Right_Coor" selected="True" rename="Right_Coor" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2586" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Product" action="Sum" rename="Sum_Product" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2022" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="startingCoor" action="GroupBy" rename="startingCoor" />
+            <SummarizeField field="Group" action="GroupBy" rename="Group" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2022" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Number" selected="True" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="2394" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Group" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Concat_Group" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Concat_Group" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2682" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3044_77b01336a26111418e2047df05f1f8d8_\Engine_3044_c97de4e847a8dc4baca46404841d84e8~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="966" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="tostring([Row])+'|'+tostring([Column])" field="startingCoor" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[startingCoor = tostring([Row])+'|'+tostring([Column])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2118" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="startingCoor" action="GroupBy" rename="startingCoor" />
+            <SummarizeField field="Group" action="Concat" rename="Concat_Group">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End />
+            </SummarizeField>
+            <SummarizeField field="Group" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2214" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-12-03 13:36:08</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>2</Operand>
+              <StartDate>2023-12-03 13:36:08</StartDate>
+              <EndDate>2023-12-03 13:36:08</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] = 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="2310" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Concat_Group</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="2490" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Group</UpdateField_Name>
+          <CreateField_Name>Product</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Number]*[Number]</Expression>
+          <GroupByFields>
+            <Field field="startingCoor" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Number]*[Number]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="88">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1794" y="786" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Pull ]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1049" y="101" width="601" height="228" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 64</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="1170" y="185" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_column" selected="True" rename="Source_column" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="1074" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="3" />
+              <Fields>
+                <Field name="joinColumn" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1266" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Column]+[joinColumn]" field="joinColumn" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[joinColumn = [Column]+[joinColumn]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1374" y="174" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Column" />
+                <Field field="Row" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="joinColumn" />
+                <Field field="Row" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Row" selected="False" rename="Right_Row" input="Right_" />
+                    <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                    <SelectField field="Right_Column" selected="True" rename="Right_Column" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MakeGroup.MakeGroup">
+            <Position x="1482" y="174" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Key1st>Coor</Key1st>
+              <Key2nd>Right_Coor</Key2nd>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMakeGroup" />
+        </Node>
+        <Node ToolID="60">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1566" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Coor" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Key" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Group" selected="True" input="Right_" />
+                    <SelectField field="Left_Row" selected="True" input="Left_" />
+                    <SelectField field="Left_data" selected="True" input="Left_" />
+                    <SelectField field="Left_Column" selected="True" input="Left_" />
+                    <SelectField field="Left_Coor" selected="True" input="Left_" />
+                    <SelectField field="Right_Key" selected="False" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1112" y="380" width="491" height="264" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Find adjacent spaces to symbols</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="1254" y="414" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_column" selected="True" rename="Source_column" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="1122" y="450" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="3" />
+              <Fields>
+                <Field name="joinColumn" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1494" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Row]+[joinRow]" field="joinRow" size="4" type="Int32" />
+                <FormulaField expression="[Column]+[joinColumn]" field="joinColumn" size="4" type="Int32" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[joinRow = [Row]+[joinRow]
+joinColumn = [Column]+[joinColumn]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="1374" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Source_joinColumn" selected="True" rename="Source_joinColumn" input="Source_" />
+                    <SelectField field="Source_column" selected="True" rename="Source_column" input="Source_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="1302" y="522" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="3" />
+              <Fields>
+                <Field name="joinRow" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>-1</c>
+                </r>
+                <r>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="FullData" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="True" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="False" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="48" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="48" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="51" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="51" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="60" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="60" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Join" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="74" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="74" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Join" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="True" />
+      <Destination ToolID="77" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Join" />
+      <Destination ToolID="77" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Join" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="81" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="81" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Join" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="42" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="42" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="84" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="True" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Join" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Join" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Join" />
+      <Destination ToolID="65" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="65" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Join" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="52" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="52" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <SortedGrouping value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day3</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="95158150-944c-42de-a7da-5c891f21a078" />
+      <Telemetry>
+        <PreviousWorkflowId value="0ea1f3b8-d669-4ec1-924d-b6dd4bbe4055" />
+        <OriginWorkflowId value="0ea1f3b8-d669-4ec1-924d-b6dd4bbe4055" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

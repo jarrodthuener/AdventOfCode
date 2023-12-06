@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings>
-        <Position x="68" y="318" />
+        <Position x="56" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -15,15 +15,12 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro=".\OpenAndSplitData.yxmc" />
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="222" y="318" />
+        <Position x="210" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -44,7 +41,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="234" y="426" width="100" height="40" />
+        <Position x="222" y="438" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -64,7 +61,7 @@
     </Node>
     <Node ToolID="138">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="210" y="666" width="100" height="40" />
+        <Position x="198" y="678" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -84,7 +81,7 @@
     </Node>
     <Node ToolID="139">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="66" y="42" width="504" height="204" />
+        <Position x="54" y="54" width="504" height="204" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -92,7 +89,8 @@
 9 &lt; hold_ms * (7-hold_ms)
 9 &lt; 7 * hold_ms - hold_ms^2
 0 &lt; 7 * hold_ms - hold_ms^2 - 9
-0&lt; -hold_ms^2 +7hold_ms - 9
+0 &lt; -hold_ms^2 +7hold_ms - 9
+0 &lt; 7hold_ms -hold_ms^2 -9
 
 x = (7 +- Sqrt( 7**2 - 4*-1*-9)) / 2*-1
 x = (7 +- sqrt( 49 - 36)) / -2
@@ -119,7 +117,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="140">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="318" y="318" />
+        <Position x="306" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -141,7 +139,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="141">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="438" y="318" />
+        <Position x="426" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -160,7 +158,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="142">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="534" y="318" />
+        <Position x="522" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -186,7 +184,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="143">
       <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
-        <Position x="726" y="318" />
+        <Position x="714" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -216,7 +214,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="144">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="630" y="318" />
+        <Position x="618" y="330" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -237,7 +235,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="145">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="606" y="390" />
+        <Position x="594" y="402" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -265,7 +263,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="146">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="414" y="390" />
+        <Position x="402" y="402" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -285,7 +283,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="147">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="510" y="390" />
+        <Position x="498" y="402" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -303,7 +301,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="150">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="366" y="558" />
+        <Position x="354" y="570" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -325,7 +323,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="151">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="510" y="546" />
+        <Position x="498" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -344,7 +342,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="152">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="606" y="546" />
+        <Position x="594" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -370,7 +368,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="153">
       <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
-        <Position x="798" y="546" />
+        <Position x="786" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -400,7 +398,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="154">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="702" y="546" />
+        <Position x="690" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -421,7 +419,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="155">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="654" y="618" />
+        <Position x="642" y="630" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -449,7 +447,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="156">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="462" y="618" />
+        <Position x="450" y="630" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -469,7 +467,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="157">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="558" y="618" />
+        <Position x="546" y="630" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -487,7 +485,7 @@ Then i'll subtract the two numbers and add 1 (to include the first number which 
     </Node>
     <Node ToolID="158">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="270" y="558" />
+        <Position x="258" y="570" />
       </GuiSettings>
       <Properties>
         <Configuration>

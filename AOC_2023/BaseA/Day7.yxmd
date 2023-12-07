@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings>
-        <Position x="54" y="330" />
+        <Position x="54" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -20,7 +20,7 @@
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="222" y="342" />
+        <Position x="222" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -41,7 +41,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="222" y="438" width="100" height="40" />
+        <Position x="222" y="162" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -61,7 +61,7 @@
     </Node>
     <Node ToolID="138">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="210" y="630" width="100" height="40" />
+        <Position x="210" y="354" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -81,7 +81,7 @@
     </Node>
     <Node ToolID="159">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="318" y="342" />
+        <Position x="318" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -101,7 +101,7 @@
     </Node>
     <Node ToolID="160">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="390" y="342" />
+        <Position x="390" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -122,7 +122,7 @@
     </Node>
     <Node ToolID="164">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
-        <Position x="522" y="390" />
+        <Position x="522" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -154,7 +154,7 @@
     </Node>
     <Node ToolID="165">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="582" y="474" />
+        <Position x="582" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -174,7 +174,7 @@
     </Node>
     <Node ToolID="166">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1014" y="402" />
+        <Position x="1014" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -205,7 +205,7 @@
     </Node>
     <Node ToolID="167">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="678" y="474" />
+        <Position x="678" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -225,7 +225,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="168">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="870" y="474" />
+        <Position x="870" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -248,7 +248,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="169">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="774" y="474" />
+        <Position x="774" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -269,7 +269,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="172">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1302" y="402" />
+        <Position x="1302" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -289,7 +289,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="173">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="510" y="330" />
+        <Position x="510" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -363,7 +363,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="174">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="714" y="354" />
+        <Position x="714" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -393,7 +393,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="175">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="618" y="366" />
+        <Position x="618" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -419,7 +419,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="176">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="786" y="354" />
+        <Position x="786" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -439,7 +439,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="177">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="858" y="354" />
+        <Position x="858" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -462,7 +462,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="178">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1110" y="402" />
+        <Position x="1110" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -493,7 +493,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="179">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1206" y="402" />
+        <Position x="1206" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -518,7 +518,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="180">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1494" y="402" />
+        <Position x="1494" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -537,7 +537,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="181">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="1398" y="402" />
+        <Position x="1398" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -557,7 +557,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="182">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1578" y="402" />
+        <Position x="1578" y="126" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -575,7 +575,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="185">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="390" y="738" />
+        <Position x="186" y="426" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -595,7 +595,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="186">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="462" y="738" />
+        <Position x="258" y="426" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -616,7 +616,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="187">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
-        <Position x="570" y="738" />
+        <Position x="366" y="426" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -648,7 +648,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="189">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1110" y="678" />
+        <Position x="906" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -679,7 +679,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="193">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1398" y="678" />
+        <Position x="1194" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -699,7 +699,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="194">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="558" y="678" />
+        <Position x="354" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -773,7 +773,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="195">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="762" y="702" />
+        <Position x="558" y="390" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -803,7 +803,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="196">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="666" y="714" />
+        <Position x="462" y="402" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -829,7 +829,7 @@ CardStrength - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="197">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="834" y="702" />
+        <Position x="630" y="390" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -849,7 +849,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="198">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="906" y="702" />
+        <Position x="702" y="390" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -872,7 +872,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="199">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1206" y="678" />
+        <Position x="1002" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -903,7 +903,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="200">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1302" y="678" />
+        <Position x="1098" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -928,7 +928,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="201">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1590" y="678" />
+        <Position x="1386" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -947,7 +947,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="202">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="1494" y="678" />
+        <Position x="1290" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -967,7 +967,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="203">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1674" y="678" />
+        <Position x="1470" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -985,7 +985,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="204">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="534" y="810" />
+        <Position x="330" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1016,7 +1016,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="205">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="642" y="810" />
+        <Position x="438" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1035,7 +1035,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="209">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="582" y="894" />
+        <Position x="378" y="582" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1055,7 +1055,7 @@ CardOrder - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="210">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="678" y="894" />
+        <Position x="474" y="582" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1075,7 +1075,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="211">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="870" y="894" />
+        <Position x="666" y="582" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1098,7 +1098,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="212">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="774" y="894" />
+        <Position x="570" y="582" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1119,7 +1119,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="213">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1410" y="942" />
+        <Position x="1206" y="630" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1138,7 +1138,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="214">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1014" y="846" />
+        <Position x="810" y="534" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -1169,7 +1169,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="215">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1098" y="858" />
+        <Position x="894" y="546" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1188,7 +1188,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="216">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1146" y="834" />
+        <Position x="942" y="522" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1207,7 +1207,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="217">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="1038" y="930" />
+        <Position x="834" y="618" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1320,7 +1320,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="218">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1242" y="1002" />
+        <Position x="1038" y="690" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1338,7 +1338,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="219">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1254" y="870" />
+        <Position x="1050" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -1375,7 +1375,7 @@ Count - Descending</DefaultAnnotationText>
     </Node>
     <Node ToolID="220">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1134" y="930" />
+        <Position x="930" y="618" />
       </GuiSettings>
       <Properties>
         <Configuration>

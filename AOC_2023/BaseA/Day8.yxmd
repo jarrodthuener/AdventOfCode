@@ -137,7 +137,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_12976_e4a5427edba698449f2b39a3a6e22117_\Engine_12976_e4a2e8ea03d4e84f86a2d6db1a516ffd~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_24428_cd5c9a3f932c9441ae039e009e3cf13c_\Engine_24428_a2176e5f1bd292458bd2b50e8526d358~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -361,7 +361,7 @@
     </Node>
     <Node ToolID="227">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1062" y="822" />
+        <Position x="918" y="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -376,35 +376,9 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="228">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="1254" y="822" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FieldFind>End_Node</FieldFind>
-          <FieldSearch>Starting_Node</FieldSearch>
-          <ReplaceFoundField>Starting_Node</ReplaceFoundField>
-          <FindMode>FindWhole</FindMode>
-          <NoCase value="False" />
-          <MatchWholeWord value="False" />
-          <ReplaceMode>Append</ReplaceMode>
-          <ReplaceMultipleFound value="True" />
-          <ReplaceAppendFields>
-            <Field field="End_Node" />
-          </ReplaceAppendFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-    </Node>
     <Node ToolID="229">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="966" y="822" />
+        <Position x="438" y="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -417,9 +391,6 @@
           <DefaultAnnotationText>Day8_FullCycle_Summary.yxdb</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Starting_Node" size="3" source="Formula: [node]" type="V_WString" />
@@ -430,57 +401,16 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
-    <Node ToolID="232">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1434" y="822" />
+    <Node ToolID="251">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="582" y="1026" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[Iterations]+1" field="Iterations" size="8" type="Int64" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[Iterations = [Iterations]+1
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="233">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1158" y="810" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="1" field="Iterations" size="8" type="Int64" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[Iterations = 1
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="234">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1350" y="822" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="End_Node" selected="False" />
-            <SelectField field="End_Node2" selected="True" rename="End_Node" />
-            <SelectField field="*Unknown" selected="True" />
-          </SelectFields>
+          <SummarizeFields>
+            <SummarizeField field="Starting_Node" action="GroupBy" rename="Starting_Node" />
+            <SummarizeField field="End_Node" action="GroupBy" rename="End_Node" />
+          </SummarizeFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -488,82 +418,15 @@
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
     </Node>
-    <Node ToolID="235">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="1254" y="906" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FieldFind>End_Node</FieldFind>
-          <FieldSearch>Starting_Node</FieldSearch>
-          <ReplaceFoundField>Starting_Node</ReplaceFoundField>
-          <FindMode>FindWhole</FindMode>
-          <NoCase value="False" />
-          <MatchWholeWord value="False" />
-          <ReplaceMode>Append</ReplaceMode>
-          <ReplaceMultipleFound value="True" />
-          <ReplaceAppendFields>
-            <Field field="End_Node" />
-          </ReplaceAppendFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-    </Node>
-    <Node ToolID="236">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1434" y="906" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[Iterations]+1" field="Iterations" size="8" type="Int64" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[Iterations = [Iterations]+1
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="237">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1350" y="906" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="End_Node" selected="False" />
-            <SelectField field="End_Node2" selected="True" rename="End_Node" />
-            <SelectField field="*Unknown" selected="True" />
-          </SelectFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-    </Node>
-    <Node ToolID="238">
+    <Node ToolID="252">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1554" y="906" />
+        <Position x="834" y="1026" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_2896_f0ac73393b18a348a17ae076a2a66760_\Engine_2896_4e209a528330fb4d82f3da8d244296de~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29688_f801757f27554c4b864b1a032b5850a7_\Engine_29688_db45da2f9cdb974fa3101a99c4975ec8~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -585,23 +448,38 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="239">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="1254" y="1002" />
+    <Node ToolID="253">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="1026" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <FieldFind>End_Node</FieldFind>
-          <FieldSearch>Starting_Node</FieldSearch>
-          <ReplaceFoundField>Starting_Node</ReplaceFoundField>
-          <FindMode>FindWhole</FindMode>
-          <NoCase value="False" />
-          <MatchWholeWord value="False" />
-          <ReplaceMode>Append</ReplaceMode>
-          <ReplaceMultipleFound value="True" />
-          <ReplaceAppendFields>
-            <Field field="End_Node" />
-          </ReplaceAppendFields>
+          <FormulaFields>
+            <FormulaField expression="'&quot;'+[Starting_Node] +'&quot;: &quot;'+ [End_Node]+'&quot;'" field="data" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[data = '"'+[Starting_Node] +'": "'+ [End_Node]+'"'
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="254">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="810" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="data" action="Concat" rename="Concat_data">
+              <Concat_Start>{</Concat_Start>
+              <Separator><![CDATA[, ]]></Separator>
+              <Concat_End>}</Concat_End>
+            </SummarizeField>
+          </SummarizeFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -609,38 +487,209 @@
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
     </Node>
-    <Node ToolID="240">
+    <Node ToolID="255">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="930" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29688_f801757f27554c4b864b1a032b5850a7_\Engine_29688_2123a3d4e6bbd04f81b19b68be8662fb~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="256">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="726" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Starting_Node" action="GroupBy" rename="Starting_Node" />
+            <SummarizeField field="End_Node" action="Concat" rename="Concat_End_Node">
+              <Concat_Start />
+              <Separator>,</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="257">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="834" y="726" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>for each starting node, string together the routes to z spaces</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="265">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1434" y="1002" />
+        <Position x="1062" y="762" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[Iterations]+1" field="Iterations" size="8" type="Int64" />
+            <FormulaField expression="1" field="Iterations" size="8" type="Int64" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[Iterations = [Iterations]+1
+          <DefaultAnnotationText><![CDATA[Iterations = 1
 ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="241">
+    <Node ToolID="271">
+      <GuiSettings>
+        <Position x="1158" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Day9P2_Iterate (263)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="C:\git\AdventOfCode\AOC_2023\BaseA\Day9P2_Iterate.yxmc" />
+    </Node>
+    <Node ToolID="266">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2910" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_24428_cd5c9a3f932c9441ae039e009e3cf13c_\Engine_24428_b603d71ddaa95e4282982bffa8cf2ff4~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="267">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1278" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_29688_f801757f27554c4b864b1a032b5850a7_\Engine_29688_a464c0797235ac46b0e7d1ead672c580~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="269">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1254" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="270">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>EndsWith([End_Node], 'z')</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>EndsWith([End_Node], 'z')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="272">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1350" y="1002" />
+        <Position x="1470" y="750" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="End_Node" selected="False" />
-            <SelectField field="End_Node2" selected="True" rename="End_Node" />
+            <SelectField field="Iterations" selected="True" type="V_WString" size="2147483647" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -652,23 +701,16 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="242">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="1266" y="1122" />
+    <Node ToolID="274">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="1758" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <FieldFind>End_Node</FieldFind>
-          <FieldSearch>Starting_Node</FieldSearch>
-          <ReplaceFoundField>Starting_Node</ReplaceFoundField>
-          <FindMode>FindWhole</FindMode>
-          <NoCase value="False" />
-          <MatchWholeWord value="False" />
-          <ReplaceMode>Append</ReplaceMode>
-          <ReplaceMultipleFound value="True" />
-          <ReplaceAppendFields>
-            <Field field="End_Node" />
-          </ReplaceAppendFields>
+          <Field>AAA</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -676,38 +718,199 @@
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
     </Node>
-    <Node ToolID="243">
+    <Node ToolID="275">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="1566" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="length_of_dir" />
+          </GroupFields>
+          <HeaderField field="Starting_Node" />
+          <DataField field="Iterations" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,</Separator>
+            <FieldSize value="20000" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="length_of_dir" source="CrossTab:Group:Concat:" type="Int64" />
+            <Field name="AAA" size="20000" source="CrossTab:Header:Starting_Node:AAA:Concat:" type="V_WString" />
+            <Field name="CVA" size="20000" source="CrossTab:Header:Starting_Node:CVA:Concat:" type="V_WString" />
+            <Field name="LDA" size="20000" source="CrossTab:Header:Starting_Node:LDA:Concat:" type="V_WString" />
+            <Field name="LHA" size="20000" source="CrossTab:Header:Starting_Node:LHA:Concat:" type="V_WString" />
+            <Field name="RHA" size="20000" source="CrossTab:Header:Starting_Node:RHA:Concat:" type="V_WString" />
+            <Field name="VGA" size="20000" source="CrossTab:Header:Starting_Node:VGA:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="277">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="1854" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>CVA</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="278">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="1974" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>LDA</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="279">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="2094" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>LHA</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="280">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="2214" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>RHA</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="281">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="2334" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>VGA</Field>
+          <Delimeters value="," />
+          <NumFields value="1" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="282">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1446" y="1122" />
+        <Position x="2622" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="[Iterations]+1" field="Iterations" size="8" type="Int64" />
+            <FormulaField expression="[AAA]*[CVA]*[LDA]*[LHA]*[RHA]*[VGA]" field="LCM" size="8" type="Int64" />
+            <FormulaField expression="[LCM]*[length_of_dir]" field="total" size="8" type="Double" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[Iterations = [Iterations]+1
+          <DefaultAnnotationText><![CDATA[LCM = [AAA]*[CVA]*[LDA]*[LHA]*[RHA]*[VGA]
+total = [LCM]*[length_of_dir]
 ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="244">
+    <Node ToolID="283">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2430" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="length_of_dir" action="GroupBy" rename="length_of_dir" />
+            <SummarizeField field="AAA" action="GroupBy" rename="AAA" />
+            <SummarizeField field="CVA" action="GroupBy" rename="CVA" />
+            <SummarizeField field="LDA" action="GroupBy" rename="LDA" />
+            <SummarizeField field="LHA" action="GroupBy" rename="LHA" />
+            <SummarizeField field="RHA" action="GroupBy" rename="RHA" />
+            <SummarizeField field="VGA" action="GroupBy" rename="VGA" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="284">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1362" y="1122" />
+        <Position x="2526" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="End_Node" selected="False" />
-            <SelectField field="End_Node2" selected="True" rename="End_Node" />
+            <SelectField field="AAA" selected="True" type="Int64" size="8" />
+            <SelectField field="CVA" selected="True" type="Int64" size="8" />
+            <SelectField field="LDA" selected="True" type="Int64" size="8" />
+            <SelectField field="LHA" selected="True" type="Int64" size="8" />
+            <SelectField field="RHA" selected="True" type="Int64" size="8" />
+            <SelectField field="VGA" selected="True" type="Int64" size="8" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -719,139 +922,41 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="245">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="1266" y="1206" />
+    <Node ToolID="285">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="2718" y="750" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <FieldFind>End_Node</FieldFind>
-          <FieldSearch>Starting_Node</FieldSearch>
-          <ReplaceFoundField>Starting_Node</ReplaceFoundField>
-          <FindMode>FindWhole</FindMode>
-          <NoCase value="False" />
-          <MatchWholeWord value="False" />
-          <ReplaceMode>Append</ReplaceMode>
-          <ReplaceMultipleFound value="True" />
-          <ReplaceAppendFields>
-            <Field field="End_Node" />
-          </ReplaceAppendFields>
+          <SortInfo locale="1033">
+            <Field field="total" order="Ascending" />
+          </SortInfo>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText />
+          <DefaultAnnotationText>total - Ascending</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
     </Node>
-    <Node ToolID="246">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1446" y="1206" />
+    <Node ToolID="286">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="2814" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[Iterations]+1" field="Iterations" size="8" type="Int64" />
-          </FormulaFields>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[Iterations = [Iterations]+1
-]]></DefaultAnnotationText>
+          <DefaultAnnotationText>First 1 rows</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="247">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1362" y="1206" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="End_Node" selected="False" />
-            <SelectField field="End_Node2" selected="True" rename="End_Node" />
-            <SelectField field="*Unknown" selected="True" />
-          </SelectFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-    </Node>
-    <Node ToolID="248">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="1266" y="1302" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FieldFind>End_Node</FieldFind>
-          <FieldSearch>Starting_Node</FieldSearch>
-          <ReplaceFoundField>Starting_Node</ReplaceFoundField>
-          <FindMode>FindWhole</FindMode>
-          <NoCase value="False" />
-          <MatchWholeWord value="False" />
-          <ReplaceMode>Append</ReplaceMode>
-          <ReplaceMultipleFound value="True" />
-          <ReplaceAppendFields>
-            <Field field="End_Node" />
-          </ReplaceAppendFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-    </Node>
-    <Node ToolID="249">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1446" y="1302" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="[Iterations]+1" field="Iterations" size="8" type="Int64" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[Iterations = [Iterations]+1
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="250">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1362" y="1302" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="End_Node" selected="False" />
-            <SelectField field="End_Node2" selected="True" rename="End_Node" />
-            <SelectField field="*Unknown" selected="True" />
-          </SelectFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
     </Node>
     <Node ToolID="205">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -1138,9 +1243,6 @@ Regex_replace([map],'.*'+[R...</DefaultAnnotationText>
               <DefaultAnnotationText>Day8_FullCycle_Summary.yxdb</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -1545,112 +1647,116 @@ node = 'AAA'
       <Destination ToolID="201" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="227" Connection="False" />
-      <Destination ToolID="228" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="233" Connection="Output" />
-      <Destination ToolID="228" Connection="Targets" />
-    </Connection>
-    <Connection>
       <Origin ToolID="227" Connection="True" />
-      <Destination ToolID="233" Connection="Input" />
+      <Destination ToolID="265" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="227" Connection="False" />
-      <Destination ToolID="235" Connection="Source" />
+      <Destination ToolID="271" Connection="Data input" />
     </Connection>
     <Connection>
-      <Origin ToolID="232" Connection="Output" />
-      <Destination ToolID="235" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="227" Connection="False" />
-      <Destination ToolID="239" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="236" Connection="Output" />
-      <Destination ToolID="239" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="227" Connection="False" />
-      <Destination ToolID="242" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="240" Connection="Output" />
-      <Destination ToolID="242" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="227" Connection="False" />
-      <Destination ToolID="245" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="243" Connection="Output" />
-      <Destination ToolID="245" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="227" Connection="False" />
-      <Destination ToolID="248" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="246" Connection="Output" />
-      <Destination ToolID="248" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="228" Connection="Output" />
-      <Destination ToolID="234" Connection="Input" />
+      <Origin ToolID="265" Connection="Output" />
+      <Destination ToolID="271" Connection="iterateInput" />
     </Connection>
     <Connection>
       <Origin ToolID="229" Connection="Output" />
       <Destination ToolID="227" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="234" Connection="Output" />
-      <Destination ToolID="232" Connection="Input" />
+      <Origin ToolID="229" Connection="Output" />
+      <Destination ToolID="251" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="235" Connection="Output" />
-      <Destination ToolID="237" Connection="Input" />
+      <Origin ToolID="229" Connection="Output" />
+      <Destination ToolID="256" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="236" Connection="Output" />
-      <Destination ToolID="238" Connection="Input" />
+      <Origin ToolID="251" Connection="Output" />
+      <Destination ToolID="253" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="237" Connection="Output" />
-      <Destination ToolID="236" Connection="Input" />
+      <Origin ToolID="253" Connection="Output" />
+      <Destination ToolID="252" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="239" Connection="Output" />
-      <Destination ToolID="241" Connection="Input" />
+      <Origin ToolID="253" Connection="Output" />
+      <Destination ToolID="254" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="241" Connection="Output" />
-      <Destination ToolID="240" Connection="Input" />
+      <Origin ToolID="254" Connection="Output" />
+      <Destination ToolID="255" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="265" Connection="Output" />
+      <Destination ToolID="269" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="271" Connection="Output258" />
+      <Destination ToolID="269" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="242" Connection="Output" />
-      <Destination ToolID="244" Connection="Input" />
+      <Origin ToolID="271" Connection="Iterate" />
+      <Destination ToolID="267" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="244" Connection="Output" />
-      <Destination ToolID="243" Connection="Input" />
+      <Origin ToolID="269" Connection="Output" />
+      <Destination ToolID="270" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="245" Connection="Output" />
-      <Destination ToolID="247" Connection="Input" />
+      <Origin ToolID="270" Connection="True" />
+      <Destination ToolID="272" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="247" Connection="Output" />
-      <Destination ToolID="246" Connection="Input" />
+      <Origin ToolID="272" Connection="Output" />
+      <Destination ToolID="275" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="248" Connection="Output" />
-      <Destination ToolID="250" Connection="Input" />
+      <Origin ToolID="274" Connection="Output" />
+      <Destination ToolID="277" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="250" Connection="Output" />
-      <Destination ToolID="249" Connection="Input" />
+      <Origin ToolID="275" Connection="Output" />
+      <Destination ToolID="274" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="277" Connection="Output" />
+      <Destination ToolID="278" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="278" Connection="Output" />
+      <Destination ToolID="279" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="279" Connection="Output" />
+      <Destination ToolID="280" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="280" Connection="Output" />
+      <Destination ToolID="281" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="281" Connection="Output" />
+      <Destination ToolID="283" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="282" Connection="Output" />
+      <Destination ToolID="285" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="283" Connection="Output" />
+      <Destination ToolID="284" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="284" Connection="Output" />
+      <Destination ToolID="282" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="285" Connection="Output" />
+      <Destination ToolID="286" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="286" Connection="Output" />
+      <Destination ToolID="266" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="193" Connection="Output" />

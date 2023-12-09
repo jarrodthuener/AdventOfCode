@@ -15,6 +15,9 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
       </Properties>
       <EngineSettings Macro=".\OpenAndSplitData.yxmc" />
     </Node>
@@ -341,34 +344,6 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="37">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1758" y="270" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3044_77b01336a26111418e2047df05f1f8d8_\Engine_3044_3bbcb6439a925a4bb9b46f44882bf291~.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Profile</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
     <Node ToolID="38">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
         <Position x="930" y="186" />
@@ -479,37 +454,9 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="62">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1686" y="114" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3044_77b01336a26111418e2047df05f1f8d8_\Engine_3044_060ab2ece323ae43825e9bf398416fd0~.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Profile</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
     <Node ToolID="65">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1722" y="402" />
+        <Position x="1794" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -545,7 +492,7 @@
     </Node>
     <Node ToolID="69">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="2046" y="354" />
+        <Position x="2118" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -563,7 +510,7 @@
     </Node>
     <Node ToolID="70">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1818" y="150" />
+        <Position x="1686" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -585,7 +532,7 @@
     </Node>
     <Node ToolID="71">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1926" y="150" />
+        <Position x="1794" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -608,7 +555,7 @@
     </Node>
     <Node ToolID="72">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1818" y="402" />
+        <Position x="1890" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -626,7 +573,7 @@
     </Node>
     <Node ToolID="73">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1830" y="318" />
+        <Position x="1902" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -647,7 +594,7 @@
     </Node>
     <Node ToolID="74">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1926" y="354" />
+        <Position x="1998" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -678,7 +625,7 @@
     </Node>
     <Node ToolID="75">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2142" y="354" />
+        <Position x="2214" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -706,7 +653,7 @@
     </Node>
     <Node ToolID="76">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1806" y="834" />
+        <Position x="1146" y="930" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -737,7 +684,7 @@
     </Node>
     <Node ToolID="77">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1926" y="822" />
+        <Position x="1266" y="918" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -773,7 +720,7 @@
     </Node>
     <Node ToolID="78">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="2586" y="678" />
+        <Position x="1926" y="774" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -791,7 +738,7 @@
     </Node>
     <Node ToolID="79">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="2022" y="822" />
+        <Position x="1362" y="918" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -810,7 +757,7 @@
     </Node>
     <Node ToolID="80">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2022" y="642" />
+        <Position x="1362" y="738" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -831,7 +778,7 @@
     </Node>
     <Node ToolID="81">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="2394" y="678" />
+        <Position x="1734" y="774" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -862,7 +809,7 @@
     </Node>
     <Node ToolID="82">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2682" y="678" />
+        <Position x="2022" y="774" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -909,7 +856,7 @@
     </Node>
     <Node ToolID="84">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="2118" y="810" />
+        <Position x="1458" y="906" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -933,7 +880,7 @@
     </Node>
     <Node ToolID="85">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="2214" y="810" />
+        <Position x="1554" y="906" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -964,7 +911,7 @@
     </Node>
     <Node ToolID="86">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-        <Position x="2310" y="798" />
+        <Position x="1650" y="894" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -983,7 +930,7 @@
     </Node>
     <Node ToolID="87">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="2490" y="678" />
+        <Position x="1830" y="774" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1009,7 +956,7 @@
     </Node>
     <Node ToolID="88">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="1794" y="786" width="100" height="40" />
+        <Position x="1134" y="882" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1524,10 +1471,6 @@ joinColumn = [Column]+[joinColumn]
     </Connection>
     <Connection>
       <Origin ToolID="60" Connection="Join" />
-      <Destination ToolID="62" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="60" Connection="Join" />
       <Destination ToolID="65" Connection="Left" />
     </Connection>
     <Connection>
@@ -1545,10 +1488,6 @@ joinColumn = [Column]+[joinColumn]
     <Connection>
       <Origin ToolID="53" Connection="Output" />
       <Destination ToolID="52" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="47" Connection="Output" />
-      <Destination ToolID="37" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="47" Connection="Output" />

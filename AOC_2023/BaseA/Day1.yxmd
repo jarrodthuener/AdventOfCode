@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+<AlteryxDocument yxmdVer="2022.3">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings>
-        <Position x="114" y="126" />
+        <Position x="54" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -23,7 +23,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="678" y="126" />
+        <Position x="618" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -51,7 +51,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="474" y="126" />
+        <Position x="414" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -71,7 +71,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="570" y="126" />
+        <Position x="510" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -89,7 +89,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="306" y="138" />
+        <Position x="246" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -109,7 +109,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="414" y="78" width="100" height="40" />
+        <Position x="354" y="54" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -129,7 +129,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="762" y="186" />
+        <Position x="702" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -157,7 +157,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="654" y="210" />
+        <Position x="594" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -174,7 +174,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="378" y="870" width="100" height="40" />
+        <Position x="318" y="846" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -194,7 +194,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="918" y="234" />
+        <Position x="858" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -222,7 +222,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="167">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="318" y="438" />
+        <Position x="258" y="414" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -239,7 +239,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="170">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="390" y="522" />
+        <Position x="330" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -256,7 +256,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="171">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="486" y="642" />
+        <Position x="426" y="618" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -273,7 +273,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="173">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="402" y="930" />
+        <Position x="342" y="906" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -299,7 +299,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="174">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="318" y="942" />
+        <Position x="258" y="918" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -393,7 +393,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="175">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="150" y="438" />
+        <Position x="90" y="414" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -413,7 +413,7 @@ number = tonumber(Left([number_...</DefaultAnnotationText>
     </Node>
     <Node ToolID="176">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="498" y="930" />
+        <Position x="438" y="906" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -433,7 +433,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="177">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="582" y="930" />
+        <Position x="522" y="906" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -464,7 +464,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="178">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="858" y="846" />
+        <Position x="798" y="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -483,7 +483,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="179">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="666" y="846" />
+        <Position x="606" y="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -501,7 +501,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="180">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="762" y="846" />
+        <Position x="702" y="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -519,7 +519,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="181">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="978" y="846" />
+        <Position x="918" y="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -543,7 +543,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="182">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="738" y="978" />
+        <Position x="678" y="954" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -561,7 +561,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="183">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="882" y="954" />
+        <Position x="822" y="930" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -599,7 +599,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="184">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="1158" y="882" width="100" height="40" />
+        <Position x="1098" y="858" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -619,7 +619,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="185">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1182" y="930" />
+        <Position x="1122" y="906" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -638,7 +638,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="186">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="978" y="954" />
+        <Position x="918" y="930" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -662,7 +662,7 @@ lastOccurance = FindString(Reverse...</DefaultAnnotationText>
     </Node>
     <Node ToolID="187">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="606" y="390" />
+        <Position x="546" y="366" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -683,7 +683,7 @@ last_digit = right([Field_1],1)
     </Node>
     <Node ToolID="188">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="606" y="486" />
+        <Position x="546" y="462" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -704,7 +704,7 @@ first_digit = Null()
     </Node>
     <Node ToolID="190">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="606" y="666" />
+        <Position x="546" y="642" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -725,7 +725,7 @@ last_digit = null()
     </Node>
     <Node ToolID="191">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="606" y="582" />
+        <Position x="546" y="558" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -746,7 +746,7 @@ last_digit = null()
     </Node>
     <Node ToolID="194">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="774" y="522" />
+        <Position x="714" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -765,7 +765,7 @@ last_digit = null()
     </Node>
     <Node ToolID="195">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="882" y="510" />
+        <Position x="822" y="486" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -797,7 +797,7 @@ last_digit = null()
     </Node>
     <Node ToolID="196">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1002" y="474" />
+        <Position x="942" y="450" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -823,7 +823,7 @@ last_digit = null()
     </Node>
     <Node ToolID="198">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1338" y="810" />
+        <Position x="1278" y="786" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -855,7 +855,7 @@ last_digit = null()
     </Node>
     <Node ToolID="201">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="438" y="1206" />
+        <Position x="378" y="1182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -881,7 +881,7 @@ last_digit = null()
     </Node>
     <Node ToolID="202">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="354" y="1218" />
+        <Position x="294" y="1194" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -975,7 +975,7 @@ last_digit = null()
     </Node>
     <Node ToolID="203">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="534" y="1206" />
+        <Position x="474" y="1182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -994,7 +994,7 @@ last_digit = null()
     </Node>
     <Node ToolID="204">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="618" y="1206" />
+        <Position x="558" y="1182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1025,7 +1025,7 @@ last_digit = null()
     </Node>
     <Node ToolID="205">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="894" y="1122" />
+        <Position x="834" y="1098" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1044,7 +1044,7 @@ last_digit = null()
     </Node>
     <Node ToolID="206">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="702" y="1122" />
+        <Position x="642" y="1098" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1062,7 +1062,7 @@ last_digit = null()
     </Node>
     <Node ToolID="207">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="798" y="1122" />
+        <Position x="738" y="1098" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1080,7 +1080,7 @@ last_digit = null()
     </Node>
     <Node ToolID="208">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1014" y="1122" />
+        <Position x="954" y="1098" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1104,7 +1104,7 @@ last_digit = null()
     </Node>
     <Node ToolID="209">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="774" y="1254" />
+        <Position x="714" y="1230" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1122,7 +1122,7 @@ last_digit = null()
     </Node>
     <Node ToolID="210">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="918" y="1230" />
+        <Position x="858" y="1206" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -1160,7 +1160,7 @@ last_digit = null()
     </Node>
     <Node ToolID="211">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="1194" y="1158" width="100" height="40" />
+        <Position x="1134" y="1134" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1180,7 +1180,7 @@ last_digit = null()
     </Node>
     <Node ToolID="212">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1218" y="1206" />
+        <Position x="1158" y="1182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1199,7 +1199,7 @@ last_digit = null()
     </Node>
     <Node ToolID="213">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1014" y="1230" />
+        <Position x="954" y="1206" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1223,7 +1223,7 @@ last_digit = null()
     </Node>
     <Node ToolID="215">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1314" y="1206" />
+        <Position x="1254" y="1182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1242,7 +1242,7 @@ last_digit = null()
     </Node>
     <Node ToolID="216">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1398" y="1206" />
+        <Position x="1338" y="1182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1260,7 +1260,7 @@ last_digit = null()
     </Node>
     <Node ToolID="217">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1518" y="1206" />
+        <Position x="1458" y="1182" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -1274,7 +1274,7 @@ last_digit = null()
     </Node>
     <Node ToolID="218">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="402" y="354" width="100" height="40" />
+        <Position x="342" y="330" width="100" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1552,7 +1552,6 @@ last_digit = null()
         <PreviousWorkflowId value="0ea1f3b8-d669-4ec1-924d-b6dd4bbe4055" />
         <OriginWorkflowId value="0ea1f3b8-d669-4ec1-924d-b6dd4bbe4055" />
       </Telemetry>
-      <PlatformWorkflowId value="" />
     </MetaInfo>
     <Events>
       <Enabled value="True" />

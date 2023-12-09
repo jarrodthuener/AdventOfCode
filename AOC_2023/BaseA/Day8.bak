@@ -1,0 +1,1671 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings>
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Folder Browse (14)">..\Data</Value>
+          <Value name="Check Box (16)">False</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro=".\OpenAndSplitData.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="222" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_1" selected="True" rename="data" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="222" y="162" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Part 1</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="210" y="354" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Part 2</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="159">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="318" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>HandID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="160">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="390" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>data</RootName>
+          <Delimeters value="\s" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="164">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="522" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data1</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>hand_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="165">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="582" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HandID" action="GroupBy" rename="HandID" />
+            <SummarizeField field="data1" action="GroupBy" rename="data1" />
+            <SummarizeField field="HandID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="166">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1014" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="HandID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="HandID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_HandID" selected="False" rename="Right_HandID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="167">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="678" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="HandID" order="Ascending" />
+            <Field field="Count" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>HandID - Ascending
+Count - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="168">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="870" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HandID" action="GroupBy" rename="HandID" />
+            <SummarizeField field="Count" action="Concat" rename="Concat_Count">
+              <Concat_Start />
+              <Separator>|</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="169">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="774" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="True" type="V_WString" size="2147483647" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="172">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1302" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="HandStrength" order="Ascending" />
+            <Field field="CardStrength" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>HandStrength - Ascending
+CardStrength - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="173">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="510" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="13" />
+          <Fields>
+            <Field name="Card" />
+            <Field name="Card_Strength" />
+          </Fields>
+          <Data>
+            <r>
+              <c>A</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>K</c>
+              <c>B</c>
+            </r>
+            <r>
+              <c>Q</c>
+              <c>C</c>
+            </r>
+            <r>
+              <c>J</c>
+              <c>D</c>
+            </r>
+            <r>
+              <c>T</c>
+              <c>E</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>F</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>G</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>H</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>I</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>L</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>M</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="174">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="714" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Card" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="data1" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="175">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="618" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>HandID</UpdateField_Name>
+          <CreateField_Name>CardOrder</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:CardOrder]+1</Expression>
+          <GroupByFields>
+            <Field field="HandID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:CardOrder]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="176">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="786" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="HandID" order="Ascending" />
+            <Field field="CardOrder" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>HandID - Ascending
+CardOrder - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="177">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="858" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HandID" action="GroupBy" rename="HandID" />
+            <SummarizeField field="Card_Strength" action="Concat" rename="Concat_Card_Strength">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="178">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1110" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="HandID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="HandID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_HandID" selected="False" rename="Right_HandID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="179">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1206" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="False" />
+            <SelectField field="data1" selected="False" />
+            <SelectField field="data2" selected="True" rename="Bid" type="Int64" size="8" />
+            <SelectField field="Concat_Count" selected="True" rename="HandStrength" />
+            <SelectField field="Concat_Card_Strength" selected="True" rename="CardStrength" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="180">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1494" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Rank]*[Bid]" field="Winnings" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Winnings = [Rank]*[Bid]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="181">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="1398" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Rank</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="182">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1578" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Winnings" action="Sum" rename="Sum_Winnings" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="185">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="186" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>HandID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="258" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>data</RootName>
+          <Delimeters value="\s" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="187">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="366" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>data1</Field>
+          <RegExExpression value="." />
+          <CaseInsensitve value="True" />
+          <Method>ParseSimple</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="True" />
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="No Marked Groups Found" type="No Marked Groups Found" size="No Marked Groups Found" />
+          </ParseComplex>
+          <Match>
+            <Field>hand_Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="189">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="906" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="HandID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="HandID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_HandID" selected="False" rename="Right_HandID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="193">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1194" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="NewBestHand" order="Ascending" />
+            <Field field="CardStrength" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NewBestHand - Ascending
+CardStrength - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="194">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="354" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="13" />
+          <Fields>
+            <Field name="Card" />
+            <Field name="Card_Strength" />
+          </Fields>
+          <Data>
+            <r>
+              <c>A</c>
+              <c>A</c>
+            </r>
+            <r>
+              <c>K</c>
+              <c>B</c>
+            </r>
+            <r>
+              <c>Q</c>
+              <c>C</c>
+            </r>
+            <r>
+              <c>J</c>
+              <c>M</c>
+            </r>
+            <r>
+              <c>T</c>
+              <c>D</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>E</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>F</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>G</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>H</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>I</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>J</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>K</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>L</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="195">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="558" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Card" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="data1" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="196">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="462" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>HandID</UpdateField_Name>
+          <CreateField_Name>CardOrder</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:CardOrder]+1</Expression>
+          <GroupByFields>
+            <Field field="HandID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:CardOrder]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="197">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="630" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="HandID" order="Ascending" />
+            <Field field="CardOrder" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>HandID - Ascending
+CardOrder - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="198">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="702" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HandID" action="GroupBy" rename="HandID" />
+            <SummarizeField field="Card_Strength" action="Concat" rename="Concat_Card_Strength">
+              <Concat_Start />
+              <Separator />
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="199">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1002" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="HandID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="HandID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_HandID" selected="False" rename="Right_HandID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="200">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1098" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="data" selected="False" />
+            <SelectField field="data1" selected="False" />
+            <SelectField field="data2" selected="True" rename="Bid" type="Int64" size="8" />
+            <SelectField field="Concat_Card_Strength" selected="True" rename="CardStrength" />
+            <SelectField field="Concat_Count" selected="True" rename="HandStrength" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="201">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1386" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Rank]*[Bid]" field="Winnings" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Winnings = [Rank]*[Bid]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="202">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="1290" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Rank</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="203">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1470" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Winnings" action="Sum" rename="Sum_Winnings" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="204">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="330" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>data1</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-12-07 00:22:29</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>J</Operand>
+              <StartDate>2023-12-07 00:22:29</StartDate>
+              <EndDate>2023-12-07 00:22:29</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[data1] = "J"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="205">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="438" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HandID" action="GroupBy" rename="HandID" />
+            <SummarizeField field="HandID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="209">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="378" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HandID" action="GroupBy" rename="HandID" />
+            <SummarizeField field="data1" action="GroupBy" rename="data1" />
+            <SummarizeField field="HandID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="210">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="474" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="HandID" order="Ascending" />
+            <Field field="Count" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>HandID - Ascending
+Count - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="211">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="666" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="HandID" action="GroupBy" rename="HandID" />
+            <SummarizeField field="Count" action="Concat" rename="Concat_Count">
+              <Concat_Start />
+              <Separator>|</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="212">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="570" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="True" type="V_WString" size="2147483647" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="213">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1206" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Concat_Count" action="GroupBy" rename="Concat_Count" />
+            <SummarizeField field="Count" action="GroupBy" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="214">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="810" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="HandID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="HandID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_HandID" selected="True" rename="Right_HandID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="215">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="894" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="0" field="Count" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Count = 0
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="216">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="942" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="217">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="834" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="18" />
+          <Fields>
+            <Field name="Concat_Count" />
+            <Field name="Jokers" />
+            <Field name="NewBestHand" />
+          </Fields>
+          <Data>
+            <r>
+              <c />
+              <c>5</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>4</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>1|1</c>
+              <c>3</c>
+              <c>4|1</c>
+            </r>
+            <r>
+              <c>1|1|1</c>
+              <c>2</c>
+              <c>3|1|1</c>
+            </r>
+            <r>
+              <c>1|1|1|1</c>
+              <c>1</c>
+              <c>2|1|1|1</c>
+            </r>
+            <r>
+              <c>1|1|1|1|1</c>
+              <c>0</c>
+              <c>1|1|1|1|1</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>3</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>2|1</c>
+              <c>2</c>
+              <c>4|1</c>
+            </r>
+            <r>
+              <c>2|1|1</c>
+              <c>1</c>
+              <c>3|1|1</c>
+            </r>
+            <r>
+              <c>2|1|1|1</c>
+              <c>0</c>
+              <c>2|1|1|1</c>
+            </r>
+            <r>
+              <c>2|2</c>
+              <c>1</c>
+              <c>3|2</c>
+            </r>
+            <r>
+              <c>2|2|1</c>
+              <c>0</c>
+              <c>2|2|1</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>2</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>3|1</c>
+              <c>1</c>
+              <c>4|1</c>
+            </r>
+            <r>
+              <c>3|1|1</c>
+              <c>0</c>
+              <c>3|1|1</c>
+            </r>
+            <r>
+              <c>3|2</c>
+              <c>0</c>
+              <c>3|2</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>1</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>4|1</c>
+              <c>0</c>
+              <c>4|1</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="218">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1038" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="NewBestHand" action="GroupBy" rename="NewBestHand" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="219">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1050" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Concat_Count" />
+            <Field field="Count" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Concat_Count" />
+            <Field field="Jokers" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Count" selected="False" input="Left_" />
+                <SelectField field="Left_Right_HandID" selected="False" input="Left_" />
+                <SelectField field="Left_Concat_Count" selected="False" input="Left_" />
+                <SelectField field="Right_Concat_Count" selected="False" rename="Right_Concat_Count" input="Right_" />
+                <SelectField field="Right_Jokers" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="220">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="930" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="FullData" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="159" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="159" Connection="Output" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="164" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="166" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="168" Connection="Output" />
+      <Destination ToolID="166" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="164" Connection="Output" />
+      <Destination ToolID="165" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="164" Connection="Output" />
+      <Destination ToolID="175" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="165" Connection="Output" />
+      <Destination ToolID="167" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="166" Connection="Join" />
+      <Destination ToolID="178" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Output" />
+      <Destination ToolID="178" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="167" Connection="Output" />
+      <Destination ToolID="169" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="169" Connection="Output" />
+      <Destination ToolID="168" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="Output" />
+      <Destination ToolID="181" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="Output" />
+      <Destination ToolID="174" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="175" Connection="Output" />
+      <Destination ToolID="174" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="174" Connection="Join" />
+      <Destination ToolID="176" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="176" Connection="Output" />
+      <Destination ToolID="177" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="178" Connection="Join" />
+      <Destination ToolID="179" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="179" Connection="Output" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="180" Connection="Output" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="180" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="185" Connection="Output" />
+      <Destination ToolID="186" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="186" Connection="Output" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="186" Connection="Output" />
+      <Destination ToolID="189" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="219" Connection="Join" />
+      <Destination ToolID="189" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="196" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="204" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="189" Connection="Join" />
+      <Destination ToolID="199" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="198" Connection="Output" />
+      <Destination ToolID="199" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="193" Connection="Output" />
+      <Destination ToolID="202" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="194" Connection="Output" />
+      <Destination ToolID="195" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="196" Connection="Output" />
+      <Destination ToolID="195" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="195" Connection="Join" />
+      <Destination ToolID="197" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="197" Connection="Output" />
+      <Destination ToolID="198" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="199" Connection="Join" />
+      <Destination ToolID="200" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="200" Connection="Output" />
+      <Destination ToolID="193" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="201" Connection="Output" />
+      <Destination ToolID="203" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="202" Connection="Output" />
+      <Destination ToolID="201" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="204" Connection="True" />
+      <Destination ToolID="205" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="204" Connection="False" />
+      <Destination ToolID="209" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="205" Connection="Output" />
+      <Destination ToolID="214" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="211" Connection="Output" />
+      <Destination ToolID="214" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="209" Connection="Output" />
+      <Destination ToolID="210" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="210" Connection="Output" />
+      <Destination ToolID="212" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="212" Connection="Output" />
+      <Destination ToolID="211" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="214" Connection="Right" />
+      <Destination ToolID="215" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="214" Connection="Join" />
+      <Destination ToolID="216" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="214" Connection="Left" />
+      <Destination ToolID="216" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="215" Connection="Output" />
+      <Destination ToolID="216" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="216" Connection="Output" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="216" Connection="Output" />
+      <Destination ToolID="219" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="220" Connection="Output" />
+      <Destination ToolID="219" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="217" Connection="Output" />
+      <Destination ToolID="220" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="220" Connection="Output" />
+      <Destination ToolID="218" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <SortedGrouping value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day7</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="95158150-944c-42de-a7da-5c891f21a078" />
+      <Telemetry>
+        <PreviousWorkflowId value="0ea1f3b8-d669-4ec1-924d-b6dd4bbe4055" />
+        <OriginWorkflowId value="0ea1f3b8-d669-4ec1-924d-b6dd4bbe4055" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,2193 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1086" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="True" />
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#2</Connection>
+            <Connection>#3</Connection>
+            <Connection>#4</Connection>
+            <Connection>#5</Connection>
+            <Connection>#6</Connection>
+            <Connection>#7</Connection>
+            <Connection>#8</Connection>
+            <Connection>#9</Connection>
+            <Connection>#10</Connection>
+            <Connection>#11</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="534" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="654" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="846" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="750" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="546" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="666" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="858" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="546" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="666" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="67">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="858" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="546" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="666" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="858" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="546" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="666" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="858" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="762" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="558" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="678" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="870" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="774" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="570" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="83">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="882" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="570" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="882" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="88">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="89">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="570" y="906" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="90">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="906" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="882" y="894" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="92">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="894" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="570" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="adj_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_data" selected="False" input="Left_" />
+                <SelectField field="Left_coor" selected="True" rename="orig_coor" input="Left_" />
+                <SelectField field="Left_adj_coor" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[orig_coor]!= [adj_coor]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[orig_coor]!= [adj_coor]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="orig_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="882" y="1002" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[index]+1" field="index" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[index = [index]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="96">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="1002" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="orig_coor" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="98">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1206" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output98</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1194" y="1026" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterative</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1098" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="Formula: [index]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="101">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="103">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="150" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input58</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="5" />
+              <Fields>
+                <Field name="path_id" />
+                <Field name="data" />
+                <Field name="coor" />
+                <Field name="adj_coor" />
+                <Field name="index" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>25,98</c>
+                  <c>L</c>
+                  <c>25,98</c>
+                  <c>25,99</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>26,97</c>
+                  <c>L</c>
+                  <c>26,97</c>
+                  <c>27,97</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c />
+                  <c>|</c>
+                  <c>58,80</c>
+                  <c>58,79</c>
+                  <c />
+                </r>
+                <r>
+                  <c />
+                  <c>|</c>
+                  <c>58,80</c>
+                  <c>58,81</c>
+                  <c />
+                </r>
+                <r>
+                  <c />
+                  <c>F</c>
+                  <c>127,101</c>
+                  <c>128,101</c>
+                  <c />
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="105">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="342" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>path_id</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-12-10 23:07:12</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2023-12-10 23:07:12</StartDate>
+              <EndDate>2023-12-10 23:07:12</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([path_id])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="path_id" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="index" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="106">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="438" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="path_id" selected="False" />
+            <SelectField field="index" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="coor" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="adj_coor" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Join" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Right" />
+      <Destination ToolID="61" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="61" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="True" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#9">
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#10">
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#11">
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="105" Connection="True" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Join" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Right" />
+      <Destination ToolID="65" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="65" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="True" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Join" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="65" Connection="Right" />
+      <Destination ToolID="69" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="69" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="True" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Join" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Right" />
+      <Destination ToolID="73" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="73" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="True" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Join" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Right" />
+      <Destination ToolID="77" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="77" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="True" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Join" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Right" />
+      <Destination ToolID="81" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="81" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="True" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Join" />
+      <Destination ToolID="82" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Right" />
+      <Destination ToolID="85" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="83" Connection="Output" />
+      <Destination ToolID="85" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="True" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="84" Connection="Output" />
+      <Destination ToolID="83" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Join" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Right" />
+      <Destination ToolID="89" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="89" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="True" />
+      <Destination ToolID="88" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Join" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Right" />
+      <Destination ToolID="93" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="93" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="90" Connection="True" />
+      <Destination ToolID="92" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Join" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="93" Connection="Right" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="True" />
+      <Destination ToolID="96" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="96" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="103" Connection="Output" />
+      <Destination ToolID="105" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="True" />
+      <Destination ToolID="52" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="106" Connection="Output" />
+      <Destination ToolID="52" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="False" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day10_Part1_Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5ebe73bf-6e09-4189-a3f4-c95c2d5c1492" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="5ebe73bf-6e09-4189-a3f4-c95c2d5c1492" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (101)</Name>
+          <ToolId value="101" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (103)</Name>
+              <ToolId value="103" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (99)</Name>
+              <ToolId value="99" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (98)</Name>
+              <ToolId value="98" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input58</Input>
+        <Output>Iterative</Output>
+        <IterationLimit value="10000" />
+        <LimitBehavior>Ignore</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="98" Selected="False" />
+        <Tool ToolId="99" Selected="False" />
+        <Tool ToolId="103" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

@@ -24,7 +24,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3244_910a203900da8b43b366f61affbd9dc4_\Engine_3244_f3ef079b48523c4aa8c8c1954eba4fa7~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_af057a9641d65948842118075e3c8874~.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -40,7 +40,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3244_910a203900da8b43b366f61affbd9dc4_\Engine_3244_8341243c24747e4f82506ea286f19c41~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_9ff1a5d28edd9c45b7d130d780641ca6~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -438,7 +438,7 @@ new_col = [new_col]+[col]
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3244_910a203900da8b43b366f61affbd9dc4_\Engine_3244_e14a8ca2260eee49ae3a2b55659047e5~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_ae6b7a6b75f55547899fee997fc0fd74~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -809,32 +809,16 @@ new_col = [new_col]+[col]
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
     </Node>
-    <Node ToolID="110">
-      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="462" y="642" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <SummarizeFields />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
-    </Node>
-    <Node ToolID="111">
+    <Node ToolID="112">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="402" y="642" />
+        <Position x="978" y="774" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="*Unknown" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -844,6 +828,600 @@ new_col = [new_col]+[col]
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="113">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="882" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="new_row" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+            </r>
+            <r>
+              <c>-1</c>
+            </r>
+            <r>
+              <c>0</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="114">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="882" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="new_col" />
+          </Fields>
+          <Data>
+            <r>
+              <c>-1</c>
+            </r>
+            <r>
+              <c>0</c>
+            </r>
+            <r>
+              <c>1</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="115">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="966" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="116">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1194" y="786" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="117">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1062" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[new_row]=0 &amp;&amp; [new_col] ==0</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[new_row]=0 &amp;&amp; [new_col] ==0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="118">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1386" y="786" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_f1d188631ce1ea4291dc86162f64746d~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="119">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1290" y="786" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[new_row]+[row]" field="new_row" size="4" type="Int32" />
+            <FormulaField expression="[new_col]+[col]" field="new_col" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[new_row = [new_row]+[row]
+new_col = [new_col]+[col]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="120">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1482" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="new_row" />
+            <Field field="new_col" />
+            <Field field="row" />
+            <Field field="col" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="row" />
+            <Field field="col" />
+            <Field field="new_row" />
+            <Field field="new_col" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_row" selected="True" rename="Right_row" input="Right_" />
+                <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                <SelectField field="Right_col" selected="True" rename="Right_col" input="Right_" />
+                <SelectField field="Right_coor" selected="True" rename="Right_coor" input="Right_" />
+                <SelectField field="Right_new_row" selected="True" rename="Right_new_row" input="Right_" />
+                <SelectField field="Right_new_col" selected="True" rename="Right_new_col" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MakeGroup.MakeGroup">
+        <Position x="1686" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Key1st>coor</Key1st>
+          <Key2nd>Right_coor</Key2nd>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMakeGroup" />
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1602" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_8f11da2edde9b34a900e1ee7ef963ffd~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1602" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_81dcdcfcc727274eaf1f214e9112fc01~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="124">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1602" y="858" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_a83a86c6c122284593ca14fe76b328d0~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1806" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_202c4f06c53e874a96a2c283b211ef42~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="126">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1758" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Group" action="GroupBy" rename="Group" />
+            <SummarizeField field="Group" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1842" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Count" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1218" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_27448_cf1559403d74d145a750faa370c82018_\Engine_27448_1c149608251a6d4fa84b8c2d53994cc0~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="1026" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="row" />
+          </GroupFields>
+          <HeaderField field="col" />
+          <DataField field="data" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="row" source="CrossTab:Group:First:" type="Int32" />
+            <Field name="1" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="2" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="3" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="4" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="5" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="6" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="7" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="8" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="9" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="10" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="11" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="12" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="13" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="14" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="15" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="16" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="17" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="18" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="19" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="20" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="21" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="22" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="23" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="24" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="25" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="26" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="27" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="28" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="29" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="30" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="31" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="32" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="33" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="34" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="35" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="36" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="37" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="39" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="40" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="41" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="42" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="44" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="45" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="46" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="47" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="48" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="49" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="50" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="51" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="52" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="54" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="55" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="56" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="57" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="58" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="59" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="60" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="61" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="62" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="63" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="64" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="65" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="66" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="67" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="68" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="69" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="70" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="71" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="72" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="73" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="74" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="75" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="76" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="77" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="78" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="79" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="80" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="81" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="82" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="84" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="85" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="86" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="88" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="89" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="90" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="92" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="93" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="94" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="95" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="96" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="97" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="98" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="99" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="100" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="101" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="103" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="105" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="107" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="108" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="109" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="110" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="111" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="112" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="113" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="114" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="115" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="117" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="118" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="119" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="120" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="121" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="122" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="123" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="124" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="125" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="126" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="127" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="128" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="129" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="130" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="131" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="132" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="133" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="134" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="135" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="136" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="137" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="138" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="139" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+            <Field name="140" size="50000" source="File: C:\git\AdventOfCode\AOC_2023\Data\day10.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="130">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1122" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="row" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>row - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="131">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="690" y="702" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>add in null values here but only count the . values</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
     </Node>
     <Node ToolID="107">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -1349,6 +1927,10 @@ index=index
       <Destination ToolID="28" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="14" Connection="Right" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="19" Connection="Join" />
       <Destination ToolID="23" Connection="Input" />
     </Connection>
@@ -1397,10 +1979,6 @@ index=index
       <Destination ToolID="43" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="29" Connection="Join" />
-      <Destination ToolID="111" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="31" Connection="Output" />
       <Destination ToolID="32" Connection="Input" />
     </Connection>
@@ -1413,8 +1991,80 @@ index=index
       <Destination ToolID="30" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="111" Connection="Output" />
-      <Destination ToolID="110" Connection="Input" />
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="116" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="False" />
+      <Destination ToolID="116" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="115" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="115" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="116" Connection="Output" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="118" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="120" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="120" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Join" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Left" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Join" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Right" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="126" Connection="Output" />
+      <Destination ToolID="127" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Output" />
+      <Destination ToolID="128" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="33" Connection="True" />

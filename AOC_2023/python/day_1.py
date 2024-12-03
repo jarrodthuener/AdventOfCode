@@ -63,14 +63,32 @@ replacement_mapping = {
     'eight': '8',
     'nine': '9'
 }
+replacement_mapping_reverse = { text[::-1]: replacement_mapping[text] for text in replacement_mapping}
+print(replacement_mapping_reverse)
+
+ext_list_compare = re.findall('\d|one|two', '88724twone')
+print('\d|one|two|three|four|five|six|seven|eight|nine'[::-1])
+print(''.join(ext_list_compare))
 
 # extract string representations of numbers and numbers
 extracted_list = [re.findall('\d|one|two|three|four|five|six|seven|eight|nine', line) for line in part2_lines]
+extracted_list_reversed = [re.findall('enin|thgie|neves|xis|evif|ruof|eerht|owt|eno|\d', line[::-1]) for line in part2_lines]
 
-for line in extracted_list:
-    print(line, ' ---- ', line[0]+line[-1])
+# for line in extracted_list:
+#     print(line, ' ---- ', line[0]+line[-1])
 # replace numeric words for numbers
 extracted_list = [''.join([replacement_mapping.get(item, item) for item in line]) for line in extracted_list ]
+extracted_list_reversed = [''.join([replacement_mapping_reverse.get(item, item) for item in line]) for line in extracted_list ]
+
+
+for i in range(len(extracted_list)):
+    print(extracted_list_reversed[i][::-1], extracted_list[i])
+    if extracted_list_reversed[i] != extracted_list[i]:
+        print(extracted_list_reversed[i][::-1], extracted_list[i])
+        print(f"row index {i} doesn't match")
+
+
+
 
 # pull first and last numbers from string and summarize list
 part2_answer = sum([int(re.findall('\d',line)[0]+re.findall('\d',line)[-1])  for line in extracted_list])

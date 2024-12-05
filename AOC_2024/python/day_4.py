@@ -54,7 +54,7 @@ def check_xmas(coordinates=(), data=None, direction='right'):
     set_of_coords = []
     for (y,x) in coords:
         # print(coordinates)
-        if coordinates[0]+y <= data.shape[0]-1 and  coordinates[1]+x <= data.shape[1]-1:
+        if 0 <= coordinates[0]+y < data.shape[0] and  0 <= coordinates[1]+x < data.shape[1]:
             set_of_coords.append((coordinates[0]+y,coordinates[1]+x))
 
     # coordinates_to_check = [[(coordinates[0]+y,coordinates[1]+x) for (y,x) in line] for line in coords]
@@ -64,7 +64,7 @@ def check_xmas(coordinates=(), data=None, direction='right'):
     if text in ('XMAS','SAMX'):
         xmas_count += 1
     # print('newLine To check')
-    return(xmas_count)
+    return xmas_count
 
 total_xmas_count = 0
 # print(data.shape)
@@ -92,3 +92,7 @@ print(f'The answer for part 1 is: {part_1_answer}')
 # part_2_answer = safe_count
 #
 # print(f'The answer for part 2 is: {part_2_answer}')
+
+
+
+

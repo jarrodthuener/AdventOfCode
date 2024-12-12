@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="241">
       <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
-        <Position x="234" y="90" />
+        <Position x="366" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -26,7 +26,7 @@
           <RecordInfo>
             <Field name="RowId" source="TextInput:" type="Int32" />
             <Field name="OperatorCount" source="TextInput:" type="Int32" />
-            <Field name="Operators" source="TextInput:" type="Bool" />
+            <Field name="Operators" size="2147483647" source="TextInput:" type="V_String" />
             <Field name="RowCount" source="GenerateRows" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -35,7 +35,7 @@
     </Node>
     <Node ToolID="242">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="330" y="90" />
+        <Position x="462" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -51,9 +51,9 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="RowId" source="RecordID: Starting Value=0" type="Int32" />
-            <Field name="OperatorCount" source="Formula: REGEX_CountMatches(trim([values]), '\s')" type="Int16" />
-            <Field name="Operators" size="1073741823" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_WString" />
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_String" />
             <Field name="RowCount" source="GenerateRows" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -62,7 +62,7 @@
     </Node>
     <Node ToolID="244">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="414" y="90" />
+        <Position x="654" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -80,9 +80,9 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="RowId" source="RecordID: Starting Value=0" type="Int32" />
-            <Field name="OperatorCount" source="Formula: REGEX_CountMatches(trim([values]), '\s')" type="Int16" />
-            <Field name="Operators" size="1073741823" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_WString" />
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -90,7 +90,7 @@
     </Node>
     <Node ToolID="245">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="486" y="90" />
+        <Position x="750" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -104,16 +104,16 @@
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="RowId" source="RecordID: Starting Value=0" type="Int32" />
-            <Field name="OperatorCount" source="Formula: REGEX_CountMatches(trim([values]), '\s')" type="Int16" />
-            <Field name="Operators" size="1073741823" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_WString" />
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_String" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="RowId" source="RecordID: Starting Value=0" type="Int32" />
-            <Field name="OperatorCount" source="Formula: REGEX_CountMatches(trim([values]), '\s')" type="Int16" />
-            <Field name="Operators" size="1073741823" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_WString" />
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -134,22 +134,28 @@
     </Node>
     <Node ToolID="247">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="54" y="90" />
+        <Position x="66" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <UseFileInput value="False" />
+          <Name>Input243</Name>
+          <Abbrev />
           <ShowFieldMap value="True" />
           <Optional value="False" />
-          <Abbrev />
-          <Name>Input243</Name>
           <TextInput>
             <Configuration>
+              <NumRows value="9" />
+              <Fields>
+                <Field name="RowId" />
+                <Field name="OperatorCount" />
+                <Field name="Operators" />
+              </Fields>
               <Data>
                 <r>
                   <c>0</c>
                   <c>1</c>
-                  <c />
+                  <c>+</c>
                 </r>
                 <r>
                   <c>1</c>
@@ -192,12 +198,6 @@
                   <c />
                 </r>
               </Data>
-              <NumRows value="9" />
-              <Fields>
-                <Field name="RowId" />
-                <Field name="OperatorCount" />
-                <Field name="Operators" />
-              </Fields>
             </Configuration>
           </TextInput>
         </Configuration>
@@ -211,7 +211,7 @@
           <RecordInfo>
             <Field name="RowId" source="TextInput:" type="Int32" />
             <Field name="OperatorCount" source="TextInput:" type="Int32" />
-            <Field name="Operators" source="TextInput:" type="Bool" />
+            <Field name="Operators" size="2147483647" source="TextInput:" type="V_String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -219,7 +219,7 @@
     </Node>
     <Node ToolID="248">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="630" y="54" />
+        <Position x="942" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -237,7 +237,7 @@
     </Node>
     <Node ToolID="249">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="738" y="126" />
+        <Position x="846" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -255,12 +255,12 @@
     </Node>
     <Node ToolID="250">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="570" y="54" />
+        <Position x="846" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="'_'+[Operators]" field="Operators" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="'_'+[Operators]" field="Operators" size="2147483647" type="V_String" enabled="true" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -269,8 +269,155 @@
 ]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="Formula: '_'+[Operators]" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="251">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="246" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>RowCount</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>254</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCount &lt;= 3</Expression_Cond>
+          <Expression_Loop>RowCount + 1</Expression_Loop>
+          <RecordCount value="27" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="RowCount" source="GenerateRows" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="252">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="342" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="operators + iif([RowCount]=1,'+',&#xA;iif([RowCount]=2,'*','|'))" field="Operators" size="2147483647" type="V_String" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Operators = operators + iif([RowCount]=1,'+',
+iif([RowCount]=2,'*','|'))
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="Formula: operators + iif([RowCount]=1,'+',&#xA;iif([RowCount]=2,'*','|'))" type="V_String" />
+            <Field name="RowCount" source="GenerateRows" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="253">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="270" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="254">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DetourEnd.DetourEnd">
+        <Position x="558" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RowId" source="TextInput:" type="Int32" />
+            <Field name="OperatorCount" source="TextInput:" type="Int32" />
+            <Field name="Operators" size="2147483647" source="Formula: operators + iif([RowCount]=1,'+','*')" type="V_String" />
+            <Field name="RowCount" source="GenerateRows" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetourEnd" />
+    </Node>
+    <Node ToolID="255">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="306" y="78" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check Box (255)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="256">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="288" y="168" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
     </Node>
   </Nodes>
   <Connections>
@@ -280,7 +427,11 @@
     </Connection>
     <Connection>
       <Origin ToolID="242" Connection="Output" />
-      <Destination ToolID="244" Connection="Input" />
+      <Destination ToolID="254" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="252" Connection="Output" />
+      <Destination ToolID="254" Connection="Right" />
     </Connection>
     <Connection>
       <Origin ToolID="244" Connection="Output" />
@@ -296,11 +447,35 @@
     </Connection>
     <Connection>
       <Origin ToolID="247" Connection="Output" />
-      <Destination ToolID="241" Connection="Input" />
+      <Destination ToolID="253" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="256" Connection="Action" />
+      <Destination ToolID="253" Connection="Action" />
     </Connection>
     <Connection>
       <Origin ToolID="250" Connection="Output" />
       <Destination ToolID="248" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="251" Connection="Output" />
+      <Destination ToolID="252" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="253" Connection="Left" />
+      <Destination ToolID="241" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="253" Connection="Right" />
+      <Destination ToolID="251" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="254" Connection="Output" />
+      <Destination ToolID="244" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="255" Connection="Question" />
+      <Destination ToolID="256" Connection="Question" />
     </Connection>
   </Connections>
   <Properties>
@@ -323,6 +498,14 @@
     <ZoomLevel value="0" />
     <LayoutType>Horizontal</LayoutType>
     <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Check Box (255)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
     <MetaInfo>
       <NameIsFileName value="True" />
       <Name>Day7_Iterative</Name>
@@ -351,7 +534,25 @@
       <Enabled value="False" />
     </Events>
     <RuntimeProperties>
-      <Actions />
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="256" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>253/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
       <Questions>
         <Question>
           <Type>Tab</Type>
@@ -376,6 +577,15 @@
               <Description />
               <Name>Macro Output (249)</Name>
               <ToolId value="249" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>Part2</Description>
+              <Name>Check Box (255)</Name>
+              <ToolId value="255" />
+              <Questions />
+              <Default value="False" />
+              <Collapsable value="False" />
             </Question>
           </Questions>
         </Question>

@@ -15,9 +15,6 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro=".\OpenAndSplitData.yxmc" />
     </Node>
@@ -47,7 +44,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16408_c8b0d1a6a29e40c7b7890a372a41e198_\Engine_16408_2011e3f02c614e10b077fd8872f8c8aa~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_33468_6f625d5921db4de4aa2dc201c9bd624d_\Engine_33468_e4136f808fc14e249ae529ba652f98de~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -165,11 +162,11 @@
     </Node>
     <Node ToolID="229">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="738" y="150" />
+        <Position x="738" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16408_c8b0d1a6a29e40c7b7890a372a41e198_\Engine_16408_ecf40b365d5f40d4b393f477715da153~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_33468_6f625d5921db4de4aa2dc201c9bd624d_\Engine_33468_613bf97b34514ed9a7cbef3257051152~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -239,7 +236,7 @@
     </Node>
     <Node ToolID="232">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="270" y="282" />
+        <Position x="318" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -250,13 +247,13 @@
             <Operands>
               <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
               <DateType>fixed</DateType>
-              <PeriodDate>2024-12-06 22:45:12</PeriodDate>
+              <PeriodDate>2024-12-07 00:45:12</PeriodDate>
               <PeriodType>
               </PeriodType>
               <PeriodCount>0</PeriodCount>
               <Operand>^</Operand>
-              <StartDate>2024-12-06 22:45:12</StartDate>
-              <EndDate>2024-12-06 22:45:12</EndDate>
+              <StartDate>2024-12-07 00:45:12</StartDate>
+              <EndDate>2024-12-07 00:45:12</EndDate>
             </Operands>
           </Simple>
         </Configuration>
@@ -267,25 +264,6 @@
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="234">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="366" y="282" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="'up'" field="heading" size="5" type="String" enabled="true" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[heading = 'up'
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
     <Node ToolID="235">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
@@ -304,9 +282,9 @@
               <PeriodType>
               </PeriodType>
               <PeriodCount>0</PeriodCount>
+              <Operand>up</Operand>
               <StartDate>2024-12-06 22:46:47</StartDate>
               <EndDate>2024-12-06 22:46:47</EndDate>
-              <Operand>up</Operand>
             </Operands>
           </Simple>
         </Configuration>
@@ -320,7 +298,7 @@
     </Node>
     <Node ToolID="236">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="618" y="270" width="252" height="60" />
+        <Position x="930" y="282" width="252" height="60" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -342,7 +320,7 @@ the guard traveled through all spaces in the column with rows less than or equal
     </Node>
     <Node ToolID="237">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="618" y="366" width="252" height="60" />
+        <Position x="930" y="354" width="252" height="60" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -378,7 +356,7 @@ the ending position will be 1 row greater than the obstacle</Text>
               <PeriodType>
               </PeriodType>
               <PeriodCount>0</PeriodCount>
-              <Operand>up</Operand>
+              <Operand>down</Operand>
               <StartDate>2024-12-06 22:46:47</StartDate>
               <EndDate>2024-12-06 22:46:47</EndDate>
             </Operands>
@@ -386,7 +364,123 @@ the ending position will be 1 row greater than the obstacle</Text>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>[heading] = up</DefaultAnnotationText>
+          <DefaultAnnotationText>[heading] = "down"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="239">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="738" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'up'" field="heading" size="5" type="String" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[heading = 'up'
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="240">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="558" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="ColumnId" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="ColumnId" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_CoorIndex" selected="True" rename="Right_CoorIndex" input="Right_" />
+                <SelectField field="Right_character" selected="True" rename="Right_character" input="Right_" />
+                <SelectField field="Right_RowId" selected="False" rename="Right_RowId" input="Right_" />
+                <SelectField field="Right_ColumnId" selected="True" rename="Right_ColumnId" input="Right_" />
+                <SelectField field="Right_heading" selected="True" rename="Right_heading" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="241">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="174" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>character</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-11 18:53:23</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2024-12-11 18:53:23</StartDate>
+              <EndDate>2024-12-11 18:53:23</EndDate>
+              <Operand>.</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[character] != "."</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="242">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="642" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-11 18:54:22</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2024-12-11 18:54:22</StartDate>
+              <EndDate>2024-12-11 18:54:22</EndDate>
+              <Operand>
+              </Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -394,7 +488,7 @@ the ending position will be 1 row greater than the obstacle</Text>
     </Node>
     <Node ToolID="204">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="810" y="66" width="227" height="24" />
+        <Position x="809" y="65" width="227" height="24" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -790,7 +884,7 @@ the ending position will be 1 row greater than the obstacle</Text>
       <Destination ToolID="10" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="1" Connection="FullData" />
+      <Origin ToolID="1" Connection="Sample" />
       <Destination ToolID="225" Connection="Input" />
     </Connection>
     <Connection>
@@ -807,7 +901,7 @@ the ending position will be 1 row greater than the obstacle</Text>
     </Connection>
     <Connection>
       <Origin ToolID="228" Connection="Output" />
-      <Destination ToolID="232" Connection="Input" />
+      <Destination ToolID="239" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="230" Connection="Output" />
@@ -819,15 +913,31 @@ the ending position will be 1 row greater than the obstacle</Text>
     </Connection>
     <Connection>
       <Origin ToolID="232" Connection="True" />
-      <Destination ToolID="234" Connection="Input" />
+      <Destination ToolID="235" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="234" Connection="Output" />
-      <Destination ToolID="235" Connection="Input" />
+      <Origin ToolID="232" Connection="False" />
+      <Destination ToolID="240" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="235" Connection="True" />
+      <Destination ToolID="240" Connection="Left" />
     </Connection>
     <Connection>
       <Origin ToolID="235" Connection="False" />
       <Destination ToolID="238" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="239" Connection="Output" />
+      <Destination ToolID="241" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="240" Connection="Join" />
+      <Destination ToolID="242" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="241" Connection="True" />
+      <Destination ToolID="232" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="224" Connection="True" />

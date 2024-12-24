@@ -44,7 +44,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_26024_9c1fbb35ca134d26bf6711af90dda765_\Engine_26024_51c8ecac9f304687b5101191d2852d9e~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16300_5e851c668eae480db96e46788fce3525_\Engine_16300_7ff1adab143840ff94912b1fa00a3f51~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -211,7 +211,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_26024_9c1fbb35ca134d26bf6711af90dda765_\Engine_26024_7f7ec25095cf43edbdd465cbc7d2c23a~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16300_5e851c668eae480db96e46788fce3525_\Engine_16300_30bbcc67bc514c10849580781999a12f~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -545,13 +545,646 @@ next_col = [ColumnId]+[col_add]
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
     </Node>
-    <Node ToolID="269">
+    <Node ToolID="270">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1302" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16300_5e851c668eae480db96e46788fce3525_\Engine_16300_63d2095d1f8b42b49fd3e64b05b80964~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="272">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="273">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
         <Position x="1374" y="234" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_26024_9c1fbb35ca134d26bf6711af90dda765_\Engine_26024_e1cec378b072493fb96e8027773322b9~.yxdb</TempFile>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="274">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>2</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="275">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>3</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 3</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="276">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>4</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 4</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="277">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>5</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 5</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="278">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>6</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 6</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="279">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="666" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>7</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 7</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="280">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="750" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>8</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 8</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="281">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1374" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>height</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-12-22 10:34:28</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>9</Operand>
+              <StartDate>2024-12-22 10:34:28</StartDate>
+              <EndDate>2024-12-22 10:34:28</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[height] = 9</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="282">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1518" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="283">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1278" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RowId" selected="False" />
+            <SelectField field="ColumnId" selected="False" />
+            <SelectField field="next_row" selected="False" />
+            <SelectField field="next_col" selected="False" />
+            <SelectField field="Right_RowId" selected="False" />
+            <SelectField field="Right_ColumnId" selected="False" />
+            <SelectField field="Right_height" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="284">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1602" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="285">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1686" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="286">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1782" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="287">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1614" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="288">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1698" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="289">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1782" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="290">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1878" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Right_coor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="coor" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_coor" selected="False" input="Left_" />
+                <SelectField field="Right_coor" selected="False" input="Right_" />
+                <SelectField field="Right_height" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="291">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1998" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16300_5e851c668eae480db96e46788fce3525_\Engine_16300_eb300584e6614904ab02c82884c678e0~.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="292">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2262" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16300_5e851c668eae480db96e46788fce3525_\Engine_16300_d2c58223f87a450788cc3cb5b9dedaba~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -573,13 +1206,13 @@ next_col = [ColumnId]+[col_add]
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="270">
+    <Node ToolID="293">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1302" y="306" />
+        <Position x="1998" y="762" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_26024_9c1fbb35ca134d26bf6711af90dda765_\Engine_26024_d57d5d8eec1c4377afeb90f8c37a4e66~.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16300_5e851c668eae480db96e46788fce3525_\Engine_16300_92fa3743c5894ee589e1dddfab0276fa~.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -589,14 +1222,16 @@ next_col = [ColumnId]+[col_add]
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="271">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.MakeGroup.MakeGroup">
-        <Position x="1278" y="234" />
+    <Node ToolID="294">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1974" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Key1st>coor</Key1st>
-          <Key2nd>Right_coor</Key2nd>
+          <SummarizeFields>
+            <SummarizeField field="coor" action="GroupBy" rename="coor" />
+            <SummarizeField field="Right_coor" action="CountDistinct" rename="CountDistinct_Right_coor" />
+          </SummarizeFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -604,11 +1239,117 @@ next_col = [ColumnId]+[col_add]
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMakeGroup" />
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="295">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2070" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="CountDistinct_Right_coor" action="Sum" rename="Trail Value Total" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="296">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+        <Position x="2166" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <When>Last</When>
+          <Filter />
+          <Type>Message</Type>
+          <Priority>High</Priority>
+          <Transient>False</Transient>
+          <MessageExpression>"The total value for part 1 is: "+tostring([Trail Value Total])</MessageExpression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
+    </Node>
+    <Node ToolID="297">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2346" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_16300_5e851c668eae480db96e46788fce3525_\Engine_16300_2fd09f854b8246908019d898b611efa8~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="300">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="2154" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="coor" action="Count" rename="Trail rating Total" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="301">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Message.Message">
+        <Position x="2250" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <When>Last</When>
+          <Filter />
+          <Type>Message</Type>
+          <Priority>High</Priority>
+          <Transient>False</Transient>
+          <MessageExpression>"The total value for part 2 is: "+tostring([Trail Rating Total])</MessageExpression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMessage" />
     </Node>
     <Node ToolID="204">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="930" y="65" width="227" height="24" />
+        <Position x="905" y="65" width="227" height="24" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1004,7 +1745,7 @@ next_col = [ColumnId]+[col_add]
       <Destination ToolID="10" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="1" Connection="Sample" />
+      <Origin ToolID="1" Connection="FullData" />
       <Destination ToolID="250" Connection="Input" />
     </Connection>
     <Connection>
@@ -1069,11 +1810,147 @@ next_col = [ColumnId]+[col_add]
     </Connection>
     <Connection>
       <Origin ToolID="268" Connection="True" />
-      <Destination ToolID="271" Connection="Input" />
+      <Destination ToolID="283" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="271" Connection="Output" />
-      <Destination ToolID="269" Connection="Input" />
+      <Origin ToolID="272" Connection="False" />
+      <Destination ToolID="273" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="272" Connection="True" />
+      <Destination ToolID="282" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="273" Connection="True" />
+      <Destination ToolID="282" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="273" Connection="False" />
+      <Destination ToolID="274" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="274" Connection="False" />
+      <Destination ToolID="275" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="274" Connection="True" />
+      <Destination ToolID="284" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="282" Connection="Join" />
+      <Destination ToolID="284" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="275" Connection="False" />
+      <Destination ToolID="276" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="275" Connection="True" />
+      <Destination ToolID="285" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="284" Connection="Join" />
+      <Destination ToolID="285" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="276" Connection="False" />
+      <Destination ToolID="277" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="276" Connection="True" />
+      <Destination ToolID="286" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="285" Connection="Join" />
+      <Destination ToolID="286" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="277" Connection="False" />
+      <Destination ToolID="278" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="277" Connection="True" />
+      <Destination ToolID="287" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="286" Connection="Join" />
+      <Destination ToolID="287" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="278" Connection="False" />
+      <Destination ToolID="279" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="278" Connection="True" />
+      <Destination ToolID="288" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="287" Connection="Join" />
+      <Destination ToolID="288" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="279" Connection="False" />
+      <Destination ToolID="280" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="279" Connection="True" />
+      <Destination ToolID="289" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="288" Connection="Join" />
+      <Destination ToolID="289" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="280" Connection="False" />
+      <Destination ToolID="281" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="280" Connection="True" />
+      <Destination ToolID="290" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="289" Connection="Join" />
+      <Destination ToolID="290" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="283" Connection="Output" />
+      <Destination ToolID="272" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="290" Connection="Left" />
+      <Destination ToolID="291" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="290" Connection="Right" />
+      <Destination ToolID="293" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="290" Connection="Join" />
+      <Destination ToolID="294" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="290" Connection="Join" />
+      <Destination ToolID="300" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="294" Connection="Output" />
+      <Destination ToolID="295" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="295" Connection="Output" />
+      <Destination ToolID="296" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="296" Connection="Output" />
+      <Destination ToolID="292" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="300" Connection="Output" />
+      <Destination ToolID="301" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="301" Connection="Output" />
+      <Destination ToolID="297" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="224" Connection="True" />

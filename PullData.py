@@ -2,6 +2,10 @@ from pathlib import Path
 from datetime import date
 from aocd.models import Puzzle
 
+# import os
+# os.environ["AOC_SESSION"] = "53616c7465645f5f8709a340abb301d4957d37e30d7c873a26c430a7a91717ddb11e441d6966d092fe8c14ce0a5733410678665c1edec6b4077fe8042497d343"
+# print(os.getenv("AOC_SESSION"))
+
 # Configuration
 BASE_DIR = Path(__file__).resolve().parent
 START_YEAR = 2015

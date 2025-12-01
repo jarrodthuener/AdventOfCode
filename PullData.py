@@ -3,7 +3,7 @@ from datetime import date
 from aocd.models import Puzzle
 
 # import os
-# os.environ["AOC_SESSION"] = "53616c7465645f5f8709a340abb301d4957d37e30d7c873a26c430a7a91717ddb11e441d6966d092fe8c14ce0a5733410678665c1edec6b4077fe8042497d343"
+# os.environ["AOC_SESSION"] = "53616c7465645f5f45991cb3cbbe483129a6fa4e1aa68527eebe51b082e7efaa9c2a3745072290fb4e075844ed895b787405439796ec2c3763d55bf1f206e749"
 # print(os.getenv("AOC_SESSION"))
 
 # Configuration

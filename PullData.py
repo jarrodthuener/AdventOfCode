@@ -3,9 +3,12 @@ from datetime import date
 from aocd import get_data
 from aocd.models import Puzzle
 
+from dotenv import load_dotenv
+load_dotenv(override=True)
+
 import os
-os.environ["AOC_SESSION"] = "53616c7465645f5f45991cb3cbbe483129a6fa4e1aa68527eebe51b082e7efaa9c2a3745072290fb4e075844ed895b787405439796ec2c3763d55bf1f206e749"
-print(os.getenv("AOC_SESSION"))
+os.environ["AOC_SESSION"] = os.getenv('AOC_SESSION')
+
 
 
 # from aocd import data
@@ -34,7 +37,7 @@ def fetch_and_save_data(year, day):
         # # Fetch data from AOC
         puzzle = Puzzle(year, day)
         print(puzzle.input_data_path)
-        # example_data = puzzle.example_data
+        example_data = puzzle.example_data
         full_data = puzzle.input_data
 
         # format data with example data on top and full data below

@@ -8,4 +8,5 @@ dependencies = [
     "advent-of-code-data>=2.1.0",
     "aocd-example-parser>=2025.12.1",
     "dotenv>=0.9.9",
+    "rich>=14.2.0",
 ]

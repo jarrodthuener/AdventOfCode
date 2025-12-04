@@ -9,12 +9,6 @@ load_dotenv(override=True)
 import os
 os.environ["AOC_SESSION"] = os.getenv('AOC_SESSION')
 
-
-
-# from aocd import data
-
-print(get_data(day=2, year=2025))
-
 # Configuration
 BASE_DIR = Path(__file__).resolve().parent
 START_YEAR = 2015
@@ -34,25 +28,34 @@ def ensure_directories(year):
 
 def fetch_and_save_data(year, day):
     try:
-        # # Fetch data from AOC
         puzzle = Puzzle(year, day)
-        print(puzzle.input_data_path)
-        example_data = puzzle.example_data
+        print(puzzle.prose0_path)
+
+        # --- NEW EXAMPLE HANDLING ---
+        examples = puzzle.examples   # list of Example objects
+        if examples:
+            # join all example inputs, separated by a blank line
+            example_text = "\n\n".join(
+                eg.input_data.strip() for eg in examples if eg.input_data
+            )
+        else:
+            example_text = ""
+
         full_data = puzzle.input_data
 
-        # format data with example data on top and full data below
-        formatted_data = f"{example_data}\nSplit From Here\n{full_data}"
+        # Format output: examples first, then split, then full input
+        formatted_data = f"{example_text}\nSplit From Here\n{full_data}"
 
-        # Save the file
+        # Save to disk
         file_path = get_data_path(year, day)
-
-        # output file
         with open(file_path, "w") as file:
             file.write(formatted_data)
 
         print(f"Data saved for Year {year}, Day {day}")
+
     except Exception as e:
         print(f"Failed to fetch data for Year {year}, Day {day}: {e}")
+
 
 def main():
     for year in range(START_YEAR, CURRENT_YEAR + 1):

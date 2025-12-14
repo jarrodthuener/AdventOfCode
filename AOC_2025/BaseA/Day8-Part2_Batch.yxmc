@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="180">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="402" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[DistID] &lt;= Tonumber([#1])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[DistID] &lt;= Tonumber([#1])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="DistID" source="TextInput:" type="Int32" />
+            <Field name="JunctionBox" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Source_JunctionBox" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Distance" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="DistID" source="TextInput:" type="Int32" />
+            <Field name="JunctionBox" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Source_JunctionBox" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Distance" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="181">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MakeGroup.MakeGroup">
+        <Position x="510" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Key1st>JunctionBox</Key1st>
+          <Key2nd>Source_JunctionBox</Key2nd>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Group" size="2147483647" type="V_String" />
+            <Field name="Key" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMakeGroup" />
+    </Node>
+    <Node ToolID="182">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="582" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Group" action="CountDistinct" rename="Circuits" />
+            <SummarizeField field="Key" action="CountDistinct" rename="UniqueJunctionBoxes" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Circuits" source="Summarize: CountDistinct - Group" type="Int64" />
+            <Field name="UniqueJunctionBoxes" source="Summarize: CountDistinct - Key" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="183">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="184">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="138" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input177</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="DistID" />
+                <Field name="JunctionBox" />
+                <Field name="Source_JunctionBox" />
+                <Field name="Distance" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>65483</c>
+                  <c>249gf</c>
+                  <c>923hj</c>
+                  <c>487.017453486012</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="DistID" source="TextInput:" type="Int32" />
+            <Field name="JunctionBox" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Source_JunctionBox" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Distance" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="185">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="774" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output184</Name>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="126" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Control Parameter (186)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="187">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="678" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Tonumber([#1])" field="DistId_Perm" size="4" type="Int32" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[DistId_Perm = Tonumber([#1])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Circuits" source="Summarize: CountDistinct - Group" type="Int64" />
+            <Field name="UniqueJunctionBoxes" source="Summarize: CountDistinct - Key" type="Int64" />
+            <Field name="DistId_Perm" source="Formula: Tonumber([#1])" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="180" Connection="True" />
+      <Destination ToolID="181" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="182" Connection="Output" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="186" Connection="Question" />
+      <Destination ToolID="187" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="184" Connection="Output" />
+      <Destination ToolID="180" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="186" Connection="Question" />
+      <Destination ToolID="180" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="187" Connection="Output" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Control Parameter (186)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day8-Part2_Batch</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b2d6754c-4852-4948-a0cd-d24065b710bb" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="b2d6754c-4852-4948-a0cd-d24065b710bb" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (183)</Name>
+          <ToolId value="183" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (184)</Name>
+              <ToolId value="184" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (185)</Name>
+              <ToolId value="185" />
+            </Question>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>Control Parameter (186)</Description>
+              <Name>Control Parameter (186)</Name>
+              <ToolId value="186" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AllSame</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>Control Parameter (186)</Name>
+            <Description>Control Parameter (186)</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="184" Selected="True" />
+        <Tool ToolId="185" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

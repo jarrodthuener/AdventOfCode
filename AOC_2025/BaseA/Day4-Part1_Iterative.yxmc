@@ -1,0 +1,1381 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="145">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="258" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>data</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2025-12-13 12:01:45</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2025-12-13 12:01:45</StartDate>
+              <EndDate>2025-12-13 12:01:45</EndDate>
+              <Operand>|</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[data] = "|"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="151">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="438" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Col" />
+            <Field field="Row" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Col" />
+            <Field field="Row" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Col" selected="False" rename="Right_Col" input="Right_" />
+                <SelectField field="Right_Row" selected="False" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="153">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="162" y="162" width="100" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Input</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="156">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1134" y="282" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>IterateData</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="157">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="822" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_23044_7077ba8c5ace466fbbe1bd9080ce3fd0_\Engine_23044_6ccd0c453c24454ca3bcf880d0766fb9~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="160">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1194" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Col" action="GroupBy" rename="Col" />
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Int32" />
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="161">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="582" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Col</UpdateField_Name>
+          <CreateField_Name>NewCol</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <Expression_Init>[Col]-1</Expression_Init>
+          <Expression_Cond>[NewCol] &lt;= [Col]+1</Expression_Cond>
+          <Expression_Loop>[NewCol] + 2</Expression_Loop>
+          <Expression>[Col]-1[NewCol] &lt;= [Col]+1[NewCol] + 2</Expression>
+          <RecordCount value="2" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="NewCol" source="GenerateRows" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="162">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="870" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="Col" action="GroupBy" rename="Col" />
+            <SummarizeField field="data" action="GroupBy" rename="data" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Consolidate Beams</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Int32" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Int32" />
+            <Field name="data" size="2147483647" source="Summarize: GroupBy - data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="163">
+      <GuiSettings>
+        <Position x="1266" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="164">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1350" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="True" rename="Splits" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Splits" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="166">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="774" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Col" source="(Multiple Sources)" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="169">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="342" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Row]+2" field="Row" size="4" type="Int32" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Row = [Row]+2
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="171">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="534" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="172">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="606" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Row" selected="True" rename="Source_Row" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Source_Row" source="Summarize: GroupBy - Row" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="173">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="702" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Row] &gt; [Source_Row]</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row] &gt; [Source_Row]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Source_Row" source="Summarize: GroupBy - Row" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Source_Row" source="Summarize: GroupBy - Row" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="174">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="534" y="318" width="240" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Dump earlier rows</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="175">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1014" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="(Multiple Sources)" type="Int32" />
+            <Field name="Col" source="(Multiple Sources)" type="Int32" />
+            <Field name="data" size="2147483647" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="176">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="318" y="90" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>beams</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="177">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="678" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Col" selected="False" />
+            <SelectField field="Right_data" selected="False" />
+            <SelectField field="NewCol" selected="True" rename="Col" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Col" source="GenerateRows" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="178">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="798" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Source_Row" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="179">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="180">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1554" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Output</Name>
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="181">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <Abbrev />
+          <Name>Input168</Name>
+          <TextInput>
+            <Configuration>
+              <Data>
+                <r>
+                  <c>8</c>
+                  <c>0</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>8</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>12</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>12</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>12</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>14</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+              </Data>
+              <NumRows value="23" />
+              <Fields>
+                <Field name="Col" />
+                <Field name="Row" />
+                <Field name="data" />
+              </Fields>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="182">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1422" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterative</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Iterative</Name>
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="303">
+      <GuiSettings>
+        <Position x="918" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="304">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1134" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="(Multiple Sources)" type="Int32" />
+            <Field name="Col" source="(Multiple Sources)" type="Int32" />
+            <Field name="data" size="2147483647" source="(Multiple Sources)" type="V_String" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="305">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1218" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2025-12-13 12:19:11</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2025-12-13 12:19:11</StartDate>
+              <EndDate>2025-12-13 12:19:11</EndDate>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Row" source="(Multiple Sources)" type="Int32" />
+            <Field name="Col" source="(Multiple Sources)" type="Int32" />
+            <Field name="data" size="2147483647" source="(Multiple Sources)" type="V_String" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Row" source="(Multiple Sources)" type="Int32" />
+            <Field name="Col" source="(Multiple Sources)" type="Int32" />
+            <Field name="data" size="2147483647" source="(Multiple Sources)" type="V_String" />
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="306">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1314" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="(Multiple Sources)" type="Int32" />
+            <Field name="Col" source="(Multiple Sources)" type="Int32" />
+            <Field name="data" size="2147483647" source="(Multiple Sources)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="307">
+      <GuiSettings>
+        <Position x="1266" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="308">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1350" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="True" rename="UniqueBeams" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="UniqueBeams" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="309">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="1446" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="True" />
+          <OutputJoinOnly value="False" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Splits" source="(Multiple Sources)" type="Int64" />
+            <Field name="UniqueBeams" source="(Multiple Sources)" type="Int64" />
+            <Field name="NetNewBeams" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="310">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1182" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="Col" action="GroupBy" rename="Col" />
+            <SummarizeField field="data" action="GroupBy" rename="data" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Consolidate Beams</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row" source="Summarize: GroupBy - Row" type="Int32" />
+            <Field name="Col" source="Summarize: GroupBy - Col" type="Int32" />
+            <Field name="data" size="2147483647" source="Summarize: GroupBy - data" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="312">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1098" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Col" />
+            <Field field="Row" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Col" />
+            <Field field="Row" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_data" selected="True" rename="Right_data" input="Right_" />
+                <SelectField field="Right_Col" selected="True" rename="Right_Col" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Col" source="TextInput:" type="Int32" />
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="Right_data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_Col" source="GenerateRows" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Row" source="Formula: [Row]+2" type="Int32" />
+            <Field name="data" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Col" source="GenerateRows" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="313">
+      <GuiSettings>
+        <Position x="1266" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output9">
+          <RecordInfo>
+            <Field name="Count" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="314">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1350" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="True" rename="NetNewBeams" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="NetNewBeams" source="(Multiple Sources)" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="145" Connection="True" />
+      <Destination ToolID="169" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="False" />
+      <Destination ToolID="151" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="169" Connection="Output" />
+      <Destination ToolID="151" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Left" />
+      <Destination ToolID="157" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Join" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="151" Connection="Left" />
+      <Destination ToolID="166" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="177" Connection="Output" />
+      <Destination ToolID="166" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Join" />
+      <Destination ToolID="161" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Right" />
+      <Destination ToolID="172" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="171" Connection="Output" />
+      <Destination ToolID="172" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Join" />
+      <Destination ToolID="312" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Output" />
+      <Destination ToolID="312" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="163" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="161" Connection="Output" />
+      <Destination ToolID="177" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="162" Connection="Output" />
+      <Destination ToolID="175" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="178" Connection="Output" />
+      <Destination ToolID="175" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="162" Connection="Output" />
+      <Destination ToolID="307" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="163" Connection="Output9" />
+      <Destination ToolID="164" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="164" Connection="Output" />
+      <Destination ToolID="309" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="308" Connection="Output" />
+      <Destination ToolID="309" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="314" Connection="Output" />
+      <Destination ToolID="309" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="166" Connection="Output" />
+      <Destination ToolID="162" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="169" Connection="Output" />
+      <Destination ToolID="171" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="Output" />
+      <Destination ToolID="173" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="True" />
+      <Destination ToolID="178" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="175" Connection="Output" />
+      <Destination ToolID="304" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="303" Connection="Output9" />
+      <Destination ToolID="304" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="178" Connection="Output" />
+      <Destination ToolID="303" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="304" Connection="Output" />
+      <Destination ToolID="305" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="305" Connection="True" />
+      <Destination ToolID="306" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="306" Connection="Output" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="307" Connection="Output9" />
+      <Destination ToolID="308" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="309" Connection="Output" />
+      <Destination ToolID="180" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="310" Connection="Output" />
+      <Destination ToolID="313" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="312" Connection="Right" />
+      <Destination ToolID="310" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="313" Connection="Output9" />
+      <Destination ToolID="314" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day4-Part1_Iterative</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="00000000-0000-0000-0000-000000000000" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="00000000-0000-0000-0000-000000000000" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (179)</Name>
+          <ToolId value="179" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Output</Name>
+              <ToolId value="180" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (181)</Name>
+              <ToolId value="181" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Iterative</Name>
+              <ToolId value="182" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input168</Input>
+        <Output>Iterative</Output>
+        <IterationLimit value="1000" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="157" Selected="False" />
+        <Tool ToolId="163" Selected="True" />
+        <Tool ToolId="180" Selected="True" />
+        <Tool ToolId="181" Selected="True" />
+        <Tool ToolId="182" Selected="True" />
+        <Tool ToolId="307" Selected="True" />
+        <Tool ToolId="303" Selected="True" />
+        <Tool ToolId="313" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
